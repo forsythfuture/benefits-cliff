@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Benefits cliff</title>
 		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 		<style type="text/css">
 			.line {
               fill: none;
@@ -13,16 +14,17 @@
 		</style>
 	</head>
 	<body>
-	    <div id = "familyDropdown" class="dropdown">Select Family Size:  </div>
+	  <div id = "familyDropdown" class="dropdown">Select Family Size:  </div>
 		<script type="text/javascript">
 
 		// python3 -m http.server 8888 &.
 
-			//Width and height
-			var w = 600;
-			var h = 250;
 
-			padding = 30;
+		//create margins
+		var margin = {top: 20, right: 30, bottom: 20, left: 30};
+
+		var width = 960 - margin.left - margin.right,
+  			height = 500 - margin.top - margin.bottom;
 
 			// import dataset
 			d3.csv("benefits.csv", function(d) {
@@ -34,17 +36,19 @@
               };
             }).then(function(data) {
 
-            // scales
+      // scales
 			var xScale = d3.scaleLinear()
 							.domain([0, d3.max(data, function(d) { return d.monthly_income; })])
-							.range([padding, w - padding * 2]);
+							.range([0, width]);
 
 			var yScale = d3.scaleLinear()
 							.domain([0, d3.max(data, function(d) { return d.payment; })])
-							.range([h - padding, padding]);
+							.range([height, 0]);
 			// axes
 			var xAxis = d3.axisBottom(xScale);
 			var yAxis = d3.axisLeft(yScale);
+
+			var bisectIncome = d3.bisector(function(d) { return d.monthly_income; }).left;
 
 			// Create line element
 			var simpleLine = d3.line()
@@ -52,10 +56,11 @@
 			    .y(function(d) { return yScale(d.payment); });
 
 			// Create SVG element
-			var svg = d3.select("body")
-						.append("svg")
-						.attr("width", w)
-						.attr("height", h);
+			var svg = d3.select("body").append("svg")
+			    .attr("width", width + margin.left + margin.right)
+			    .attr("height", height + margin.top + margin.bottom)
+			  .append("g")
+			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 			// Nest the data by composition (family type) and benefit type
             var nest = d3.nest()
@@ -123,150 +128,149 @@
          	}
 
 			// Create initial graph
- 	        initialGraph("One adult, three children")
+      initialGraph("One adult, three children")
 
-          	// Update the data
-         	var updateGraph = function(family){
+      // Update the data
+     	var updateGraph = function(family){
 
-         		// Filter the data to include only fruit of interest
-         		var selectFamily = nest.filter(function(d){
-                        return d.key == family;
+     		// Filter the data to include only fruit of interest
+     		var selectFamily = nest.filter(function(d){
+                    return d.key == family;
+                  })
+
+     		// Select all of the grouped elements and update the data
+    	    var selectFamilyGroups = svg.selectAll(".familyGroups")
+    		    .data(selectFamily)
+
+    		    // Select all the lines and transition to new positions
+                selectFamilyGroups.selectAll("path.line")
+                   .data(function(d){
+                      return (d.values);
+                    })
+                    .transition()
+                      .duration(1000)
+                      .attr("d", function(d){
+                        return simpleLine(d.values)
                       })
+     	}
 
-         		// Select all of the grouped elements and update the data
-        	    var selectFamilyGroups = svg.selectAll(".familyGroups")
-        		    .data(selectFamily)
+     	// Run update function when dropdown selection changes
+     	familyMenu.on('change', function(){
 
-        		    // Select all the lines and transition to new positions
-                    selectFamilyGroups.selectAll("path.line")
-                       .data(function(d){
-                          return (d.values);
-                        })
-                        .transition()
-                          .duration(1000)
-                          .attr("d", function(d){
-                            return simpleLine(d.values)
-                          })
-         	}
+     		// Find which family was selected from the dropdown
+     		var selectedFamily = d3.select(this)
+                .select("select")
+                .property("value")
 
-         	// Run update function when dropdown selection changes
-         	familyMenu.on('change', function(){
+            // Run update function with the selected fruit
+            updateGraph(selectedFamily)
+        });
 
-         		// Find which family was selected from the dropdown
-         		var selectedFamily = d3.select(this)
-                    .select("select")
-                    .property("value")
+				// mouseover line --------------------------
 
-                // Run update function with the selected fruit
-                updateGraph(selectedFamily)
-            });
+        var mouseG = svg.append("g")
+          .attr("class", "mouse-over-effects");
 
-			// mouseover line --------------------------
+        mouseG.append("path") // this is the black vertical line to follow mouse
+          .attr("class", "mouse-line")
+          .style("stroke", "black")
+          .style("stroke-width", "1px")
+          .style("opacity", "0");
 
-            var mouseG = svg.append("g")
-              .attr("class", "mouse-over-effects");
 
-            mouseG.append("path") // this is the black vertical line to follow mouse
-              .attr("class", "mouse-line")
-              .style("stroke", "black")
-              .style("stroke-width", "1px")
+        var lines = document.getElementsByClassName('line');
+
+        var mousePerLine = mouseG.selectAll('.mouse-per-line')
+          .data(nest)
+          .enter()
+          .append("g")
+          .attr("class", "mouse-per-line");
+
+        mousePerLine.append("circle")
+          .attr("r", 7)
+          .style("stroke", function(d) {
+            return color(d.key);
+          })
+          .style("fill", "none")
+          .style("stroke-width", "1px")
+          .style("opacity", "0");
+
+        mousePerLine.append("text")
+          .attr("transform", "translate(10,3)");
+
+        mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
+          .attr('width', width) // can't catch mouse events on a g element
+          .attr('height', height)
+          .attr('fill', 'none')
+          .attr('pointer-events', 'all')
+          .on('mouseout', function() { // on mouse out hide line, circles and text
+            d3.select(".mouse-line")
               .style("opacity", "0");
-
-            lines = document.getElementsByClassName('line');
-
-            var mousePerLine = mouseG.selectAll('.mouse-per-line')
-              .data(nest)
-              .enter()
-              .append("g")
-              .attr("class", "mouse-per-line");
-
-            mousePerLine.append("circle")
-              .attr("r", 7)
-              .style("stroke", function(d) {
-                return color(d.key);
-              })
-              .style("fill", "none")
-              .style("stroke-width", "1px")
+            d3.selectAll(".mouse-per-line circle")
               .style("opacity", "0");
-
-            mousePerLine.append("text")
-              .attr("transform", "translate(10,3)");
-
-            mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
-              .attr('width', w) // can't catch mouse events on a g element
-              .attr('height', h)
-              .attr('fill', 'none')
-              .attr('pointer-events', 'all')
-              .on('mouseout', function() { // on mouse out hide line, circles and text
-                d3.select(".mouse-line")
-                  .style("opacity", "0");
-                d3.selectAll(".mouse-per-line circle")
-                  .style("opacity", "0");
-                d3.selectAll(".mouse-per-line text")
-                  .style("opacity", "0");
-              })
-              .on('mouseover', function() { // on mouse in show line, circles and text
-                d3.select(".mouse-line")
-                  .style("opacity", "1");
-                d3.selectAll(".mouse-per-line circle")
-                  .style("opacity", "1");
-                d3.selectAll(".mouse-per-line text")
-                  .style("opacity", "1");
-              })
-              .on('mousemove', function() { // mouse moving over canvas
-                var mouse = d3.mouse(this);
-                d3.select(".mouse-line")
-                  .attr("d", function() {
-                    var d = "M" + mouse[0] + "," + h;
-                    d += " " + mouse[0] + "," + 0;
-                    return d;
-                  });
-
-                d3.selectAll(".mouse-per-line")
-                  .attr("transform", function(d, i) {
-                    console.log(w/mouse[0])
-                    var xIncome = xScale.invert(mouse[0]),
-                        bisect = d3.bisector(function(d) { return d.monthly_income; }).right;
-                        idx = bisect(d.values, xIncome);
-
-                        //var totalLength = initialPlot.node().getTotalLength();
-
-                    var beginning = padding,
-                        end = lines[i].getTotalLength(),
-                        target = null;
-
-                    while (true){
-                      target = Math.floor((beginning + end) / 2);
-                      pos = lines[i].getPointAtLength(target);
-                      if ((target === end || target === beginning) && pos.x !== mouse[0]) {
-                          break;
-                      }
-                      if (pos.x > mouse[0])      end = target;
-                      else if (pos.x < mouse[0]) beginning = target;
-                      else break; //position found
-                    }
-
-                    d3.select(this).select('text')
-                      .text(yScale.invert(pos.y).toFixed(2));
-
-                    return "translate(" + mouse[0] + "," + pos.y +")";
-                  });
+            d3.selectAll(".mouse-per-line text")
+              .style("opacity", "0");
+          })
+          .on('mouseover', function() { // on mouse in show line, circles and text
+            d3.select(".mouse-line")
+              .style("opacity", "1");
+            d3.selectAll(".mouse-per-line circle")
+              .style("opacity", "1");
+            d3.selectAll(".mouse-per-line text")
+              .style("opacity", "1");
+          })
+          .on('mousemove', function() { // mouse moving over canvas
+            var mouse = d3.mouse(this);
+            d3.select(".mouse-line")
+              .attr("d", function() {
+                var d = "M" + mouse[0] + "," + height;
+                d += " " + mouse[0] + "," + 0;
+                return d;
               });
+
+            d3.selectAll(".mouse-per-line")
+              .attr("transform", function(d, i) {
+                console.log(width/mouse[0])
+                var xIncome = xScale.invert(mouse[0]),
+                    bisect = d3.bisector(function(d) { return d.monthly_income; }).right;
+                    idx = bisect(d.values, xIncome);
+
+                var beginning = 0,
+                    end = lines[i].getTotalLength(),
+                    target = null;
+
+                while (true){
+                  target = Math.floor((beginning + end) / 2);
+                  pos = lines[i].getPointAtLength(target);
+                  if ((target === end || target === beginning) && pos.x !== mouse[0]) {
+                      break;
+                  }
+                  if (pos.x > mouse[0])      end = target;
+                  else if (pos.x < mouse[0]) beginning = target;
+                  else break; //position found
+                }
+
+                d3.select(this).select('text')
+                  .text(yScale.invert(pos.y).toFixed(2));
+
+                return "translate(" + mouse[0] + "," + pos.y +")";
+              });
+          });
 			// end mouseover line --------------------------
 
 			// draw y axis with labels and move in from the size by the amount of padding
-            svg.append("g")
-            	.attr("class", "axis")
-                .attr("transform", "translate(" + padding + ",0)")
-                .call(yAxis);
+      svg.append("g")
+      	.attr("class", "axis")
+          .attr("transform", "translate(" + 0 + ",0)")
+          .call(yAxis);
 
-            // draw x axis with labels and move to the bottom of the chart area
-            svg.append("g")
-                .attr("class", "axis")
-                .attr("transform", "translate(0," + (h - padding) + ")")
-                .call(xAxis);
+      // draw x axis with labels and move to the bottom of the chart area
+      svg.append("g")
+          .attr("class", "axis")
+          .attr("transform", "translate(0," + (height) + ")")
+          .call(xAxis);
 
-            });
+    });
 
 		</script>
 	</body>

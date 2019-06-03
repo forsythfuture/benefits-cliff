@@ -54,8 +54,8 @@ benefits %>%
 input_dropdown = alt$binding_select(options=unique_composition)
 
 # filter based on drop down
-drop_down_select = alt$selection_single(fields=list('composition'), 
-                                        bind=input_dropdown, 
+drop_down_select = alt$selection_single(fields=list('composition'),
+                                        bind=input_dropdown,
                                         name='Family ')
 
 # Create a selection that chooses the nearest point & selects based on x-value
