@@ -5,7 +5,7 @@
 #############################################################
 
 library(tidyverse)
-
+# /home/ubuntu/miniconda3/bin/python
 # federal poverty guidelines for 2018 and 2019 ---------------------------
 
 fpg <- data.frame(household_size = rep(seq_len(8), times = 2),
@@ -23,7 +23,7 @@ fpg <- data.frame(household_size = rep(seq_len(8), times = 2),
 
 # create a base data frame that is the household size, household composition, and income
 # columns for all benefit data frames
-incomes <- seq(0, 5000, by=25)
+incomes <- seq(0, 5000, by=10)
 
 # create base composition, and then we will paste sizes on to this
 composition <- c("One adult", "One adult, one child", "One adult, two children", "One adult, three children",
@@ -68,5 +68,12 @@ tanf_base <- tanf_base %>%
 tanf <- tanf_base %>%
   select(composition, monthly_income, payment) %>%
   mutate(benefit = 'Work First (TANF)')
+
+# made_up <- tanf %>%
+#   mutate(payment = round(payment * 1.4, 0),
+#          benefit = 'Made up benefit') %>%
+#   bind_rows(tanf)
+# 
+# write_rds(made_up, 'benefits_tables/data/made_up.rds')
 
 write_rds(tanf, 'benefits_tables/data/work_first.rds')
