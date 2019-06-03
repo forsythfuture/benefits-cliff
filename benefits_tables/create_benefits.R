@@ -1,6 +1,6 @@
 #############################################################
 #
-# THis script creates tables of benefits
+# This script creates tables of benefits
 #
 #############################################################
 
@@ -74,6 +74,9 @@ tanf <- tanf_base %>%
   select(composition, monthly_income, payment) %>%
   mutate(benefit = 'Work First (TANF)')
 
+# make a copy of TANF to start a cumulative benefits dataframe
+benefits_master <- tanf
+
 # made_up <- tanf %>%
 #   mutate(payment = round(payment * 1.4, 0),
 #          benefit = 'Made up benefit') %>%
@@ -139,7 +142,9 @@ snap <- snap %>%
         # subtract shelter deduction from net income
         net_income = net_income - shelter_ded,
         # family is expected to contribute 30% of income to food
-        family_contribution = net_income * .3)
+        family_contribution = net_income * .3,
+        # convert this amount to 0 if it is negative
+        family_contribution = ifelse(family_contribution < 0, 0, family_contribution))
 
 # SNAP max allotment amounts Oct 2018 - Sep 2019
 snap_amounts <- c(`1` = 192,
@@ -150,9 +155,25 @@ snap_amounts <- c(`1` = 192,
                   `6` = 914,
                   `7` = 1011,
                   `8` = 1155)
-head(fpg)
-# add benefit amounts to dataset
-snap <- snap %>%
-  mutate(max_allotment = recode(.$size, !!!snap_amounts))
 
-(snap)
+# maximum income is set at 130% of federal poverty guideline
+# convert guideline amounts to 130% and filter for 2018
+snap_income_limit <- fpg %>%
+  filter(year == 2018) %>%
+  mutate(snap_income_limit = round(guidelines_month * 1.3, 0)) %>%
+  rename(size = household_size) %>%
+  select(size, snap_income_limit)
+
+# add benefit and income limit amounts to dataset
+snap <- snap %>%
+  mutate(max_allotment = recode(.$size, !!!snap_amounts)) %>%
+  left_join(snap_income_limit, by = "size") %>%
+  # find benefit amount by subtracting family contribution from maximum benefit
+  mutate(snap_amount = max_allotment - family_contribution,
+        # for families over 130% of federal poverty line, make benefit 0
+        snap_amount = ifelse(monthly_income > snap_income_limit, 0, snap_amount))
+
+# end SNAP ---------------------------------------------------------------------
+
+
+tail(snap)
