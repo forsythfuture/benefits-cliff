@@ -14,6 +14,11 @@ benefits <- read_rds("benefits_tables/data/made_up.rds")
 #benefits_slim <- benefits %>%
 #  filter(composition == 'One adult, three children')
 
+# make different datasets for each benefti group
+# needed so each benefit type can be its own trace
+benefit_wide <- benefits%>%
+  pivot_wider(names_from = 'benefit', values_from = 'payment')
+
 # unique benefits values for drop down
 unique_composition <- as.character(unique(benefits$composition))
 
@@ -26,17 +31,25 @@ drop_down_values <- map(unique_composition, function(x) {
 
 # plotly
 
+tooltip_benefits <- function() {
+  ~paste0("Benefit: ", benefit,
+          "<br>Monthly Payment:  $", payment,
+          "<br>Monthly Wages:  $", monthly_income)
+}
+
 benefits %>%
   plot_ly(x=~monthly_income, y=~payment, color=~benefit,
           type = 'scatter', mode = 'lines',
+          # tooltip info
+          hoverinfo = 'text',
+          text = tooltip_benefits(),
           transforms = list(
             list(
               type = 'filter',
               target = ~composition,
               operation = '=',
               value = unique_composition[1])
-          )
-  ) %>%
+          )) %>%
   layout(
     updatemenus = list(
       list(
@@ -44,8 +57,11 @@ benefits %>%
         active = 0,
         buttons = drop_down_values
       )
-    )
-  )
+    ),
+    xaxis = list(title="Monthly Wages", tickformat = "$"),
+    yaxis = list(title="Monthly Benefit Payment", tickformat = "$")
+  ) %>%
+  config(displayModeBar = FALSE)
 
 
 #####################################################################3
