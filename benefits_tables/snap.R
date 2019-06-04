@@ -94,3 +94,5 @@ snap <- snap %>%
         # for families over 130% of federal poverty line, make benefit 0
         payment = ifelse(monthly_income > snap_income_limit, 0, snap_amount)) %>%
   select(composition, monthly_income, payment, benefit)
+
+write_rds(snap, 'benefits_tables/tables/snap.rds')

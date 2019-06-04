@@ -47,6 +47,9 @@
 			var xAxis = d3.axisBottom(xScale);
 			var yAxis = d3.axisLeft(yScale);
 
+			// set the colour scale for lines
+			var color = d3.scaleOrdinal(d3.schemeCategory10);
+
 			var bisectIncome = d3.bisector(function(d) { return d.monthly_income; }).left;
 
 			// Create line element
@@ -61,18 +64,41 @@
 			  .append("g")
 			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-			// Nest the data by composition (family type) and benefit type
-            var nest = d3.nest()
-        	  .key(function(d){
-        	    return d.composition;
-        	  })
-        	  .key(function(d){
-        	  	return d.benefit;
-        	  })
-        	  .entries(data);
+			// add legend
+			var legend = svg.selectAll('g')
+	        .data(d3.map(data, function(d){return d.benefit;}).keys())
+	        .enter()
+	      .append('g')
+	        .attr('class', 'legend');
 
-			// set the colour scale for lines
-			var color = d3.scaleOrdinal(d3.schemeCategory10);
+			var yLegendOffest = 30
+
+	    legend.append('circle')
+	        .attr('cx', width - 200)
+	        .attr('cy', function(d, i){ return (i *  20) + yLegendOffest;})
+					.attr('r', 7)
+	        //.attr('width', 10)
+	        //.attr('height', 10)
+	        .style('fill', function(d) {
+	          return color(d);
+	        });
+
+			legend.append('text')
+				.attr('x', width - 180)
+				.attr('y', function(d, i){ return ((i *  20) + 5) + yLegendOffest;})
+				.text(function(d){ return d; });
+
+			// end legend
+
+			// Nest the data by composition (family type) and benefit type
+      var nest = d3.nest()
+  	  .key(function(d){
+  	    return d.composition;
+  	  })
+  	  .key(function(d){
+  	  	return d.benefit;
+  	  })
+  	  .entries(data);
 
 			// variable for vertical lines
 			var focus = svg.append("g")
@@ -82,24 +108,21 @@
 			var familyMenu = d3.select("#familyDropdown");
 
 			// population drop-down menu
-            familyMenu
-        		.append("select")
-        		.selectAll("option")
-                .data(nest)
-                .enter()
-                .append("option")
-                .attr("value", function(d){
-                    return d.key;
-                })
-                .text(function(d){
-                    return d.key;
-                });
+      familyMenu
+	  		.append("select")
+	  		.selectAll("option")
+	          .data(nest)
+	          .enter()
+	          .append("option")
+	          .attr("value", function(d){
+	              return d.key;
+	          })
+	          .text(function(d){
+	              return d.key;
+	          });
 
          	// Function to create the initial graph
          	var initialGraph = function(family){
-
-         	    // set the colour scale for lines
-			    var color = d3.scaleOrdinal(d3.schemeCategory10);
 
          		// Filter the data to include only family composition of interest
          		var selectFamily = nest.filter(function(d){
