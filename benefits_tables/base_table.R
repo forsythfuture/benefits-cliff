@@ -14,23 +14,22 @@ incomes <- seq(0, 5000, by=10)
 composition <- c("One adult", "One adult, one child", "One adult, two children", "One adult, three children",
                  "Two adults", "Two adults, one child", "Two adults, two children", "Two adults, three children")
 
+# dataframe for number of adutls and children
+adults_children <- data.frame(adults = c(rep(1, 4), rep(2, 4)),
+                              children = c(rep(c(0, 1, 2, 3), 2)))
+
 # sizes should match composition levels
 sizes <- c(seq(1, 4), seq(2, 5))
-
-# create column for number of children
-num_children <- rep(c(0, 1, 2, 3), 2)
 
 # we now need a data frame that lists every income for all composition levels
 
 # create data frame that is just the compositin and size, and we will add incomes later
 comp_size <- data.frame(composition = composition,
-                        size = sizes,
-                        num_children = num_children)
+                        size = sizes) %>%
+  bind_cols(adults_children)
 
 # iterate through each income value, adding that value to the comp_size data frame,
 # then add the data frame to the main data frame containing all incomes
-base <- map_df(incomes, function(x) mutate(comp_size, monthly_income = x)) %>%
-  # add boolean variabe of whether children are in the house
-  mutate(children = ifelse(composition %in% c('One adult', 'Two adults'), F, T))
+base <- map_df(incomes, function(x) mutate(comp_size, monthly_income = x))
 
 write_rds(base, 'benefits_tables/tables/base.rds')

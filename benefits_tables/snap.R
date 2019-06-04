@@ -46,7 +46,7 @@ snap <- snap %>%
     # so add column showing this amount
     ded_20 = monthly_income * .2,
     # for dependent care deduction, assume $60 per child per month
-    dep_care = num_children * 60)
+    dep_care = children * 60)
 
 # calculate SNAP amounts
 snap <- snap %>%
@@ -87,12 +87,13 @@ snap_income_limit <- fpg %>%
 
 # add benefit and income limit amounts to dataset
 snap <- snap %>%
+  arrange(monthly_income, adults, children) %>%
   mutate(max_allotment = recode(.$size, !!!snap_amounts)) %>%
   left_join(snap_income_limit, by = "size") %>%
   # find benefit amount by subtracting family contribution from maximum benefit
   mutate(snap_amount = max_allotment - family_contribution,
         # for families over 130% of federal poverty line, make benefit 0
         payment = ifelse(monthly_income > snap_income_limit, 0, snap_amount)) %>%
-  select(composition, monthly_income, payment, benefit)
+  select(composition, adults, children, monthly_income, payment, benefit)
 
 write_rds(snap, 'benefits_tables/tables/snap.rds')
