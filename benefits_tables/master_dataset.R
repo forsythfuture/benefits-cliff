@@ -13,6 +13,8 @@ master <- bind_rows(
   list(
     read_rds(str_c(file_dir, 'work_first.rds')),
     read_rds(str_c(file_dir, 'snap.rds'))
-  ))
+  )) %>%
+  arrange(monthly_income, adults, children) %>%
+  select(-adults, -children)
 
 write_csv(master, "plots/benefits.csv")
