@@ -10,6 +10,21 @@
               stroke: #EF5285;
               stroke-width: 2px;
             }
+
+			body {
+			  font-family: Helvetica, Sans-serif;
+			}
+
+			.grid line {
+			  stroke: lightgrey;
+			  stroke-opacity: 0.7;
+			  shape-rendering: crispEdges;
+			}
+
+			.grid path {
+			  stroke-width: 0;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -20,7 +35,7 @@
 
 
 		//create margins
-		var margin = {top: 20, right: 30, bottom: 20, left: 30};
+		var margin = {top: 20, right: 30, bottom: 60, left: 70};
 
 		var width = 960 - margin.left - margin.right,
   			height = 500 - margin.top - margin.bottom;
@@ -35,6 +50,18 @@
               };
             }).then(function(data) {
 
+			// gridlines in x axis function
+			function make_x_gridlines() {
+			    return d3.axisBottom(xScale)
+			        //.ticks(10)
+			}
+
+			// gridlines in y axis function
+			function make_y_gridlines() {
+			    return d3.axisLeft(yScale)
+			        //.ticks(10)
+			}
+
       // scales
 			var xScale = d3.scaleLinear()
 							.domain([0, d3.max(data, function(d) { return d.monthly_income; })])
@@ -43,9 +70,14 @@
 			var yScale = d3.scaleLinear()
 							.domain([0, d3.max(data, function(d) { return d.payment; })])
 							.range([height, 0]);
+
+			var dollarFormat = d3.format("$")
+
 			// axes
-			var xAxis = d3.axisBottom(xScale);
-			var yAxis = d3.axisLeft(yScale);
+			var xAxis = d3.axisBottom(xScale)
+										.tickFormat(dollarFormat)
+			var yAxis = d3.axisLeft(yScale)
+										.tickFormat(dollarFormat);
 
 			// set the colour scale for lines
 			var color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -89,6 +121,23 @@
 				.text(function(d){ return d; });
 
 			// end legend
+
+			// add the X gridlines
+		  svg.append("g")
+		      .attr("class", "grid")
+		      .attr("transform", "translate(0," + height + ")")
+		      .call(make_x_gridlines()
+		          .tickSize(-height)
+		          .tickFormat("")
+		      )
+
+		  // add the Y gridlines
+		  svg.append("g")
+		      .attr("class", "grid")
+		      .call(make_y_gridlines()
+		          .tickSize(-width)
+		          .tickFormat("")
+		      )
 
 			// Nest the data by composition (family type) and benefit type
       var nest = d3.nest()
@@ -150,7 +199,7 @@
          	}
 
 			// Create initial graph
-      initialGraph("One adult, three children")
+      initialGraph("One adult")
 
       // Update the data
      	var updateGraph = function(family){
@@ -273,7 +322,8 @@
                 }
 
                 d3.select(this).select('text')
-                  .text(yScale.invert(pos.y).toFixed(2));
+                  .text("Benefit: $" + yScale.invert(pos.y).toFixed(2))
+									.style("font-size", "12px");
 
                 return "translate(" + mouse[0] + "," + pos.y +")";
               });
@@ -291,6 +341,23 @@
           .attr("class", "axis")
           .attr("transform", "translate(0," + (height) + ")")
           .call(xAxis);
+
+			// text label for the x axis
+		  svg.append("text")
+		      .attr("transform",
+		            "translate(" + (width/2) + " ," +
+		                           (height + margin.top + 30) + ")")
+		      .style("text-anchor", "middle")
+		      .text("Monthly Wages");
+
+			// text label for the y axis
+		  svg.append("text")
+		      .attr("transform", "rotate(-90)")
+		      .attr("y", 0 - margin.left)
+		      .attr("x",0 - (height / 2))
+		      .attr("dy", "1em")
+		      .style("text-anchor", "middle")
+		      .text("Benefit Amount");
 
     });
 
