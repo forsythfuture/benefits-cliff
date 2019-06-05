@@ -14,7 +14,8 @@ master <- bind_rows(
     read_rds(str_c(file_dir, 'work_first.rds')),
     read_rds(str_c(file_dir, 'snap.rds')),
     read_rds(str_c(file_dir, 'child_care_subsidy.rds')),
-    read_rds(str_c(file_dir, 'prek.rds'))
+    read_rds(str_c(file_dir, 'prek.rds')),
+    read_rds(str_c(file_dir, 'sec8.rds'))
   )) %>%
   arrange(monthly_income, adults, children) %>%
   select(-adults, -children)

@@ -5,7 +5,6 @@
 ##############################################################################
 
 library(tidyverse)
-library(tidycensus)
 
 prek <- read_rds('benefits_tables/tables/base.rds')
 

@@ -16,7 +16,8 @@ care <- read_rds('benefits_tables/tables/base.rds')
 market_rates <- c(`0` = 0,
                   `1` = 750,
                   `2` = 1605, # 855 + 750 (infant plut 3 to 5)
-                  `3` = 1605)
+                  `3` = 1605 # for three child families, only two are under 5
+                  )
 
 # create new column for market rates, which signifies benefit level
 care <- care %>%
