@@ -1,6 +1,6 @@
 ###############################################################
 #
-# State and fedreal child cre subsidies
+# State and fedreal child care subsidies
 #
 ##############################################################
 

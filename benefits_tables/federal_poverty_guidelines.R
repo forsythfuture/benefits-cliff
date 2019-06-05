@@ -1,3 +1,11 @@
+################################################################################
+#
+# create federal poverty guidelines
+#
+###############################################################################
+
+library(tidyverse)
+
 # federal poverty guidelines for 2018 and 2019 ---------------------------
 
 fpg <- data.frame(household_size = rep(seq_len(8), times = 2),
