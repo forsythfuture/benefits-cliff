@@ -5,7 +5,6 @@
 ###############################################################################
 
 library(tidyverse)
-library(plotly)
 
 # read in data ----------------------------------------------------------------
 
@@ -23,10 +22,16 @@ tax <- read_csv('tax_liability/tax_outputs.csv') %>%
 # read in dataset of all benefits
 benefits <- read_csv("plots/benefits.csv") %>%
   # don't include pre-k subsidies
-  filter(benefit != "NC pre-K") %>%
+  filter(benefit != "NC pre-K")
+
+child_care <- benefits %>%
+  filter(benefit == "Child care subsidy")
+
+benefits <- benefits %>%
   # sum total benefits for each family type / income
   group_by(composition, monthly_income) %>%
-  summarize(payment = sum(payment))
+  summarize(payment = sum(payment),
+            benefit = "TANF, SNAP, Housing, EITC")
 
 # clean data -------------------------------------------------------------------
 
@@ -49,65 +54,14 @@ master <- bind_cols(base, tax) %>%
 # currently they are in different columns, convert them into different rows
 master <- master %>%
   pivot_longer(c('aftertax_income', 'net_income'),
-               names_to = "benefit", values_to = "payment") %>%
-  mutate(benefit = str_replace_all(benefit, "^after.*", "After-tax income"),
-         benefit = str_replace_all(benefit, "^net.*", "After-tax income plus benefits"))
+               names_to = "income_source", values_to = "payment") %>%
+  mutate(income_source = str_replace_all(income_source, "^after.*", "After-tax income"),
+         income_source = str_replace_all(income_source, "^net.*", "After-tax income plus benefits"))
 
 # write out as csv for plotting
 write_csv(master, "plots/total_income.csv")
 
 # ----------------
-
-
-# find max x and y values, will be used for range of plot
-x_max <- max(master$monthly_income)
-y_max <- max(master$payment)
-
-# unique benefits values for drop down
-unique_composition <- as.character(unique(master$composition))
-
-# create list of arguments for drop down arrows
-drop_down_values <- map(unique_composition, function(x) {
-  list(method = "restyle",
-       args = list("transforms[0].value", x),
-       label = x)
-})
-
-# plotly
-
-tooltip_benefits <- function() {
-  ~paste0("Benefit: ", benefit,
-          "<br>Monthly Payment:  $", payment,
-          "<br>Monthly Wages:  $", monthly_income)
-}
-
-master %>%
-  plot_ly(x=~monthly_income, y=~payment, color=~benefit,
-          type = 'scatter', mode = 'lines',
-          # tooltip info
-          hoverinfo = 'text',
-          text = tooltip_benefits(),
-          transforms = list(
-            list(
-              type = 'filter',
-              target = ~composition,
-              operation = '=',
-              value = unique_composition[1])
-          )) %>%
-  layout(
-    updatemenus = list(
-      list(
-        type = 'dropdown',
-        active = 0,
-        buttons = drop_down_values
-      )
-    ),
-    xaxis = list(title="Monthly Wages", tickformat = "$",
-                 range=c(0, x_max)),
-    yaxis = list(title="Monthly Benefit Payment", tickformat = "$",
-                 range=c(0, y_max))
-  ) %>%
-  config(displayModeBar = FALSE)
 
 
 # create dataset of EITC benefits ----------------------------------------------
