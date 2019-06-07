@@ -6,8 +6,25 @@
 
 library(tidyverse)
 library(plotly)
+library(highcharter)
 
-benefits <- read_csv("plots/benefits.csv")
+benefits <- read_csv("plots/benefits.csv") %>%
+  filter(composition == "One adult, three children")
+
+tanf <- benefits %>%
+  filter(benefit == "Work First (TANF)")
+
+row.names(tanf) <- tanf$monthly_income
+
+# highcharts --------------------------------------
+hchart(benefits, hcaes(monthly_income, payment, group=benefit),
+       type="line")
+
+# plotly ---------------------------------------------
+
+# find max x and y values, will be used for range of plot
+x_max <- max(benefits$monthly_income)
+y_max <- max(benefits$payment)
 
 # unique benefits values for drop down
 unique_composition <- as.character(unique(benefits$composition))
@@ -48,7 +65,9 @@ benefits %>%
         buttons = drop_down_values
       )
     ),
-    xaxis = list(title="Monthly Wages", tickformat = "$"),
-    yaxis = list(title="Monthly Benefit Payment", tickformat = "$")
+    xaxis = list(title="Monthly Wages", tickformat = "$",
+                 range=c(0, x_max)),
+    yaxis = list(title="Monthly Benefit Payment", tickformat = "$",
+                 range=c(0, y_max))
   ) %>%
   config(displayModeBar = FALSE)
