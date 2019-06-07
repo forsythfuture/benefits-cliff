@@ -43,6 +43,8 @@ housing <- housing %>%
         income_limits = recode(.$size, !!!income_limits),
         # if income exceeds limits, reduce payment to 0
         payment = ifelse(monthly_income > income_limits, 0, payment),
+        # if payment is negative, make it 0
+        payment = ifelse(payment < 0, 0, payment),
         benefit = "Section 8 public housing") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 

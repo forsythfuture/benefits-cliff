@@ -80,7 +80,7 @@
 										.tickFormat(dollarFormat);
 
 			// set the colour scale for lines
-			var color = d3.scaleOrdinal(d3.schemeCategory10);
+			var color = d3.scaleOrdinal(d3.schemeSet2);
 
 			var bisectIncome = d3.bisector(function(d) { return d.monthly_income; }).left;
 
@@ -204,7 +204,7 @@
       // Update the data
      	var updateGraph = function(family){
 
-     		// Filter the data to include only fruit of interest
+     		// Filter the data to include only family of interest
      		var selectFamily = nest.filter(function(d){
                     return d.key == family;
                   })
@@ -248,7 +248,6 @@
           .style("stroke-width", "1px")
           .style("opacity", "0");
 
-
         var lines = document.getElementsByClassName('line');
 
         var mousePerLine = mouseG.selectAll('.mouse-per-line')
@@ -259,9 +258,7 @@
 
         mousePerLine.append("circle")
           .attr("r", 7)
-          .style("stroke", function(d) {
-            return color(d.key);
-          })
+        	.style("stroke", "grey")
           .style("fill", "none")
           .style("stroke-width", "1px")
           .style("opacity", "0");
@@ -322,7 +319,7 @@
                 }
 
                 d3.select(this).select('text')
-                  .text("Benefit: $" + yScale.invert(pos.y).toFixed(2))
+                  .text("$" + yScale.invert(pos.y).toFixed(2))
 									.style("font-size", "12px");
 
                 return "translate(" + mouse[0] + "," + pos.y +")";
