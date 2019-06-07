@@ -11,14 +11,15 @@ library(highcharter)
 benefits <- read_csv("plots/benefits.csv") %>%
   filter(composition == "One adult, three children")
 
-tanf <- benefits %>%
-  filter(benefit == "Work First (TANF)")
-
-row.names(tanf) <- tanf$monthly_income
-
 # highcharts --------------------------------------
 hchart(benefits, hcaes(monthly_income, payment, group=benefit),
-       type="line")
+       type="line") %>% 
+  hc_xAxis(labels = list(format = "${value}")) %>% 
+  hc_yAxis(labels = list(format = "${value}")) %>%
+  hc_tooltip(pointFormat = 'Monthly wages: ${point.x}
+                            <br>
+  
+                            Benefit: ${point.y}')
 
 # plotly ---------------------------------------------
 
