@@ -11,8 +11,8 @@ library(tidyverse)
 incomes <- seq(0, 5000, by=10)
 
 # create base composition, and then we will paste sizes on to this
-composition <- c("One adult", "One adult, one child", "One adult, two children", "One adult, three children",
-                 "Two adults", "Two adults, one child", "Two adults, two children", "Two adults, three children")
+composition <- c("1 adult", "1 adult, 1 child", "1 adult, 2 children", "1 adult, 3 children",
+                 "2 adults", "2 adults, 1 child", "2 adults, 2 children", "2 adults, 3 children")
 
 # dataframe for number of adutls and children
 adults_children <- data.frame(adults = c(rep(1, 4), rep(2, 4)),
