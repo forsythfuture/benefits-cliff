@@ -24,16 +24,32 @@ benefits <- read_csv("plots/benefits.csv") %>%
   # don't include pre-k subsidies
   filter(benefit != "NC pre-K")
 
-child_care <- benefits %>%
-  filter(benefit == "Child care subsidy")
-
-benefits <- benefits %>%
-  # sum total benefits for each family type / income
-  group_by(composition, monthly_income) %>%
-  summarize(payment = sum(payment),
-            benefit = "TANF, SNAP, Housing, EITC")
-
 # clean data -------------------------------------------------------------------
+
+# we want to calculate total benefits for two groups:
+# 1) all benefits except child care, and 2) all benefits, including child care
+# we want a non-child care group because we want to plot it separately since it is so high
+no_child_care <- benefits %>%
+  filter(benefit != "Child care subsidy")
+
+# create function that sums all benefits
+sum_benefits <- function(df, benefit_name) {
+  
+  df <- df %>%
+    # sum total benefits for each family type / income
+    group_by(composition, monthly_income) %>%
+    summarize(payment = sum(payment),
+              benefit = benefit_name)
+  
+  return(df)
+}
+
+# sum benefits for all benefits, and for benefits without child care
+total_benefits <- map2(list(benefits, no_child_care), 
+                       list("SNAP, TANF, Housing, EITC", "Child care, SNAP, TANF, Housing, EITC"), 
+                       sum_benefits) %>%
+  bind_rows() %>%
+  ungroup()
 
 # add tax information to base
 # rows are the same
@@ -42,7 +58,7 @@ master <- bind_cols(base, tax) %>%
   # also don't need regular taxable income (c04800)
   select(-c00100, -c04800, -size:-children) %>%
   # add amount received in benefites
-  left_join(benefits, by=c("composition", "monthly_income")) %>%
+  right_join(total_benefits, by=c("composition", "monthly_income")) %>%
   # after tax income currently includes EITC
   # remove EITC from it, so we have a column that is jsut after-tax income without eitc
   mutate(aftertax_income = round(aftertax_income - eitc, 2),
@@ -50,14 +66,23 @@ master <- bind_cols(base, tax) %>%
         net_income = round(aftertax_income + payment + eitc, 2)) %>%
   select(-eitc, -payment)
 
-# we need to stack after tax income and net income into long form;
-# currently they are in different columns, convert them into different rows
-master <- master %>%
-  pivot_longer(c('aftertax_income', 'net_income'),
-               names_to = "income_source", values_to = "payment") %>%
-  mutate(income_source = str_replace_all(income_source, "^after.*", "After-tax income"),
-         income_source = str_replace_all(income_source, "^net.*", "After-tax income plus benefits"))
+rm(base, benefits, no_child_care, tax, total_benefits)
 
+# we need to stack after tax income and net income into long form;
+# currently they are in different columns,
+# make after-tax income its own dataset, then bind to master
+after_tax <- master %>%
+  filter(benefit == "SNAP, TANF, Housing, EITC") %>%
+  select(composition, monthly_income, aftertax_income) %>%
+  rename(net_income = aftertax_income) %>%
+  mutate(benefit = "After-tax income")
+
+# bind after tax income to master
+master <- master %>%
+  select(-aftertax_income) %>%
+  bind_rows(after_tax) %>%
+  rename(payment = net_income)
+  
 # write out as csv for plotting
 write_csv(master, "plots/total_income.csv")
 
