@@ -35,13 +35,13 @@
 
 
 		//create margins
-		var margin = {top: 20, right: 30, bottom: 60, left: 70};
+		var margin = {top: 20, right: 220, bottom: 60, left: 70};
 
 		var width = 960 - margin.left - margin.right,
   			height = 500 - margin.top - margin.bottom;
 
 			// import dataset
-			d3.csv("total_income.csv", function(d) {
+			d3.csv("benefits.csv", function(d) {
               return {
                 composition: d.composition,
                 monthly_income: +d.monthly_income,
@@ -106,7 +106,7 @@
 			var yLegendOffest = 30
 
 	    legend.append('circle')
-	        .attr('cx', width - 200)
+	        .attr('cx', width + 15)
 	        .attr('cy', function(d, i){ return (i *  20) + yLegendOffest;})
 					.attr('r', 7)
 	        //.attr('width', 10)
@@ -116,7 +116,7 @@
 	        });
 
 			legend.append('text')
-				.attr('x', width - 180)
+				.attr('x', width + 28)
 				.attr('y', function(d, i){ return ((i *  20) + 5) + yLegendOffest;})
 				.text(function(d){ return d; });
 
@@ -199,7 +199,7 @@
          	}
 
 			// Create initial graph
-      initialGraph("One adult")
+      initialGraph("1 adult")
 
       // Update the data
      	var updateGraph = function(family){

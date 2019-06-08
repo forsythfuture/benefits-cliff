@@ -19,4 +19,5 @@ master <- bind_rows(
   )) %>%
   arrange(benefit, monthly_income, adults, children)
 
+write_csv(master, "plots/benefits.csv")
 write_rds(master, "plots/benefits.rds")
