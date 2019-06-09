@@ -22,3 +22,9 @@ master <- bind_rows(
 
 write_csv(master, "plots/benefits.csv")
 write_rds(master, "plots/benefits.rds")
+
+base <- fpl <- read_rds(str_c(file_dir, "base.rds"))
+unique(base$composition)
+fpl <- read_rds(str_c(file_dir, "federal_poverty_guidelines.rds"))
+
+fpl

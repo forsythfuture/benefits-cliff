@@ -40,6 +40,44 @@
 		var width = 960 - margin.left - margin.right,
   			height = 500 - margin.top - margin.bottom;
 
+				// JSON dataset of federal poverty federal_poverty_guidelines
+	 		 // will be used to draw vertical lines at 100%, 130%, 185%, and 200% of fpg
+
+ 		 const fpl = [{
+ 			 "name": "1 adult",
+ 			 "levels": {
+ 				 "a": 1012,
+ 				 "b": Math.round(1012 * 1.3),
+ 				 "c": Math.round(1012 * 1.85),
+ 				 "d": Math.round(1012 * 2)
+ 			 }
+ 		 }, {
+ 			 "name": "1 adult, 1 child",
+ 			 "levels": {
+ 				 "a": 1372,
+ 				 "b": Math.round(1372 * 1.3),
+ 				 "c": Math.round(1372 * 1.85),
+ 				 "d": Math.round(1372 * 2)
+ 			 }
+ 		 }, {
+ 			 "name": "1 adult, 2 children",
+ 			 "levels": {
+ 				 "a": 1732,
+ 				 "b": Math.round(1732 * 1.3),
+ 				 "c": Math.round(1732 * 1.85),
+ 				 "d": Math.round(1732 * 2)
+ 			 }
+ 		 }, {
+ 			 "name": "1 adult, 3 children",
+ 			 "levels": {
+ 				 "a": 2092,
+ 				 "b": Math.round(2092 * 1.3),
+ 				 "c": Math.round(2092 * 1.85),
+ 				 "d": Math.round(2092 * 2)
+ 			 }
+ 		 }];
+
+
 			// import dataset
 			d3.csv("benefits.csv", function(d) {
               return {
@@ -196,6 +234,44 @@
         			.attr("class", "line")
         			.style("stroke", function(d) { return color(d.key); })
 
+						// create federal poverty guideline vertical lines ----------------
+
+						// pull out poverty levels for family size, based on family composition selected
+						// from drop down
+						for(var i = 0; i < fpl.length; ++i) {
+							if(fpl[i].name == family) {
+								 var single_fpl = fpl[i]
+								 { break; }
+							 }
+						 }
+
+						 var poverty_levels = ['a', 'b', 'c', 'd']
+						 var poverty_text = ["100%", "130%", "185%", "200%"]
+
+						 for(var i = 0; i < poverty_levels.length; ++i) {
+
+								var fpl_threshold = single_fpl.levels[poverty_levels[i]]
+
+								svg.append('line')//.selectAll(".fgp_lines")
+									.attr("x1", xScale(fpl_threshold))
+									.attr("x2", xScale(fpl_threshold))
+									.attr("y1", height - 420)
+									.attr("y2", height)
+									.style("stroke", "gray")
+									.style("stroke-width", 2)
+									.style("stroke-dasharray", "2,2")
+									.attr("class", poverty_levels[i])
+
+								svg.append('text')
+									.attr("x", xScale(fpl_threshold + 30))
+									.attr("y", height - 416)
+									.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 416) + ')')
+									.attr("font-size", "12px")
+									.text(poverty_text[i] + "  FPG")
+									.attr("class", poverty_levels[i]+"_text")
+
+								}
+								// end lines for federal poverty levels
          	}
 
 			// Create initial graph
@@ -210,20 +286,51 @@
                   })
 
      		// Select all of the grouped elements and update the data
-    	    var selectFamilyGroups = svg.selectAll(".familyGroups")
-    		    .data(selectFamily)
+  	    var selectFamilyGroups = svg.selectAll(".familyGroups")
+  		    .data(selectFamily)
 
-    		    // Select all the lines and transition to new positions
-                selectFamilyGroups.selectAll("path.line")
-                   .data(function(d){
-                      return (d.values);
-                    })
-                    .transition()
-                      .duration(1000)
-                      .attr("d", function(d){
-                        return simpleLine(d.values)
-                      })
-     	}
+  		    // Select all the lines and transition to new positions
+          selectFamilyGroups.selectAll("path.line")
+             .data(function(d){
+                return (d.values);
+              })
+              .transition()
+                .duration(1000)
+                .attr("d", function(d){
+                  return simpleLine(d.values)
+                });
+
+				// add lines for poverty poverty_levels
+				for(var i = 0; i < fpl.length; ++i) {
+					if(fpl[i].name == family) {
+						 var single_fpl = fpl[i]
+						 { break; }
+					 }
+				 }
+
+				 var poverty_levels = ['a', 'b', 'c', 'd']
+				 var poverty_text = ["100%", "130%", "185%", "200%"]
+
+				 for(var i = 0; i < poverty_levels.length; ++i) {
+
+						var fpl_threshold = single_fpl.levels[poverty_levels[i]]
+
+						svg.selectAll("."+poverty_levels[i])
+						.transition()
+							.duration(1000)
+							.attr("x1", xScale(fpl_threshold))
+							.attr("x2", xScale(fpl_threshold))
+
+						svg.selectAll("."+poverty_levels[i]+"_text")
+						.transition()
+							.duration(1000)
+							.attr("x", xScale(fpl_threshold  + 30))
+							.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 416) + ')')
+				}
+
+				// end lines for poverty levels
+
+			}
 
      	// Run update function when dropdown selection changes
      	familyMenu.on('change', function(){
@@ -233,7 +340,7 @@
                 .select("select")
                 .property("value")
 
-            // Run update function with the selected fruit
+            // Run update function with the selected family composition
             updateGraph(selectedFamily)
         });
 
@@ -308,7 +415,7 @@
                     target = null;
 
                 while (true){
-                  target = Math.floor((beginning + end) / 2);
+                  target =  Math.floor((beginning + end) / 2);
                   pos = lines[i].getPointAtLength(target);
                   if ((target === end || target === beginning) && pos.x !== mouse[0]) {
                       break;
