@@ -35,7 +35,7 @@
 
 
 		//create margins
-		var margin = {top: 20, right: 220, bottom: 60, left: 70};
+		var margin = {top: 20, right: 300, bottom: 60, left: 70};
 
 		var width = 960 - margin.left - margin.right,
   			height = 500 - margin.top - margin.bottom;
@@ -75,11 +75,43 @@
  				 "c": Math.round(2092 * 1.85),
  				 "d": Math.round(2092 * 2)
  			 }
+ 		 }, {
+ 			 "name": "2 adults",
+ 			 "levels": {
+ 				 "a": 1372,
+ 				 "b": Math.round(1372 * 1.3),
+ 				 "c": Math.round(1372 * 1.85),
+ 				 "d": Math.round(1372 * 2)
+ 			 }
+ 		 }, {
+ 			 "name": "2 adults, 1 child",
+ 			 "levels": {
+ 				 "a": 1732,
+ 				 "b": Math.round(1732 * 1.3),
+ 				 "c": Math.round(1732 * 1.85),
+ 				 "d": Math.round(1732 * 2)
+ 			 }
+ 		 }, {
+ 			 "name": "2 adults, 2 children",
+ 			 "levels": {
+ 				 "a": 2092,
+ 				 "b": Math.round(2092 * 1.3),
+ 				 "c": Math.round(2092 * 1.85),
+ 				 "d": Math.round(2092 * 2)
+ 			 }
+ 		 }, {
+ 			 "name": "2 adults, 3 children",
+ 			 "levels": {
+ 				 "a": 2452,
+ 				 "b": Math.round(2452 * 1.3),
+ 				 "c": Math.round(2452 * 1.85),
+ 				 "d": Math.round(2452 * 2)
+ 			 }
  		 }];
 
 
 			// import dataset
-			d3.csv("benefits.csv", function(d) {
+			d3.csv("https://ff-plots.s3.amazonaws.com/data/total_income.csv", function(d) {
               return {
                 composition: d.composition,
                 monthly_income: +d.monthly_income,
@@ -141,7 +173,7 @@
 	      .append('g')
 	        .attr('class', 'legend');
 
-			var yLegendOffest = 30
+			var yLegendOffest = 10
 
 	    legend.append('circle')
 	        .attr('cx', width + 15)
@@ -156,7 +188,8 @@
 			legend.append('text')
 				.attr('x', width + 28)
 				.attr('y', function(d, i){ return ((i *  20) + 5) + yLegendOffest;})
-				.text(function(d){ return d; });
+				.text(function(d){ return d; })
+				.attr("font-size", "14px");
 
 			// end legend
 
@@ -269,6 +302,7 @@
 									.attr("font-size", "12px")
 									.text(poverty_text[i] + "  FPG")
 									.attr("class", poverty_levels[i]+"_text")
+									.style("fill", "gray")
 
 								}
 								// end lines for federal poverty levels
@@ -326,6 +360,7 @@
 							.duration(1000)
 							.attr("x", xScale(fpl_threshold  + 30))
 							.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 416) + ')')
+
 				}
 
 				// end lines for poverty levels
@@ -452,7 +487,7 @@
 		            "translate(" + (width/2) + " ," +
 		                           (height + margin.top + 30) + ")")
 		      .style("text-anchor", "middle")
-		      .text("Monthly Wages");
+		      .text("Monthly W-2 Wages");
 
 			// text label for the y axis
 		  svg.append("text")
@@ -461,7 +496,15 @@
 		      .attr("x",0 - (height / 2))
 		      .attr("dy", "1em")
 		      .style("text-anchor", "middle")
-		      .text("Benefit Amount");
+		      .text("Net Monthly Wages");
+
+			// add text saying that FPG stands for federal poverty guidelines
+			svg.append("text")
+				.attr("x", 10 - margin.left)
+				.attr("y", (height + margin.bottom) - 5)
+				.text("*FPG = Federal Poverty Guideines")
+				.attr("fill", "gray")
+				.attr("font-size", "14px")
 
     });
 

@@ -17664,7 +17664,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2030,126.84,WIC
 "2 adults, 3 children",2,3,2030,126.84,WIC
 1 adult,1,0,2040,0,WIC
-"1 adult, 1 child",1,1,2040,0,WIC
+"1 adult, 1 child",1,1,2040,84.56,WIC
 "1 adult, 2 children",1,2,2040,126.84,WIC
 "1 adult, 3 children",1,3,2040,126.84,WIC
 2 adults,2,0,2040,0,WIC
@@ -17672,7 +17672,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2040,126.84,WIC
 "2 adults, 3 children",2,3,2040,126.84,WIC
 1 adult,1,0,2050,0,WIC
-"1 adult, 1 child",1,1,2050,0,WIC
+"1 adult, 1 child",1,1,2050,84.56,WIC
 "1 adult, 2 children",1,2,2050,126.84,WIC
 "1 adult, 3 children",1,3,2050,126.84,WIC
 2 adults,2,0,2050,0,WIC
@@ -17680,7 +17680,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2050,126.84,WIC
 "2 adults, 3 children",2,3,2050,126.84,WIC
 1 adult,1,0,2060,0,WIC
-"1 adult, 1 child",1,1,2060,0,WIC
+"1 adult, 1 child",1,1,2060,84.56,WIC
 "1 adult, 2 children",1,2,2060,126.84,WIC
 "1 adult, 3 children",1,3,2060,126.84,WIC
 2 adults,2,0,2060,0,WIC
@@ -17688,7 +17688,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2060,126.84,WIC
 "2 adults, 3 children",2,3,2060,126.84,WIC
 1 adult,1,0,2070,0,WIC
-"1 adult, 1 child",1,1,2070,0,WIC
+"1 adult, 1 child",1,1,2070,84.56,WIC
 "1 adult, 2 children",1,2,2070,126.84,WIC
 "1 adult, 3 children",1,3,2070,126.84,WIC
 2 adults,2,0,2070,0,WIC
@@ -17696,7 +17696,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2070,126.84,WIC
 "2 adults, 3 children",2,3,2070,126.84,WIC
 1 adult,1,0,2080,0,WIC
-"1 adult, 1 child",1,1,2080,0,WIC
+"1 adult, 1 child",1,1,2080,84.56,WIC
 "1 adult, 2 children",1,2,2080,126.84,WIC
 "1 adult, 3 children",1,3,2080,126.84,WIC
 2 adults,2,0,2080,0,WIC
@@ -17704,7 +17704,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2080,126.84,WIC
 "2 adults, 3 children",2,3,2080,126.84,WIC
 1 adult,1,0,2090,0,WIC
-"1 adult, 1 child",1,1,2090,0,WIC
+"1 adult, 1 child",1,1,2090,84.56,WIC
 "1 adult, 2 children",1,2,2090,126.84,WIC
 "1 adult, 3 children",1,3,2090,126.84,WIC
 2 adults,2,0,2090,0,WIC
@@ -17712,7 +17712,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2090,126.84,WIC
 "2 adults, 3 children",2,3,2090,126.84,WIC
 1 adult,1,0,2100,0,WIC
-"1 adult, 1 child",1,1,2100,0,WIC
+"1 adult, 1 child",1,1,2100,84.56,WIC
 "1 adult, 2 children",1,2,2100,126.84,WIC
 "1 adult, 3 children",1,3,2100,126.84,WIC
 2 adults,2,0,2100,0,WIC
@@ -17720,7 +17720,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2100,126.84,WIC
 "2 adults, 3 children",2,3,2100,126.84,WIC
 1 adult,1,0,2110,0,WIC
-"1 adult, 1 child",1,1,2110,0,WIC
+"1 adult, 1 child",1,1,2110,84.56,WIC
 "1 adult, 2 children",1,2,2110,126.84,WIC
 "1 adult, 3 children",1,3,2110,126.84,WIC
 2 adults,2,0,2110,0,WIC
@@ -17728,7 +17728,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2110,126.84,WIC
 "2 adults, 3 children",2,3,2110,126.84,WIC
 1 adult,1,0,2120,0,WIC
-"1 adult, 1 child",1,1,2120,0,WIC
+"1 adult, 1 child",1,1,2120,84.56,WIC
 "1 adult, 2 children",1,2,2120,126.84,WIC
 "1 adult, 3 children",1,3,2120,126.84,WIC
 2 adults,2,0,2120,0,WIC
@@ -17736,7 +17736,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2120,126.84,WIC
 "2 adults, 3 children",2,3,2120,126.84,WIC
 1 adult,1,0,2130,0,WIC
-"1 adult, 1 child",1,1,2130,0,WIC
+"1 adult, 1 child",1,1,2130,84.56,WIC
 "1 adult, 2 children",1,2,2130,126.84,WIC
 "1 adult, 3 children",1,3,2130,126.84,WIC
 2 adults,2,0,2130,0,WIC
@@ -17744,7 +17744,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2130,126.84,WIC
 "2 adults, 3 children",2,3,2130,126.84,WIC
 1 adult,1,0,2140,0,WIC
-"1 adult, 1 child",1,1,2140,0,WIC
+"1 adult, 1 child",1,1,2140,84.56,WIC
 "1 adult, 2 children",1,2,2140,126.84,WIC
 "1 adult, 3 children",1,3,2140,126.84,WIC
 2 adults,2,0,2140,0,WIC
@@ -17752,7 +17752,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2140,126.84,WIC
 "2 adults, 3 children",2,3,2140,126.84,WIC
 1 adult,1,0,2150,0,WIC
-"1 adult, 1 child",1,1,2150,0,WIC
+"1 adult, 1 child",1,1,2150,84.56,WIC
 "1 adult, 2 children",1,2,2150,126.84,WIC
 "1 adult, 3 children",1,3,2150,126.84,WIC
 2 adults,2,0,2150,0,WIC
@@ -17760,7 +17760,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2150,126.84,WIC
 "2 adults, 3 children",2,3,2150,126.84,WIC
 1 adult,1,0,2160,0,WIC
-"1 adult, 1 child",1,1,2160,0,WIC
+"1 adult, 1 child",1,1,2160,84.56,WIC
 "1 adult, 2 children",1,2,2160,126.84,WIC
 "1 adult, 3 children",1,3,2160,126.84,WIC
 2 adults,2,0,2160,0,WIC
@@ -17768,7 +17768,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2160,126.84,WIC
 "2 adults, 3 children",2,3,2160,126.84,WIC
 1 adult,1,0,2170,0,WIC
-"1 adult, 1 child",1,1,2170,0,WIC
+"1 adult, 1 child",1,1,2170,84.56,WIC
 "1 adult, 2 children",1,2,2170,126.84,WIC
 "1 adult, 3 children",1,3,2170,126.84,WIC
 2 adults,2,0,2170,0,WIC
@@ -17776,7 +17776,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2170,126.84,WIC
 "2 adults, 3 children",2,3,2170,126.84,WIC
 1 adult,1,0,2180,0,WIC
-"1 adult, 1 child",1,1,2180,0,WIC
+"1 adult, 1 child",1,1,2180,84.56,WIC
 "1 adult, 2 children",1,2,2180,126.84,WIC
 "1 adult, 3 children",1,3,2180,126.84,WIC
 2 adults,2,0,2180,0,WIC
@@ -17784,7 +17784,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2180,126.84,WIC
 "2 adults, 3 children",2,3,2180,126.84,WIC
 1 adult,1,0,2190,0,WIC
-"1 adult, 1 child",1,1,2190,0,WIC
+"1 adult, 1 child",1,1,2190,84.56,WIC
 "1 adult, 2 children",1,2,2190,126.84,WIC
 "1 adult, 3 children",1,3,2190,126.84,WIC
 2 adults,2,0,2190,0,WIC
@@ -17792,7 +17792,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2190,126.84,WIC
 "2 adults, 3 children",2,3,2190,126.84,WIC
 1 adult,1,0,2200,0,WIC
-"1 adult, 1 child",1,1,2200,0,WIC
+"1 adult, 1 child",1,1,2200,84.56,WIC
 "1 adult, 2 children",1,2,2200,126.84,WIC
 "1 adult, 3 children",1,3,2200,126.84,WIC
 2 adults,2,0,2200,0,WIC
@@ -17800,7 +17800,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2200,126.84,WIC
 "2 adults, 3 children",2,3,2200,126.84,WIC
 1 adult,1,0,2210,0,WIC
-"1 adult, 1 child",1,1,2210,0,WIC
+"1 adult, 1 child",1,1,2210,84.56,WIC
 "1 adult, 2 children",1,2,2210,126.84,WIC
 "1 adult, 3 children",1,3,2210,126.84,WIC
 2 adults,2,0,2210,0,WIC
@@ -17808,7 +17808,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2210,126.84,WIC
 "2 adults, 3 children",2,3,2210,126.84,WIC
 1 adult,1,0,2220,0,WIC
-"1 adult, 1 child",1,1,2220,0,WIC
+"1 adult, 1 child",1,1,2220,84.56,WIC
 "1 adult, 2 children",1,2,2220,126.84,WIC
 "1 adult, 3 children",1,3,2220,126.84,WIC
 2 adults,2,0,2220,0,WIC
@@ -17816,7 +17816,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2220,126.84,WIC
 "2 adults, 3 children",2,3,2220,126.84,WIC
 1 adult,1,0,2230,0,WIC
-"1 adult, 1 child",1,1,2230,0,WIC
+"1 adult, 1 child",1,1,2230,84.56,WIC
 "1 adult, 2 children",1,2,2230,126.84,WIC
 "1 adult, 3 children",1,3,2230,126.84,WIC
 2 adults,2,0,2230,0,WIC
@@ -17824,7 +17824,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2230,126.84,WIC
 "2 adults, 3 children",2,3,2230,126.84,WIC
 1 adult,1,0,2240,0,WIC
-"1 adult, 1 child",1,1,2240,0,WIC
+"1 adult, 1 child",1,1,2240,84.56,WIC
 "1 adult, 2 children",1,2,2240,126.84,WIC
 "1 adult, 3 children",1,3,2240,126.84,WIC
 2 adults,2,0,2240,0,WIC
@@ -17832,7 +17832,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2240,126.84,WIC
 "2 adults, 3 children",2,3,2240,126.84,WIC
 1 adult,1,0,2250,0,WIC
-"1 adult, 1 child",1,1,2250,0,WIC
+"1 adult, 1 child",1,1,2250,84.56,WIC
 "1 adult, 2 children",1,2,2250,126.84,WIC
 "1 adult, 3 children",1,3,2250,126.84,WIC
 2 adults,2,0,2250,0,WIC
@@ -17840,7 +17840,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2250,126.84,WIC
 "2 adults, 3 children",2,3,2250,126.84,WIC
 1 adult,1,0,2260,0,WIC
-"1 adult, 1 child",1,1,2260,0,WIC
+"1 adult, 1 child",1,1,2260,84.56,WIC
 "1 adult, 2 children",1,2,2260,126.84,WIC
 "1 adult, 3 children",1,3,2260,126.84,WIC
 2 adults,2,0,2260,0,WIC
@@ -17848,7 +17848,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2260,126.84,WIC
 "2 adults, 3 children",2,3,2260,126.84,WIC
 1 adult,1,0,2270,0,WIC
-"1 adult, 1 child",1,1,2270,0,WIC
+"1 adult, 1 child",1,1,2270,84.56,WIC
 "1 adult, 2 children",1,2,2270,126.84,WIC
 "1 adult, 3 children",1,3,2270,126.84,WIC
 2 adults,2,0,2270,0,WIC
@@ -17856,7 +17856,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2270,126.84,WIC
 "2 adults, 3 children",2,3,2270,126.84,WIC
 1 adult,1,0,2280,0,WIC
-"1 adult, 1 child",1,1,2280,0,WIC
+"1 adult, 1 child",1,1,2280,84.56,WIC
 "1 adult, 2 children",1,2,2280,126.84,WIC
 "1 adult, 3 children",1,3,2280,126.84,WIC
 2 adults,2,0,2280,0,WIC
@@ -17864,7 +17864,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2280,126.84,WIC
 "2 adults, 3 children",2,3,2280,126.84,WIC
 1 adult,1,0,2290,0,WIC
-"1 adult, 1 child",1,1,2290,0,WIC
+"1 adult, 1 child",1,1,2290,84.56,WIC
 "1 adult, 2 children",1,2,2290,126.84,WIC
 "1 adult, 3 children",1,3,2290,126.84,WIC
 2 adults,2,0,2290,0,WIC
@@ -17872,7 +17872,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2290,126.84,WIC
 "2 adults, 3 children",2,3,2290,126.84,WIC
 1 adult,1,0,2300,0,WIC
-"1 adult, 1 child",1,1,2300,0,WIC
+"1 adult, 1 child",1,1,2300,84.56,WIC
 "1 adult, 2 children",1,2,2300,126.84,WIC
 "1 adult, 3 children",1,3,2300,126.84,WIC
 2 adults,2,0,2300,0,WIC
@@ -17880,7 +17880,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2300,126.84,WIC
 "2 adults, 3 children",2,3,2300,126.84,WIC
 1 adult,1,0,2310,0,WIC
-"1 adult, 1 child",1,1,2310,0,WIC
+"1 adult, 1 child",1,1,2310,84.56,WIC
 "1 adult, 2 children",1,2,2310,126.84,WIC
 "1 adult, 3 children",1,3,2310,126.84,WIC
 2 adults,2,0,2310,0,WIC
@@ -17888,7 +17888,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2310,126.84,WIC
 "2 adults, 3 children",2,3,2310,126.84,WIC
 1 adult,1,0,2320,0,WIC
-"1 adult, 1 child",1,1,2320,0,WIC
+"1 adult, 1 child",1,1,2320,84.56,WIC
 "1 adult, 2 children",1,2,2320,126.84,WIC
 "1 adult, 3 children",1,3,2320,126.84,WIC
 2 adults,2,0,2320,0,WIC
@@ -17896,7 +17896,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2320,126.84,WIC
 "2 adults, 3 children",2,3,2320,126.84,WIC
 1 adult,1,0,2330,0,WIC
-"1 adult, 1 child",1,1,2330,0,WIC
+"1 adult, 1 child",1,1,2330,84.56,WIC
 "1 adult, 2 children",1,2,2330,126.84,WIC
 "1 adult, 3 children",1,3,2330,126.84,WIC
 2 adults,2,0,2330,0,WIC
@@ -17904,7 +17904,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2330,126.84,WIC
 "2 adults, 3 children",2,3,2330,126.84,WIC
 1 adult,1,0,2340,0,WIC
-"1 adult, 1 child",1,1,2340,0,WIC
+"1 adult, 1 child",1,1,2340,84.56,WIC
 "1 adult, 2 children",1,2,2340,126.84,WIC
 "1 adult, 3 children",1,3,2340,126.84,WIC
 2 adults,2,0,2340,0,WIC
@@ -17912,7 +17912,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2340,126.84,WIC
 "2 adults, 3 children",2,3,2340,126.84,WIC
 1 adult,1,0,2350,0,WIC
-"1 adult, 1 child",1,1,2350,0,WIC
+"1 adult, 1 child",1,1,2350,84.56,WIC
 "1 adult, 2 children",1,2,2350,126.84,WIC
 "1 adult, 3 children",1,3,2350,126.84,WIC
 2 adults,2,0,2350,0,WIC
@@ -17920,7 +17920,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2350,126.84,WIC
 "2 adults, 3 children",2,3,2350,126.84,WIC
 1 adult,1,0,2360,0,WIC
-"1 adult, 1 child",1,1,2360,0,WIC
+"1 adult, 1 child",1,1,2360,84.56,WIC
 "1 adult, 2 children",1,2,2360,126.84,WIC
 "1 adult, 3 children",1,3,2360,126.84,WIC
 2 adults,2,0,2360,0,WIC
@@ -17928,7 +17928,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2360,126.84,WIC
 "2 adults, 3 children",2,3,2360,126.84,WIC
 1 adult,1,0,2370,0,WIC
-"1 adult, 1 child",1,1,2370,0,WIC
+"1 adult, 1 child",1,1,2370,84.56,WIC
 "1 adult, 2 children",1,2,2370,126.84,WIC
 "1 adult, 3 children",1,3,2370,126.84,WIC
 2 adults,2,0,2370,0,WIC
@@ -17936,7 +17936,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2370,126.84,WIC
 "2 adults, 3 children",2,3,2370,126.84,WIC
 1 adult,1,0,2380,0,WIC
-"1 adult, 1 child",1,1,2380,0,WIC
+"1 adult, 1 child",1,1,2380,84.56,WIC
 "1 adult, 2 children",1,2,2380,126.84,WIC
 "1 adult, 3 children",1,3,2380,126.84,WIC
 2 adults,2,0,2380,0,WIC
@@ -17944,7 +17944,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2380,126.84,WIC
 "2 adults, 3 children",2,3,2380,126.84,WIC
 1 adult,1,0,2390,0,WIC
-"1 adult, 1 child",1,1,2390,0,WIC
+"1 adult, 1 child",1,1,2390,84.56,WIC
 "1 adult, 2 children",1,2,2390,126.84,WIC
 "1 adult, 3 children",1,3,2390,126.84,WIC
 2 adults,2,0,2390,0,WIC
@@ -17952,7 +17952,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2390,126.84,WIC
 "2 adults, 3 children",2,3,2390,126.84,WIC
 1 adult,1,0,2400,0,WIC
-"1 adult, 1 child",1,1,2400,0,WIC
+"1 adult, 1 child",1,1,2400,84.56,WIC
 "1 adult, 2 children",1,2,2400,126.84,WIC
 "1 adult, 3 children",1,3,2400,126.84,WIC
 2 adults,2,0,2400,0,WIC
@@ -17960,7 +17960,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2400,126.84,WIC
 "2 adults, 3 children",2,3,2400,126.84,WIC
 1 adult,1,0,2410,0,WIC
-"1 adult, 1 child",1,1,2410,0,WIC
+"1 adult, 1 child",1,1,2410,84.56,WIC
 "1 adult, 2 children",1,2,2410,126.84,WIC
 "1 adult, 3 children",1,3,2410,126.84,WIC
 2 adults,2,0,2410,0,WIC
@@ -17968,7 +17968,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2410,126.84,WIC
 "2 adults, 3 children",2,3,2410,126.84,WIC
 1 adult,1,0,2420,0,WIC
-"1 adult, 1 child",1,1,2420,0,WIC
+"1 adult, 1 child",1,1,2420,84.56,WIC
 "1 adult, 2 children",1,2,2420,126.84,WIC
 "1 adult, 3 children",1,3,2420,126.84,WIC
 2 adults,2,0,2420,0,WIC
@@ -17976,7 +17976,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2420,126.84,WIC
 "2 adults, 3 children",2,3,2420,126.84,WIC
 1 adult,1,0,2430,0,WIC
-"1 adult, 1 child",1,1,2430,0,WIC
+"1 adult, 1 child",1,1,2430,84.56,WIC
 "1 adult, 2 children",1,2,2430,126.84,WIC
 "1 adult, 3 children",1,3,2430,126.84,WIC
 2 adults,2,0,2430,0,WIC
@@ -17984,7 +17984,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2430,126.84,WIC
 "2 adults, 3 children",2,3,2430,126.84,WIC
 1 adult,1,0,2440,0,WIC
-"1 adult, 1 child",1,1,2440,0,WIC
+"1 adult, 1 child",1,1,2440,84.56,WIC
 "1 adult, 2 children",1,2,2440,126.84,WIC
 "1 adult, 3 children",1,3,2440,126.84,WIC
 2 adults,2,0,2440,0,WIC
@@ -17992,7 +17992,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2440,126.84,WIC
 "2 adults, 3 children",2,3,2440,126.84,WIC
 1 adult,1,0,2450,0,WIC
-"1 adult, 1 child",1,1,2450,0,WIC
+"1 adult, 1 child",1,1,2450,84.56,WIC
 "1 adult, 2 children",1,2,2450,126.84,WIC
 "1 adult, 3 children",1,3,2450,126.84,WIC
 2 adults,2,0,2450,0,WIC
@@ -18000,7 +18000,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2450,126.84,WIC
 "2 adults, 3 children",2,3,2450,126.84,WIC
 1 adult,1,0,2460,0,WIC
-"1 adult, 1 child",1,1,2460,0,WIC
+"1 adult, 1 child",1,1,2460,84.56,WIC
 "1 adult, 2 children",1,2,2460,126.84,WIC
 "1 adult, 3 children",1,3,2460,126.84,WIC
 2 adults,2,0,2460,0,WIC
@@ -18008,7 +18008,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2460,126.84,WIC
 "2 adults, 3 children",2,3,2460,126.84,WIC
 1 adult,1,0,2470,0,WIC
-"1 adult, 1 child",1,1,2470,0,WIC
+"1 adult, 1 child",1,1,2470,84.56,WIC
 "1 adult, 2 children",1,2,2470,126.84,WIC
 "1 adult, 3 children",1,3,2470,126.84,WIC
 2 adults,2,0,2470,0,WIC
@@ -18016,7 +18016,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2470,126.84,WIC
 "2 adults, 3 children",2,3,2470,126.84,WIC
 1 adult,1,0,2480,0,WIC
-"1 adult, 1 child",1,1,2480,0,WIC
+"1 adult, 1 child",1,1,2480,84.56,WIC
 "1 adult, 2 children",1,2,2480,126.84,WIC
 "1 adult, 3 children",1,3,2480,126.84,WIC
 2 adults,2,0,2480,0,WIC
@@ -18024,7 +18024,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2480,126.84,WIC
 "2 adults, 3 children",2,3,2480,126.84,WIC
 1 adult,1,0,2490,0,WIC
-"1 adult, 1 child",1,1,2490,0,WIC
+"1 adult, 1 child",1,1,2490,84.56,WIC
 "1 adult, 2 children",1,2,2490,126.84,WIC
 "1 adult, 3 children",1,3,2490,126.84,WIC
 2 adults,2,0,2490,0,WIC
@@ -18032,7 +18032,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2490,126.84,WIC
 "2 adults, 3 children",2,3,2490,126.84,WIC
 1 adult,1,0,2500,0,WIC
-"1 adult, 1 child",1,1,2500,0,WIC
+"1 adult, 1 child",1,1,2500,84.56,WIC
 "1 adult, 2 children",1,2,2500,126.84,WIC
 "1 adult, 3 children",1,3,2500,126.84,WIC
 2 adults,2,0,2500,0,WIC
@@ -18040,7 +18040,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2500,126.84,WIC
 "2 adults, 3 children",2,3,2500,126.84,WIC
 1 adult,1,0,2510,0,WIC
-"1 adult, 1 child",1,1,2510,0,WIC
+"1 adult, 1 child",1,1,2510,84.56,WIC
 "1 adult, 2 children",1,2,2510,126.84,WIC
 "1 adult, 3 children",1,3,2510,126.84,WIC
 2 adults,2,0,2510,0,WIC
@@ -18048,7 +18048,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2510,126.84,WIC
 "2 adults, 3 children",2,3,2510,126.84,WIC
 1 adult,1,0,2520,0,WIC
-"1 adult, 1 child",1,1,2520,0,WIC
+"1 adult, 1 child",1,1,2520,84.56,WIC
 "1 adult, 2 children",1,2,2520,126.84,WIC
 "1 adult, 3 children",1,3,2520,126.84,WIC
 2 adults,2,0,2520,0,WIC
@@ -18056,7 +18056,7 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 2 children",2,2,2520,126.84,WIC
 "2 adults, 3 children",2,3,2520,126.84,WIC
 1 adult,1,0,2530,0,WIC
-"1 adult, 1 child",1,1,2530,0,WIC
+"1 adult, 1 child",1,1,2530,84.56,WIC
 "1 adult, 2 children",1,2,2530,126.84,WIC
 "1 adult, 3 children",1,3,2530,126.84,WIC
 2 adults,2,0,2530,0,WIC
@@ -18089,1052 +18089,1052 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 3 children",2,3,2560,126.84,WIC
 1 adult,1,0,2570,0,WIC
 "1 adult, 1 child",1,1,2570,0,WIC
-"1 adult, 2 children",1,2,2570,0,WIC
+"1 adult, 2 children",1,2,2570,126.84,WIC
 "1 adult, 3 children",1,3,2570,126.84,WIC
 2 adults,2,0,2570,0,WIC
-"2 adults, 1 child",2,1,2570,0,WIC
+"2 adults, 1 child",2,1,2570,84.56,WIC
 "2 adults, 2 children",2,2,2570,126.84,WIC
 "2 adults, 3 children",2,3,2570,126.84,WIC
 1 adult,1,0,2580,0,WIC
 "1 adult, 1 child",1,1,2580,0,WIC
-"1 adult, 2 children",1,2,2580,0,WIC
+"1 adult, 2 children",1,2,2580,126.84,WIC
 "1 adult, 3 children",1,3,2580,126.84,WIC
 2 adults,2,0,2580,0,WIC
-"2 adults, 1 child",2,1,2580,0,WIC
+"2 adults, 1 child",2,1,2580,84.56,WIC
 "2 adults, 2 children",2,2,2580,126.84,WIC
 "2 adults, 3 children",2,3,2580,126.84,WIC
 1 adult,1,0,2590,0,WIC
 "1 adult, 1 child",1,1,2590,0,WIC
-"1 adult, 2 children",1,2,2590,0,WIC
+"1 adult, 2 children",1,2,2590,126.84,WIC
 "1 adult, 3 children",1,3,2590,126.84,WIC
 2 adults,2,0,2590,0,WIC
-"2 adults, 1 child",2,1,2590,0,WIC
+"2 adults, 1 child",2,1,2590,84.56,WIC
 "2 adults, 2 children",2,2,2590,126.84,WIC
 "2 adults, 3 children",2,3,2590,126.84,WIC
 1 adult,1,0,2600,0,WIC
 "1 adult, 1 child",1,1,2600,0,WIC
-"1 adult, 2 children",1,2,2600,0,WIC
+"1 adult, 2 children",1,2,2600,126.84,WIC
 "1 adult, 3 children",1,3,2600,126.84,WIC
 2 adults,2,0,2600,0,WIC
-"2 adults, 1 child",2,1,2600,0,WIC
+"2 adults, 1 child",2,1,2600,84.56,WIC
 "2 adults, 2 children",2,2,2600,126.84,WIC
 "2 adults, 3 children",2,3,2600,126.84,WIC
 1 adult,1,0,2610,0,WIC
 "1 adult, 1 child",1,1,2610,0,WIC
-"1 adult, 2 children",1,2,2610,0,WIC
+"1 adult, 2 children",1,2,2610,126.84,WIC
 "1 adult, 3 children",1,3,2610,126.84,WIC
 2 adults,2,0,2610,0,WIC
-"2 adults, 1 child",2,1,2610,0,WIC
+"2 adults, 1 child",2,1,2610,84.56,WIC
 "2 adults, 2 children",2,2,2610,126.84,WIC
 "2 adults, 3 children",2,3,2610,126.84,WIC
 1 adult,1,0,2620,0,WIC
 "1 adult, 1 child",1,1,2620,0,WIC
-"1 adult, 2 children",1,2,2620,0,WIC
+"1 adult, 2 children",1,2,2620,126.84,WIC
 "1 adult, 3 children",1,3,2620,126.84,WIC
 2 adults,2,0,2620,0,WIC
-"2 adults, 1 child",2,1,2620,0,WIC
+"2 adults, 1 child",2,1,2620,84.56,WIC
 "2 adults, 2 children",2,2,2620,126.84,WIC
 "2 adults, 3 children",2,3,2620,126.84,WIC
 1 adult,1,0,2630,0,WIC
 "1 adult, 1 child",1,1,2630,0,WIC
-"1 adult, 2 children",1,2,2630,0,WIC
+"1 adult, 2 children",1,2,2630,126.84,WIC
 "1 adult, 3 children",1,3,2630,126.84,WIC
 2 adults,2,0,2630,0,WIC
-"2 adults, 1 child",2,1,2630,0,WIC
+"2 adults, 1 child",2,1,2630,84.56,WIC
 "2 adults, 2 children",2,2,2630,126.84,WIC
 "2 adults, 3 children",2,3,2630,126.84,WIC
 1 adult,1,0,2640,0,WIC
 "1 adult, 1 child",1,1,2640,0,WIC
-"1 adult, 2 children",1,2,2640,0,WIC
+"1 adult, 2 children",1,2,2640,126.84,WIC
 "1 adult, 3 children",1,3,2640,126.84,WIC
 2 adults,2,0,2640,0,WIC
-"2 adults, 1 child",2,1,2640,0,WIC
+"2 adults, 1 child",2,1,2640,84.56,WIC
 "2 adults, 2 children",2,2,2640,126.84,WIC
 "2 adults, 3 children",2,3,2640,126.84,WIC
 1 adult,1,0,2650,0,WIC
 "1 adult, 1 child",1,1,2650,0,WIC
-"1 adult, 2 children",1,2,2650,0,WIC
+"1 adult, 2 children",1,2,2650,126.84,WIC
 "1 adult, 3 children",1,3,2650,126.84,WIC
 2 adults,2,0,2650,0,WIC
-"2 adults, 1 child",2,1,2650,0,WIC
+"2 adults, 1 child",2,1,2650,84.56,WIC
 "2 adults, 2 children",2,2,2650,126.84,WIC
 "2 adults, 3 children",2,3,2650,126.84,WIC
 1 adult,1,0,2660,0,WIC
 "1 adult, 1 child",1,1,2660,0,WIC
-"1 adult, 2 children",1,2,2660,0,WIC
+"1 adult, 2 children",1,2,2660,126.84,WIC
 "1 adult, 3 children",1,3,2660,126.84,WIC
 2 adults,2,0,2660,0,WIC
-"2 adults, 1 child",2,1,2660,0,WIC
+"2 adults, 1 child",2,1,2660,84.56,WIC
 "2 adults, 2 children",2,2,2660,126.84,WIC
 "2 adults, 3 children",2,3,2660,126.84,WIC
 1 adult,1,0,2670,0,WIC
 "1 adult, 1 child",1,1,2670,0,WIC
-"1 adult, 2 children",1,2,2670,0,WIC
+"1 adult, 2 children",1,2,2670,126.84,WIC
 "1 adult, 3 children",1,3,2670,126.84,WIC
 2 adults,2,0,2670,0,WIC
-"2 adults, 1 child",2,1,2670,0,WIC
+"2 adults, 1 child",2,1,2670,84.56,WIC
 "2 adults, 2 children",2,2,2670,126.84,WIC
 "2 adults, 3 children",2,3,2670,126.84,WIC
 1 adult,1,0,2680,0,WIC
 "1 adult, 1 child",1,1,2680,0,WIC
-"1 adult, 2 children",1,2,2680,0,WIC
+"1 adult, 2 children",1,2,2680,126.84,WIC
 "1 adult, 3 children",1,3,2680,126.84,WIC
 2 adults,2,0,2680,0,WIC
-"2 adults, 1 child",2,1,2680,0,WIC
+"2 adults, 1 child",2,1,2680,84.56,WIC
 "2 adults, 2 children",2,2,2680,126.84,WIC
 "2 adults, 3 children",2,3,2680,126.84,WIC
 1 adult,1,0,2690,0,WIC
 "1 adult, 1 child",1,1,2690,0,WIC
-"1 adult, 2 children",1,2,2690,0,WIC
+"1 adult, 2 children",1,2,2690,126.84,WIC
 "1 adult, 3 children",1,3,2690,126.84,WIC
 2 adults,2,0,2690,0,WIC
-"2 adults, 1 child",2,1,2690,0,WIC
+"2 adults, 1 child",2,1,2690,84.56,WIC
 "2 adults, 2 children",2,2,2690,126.84,WIC
 "2 adults, 3 children",2,3,2690,126.84,WIC
 1 adult,1,0,2700,0,WIC
 "1 adult, 1 child",1,1,2700,0,WIC
-"1 adult, 2 children",1,2,2700,0,WIC
+"1 adult, 2 children",1,2,2700,126.84,WIC
 "1 adult, 3 children",1,3,2700,126.84,WIC
 2 adults,2,0,2700,0,WIC
-"2 adults, 1 child",2,1,2700,0,WIC
+"2 adults, 1 child",2,1,2700,84.56,WIC
 "2 adults, 2 children",2,2,2700,126.84,WIC
 "2 adults, 3 children",2,3,2700,126.84,WIC
 1 adult,1,0,2710,0,WIC
 "1 adult, 1 child",1,1,2710,0,WIC
-"1 adult, 2 children",1,2,2710,0,WIC
+"1 adult, 2 children",1,2,2710,126.84,WIC
 "1 adult, 3 children",1,3,2710,126.84,WIC
 2 adults,2,0,2710,0,WIC
-"2 adults, 1 child",2,1,2710,0,WIC
+"2 adults, 1 child",2,1,2710,84.56,WIC
 "2 adults, 2 children",2,2,2710,126.84,WIC
 "2 adults, 3 children",2,3,2710,126.84,WIC
 1 adult,1,0,2720,0,WIC
 "1 adult, 1 child",1,1,2720,0,WIC
-"1 adult, 2 children",1,2,2720,0,WIC
+"1 adult, 2 children",1,2,2720,126.84,WIC
 "1 adult, 3 children",1,3,2720,126.84,WIC
 2 adults,2,0,2720,0,WIC
-"2 adults, 1 child",2,1,2720,0,WIC
+"2 adults, 1 child",2,1,2720,84.56,WIC
 "2 adults, 2 children",2,2,2720,126.84,WIC
 "2 adults, 3 children",2,3,2720,126.84,WIC
 1 adult,1,0,2730,0,WIC
 "1 adult, 1 child",1,1,2730,0,WIC
-"1 adult, 2 children",1,2,2730,0,WIC
+"1 adult, 2 children",1,2,2730,126.84,WIC
 "1 adult, 3 children",1,3,2730,126.84,WIC
 2 adults,2,0,2730,0,WIC
-"2 adults, 1 child",2,1,2730,0,WIC
+"2 adults, 1 child",2,1,2730,84.56,WIC
 "2 adults, 2 children",2,2,2730,126.84,WIC
 "2 adults, 3 children",2,3,2730,126.84,WIC
 1 adult,1,0,2740,0,WIC
 "1 adult, 1 child",1,1,2740,0,WIC
-"1 adult, 2 children",1,2,2740,0,WIC
+"1 adult, 2 children",1,2,2740,126.84,WIC
 "1 adult, 3 children",1,3,2740,126.84,WIC
 2 adults,2,0,2740,0,WIC
-"2 adults, 1 child",2,1,2740,0,WIC
+"2 adults, 1 child",2,1,2740,84.56,WIC
 "2 adults, 2 children",2,2,2740,126.84,WIC
 "2 adults, 3 children",2,3,2740,126.84,WIC
 1 adult,1,0,2750,0,WIC
 "1 adult, 1 child",1,1,2750,0,WIC
-"1 adult, 2 children",1,2,2750,0,WIC
+"1 adult, 2 children",1,2,2750,126.84,WIC
 "1 adult, 3 children",1,3,2750,126.84,WIC
 2 adults,2,0,2750,0,WIC
-"2 adults, 1 child",2,1,2750,0,WIC
+"2 adults, 1 child",2,1,2750,84.56,WIC
 "2 adults, 2 children",2,2,2750,126.84,WIC
 "2 adults, 3 children",2,3,2750,126.84,WIC
 1 adult,1,0,2760,0,WIC
 "1 adult, 1 child",1,1,2760,0,WIC
-"1 adult, 2 children",1,2,2760,0,WIC
+"1 adult, 2 children",1,2,2760,126.84,WIC
 "1 adult, 3 children",1,3,2760,126.84,WIC
 2 adults,2,0,2760,0,WIC
-"2 adults, 1 child",2,1,2760,0,WIC
+"2 adults, 1 child",2,1,2760,84.56,WIC
 "2 adults, 2 children",2,2,2760,126.84,WIC
 "2 adults, 3 children",2,3,2760,126.84,WIC
 1 adult,1,0,2770,0,WIC
 "1 adult, 1 child",1,1,2770,0,WIC
-"1 adult, 2 children",1,2,2770,0,WIC
+"1 adult, 2 children",1,2,2770,126.84,WIC
 "1 adult, 3 children",1,3,2770,126.84,WIC
 2 adults,2,0,2770,0,WIC
-"2 adults, 1 child",2,1,2770,0,WIC
+"2 adults, 1 child",2,1,2770,84.56,WIC
 "2 adults, 2 children",2,2,2770,126.84,WIC
 "2 adults, 3 children",2,3,2770,126.84,WIC
 1 adult,1,0,2780,0,WIC
 "1 adult, 1 child",1,1,2780,0,WIC
-"1 adult, 2 children",1,2,2780,0,WIC
+"1 adult, 2 children",1,2,2780,126.84,WIC
 "1 adult, 3 children",1,3,2780,126.84,WIC
 2 adults,2,0,2780,0,WIC
-"2 adults, 1 child",2,1,2780,0,WIC
+"2 adults, 1 child",2,1,2780,84.56,WIC
 "2 adults, 2 children",2,2,2780,126.84,WIC
 "2 adults, 3 children",2,3,2780,126.84,WIC
 1 adult,1,0,2790,0,WIC
 "1 adult, 1 child",1,1,2790,0,WIC
-"1 adult, 2 children",1,2,2790,0,WIC
+"1 adult, 2 children",1,2,2790,126.84,WIC
 "1 adult, 3 children",1,3,2790,126.84,WIC
 2 adults,2,0,2790,0,WIC
-"2 adults, 1 child",2,1,2790,0,WIC
+"2 adults, 1 child",2,1,2790,84.56,WIC
 "2 adults, 2 children",2,2,2790,126.84,WIC
 "2 adults, 3 children",2,3,2790,126.84,WIC
 1 adult,1,0,2800,0,WIC
 "1 adult, 1 child",1,1,2800,0,WIC
-"1 adult, 2 children",1,2,2800,0,WIC
+"1 adult, 2 children",1,2,2800,126.84,WIC
 "1 adult, 3 children",1,3,2800,126.84,WIC
 2 adults,2,0,2800,0,WIC
-"2 adults, 1 child",2,1,2800,0,WIC
+"2 adults, 1 child",2,1,2800,84.56,WIC
 "2 adults, 2 children",2,2,2800,126.84,WIC
 "2 adults, 3 children",2,3,2800,126.84,WIC
 1 adult,1,0,2810,0,WIC
 "1 adult, 1 child",1,1,2810,0,WIC
-"1 adult, 2 children",1,2,2810,0,WIC
+"1 adult, 2 children",1,2,2810,126.84,WIC
 "1 adult, 3 children",1,3,2810,126.84,WIC
 2 adults,2,0,2810,0,WIC
-"2 adults, 1 child",2,1,2810,0,WIC
+"2 adults, 1 child",2,1,2810,84.56,WIC
 "2 adults, 2 children",2,2,2810,126.84,WIC
 "2 adults, 3 children",2,3,2810,126.84,WIC
 1 adult,1,0,2820,0,WIC
 "1 adult, 1 child",1,1,2820,0,WIC
-"1 adult, 2 children",1,2,2820,0,WIC
+"1 adult, 2 children",1,2,2820,126.84,WIC
 "1 adult, 3 children",1,3,2820,126.84,WIC
 2 adults,2,0,2820,0,WIC
-"2 adults, 1 child",2,1,2820,0,WIC
+"2 adults, 1 child",2,1,2820,84.56,WIC
 "2 adults, 2 children",2,2,2820,126.84,WIC
 "2 adults, 3 children",2,3,2820,126.84,WIC
 1 adult,1,0,2830,0,WIC
 "1 adult, 1 child",1,1,2830,0,WIC
-"1 adult, 2 children",1,2,2830,0,WIC
+"1 adult, 2 children",1,2,2830,126.84,WIC
 "1 adult, 3 children",1,3,2830,126.84,WIC
 2 adults,2,0,2830,0,WIC
-"2 adults, 1 child",2,1,2830,0,WIC
+"2 adults, 1 child",2,1,2830,84.56,WIC
 "2 adults, 2 children",2,2,2830,126.84,WIC
 "2 adults, 3 children",2,3,2830,126.84,WIC
 1 adult,1,0,2840,0,WIC
 "1 adult, 1 child",1,1,2840,0,WIC
-"1 adult, 2 children",1,2,2840,0,WIC
+"1 adult, 2 children",1,2,2840,126.84,WIC
 "1 adult, 3 children",1,3,2840,126.84,WIC
 2 adults,2,0,2840,0,WIC
-"2 adults, 1 child",2,1,2840,0,WIC
+"2 adults, 1 child",2,1,2840,84.56,WIC
 "2 adults, 2 children",2,2,2840,126.84,WIC
 "2 adults, 3 children",2,3,2840,126.84,WIC
 1 adult,1,0,2850,0,WIC
 "1 adult, 1 child",1,1,2850,0,WIC
-"1 adult, 2 children",1,2,2850,0,WIC
+"1 adult, 2 children",1,2,2850,126.84,WIC
 "1 adult, 3 children",1,3,2850,126.84,WIC
 2 adults,2,0,2850,0,WIC
-"2 adults, 1 child",2,1,2850,0,WIC
+"2 adults, 1 child",2,1,2850,84.56,WIC
 "2 adults, 2 children",2,2,2850,126.84,WIC
 "2 adults, 3 children",2,3,2850,126.84,WIC
 1 adult,1,0,2860,0,WIC
 "1 adult, 1 child",1,1,2860,0,WIC
-"1 adult, 2 children",1,2,2860,0,WIC
+"1 adult, 2 children",1,2,2860,126.84,WIC
 "1 adult, 3 children",1,3,2860,126.84,WIC
 2 adults,2,0,2860,0,WIC
-"2 adults, 1 child",2,1,2860,0,WIC
+"2 adults, 1 child",2,1,2860,84.56,WIC
 "2 adults, 2 children",2,2,2860,126.84,WIC
 "2 adults, 3 children",2,3,2860,126.84,WIC
 1 adult,1,0,2870,0,WIC
 "1 adult, 1 child",1,1,2870,0,WIC
-"1 adult, 2 children",1,2,2870,0,WIC
+"1 adult, 2 children",1,2,2870,126.84,WIC
 "1 adult, 3 children",1,3,2870,126.84,WIC
 2 adults,2,0,2870,0,WIC
-"2 adults, 1 child",2,1,2870,0,WIC
+"2 adults, 1 child",2,1,2870,84.56,WIC
 "2 adults, 2 children",2,2,2870,126.84,WIC
 "2 adults, 3 children",2,3,2870,126.84,WIC
 1 adult,1,0,2880,0,WIC
 "1 adult, 1 child",1,1,2880,0,WIC
-"1 adult, 2 children",1,2,2880,0,WIC
+"1 adult, 2 children",1,2,2880,126.84,WIC
 "1 adult, 3 children",1,3,2880,126.84,WIC
 2 adults,2,0,2880,0,WIC
-"2 adults, 1 child",2,1,2880,0,WIC
+"2 adults, 1 child",2,1,2880,84.56,WIC
 "2 adults, 2 children",2,2,2880,126.84,WIC
 "2 adults, 3 children",2,3,2880,126.84,WIC
 1 adult,1,0,2890,0,WIC
 "1 adult, 1 child",1,1,2890,0,WIC
-"1 adult, 2 children",1,2,2890,0,WIC
+"1 adult, 2 children",1,2,2890,126.84,WIC
 "1 adult, 3 children",1,3,2890,126.84,WIC
 2 adults,2,0,2890,0,WIC
-"2 adults, 1 child",2,1,2890,0,WIC
+"2 adults, 1 child",2,1,2890,84.56,WIC
 "2 adults, 2 children",2,2,2890,126.84,WIC
 "2 adults, 3 children",2,3,2890,126.84,WIC
 1 adult,1,0,2900,0,WIC
 "1 adult, 1 child",1,1,2900,0,WIC
-"1 adult, 2 children",1,2,2900,0,WIC
+"1 adult, 2 children",1,2,2900,126.84,WIC
 "1 adult, 3 children",1,3,2900,126.84,WIC
 2 adults,2,0,2900,0,WIC
-"2 adults, 1 child",2,1,2900,0,WIC
+"2 adults, 1 child",2,1,2900,84.56,WIC
 "2 adults, 2 children",2,2,2900,126.84,WIC
 "2 adults, 3 children",2,3,2900,126.84,WIC
 1 adult,1,0,2910,0,WIC
 "1 adult, 1 child",1,1,2910,0,WIC
-"1 adult, 2 children",1,2,2910,0,WIC
+"1 adult, 2 children",1,2,2910,126.84,WIC
 "1 adult, 3 children",1,3,2910,126.84,WIC
 2 adults,2,0,2910,0,WIC
-"2 adults, 1 child",2,1,2910,0,WIC
+"2 adults, 1 child",2,1,2910,84.56,WIC
 "2 adults, 2 children",2,2,2910,126.84,WIC
 "2 adults, 3 children",2,3,2910,126.84,WIC
 1 adult,1,0,2920,0,WIC
 "1 adult, 1 child",1,1,2920,0,WIC
-"1 adult, 2 children",1,2,2920,0,WIC
+"1 adult, 2 children",1,2,2920,126.84,WIC
 "1 adult, 3 children",1,3,2920,126.84,WIC
 2 adults,2,0,2920,0,WIC
-"2 adults, 1 child",2,1,2920,0,WIC
+"2 adults, 1 child",2,1,2920,84.56,WIC
 "2 adults, 2 children",2,2,2920,126.84,WIC
 "2 adults, 3 children",2,3,2920,126.84,WIC
 1 adult,1,0,2930,0,WIC
 "1 adult, 1 child",1,1,2930,0,WIC
-"1 adult, 2 children",1,2,2930,0,WIC
+"1 adult, 2 children",1,2,2930,126.84,WIC
 "1 adult, 3 children",1,3,2930,126.84,WIC
 2 adults,2,0,2930,0,WIC
-"2 adults, 1 child",2,1,2930,0,WIC
+"2 adults, 1 child",2,1,2930,84.56,WIC
 "2 adults, 2 children",2,2,2930,126.84,WIC
 "2 adults, 3 children",2,3,2930,126.84,WIC
 1 adult,1,0,2940,0,WIC
 "1 adult, 1 child",1,1,2940,0,WIC
-"1 adult, 2 children",1,2,2940,0,WIC
+"1 adult, 2 children",1,2,2940,126.84,WIC
 "1 adult, 3 children",1,3,2940,126.84,WIC
 2 adults,2,0,2940,0,WIC
-"2 adults, 1 child",2,1,2940,0,WIC
+"2 adults, 1 child",2,1,2940,84.56,WIC
 "2 adults, 2 children",2,2,2940,126.84,WIC
 "2 adults, 3 children",2,3,2940,126.84,WIC
 1 adult,1,0,2950,0,WIC
 "1 adult, 1 child",1,1,2950,0,WIC
-"1 adult, 2 children",1,2,2950,0,WIC
+"1 adult, 2 children",1,2,2950,126.84,WIC
 "1 adult, 3 children",1,3,2950,126.84,WIC
 2 adults,2,0,2950,0,WIC
-"2 adults, 1 child",2,1,2950,0,WIC
+"2 adults, 1 child",2,1,2950,84.56,WIC
 "2 adults, 2 children",2,2,2950,126.84,WIC
 "2 adults, 3 children",2,3,2950,126.84,WIC
 1 adult,1,0,2960,0,WIC
 "1 adult, 1 child",1,1,2960,0,WIC
-"1 adult, 2 children",1,2,2960,0,WIC
+"1 adult, 2 children",1,2,2960,126.84,WIC
 "1 adult, 3 children",1,3,2960,126.84,WIC
 2 adults,2,0,2960,0,WIC
-"2 adults, 1 child",2,1,2960,0,WIC
+"2 adults, 1 child",2,1,2960,84.56,WIC
 "2 adults, 2 children",2,2,2960,126.84,WIC
 "2 adults, 3 children",2,3,2960,126.84,WIC
 1 adult,1,0,2970,0,WIC
 "1 adult, 1 child",1,1,2970,0,WIC
-"1 adult, 2 children",1,2,2970,0,WIC
+"1 adult, 2 children",1,2,2970,126.84,WIC
 "1 adult, 3 children",1,3,2970,126.84,WIC
 2 adults,2,0,2970,0,WIC
-"2 adults, 1 child",2,1,2970,0,WIC
+"2 adults, 1 child",2,1,2970,84.56,WIC
 "2 adults, 2 children",2,2,2970,126.84,WIC
 "2 adults, 3 children",2,3,2970,126.84,WIC
 1 adult,1,0,2980,0,WIC
 "1 adult, 1 child",1,1,2980,0,WIC
-"1 adult, 2 children",1,2,2980,0,WIC
+"1 adult, 2 children",1,2,2980,126.84,WIC
 "1 adult, 3 children",1,3,2980,126.84,WIC
 2 adults,2,0,2980,0,WIC
-"2 adults, 1 child",2,1,2980,0,WIC
+"2 adults, 1 child",2,1,2980,84.56,WIC
 "2 adults, 2 children",2,2,2980,126.84,WIC
 "2 adults, 3 children",2,3,2980,126.84,WIC
 1 adult,1,0,2990,0,WIC
 "1 adult, 1 child",1,1,2990,0,WIC
-"1 adult, 2 children",1,2,2990,0,WIC
+"1 adult, 2 children",1,2,2990,126.84,WIC
 "1 adult, 3 children",1,3,2990,126.84,WIC
 2 adults,2,0,2990,0,WIC
-"2 adults, 1 child",2,1,2990,0,WIC
+"2 adults, 1 child",2,1,2990,84.56,WIC
 "2 adults, 2 children",2,2,2990,126.84,WIC
 "2 adults, 3 children",2,3,2990,126.84,WIC
 1 adult,1,0,3e3,0,WIC
 "1 adult, 1 child",1,1,3e3,0,WIC
-"1 adult, 2 children",1,2,3e3,0,WIC
+"1 adult, 2 children",1,2,3e3,126.84,WIC
 "1 adult, 3 children",1,3,3e3,126.84,WIC
 2 adults,2,0,3e3,0,WIC
-"2 adults, 1 child",2,1,3e3,0,WIC
+"2 adults, 1 child",2,1,3e3,84.56,WIC
 "2 adults, 2 children",2,2,3e3,126.84,WIC
 "2 adults, 3 children",2,3,3e3,126.84,WIC
 1 adult,1,0,3010,0,WIC
 "1 adult, 1 child",1,1,3010,0,WIC
-"1 adult, 2 children",1,2,3010,0,WIC
+"1 adult, 2 children",1,2,3010,126.84,WIC
 "1 adult, 3 children",1,3,3010,126.84,WIC
 2 adults,2,0,3010,0,WIC
-"2 adults, 1 child",2,1,3010,0,WIC
+"2 adults, 1 child",2,1,3010,84.56,WIC
 "2 adults, 2 children",2,2,3010,126.84,WIC
 "2 adults, 3 children",2,3,3010,126.84,WIC
 1 adult,1,0,3020,0,WIC
 "1 adult, 1 child",1,1,3020,0,WIC
-"1 adult, 2 children",1,2,3020,0,WIC
+"1 adult, 2 children",1,2,3020,126.84,WIC
 "1 adult, 3 children",1,3,3020,126.84,WIC
 2 adults,2,0,3020,0,WIC
-"2 adults, 1 child",2,1,3020,0,WIC
+"2 adults, 1 child",2,1,3020,84.56,WIC
 "2 adults, 2 children",2,2,3020,126.84,WIC
 "2 adults, 3 children",2,3,3020,126.84,WIC
 1 adult,1,0,3030,0,WIC
 "1 adult, 1 child",1,1,3030,0,WIC
-"1 adult, 2 children",1,2,3030,0,WIC
+"1 adult, 2 children",1,2,3030,126.84,WIC
 "1 adult, 3 children",1,3,3030,126.84,WIC
 2 adults,2,0,3030,0,WIC
-"2 adults, 1 child",2,1,3030,0,WIC
+"2 adults, 1 child",2,1,3030,84.56,WIC
 "2 adults, 2 children",2,2,3030,126.84,WIC
 "2 adults, 3 children",2,3,3030,126.84,WIC
 1 adult,1,0,3040,0,WIC
 "1 adult, 1 child",1,1,3040,0,WIC
-"1 adult, 2 children",1,2,3040,0,WIC
+"1 adult, 2 children",1,2,3040,126.84,WIC
 "1 adult, 3 children",1,3,3040,126.84,WIC
 2 adults,2,0,3040,0,WIC
-"2 adults, 1 child",2,1,3040,0,WIC
+"2 adults, 1 child",2,1,3040,84.56,WIC
 "2 adults, 2 children",2,2,3040,126.84,WIC
 "2 adults, 3 children",2,3,3040,126.84,WIC
 1 adult,1,0,3050,0,WIC
 "1 adult, 1 child",1,1,3050,0,WIC
-"1 adult, 2 children",1,2,3050,0,WIC
+"1 adult, 2 children",1,2,3050,126.84,WIC
 "1 adult, 3 children",1,3,3050,126.84,WIC
 2 adults,2,0,3050,0,WIC
-"2 adults, 1 child",2,1,3050,0,WIC
+"2 adults, 1 child",2,1,3050,84.56,WIC
 "2 adults, 2 children",2,2,3050,126.84,WIC
 "2 adults, 3 children",2,3,3050,126.84,WIC
 1 adult,1,0,3060,0,WIC
 "1 adult, 1 child",1,1,3060,0,WIC
-"1 adult, 2 children",1,2,3060,0,WIC
+"1 adult, 2 children",1,2,3060,126.84,WIC
 "1 adult, 3 children",1,3,3060,126.84,WIC
 2 adults,2,0,3060,0,WIC
-"2 adults, 1 child",2,1,3060,0,WIC
+"2 adults, 1 child",2,1,3060,84.56,WIC
 "2 adults, 2 children",2,2,3060,126.84,WIC
 "2 adults, 3 children",2,3,3060,126.84,WIC
 1 adult,1,0,3070,0,WIC
 "1 adult, 1 child",1,1,3070,0,WIC
-"1 adult, 2 children",1,2,3070,0,WIC
+"1 adult, 2 children",1,2,3070,126.84,WIC
 "1 adult, 3 children",1,3,3070,126.84,WIC
 2 adults,2,0,3070,0,WIC
-"2 adults, 1 child",2,1,3070,0,WIC
+"2 adults, 1 child",2,1,3070,84.56,WIC
 "2 adults, 2 children",2,2,3070,126.84,WIC
 "2 adults, 3 children",2,3,3070,126.84,WIC
 1 adult,1,0,3080,0,WIC
 "1 adult, 1 child",1,1,3080,0,WIC
-"1 adult, 2 children",1,2,3080,0,WIC
+"1 adult, 2 children",1,2,3080,126.84,WIC
 "1 adult, 3 children",1,3,3080,126.84,WIC
 2 adults,2,0,3080,0,WIC
-"2 adults, 1 child",2,1,3080,0,WIC
+"2 adults, 1 child",2,1,3080,84.56,WIC
 "2 adults, 2 children",2,2,3080,126.84,WIC
 "2 adults, 3 children",2,3,3080,126.84,WIC
 1 adult,1,0,3090,0,WIC
 "1 adult, 1 child",1,1,3090,0,WIC
-"1 adult, 2 children",1,2,3090,0,WIC
+"1 adult, 2 children",1,2,3090,126.84,WIC
 "1 adult, 3 children",1,3,3090,126.84,WIC
 2 adults,2,0,3090,0,WIC
-"2 adults, 1 child",2,1,3090,0,WIC
+"2 adults, 1 child",2,1,3090,84.56,WIC
 "2 adults, 2 children",2,2,3090,126.84,WIC
 "2 adults, 3 children",2,3,3090,126.84,WIC
 1 adult,1,0,3100,0,WIC
 "1 adult, 1 child",1,1,3100,0,WIC
-"1 adult, 2 children",1,2,3100,0,WIC
-"1 adult, 3 children",1,3,3100,0,WIC
+"1 adult, 2 children",1,2,3100,126.84,WIC
+"1 adult, 3 children",1,3,3100,126.84,WIC
 2 adults,2,0,3100,0,WIC
-"2 adults, 1 child",2,1,3100,0,WIC
-"2 adults, 2 children",2,2,3100,0,WIC
+"2 adults, 1 child",2,1,3100,84.56,WIC
+"2 adults, 2 children",2,2,3100,126.84,WIC
 "2 adults, 3 children",2,3,3100,126.84,WIC
 1 adult,1,0,3110,0,WIC
 "1 adult, 1 child",1,1,3110,0,WIC
-"1 adult, 2 children",1,2,3110,0,WIC
-"1 adult, 3 children",1,3,3110,0,WIC
+"1 adult, 2 children",1,2,3110,126.84,WIC
+"1 adult, 3 children",1,3,3110,126.84,WIC
 2 adults,2,0,3110,0,WIC
-"2 adults, 1 child",2,1,3110,0,WIC
-"2 adults, 2 children",2,2,3110,0,WIC
+"2 adults, 1 child",2,1,3110,84.56,WIC
+"2 adults, 2 children",2,2,3110,126.84,WIC
 "2 adults, 3 children",2,3,3110,126.84,WIC
 1 adult,1,0,3120,0,WIC
 "1 adult, 1 child",1,1,3120,0,WIC
-"1 adult, 2 children",1,2,3120,0,WIC
-"1 adult, 3 children",1,3,3120,0,WIC
+"1 adult, 2 children",1,2,3120,126.84,WIC
+"1 adult, 3 children",1,3,3120,126.84,WIC
 2 adults,2,0,3120,0,WIC
-"2 adults, 1 child",2,1,3120,0,WIC
-"2 adults, 2 children",2,2,3120,0,WIC
+"2 adults, 1 child",2,1,3120,84.56,WIC
+"2 adults, 2 children",2,2,3120,126.84,WIC
 "2 adults, 3 children",2,3,3120,126.84,WIC
 1 adult,1,0,3130,0,WIC
 "1 adult, 1 child",1,1,3130,0,WIC
-"1 adult, 2 children",1,2,3130,0,WIC
-"1 adult, 3 children",1,3,3130,0,WIC
+"1 adult, 2 children",1,2,3130,126.84,WIC
+"1 adult, 3 children",1,3,3130,126.84,WIC
 2 adults,2,0,3130,0,WIC
-"2 adults, 1 child",2,1,3130,0,WIC
-"2 adults, 2 children",2,2,3130,0,WIC
+"2 adults, 1 child",2,1,3130,84.56,WIC
+"2 adults, 2 children",2,2,3130,126.84,WIC
 "2 adults, 3 children",2,3,3130,126.84,WIC
 1 adult,1,0,3140,0,WIC
 "1 adult, 1 child",1,1,3140,0,WIC
-"1 adult, 2 children",1,2,3140,0,WIC
-"1 adult, 3 children",1,3,3140,0,WIC
+"1 adult, 2 children",1,2,3140,126.84,WIC
+"1 adult, 3 children",1,3,3140,126.84,WIC
 2 adults,2,0,3140,0,WIC
-"2 adults, 1 child",2,1,3140,0,WIC
-"2 adults, 2 children",2,2,3140,0,WIC
+"2 adults, 1 child",2,1,3140,84.56,WIC
+"2 adults, 2 children",2,2,3140,126.84,WIC
 "2 adults, 3 children",2,3,3140,126.84,WIC
 1 adult,1,0,3150,0,WIC
 "1 adult, 1 child",1,1,3150,0,WIC
-"1 adult, 2 children",1,2,3150,0,WIC
-"1 adult, 3 children",1,3,3150,0,WIC
+"1 adult, 2 children",1,2,3150,126.84,WIC
+"1 adult, 3 children",1,3,3150,126.84,WIC
 2 adults,2,0,3150,0,WIC
-"2 adults, 1 child",2,1,3150,0,WIC
-"2 adults, 2 children",2,2,3150,0,WIC
+"2 adults, 1 child",2,1,3150,84.56,WIC
+"2 adults, 2 children",2,2,3150,126.84,WIC
 "2 adults, 3 children",2,3,3150,126.84,WIC
 1 adult,1,0,3160,0,WIC
 "1 adult, 1 child",1,1,3160,0,WIC
-"1 adult, 2 children",1,2,3160,0,WIC
-"1 adult, 3 children",1,3,3160,0,WIC
+"1 adult, 2 children",1,2,3160,126.84,WIC
+"1 adult, 3 children",1,3,3160,126.84,WIC
 2 adults,2,0,3160,0,WIC
-"2 adults, 1 child",2,1,3160,0,WIC
-"2 adults, 2 children",2,2,3160,0,WIC
+"2 adults, 1 child",2,1,3160,84.56,WIC
+"2 adults, 2 children",2,2,3160,126.84,WIC
 "2 adults, 3 children",2,3,3160,126.84,WIC
 1 adult,1,0,3170,0,WIC
 "1 adult, 1 child",1,1,3170,0,WIC
-"1 adult, 2 children",1,2,3170,0,WIC
-"1 adult, 3 children",1,3,3170,0,WIC
+"1 adult, 2 children",1,2,3170,126.84,WIC
+"1 adult, 3 children",1,3,3170,126.84,WIC
 2 adults,2,0,3170,0,WIC
-"2 adults, 1 child",2,1,3170,0,WIC
-"2 adults, 2 children",2,2,3170,0,WIC
+"2 adults, 1 child",2,1,3170,84.56,WIC
+"2 adults, 2 children",2,2,3170,126.84,WIC
 "2 adults, 3 children",2,3,3170,126.84,WIC
 1 adult,1,0,3180,0,WIC
 "1 adult, 1 child",1,1,3180,0,WIC
-"1 adult, 2 children",1,2,3180,0,WIC
-"1 adult, 3 children",1,3,3180,0,WIC
+"1 adult, 2 children",1,2,3180,126.84,WIC
+"1 adult, 3 children",1,3,3180,126.84,WIC
 2 adults,2,0,3180,0,WIC
-"2 adults, 1 child",2,1,3180,0,WIC
-"2 adults, 2 children",2,2,3180,0,WIC
+"2 adults, 1 child",2,1,3180,84.56,WIC
+"2 adults, 2 children",2,2,3180,126.84,WIC
 "2 adults, 3 children",2,3,3180,126.84,WIC
 1 adult,1,0,3190,0,WIC
 "1 adult, 1 child",1,1,3190,0,WIC
-"1 adult, 2 children",1,2,3190,0,WIC
-"1 adult, 3 children",1,3,3190,0,WIC
+"1 adult, 2 children",1,2,3190,126.84,WIC
+"1 adult, 3 children",1,3,3190,126.84,WIC
 2 adults,2,0,3190,0,WIC
-"2 adults, 1 child",2,1,3190,0,WIC
-"2 adults, 2 children",2,2,3190,0,WIC
+"2 adults, 1 child",2,1,3190,84.56,WIC
+"2 adults, 2 children",2,2,3190,126.84,WIC
 "2 adults, 3 children",2,3,3190,126.84,WIC
 1 adult,1,0,3200,0,WIC
 "1 adult, 1 child",1,1,3200,0,WIC
-"1 adult, 2 children",1,2,3200,0,WIC
-"1 adult, 3 children",1,3,3200,0,WIC
+"1 adult, 2 children",1,2,3200,126.84,WIC
+"1 adult, 3 children",1,3,3200,126.84,WIC
 2 adults,2,0,3200,0,WIC
-"2 adults, 1 child",2,1,3200,0,WIC
-"2 adults, 2 children",2,2,3200,0,WIC
+"2 adults, 1 child",2,1,3200,84.56,WIC
+"2 adults, 2 children",2,2,3200,126.84,WIC
 "2 adults, 3 children",2,3,3200,126.84,WIC
 1 adult,1,0,3210,0,WIC
 "1 adult, 1 child",1,1,3210,0,WIC
 "1 adult, 2 children",1,2,3210,0,WIC
-"1 adult, 3 children",1,3,3210,0,WIC
+"1 adult, 3 children",1,3,3210,126.84,WIC
 2 adults,2,0,3210,0,WIC
 "2 adults, 1 child",2,1,3210,0,WIC
-"2 adults, 2 children",2,2,3210,0,WIC
+"2 adults, 2 children",2,2,3210,126.84,WIC
 "2 adults, 3 children",2,3,3210,126.84,WIC
 1 adult,1,0,3220,0,WIC
 "1 adult, 1 child",1,1,3220,0,WIC
 "1 adult, 2 children",1,2,3220,0,WIC
-"1 adult, 3 children",1,3,3220,0,WIC
+"1 adult, 3 children",1,3,3220,126.84,WIC
 2 adults,2,0,3220,0,WIC
 "2 adults, 1 child",2,1,3220,0,WIC
-"2 adults, 2 children",2,2,3220,0,WIC
+"2 adults, 2 children",2,2,3220,126.84,WIC
 "2 adults, 3 children",2,3,3220,126.84,WIC
 1 adult,1,0,3230,0,WIC
 "1 adult, 1 child",1,1,3230,0,WIC
 "1 adult, 2 children",1,2,3230,0,WIC
-"1 adult, 3 children",1,3,3230,0,WIC
+"1 adult, 3 children",1,3,3230,126.84,WIC
 2 adults,2,0,3230,0,WIC
 "2 adults, 1 child",2,1,3230,0,WIC
-"2 adults, 2 children",2,2,3230,0,WIC
+"2 adults, 2 children",2,2,3230,126.84,WIC
 "2 adults, 3 children",2,3,3230,126.84,WIC
 1 adult,1,0,3240,0,WIC
 "1 adult, 1 child",1,1,3240,0,WIC
 "1 adult, 2 children",1,2,3240,0,WIC
-"1 adult, 3 children",1,3,3240,0,WIC
+"1 adult, 3 children",1,3,3240,126.84,WIC
 2 adults,2,0,3240,0,WIC
 "2 adults, 1 child",2,1,3240,0,WIC
-"2 adults, 2 children",2,2,3240,0,WIC
+"2 adults, 2 children",2,2,3240,126.84,WIC
 "2 adults, 3 children",2,3,3240,126.84,WIC
 1 adult,1,0,3250,0,WIC
 "1 adult, 1 child",1,1,3250,0,WIC
 "1 adult, 2 children",1,2,3250,0,WIC
-"1 adult, 3 children",1,3,3250,0,WIC
+"1 adult, 3 children",1,3,3250,126.84,WIC
 2 adults,2,0,3250,0,WIC
 "2 adults, 1 child",2,1,3250,0,WIC
-"2 adults, 2 children",2,2,3250,0,WIC
+"2 adults, 2 children",2,2,3250,126.84,WIC
 "2 adults, 3 children",2,3,3250,126.84,WIC
 1 adult,1,0,3260,0,WIC
 "1 adult, 1 child",1,1,3260,0,WIC
 "1 adult, 2 children",1,2,3260,0,WIC
-"1 adult, 3 children",1,3,3260,0,WIC
+"1 adult, 3 children",1,3,3260,126.84,WIC
 2 adults,2,0,3260,0,WIC
 "2 adults, 1 child",2,1,3260,0,WIC
-"2 adults, 2 children",2,2,3260,0,WIC
+"2 adults, 2 children",2,2,3260,126.84,WIC
 "2 adults, 3 children",2,3,3260,126.84,WIC
 1 adult,1,0,3270,0,WIC
 "1 adult, 1 child",1,1,3270,0,WIC
 "1 adult, 2 children",1,2,3270,0,WIC
-"1 adult, 3 children",1,3,3270,0,WIC
+"1 adult, 3 children",1,3,3270,126.84,WIC
 2 adults,2,0,3270,0,WIC
 "2 adults, 1 child",2,1,3270,0,WIC
-"2 adults, 2 children",2,2,3270,0,WIC
+"2 adults, 2 children",2,2,3270,126.84,WIC
 "2 adults, 3 children",2,3,3270,126.84,WIC
 1 adult,1,0,3280,0,WIC
 "1 adult, 1 child",1,1,3280,0,WIC
 "1 adult, 2 children",1,2,3280,0,WIC
-"1 adult, 3 children",1,3,3280,0,WIC
+"1 adult, 3 children",1,3,3280,126.84,WIC
 2 adults,2,0,3280,0,WIC
 "2 adults, 1 child",2,1,3280,0,WIC
-"2 adults, 2 children",2,2,3280,0,WIC
+"2 adults, 2 children",2,2,3280,126.84,WIC
 "2 adults, 3 children",2,3,3280,126.84,WIC
 1 adult,1,0,3290,0,WIC
 "1 adult, 1 child",1,1,3290,0,WIC
 "1 adult, 2 children",1,2,3290,0,WIC
-"1 adult, 3 children",1,3,3290,0,WIC
+"1 adult, 3 children",1,3,3290,126.84,WIC
 2 adults,2,0,3290,0,WIC
 "2 adults, 1 child",2,1,3290,0,WIC
-"2 adults, 2 children",2,2,3290,0,WIC
+"2 adults, 2 children",2,2,3290,126.84,WIC
 "2 adults, 3 children",2,3,3290,126.84,WIC
 1 adult,1,0,3300,0,WIC
 "1 adult, 1 child",1,1,3300,0,WIC
 "1 adult, 2 children",1,2,3300,0,WIC
-"1 adult, 3 children",1,3,3300,0,WIC
+"1 adult, 3 children",1,3,3300,126.84,WIC
 2 adults,2,0,3300,0,WIC
 "2 adults, 1 child",2,1,3300,0,WIC
-"2 adults, 2 children",2,2,3300,0,WIC
+"2 adults, 2 children",2,2,3300,126.84,WIC
 "2 adults, 3 children",2,3,3300,126.84,WIC
 1 adult,1,0,3310,0,WIC
 "1 adult, 1 child",1,1,3310,0,WIC
 "1 adult, 2 children",1,2,3310,0,WIC
-"1 adult, 3 children",1,3,3310,0,WIC
+"1 adult, 3 children",1,3,3310,126.84,WIC
 2 adults,2,0,3310,0,WIC
 "2 adults, 1 child",2,1,3310,0,WIC
-"2 adults, 2 children",2,2,3310,0,WIC
+"2 adults, 2 children",2,2,3310,126.84,WIC
 "2 adults, 3 children",2,3,3310,126.84,WIC
 1 adult,1,0,3320,0,WIC
 "1 adult, 1 child",1,1,3320,0,WIC
 "1 adult, 2 children",1,2,3320,0,WIC
-"1 adult, 3 children",1,3,3320,0,WIC
+"1 adult, 3 children",1,3,3320,126.84,WIC
 2 adults,2,0,3320,0,WIC
 "2 adults, 1 child",2,1,3320,0,WIC
-"2 adults, 2 children",2,2,3320,0,WIC
+"2 adults, 2 children",2,2,3320,126.84,WIC
 "2 adults, 3 children",2,3,3320,126.84,WIC
 1 adult,1,0,3330,0,WIC
 "1 adult, 1 child",1,1,3330,0,WIC
 "1 adult, 2 children",1,2,3330,0,WIC
-"1 adult, 3 children",1,3,3330,0,WIC
+"1 adult, 3 children",1,3,3330,126.84,WIC
 2 adults,2,0,3330,0,WIC
 "2 adults, 1 child",2,1,3330,0,WIC
-"2 adults, 2 children",2,2,3330,0,WIC
+"2 adults, 2 children",2,2,3330,126.84,WIC
 "2 adults, 3 children",2,3,3330,126.84,WIC
 1 adult,1,0,3340,0,WIC
 "1 adult, 1 child",1,1,3340,0,WIC
 "1 adult, 2 children",1,2,3340,0,WIC
-"1 adult, 3 children",1,3,3340,0,WIC
+"1 adult, 3 children",1,3,3340,126.84,WIC
 2 adults,2,0,3340,0,WIC
 "2 adults, 1 child",2,1,3340,0,WIC
-"2 adults, 2 children",2,2,3340,0,WIC
+"2 adults, 2 children",2,2,3340,126.84,WIC
 "2 adults, 3 children",2,3,3340,126.84,WIC
 1 adult,1,0,3350,0,WIC
 "1 adult, 1 child",1,1,3350,0,WIC
 "1 adult, 2 children",1,2,3350,0,WIC
-"1 adult, 3 children",1,3,3350,0,WIC
+"1 adult, 3 children",1,3,3350,126.84,WIC
 2 adults,2,0,3350,0,WIC
 "2 adults, 1 child",2,1,3350,0,WIC
-"2 adults, 2 children",2,2,3350,0,WIC
+"2 adults, 2 children",2,2,3350,126.84,WIC
 "2 adults, 3 children",2,3,3350,126.84,WIC
 1 adult,1,0,3360,0,WIC
 "1 adult, 1 child",1,1,3360,0,WIC
 "1 adult, 2 children",1,2,3360,0,WIC
-"1 adult, 3 children",1,3,3360,0,WIC
+"1 adult, 3 children",1,3,3360,126.84,WIC
 2 adults,2,0,3360,0,WIC
 "2 adults, 1 child",2,1,3360,0,WIC
-"2 adults, 2 children",2,2,3360,0,WIC
+"2 adults, 2 children",2,2,3360,126.84,WIC
 "2 adults, 3 children",2,3,3360,126.84,WIC
 1 adult,1,0,3370,0,WIC
 "1 adult, 1 child",1,1,3370,0,WIC
 "1 adult, 2 children",1,2,3370,0,WIC
-"1 adult, 3 children",1,3,3370,0,WIC
+"1 adult, 3 children",1,3,3370,126.84,WIC
 2 adults,2,0,3370,0,WIC
 "2 adults, 1 child",2,1,3370,0,WIC
-"2 adults, 2 children",2,2,3370,0,WIC
+"2 adults, 2 children",2,2,3370,126.84,WIC
 "2 adults, 3 children",2,3,3370,126.84,WIC
 1 adult,1,0,3380,0,WIC
 "1 adult, 1 child",1,1,3380,0,WIC
 "1 adult, 2 children",1,2,3380,0,WIC
-"1 adult, 3 children",1,3,3380,0,WIC
+"1 adult, 3 children",1,3,3380,126.84,WIC
 2 adults,2,0,3380,0,WIC
 "2 adults, 1 child",2,1,3380,0,WIC
-"2 adults, 2 children",2,2,3380,0,WIC
+"2 adults, 2 children",2,2,3380,126.84,WIC
 "2 adults, 3 children",2,3,3380,126.84,WIC
 1 adult,1,0,3390,0,WIC
 "1 adult, 1 child",1,1,3390,0,WIC
 "1 adult, 2 children",1,2,3390,0,WIC
-"1 adult, 3 children",1,3,3390,0,WIC
+"1 adult, 3 children",1,3,3390,126.84,WIC
 2 adults,2,0,3390,0,WIC
 "2 adults, 1 child",2,1,3390,0,WIC
-"2 adults, 2 children",2,2,3390,0,WIC
+"2 adults, 2 children",2,2,3390,126.84,WIC
 "2 adults, 3 children",2,3,3390,126.84,WIC
 1 adult,1,0,3400,0,WIC
 "1 adult, 1 child",1,1,3400,0,WIC
 "1 adult, 2 children",1,2,3400,0,WIC
-"1 adult, 3 children",1,3,3400,0,WIC
+"1 adult, 3 children",1,3,3400,126.84,WIC
 2 adults,2,0,3400,0,WIC
 "2 adults, 1 child",2,1,3400,0,WIC
-"2 adults, 2 children",2,2,3400,0,WIC
+"2 adults, 2 children",2,2,3400,126.84,WIC
 "2 adults, 3 children",2,3,3400,126.84,WIC
 1 adult,1,0,3410,0,WIC
 "1 adult, 1 child",1,1,3410,0,WIC
 "1 adult, 2 children",1,2,3410,0,WIC
-"1 adult, 3 children",1,3,3410,0,WIC
+"1 adult, 3 children",1,3,3410,126.84,WIC
 2 adults,2,0,3410,0,WIC
 "2 adults, 1 child",2,1,3410,0,WIC
-"2 adults, 2 children",2,2,3410,0,WIC
+"2 adults, 2 children",2,2,3410,126.84,WIC
 "2 adults, 3 children",2,3,3410,126.84,WIC
 1 adult,1,0,3420,0,WIC
 "1 adult, 1 child",1,1,3420,0,WIC
 "1 adult, 2 children",1,2,3420,0,WIC
-"1 adult, 3 children",1,3,3420,0,WIC
+"1 adult, 3 children",1,3,3420,126.84,WIC
 2 adults,2,0,3420,0,WIC
 "2 adults, 1 child",2,1,3420,0,WIC
-"2 adults, 2 children",2,2,3420,0,WIC
+"2 adults, 2 children",2,2,3420,126.84,WIC
 "2 adults, 3 children",2,3,3420,126.84,WIC
 1 adult,1,0,3430,0,WIC
 "1 adult, 1 child",1,1,3430,0,WIC
 "1 adult, 2 children",1,2,3430,0,WIC
-"1 adult, 3 children",1,3,3430,0,WIC
+"1 adult, 3 children",1,3,3430,126.84,WIC
 2 adults,2,0,3430,0,WIC
 "2 adults, 1 child",2,1,3430,0,WIC
-"2 adults, 2 children",2,2,3430,0,WIC
+"2 adults, 2 children",2,2,3430,126.84,WIC
 "2 adults, 3 children",2,3,3430,126.84,WIC
 1 adult,1,0,3440,0,WIC
 "1 adult, 1 child",1,1,3440,0,WIC
 "1 adult, 2 children",1,2,3440,0,WIC
-"1 adult, 3 children",1,3,3440,0,WIC
+"1 adult, 3 children",1,3,3440,126.84,WIC
 2 adults,2,0,3440,0,WIC
 "2 adults, 1 child",2,1,3440,0,WIC
-"2 adults, 2 children",2,2,3440,0,WIC
+"2 adults, 2 children",2,2,3440,126.84,WIC
 "2 adults, 3 children",2,3,3440,126.84,WIC
 1 adult,1,0,3450,0,WIC
 "1 adult, 1 child",1,1,3450,0,WIC
 "1 adult, 2 children",1,2,3450,0,WIC
-"1 adult, 3 children",1,3,3450,0,WIC
+"1 adult, 3 children",1,3,3450,126.84,WIC
 2 adults,2,0,3450,0,WIC
 "2 adults, 1 child",2,1,3450,0,WIC
-"2 adults, 2 children",2,2,3450,0,WIC
+"2 adults, 2 children",2,2,3450,126.84,WIC
 "2 adults, 3 children",2,3,3450,126.84,WIC
 1 adult,1,0,3460,0,WIC
 "1 adult, 1 child",1,1,3460,0,WIC
 "1 adult, 2 children",1,2,3460,0,WIC
-"1 adult, 3 children",1,3,3460,0,WIC
+"1 adult, 3 children",1,3,3460,126.84,WIC
 2 adults,2,0,3460,0,WIC
 "2 adults, 1 child",2,1,3460,0,WIC
-"2 adults, 2 children",2,2,3460,0,WIC
+"2 adults, 2 children",2,2,3460,126.84,WIC
 "2 adults, 3 children",2,3,3460,126.84,WIC
 1 adult,1,0,3470,0,WIC
 "1 adult, 1 child",1,1,3470,0,WIC
 "1 adult, 2 children",1,2,3470,0,WIC
-"1 adult, 3 children",1,3,3470,0,WIC
+"1 adult, 3 children",1,3,3470,126.84,WIC
 2 adults,2,0,3470,0,WIC
 "2 adults, 1 child",2,1,3470,0,WIC
-"2 adults, 2 children",2,2,3470,0,WIC
+"2 adults, 2 children",2,2,3470,126.84,WIC
 "2 adults, 3 children",2,3,3470,126.84,WIC
 1 adult,1,0,3480,0,WIC
 "1 adult, 1 child",1,1,3480,0,WIC
 "1 adult, 2 children",1,2,3480,0,WIC
-"1 adult, 3 children",1,3,3480,0,WIC
+"1 adult, 3 children",1,3,3480,126.84,WIC
 2 adults,2,0,3480,0,WIC
 "2 adults, 1 child",2,1,3480,0,WIC
-"2 adults, 2 children",2,2,3480,0,WIC
+"2 adults, 2 children",2,2,3480,126.84,WIC
 "2 adults, 3 children",2,3,3480,126.84,WIC
 1 adult,1,0,3490,0,WIC
 "1 adult, 1 child",1,1,3490,0,WIC
 "1 adult, 2 children",1,2,3490,0,WIC
-"1 adult, 3 children",1,3,3490,0,WIC
+"1 adult, 3 children",1,3,3490,126.84,WIC
 2 adults,2,0,3490,0,WIC
 "2 adults, 1 child",2,1,3490,0,WIC
-"2 adults, 2 children",2,2,3490,0,WIC
+"2 adults, 2 children",2,2,3490,126.84,WIC
 "2 adults, 3 children",2,3,3490,126.84,WIC
 1 adult,1,0,3500,0,WIC
 "1 adult, 1 child",1,1,3500,0,WIC
 "1 adult, 2 children",1,2,3500,0,WIC
-"1 adult, 3 children",1,3,3500,0,WIC
+"1 adult, 3 children",1,3,3500,126.84,WIC
 2 adults,2,0,3500,0,WIC
 "2 adults, 1 child",2,1,3500,0,WIC
-"2 adults, 2 children",2,2,3500,0,WIC
+"2 adults, 2 children",2,2,3500,126.84,WIC
 "2 adults, 3 children",2,3,3500,126.84,WIC
 1 adult,1,0,3510,0,WIC
 "1 adult, 1 child",1,1,3510,0,WIC
 "1 adult, 2 children",1,2,3510,0,WIC
-"1 adult, 3 children",1,3,3510,0,WIC
+"1 adult, 3 children",1,3,3510,126.84,WIC
 2 adults,2,0,3510,0,WIC
 "2 adults, 1 child",2,1,3510,0,WIC
-"2 adults, 2 children",2,2,3510,0,WIC
+"2 adults, 2 children",2,2,3510,126.84,WIC
 "2 adults, 3 children",2,3,3510,126.84,WIC
 1 adult,1,0,3520,0,WIC
 "1 adult, 1 child",1,1,3520,0,WIC
 "1 adult, 2 children",1,2,3520,0,WIC
-"1 adult, 3 children",1,3,3520,0,WIC
+"1 adult, 3 children",1,3,3520,126.84,WIC
 2 adults,2,0,3520,0,WIC
 "2 adults, 1 child",2,1,3520,0,WIC
-"2 adults, 2 children",2,2,3520,0,WIC
+"2 adults, 2 children",2,2,3520,126.84,WIC
 "2 adults, 3 children",2,3,3520,126.84,WIC
 1 adult,1,0,3530,0,WIC
 "1 adult, 1 child",1,1,3530,0,WIC
 "1 adult, 2 children",1,2,3530,0,WIC
-"1 adult, 3 children",1,3,3530,0,WIC
+"1 adult, 3 children",1,3,3530,126.84,WIC
 2 adults,2,0,3530,0,WIC
 "2 adults, 1 child",2,1,3530,0,WIC
-"2 adults, 2 children",2,2,3530,0,WIC
+"2 adults, 2 children",2,2,3530,126.84,WIC
 "2 adults, 3 children",2,3,3530,126.84,WIC
 1 adult,1,0,3540,0,WIC
 "1 adult, 1 child",1,1,3540,0,WIC
 "1 adult, 2 children",1,2,3540,0,WIC
-"1 adult, 3 children",1,3,3540,0,WIC
+"1 adult, 3 children",1,3,3540,126.84,WIC
 2 adults,2,0,3540,0,WIC
 "2 adults, 1 child",2,1,3540,0,WIC
-"2 adults, 2 children",2,2,3540,0,WIC
+"2 adults, 2 children",2,2,3540,126.84,WIC
 "2 adults, 3 children",2,3,3540,126.84,WIC
 1 adult,1,0,3550,0,WIC
 "1 adult, 1 child",1,1,3550,0,WIC
 "1 adult, 2 children",1,2,3550,0,WIC
-"1 adult, 3 children",1,3,3550,0,WIC
+"1 adult, 3 children",1,3,3550,126.84,WIC
 2 adults,2,0,3550,0,WIC
 "2 adults, 1 child",2,1,3550,0,WIC
-"2 adults, 2 children",2,2,3550,0,WIC
+"2 adults, 2 children",2,2,3550,126.84,WIC
 "2 adults, 3 children",2,3,3550,126.84,WIC
 1 adult,1,0,3560,0,WIC
 "1 adult, 1 child",1,1,3560,0,WIC
 "1 adult, 2 children",1,2,3560,0,WIC
-"1 adult, 3 children",1,3,3560,0,WIC
+"1 adult, 3 children",1,3,3560,126.84,WIC
 2 adults,2,0,3560,0,WIC
 "2 adults, 1 child",2,1,3560,0,WIC
-"2 adults, 2 children",2,2,3560,0,WIC
+"2 adults, 2 children",2,2,3560,126.84,WIC
 "2 adults, 3 children",2,3,3560,126.84,WIC
 1 adult,1,0,3570,0,WIC
 "1 adult, 1 child",1,1,3570,0,WIC
 "1 adult, 2 children",1,2,3570,0,WIC
-"1 adult, 3 children",1,3,3570,0,WIC
+"1 adult, 3 children",1,3,3570,126.84,WIC
 2 adults,2,0,3570,0,WIC
 "2 adults, 1 child",2,1,3570,0,WIC
-"2 adults, 2 children",2,2,3570,0,WIC
+"2 adults, 2 children",2,2,3570,126.84,WIC
 "2 adults, 3 children",2,3,3570,126.84,WIC
 1 adult,1,0,3580,0,WIC
 "1 adult, 1 child",1,1,3580,0,WIC
 "1 adult, 2 children",1,2,3580,0,WIC
-"1 adult, 3 children",1,3,3580,0,WIC
+"1 adult, 3 children",1,3,3580,126.84,WIC
 2 adults,2,0,3580,0,WIC
 "2 adults, 1 child",2,1,3580,0,WIC
-"2 adults, 2 children",2,2,3580,0,WIC
+"2 adults, 2 children",2,2,3580,126.84,WIC
 "2 adults, 3 children",2,3,3580,126.84,WIC
 1 adult,1,0,3590,0,WIC
 "1 adult, 1 child",1,1,3590,0,WIC
 "1 adult, 2 children",1,2,3590,0,WIC
-"1 adult, 3 children",1,3,3590,0,WIC
+"1 adult, 3 children",1,3,3590,126.84,WIC
 2 adults,2,0,3590,0,WIC
 "2 adults, 1 child",2,1,3590,0,WIC
-"2 adults, 2 children",2,2,3590,0,WIC
+"2 adults, 2 children",2,2,3590,126.84,WIC
 "2 adults, 3 children",2,3,3590,126.84,WIC
 1 adult,1,0,3600,0,WIC
 "1 adult, 1 child",1,1,3600,0,WIC
 "1 adult, 2 children",1,2,3600,0,WIC
-"1 adult, 3 children",1,3,3600,0,WIC
+"1 adult, 3 children",1,3,3600,126.84,WIC
 2 adults,2,0,3600,0,WIC
 "2 adults, 1 child",2,1,3600,0,WIC
-"2 adults, 2 children",2,2,3600,0,WIC
+"2 adults, 2 children",2,2,3600,126.84,WIC
 "2 adults, 3 children",2,3,3600,126.84,WIC
 1 adult,1,0,3610,0,WIC
 "1 adult, 1 child",1,1,3610,0,WIC
 "1 adult, 2 children",1,2,3610,0,WIC
-"1 adult, 3 children",1,3,3610,0,WIC
+"1 adult, 3 children",1,3,3610,126.84,WIC
 2 adults,2,0,3610,0,WIC
 "2 adults, 1 child",2,1,3610,0,WIC
-"2 adults, 2 children",2,2,3610,0,WIC
+"2 adults, 2 children",2,2,3610,126.84,WIC
 "2 adults, 3 children",2,3,3610,126.84,WIC
 1 adult,1,0,3620,0,WIC
 "1 adult, 1 child",1,1,3620,0,WIC
 "1 adult, 2 children",1,2,3620,0,WIC
-"1 adult, 3 children",1,3,3620,0,WIC
+"1 adult, 3 children",1,3,3620,126.84,WIC
 2 adults,2,0,3620,0,WIC
 "2 adults, 1 child",2,1,3620,0,WIC
-"2 adults, 2 children",2,2,3620,0,WIC
+"2 adults, 2 children",2,2,3620,126.84,WIC
 "2 adults, 3 children",2,3,3620,126.84,WIC
 1 adult,1,0,3630,0,WIC
 "1 adult, 1 child",1,1,3630,0,WIC
 "1 adult, 2 children",1,2,3630,0,WIC
-"1 adult, 3 children",1,3,3630,0,WIC
+"1 adult, 3 children",1,3,3630,126.84,WIC
 2 adults,2,0,3630,0,WIC
 "2 adults, 1 child",2,1,3630,0,WIC
-"2 adults, 2 children",2,2,3630,0,WIC
-"2 adults, 3 children",2,3,3630,0,WIC
+"2 adults, 2 children",2,2,3630,126.84,WIC
+"2 adults, 3 children",2,3,3630,126.84,WIC
 1 adult,1,0,3640,0,WIC
 "1 adult, 1 child",1,1,3640,0,WIC
 "1 adult, 2 children",1,2,3640,0,WIC
-"1 adult, 3 children",1,3,3640,0,WIC
+"1 adult, 3 children",1,3,3640,126.84,WIC
 2 adults,2,0,3640,0,WIC
 "2 adults, 1 child",2,1,3640,0,WIC
-"2 adults, 2 children",2,2,3640,0,WIC
-"2 adults, 3 children",2,3,3640,0,WIC
+"2 adults, 2 children",2,2,3640,126.84,WIC
+"2 adults, 3 children",2,3,3640,126.84,WIC
 1 adult,1,0,3650,0,WIC
 "1 adult, 1 child",1,1,3650,0,WIC
 "1 adult, 2 children",1,2,3650,0,WIC
-"1 adult, 3 children",1,3,3650,0,WIC
+"1 adult, 3 children",1,3,3650,126.84,WIC
 2 adults,2,0,3650,0,WIC
 "2 adults, 1 child",2,1,3650,0,WIC
-"2 adults, 2 children",2,2,3650,0,WIC
-"2 adults, 3 children",2,3,3650,0,WIC
+"2 adults, 2 children",2,2,3650,126.84,WIC
+"2 adults, 3 children",2,3,3650,126.84,WIC
 1 adult,1,0,3660,0,WIC
 "1 adult, 1 child",1,1,3660,0,WIC
 "1 adult, 2 children",1,2,3660,0,WIC
-"1 adult, 3 children",1,3,3660,0,WIC
+"1 adult, 3 children",1,3,3660,126.84,WIC
 2 adults,2,0,3660,0,WIC
 "2 adults, 1 child",2,1,3660,0,WIC
-"2 adults, 2 children",2,2,3660,0,WIC
-"2 adults, 3 children",2,3,3660,0,WIC
+"2 adults, 2 children",2,2,3660,126.84,WIC
+"2 adults, 3 children",2,3,3660,126.84,WIC
 1 adult,1,0,3670,0,WIC
 "1 adult, 1 child",1,1,3670,0,WIC
 "1 adult, 2 children",1,2,3670,0,WIC
-"1 adult, 3 children",1,3,3670,0,WIC
+"1 adult, 3 children",1,3,3670,126.84,WIC
 2 adults,2,0,3670,0,WIC
 "2 adults, 1 child",2,1,3670,0,WIC
-"2 adults, 2 children",2,2,3670,0,WIC
-"2 adults, 3 children",2,3,3670,0,WIC
+"2 adults, 2 children",2,2,3670,126.84,WIC
+"2 adults, 3 children",2,3,3670,126.84,WIC
 1 adult,1,0,3680,0,WIC
 "1 adult, 1 child",1,1,3680,0,WIC
 "1 adult, 2 children",1,2,3680,0,WIC
-"1 adult, 3 children",1,3,3680,0,WIC
+"1 adult, 3 children",1,3,3680,126.84,WIC
 2 adults,2,0,3680,0,WIC
 "2 adults, 1 child",2,1,3680,0,WIC
-"2 adults, 2 children",2,2,3680,0,WIC
-"2 adults, 3 children",2,3,3680,0,WIC
+"2 adults, 2 children",2,2,3680,126.84,WIC
+"2 adults, 3 children",2,3,3680,126.84,WIC
 1 adult,1,0,3690,0,WIC
 "1 adult, 1 child",1,1,3690,0,WIC
 "1 adult, 2 children",1,2,3690,0,WIC
-"1 adult, 3 children",1,3,3690,0,WIC
+"1 adult, 3 children",1,3,3690,126.84,WIC
 2 adults,2,0,3690,0,WIC
 "2 adults, 1 child",2,1,3690,0,WIC
-"2 adults, 2 children",2,2,3690,0,WIC
-"2 adults, 3 children",2,3,3690,0,WIC
+"2 adults, 2 children",2,2,3690,126.84,WIC
+"2 adults, 3 children",2,3,3690,126.84,WIC
 1 adult,1,0,3700,0,WIC
 "1 adult, 1 child",1,1,3700,0,WIC
 "1 adult, 2 children",1,2,3700,0,WIC
-"1 adult, 3 children",1,3,3700,0,WIC
+"1 adult, 3 children",1,3,3700,126.84,WIC
 2 adults,2,0,3700,0,WIC
 "2 adults, 1 child",2,1,3700,0,WIC
-"2 adults, 2 children",2,2,3700,0,WIC
-"2 adults, 3 children",2,3,3700,0,WIC
+"2 adults, 2 children",2,2,3700,126.84,WIC
+"2 adults, 3 children",2,3,3700,126.84,WIC
 1 adult,1,0,3710,0,WIC
 "1 adult, 1 child",1,1,3710,0,WIC
 "1 adult, 2 children",1,2,3710,0,WIC
-"1 adult, 3 children",1,3,3710,0,WIC
+"1 adult, 3 children",1,3,3710,126.84,WIC
 2 adults,2,0,3710,0,WIC
 "2 adults, 1 child",2,1,3710,0,WIC
-"2 adults, 2 children",2,2,3710,0,WIC
-"2 adults, 3 children",2,3,3710,0,WIC
+"2 adults, 2 children",2,2,3710,126.84,WIC
+"2 adults, 3 children",2,3,3710,126.84,WIC
 1 adult,1,0,3720,0,WIC
 "1 adult, 1 child",1,1,3720,0,WIC
 "1 adult, 2 children",1,2,3720,0,WIC
-"1 adult, 3 children",1,3,3720,0,WIC
+"1 adult, 3 children",1,3,3720,126.84,WIC
 2 adults,2,0,3720,0,WIC
 "2 adults, 1 child",2,1,3720,0,WIC
-"2 adults, 2 children",2,2,3720,0,WIC
-"2 adults, 3 children",2,3,3720,0,WIC
+"2 adults, 2 children",2,2,3720,126.84,WIC
+"2 adults, 3 children",2,3,3720,126.84,WIC
 1 adult,1,0,3730,0,WIC
 "1 adult, 1 child",1,1,3730,0,WIC
 "1 adult, 2 children",1,2,3730,0,WIC
-"1 adult, 3 children",1,3,3730,0,WIC
+"1 adult, 3 children",1,3,3730,126.84,WIC
 2 adults,2,0,3730,0,WIC
 "2 adults, 1 child",2,1,3730,0,WIC
-"2 adults, 2 children",2,2,3730,0,WIC
-"2 adults, 3 children",2,3,3730,0,WIC
+"2 adults, 2 children",2,2,3730,126.84,WIC
+"2 adults, 3 children",2,3,3730,126.84,WIC
 1 adult,1,0,3740,0,WIC
 "1 adult, 1 child",1,1,3740,0,WIC
 "1 adult, 2 children",1,2,3740,0,WIC
-"1 adult, 3 children",1,3,3740,0,WIC
+"1 adult, 3 children",1,3,3740,126.84,WIC
 2 adults,2,0,3740,0,WIC
 "2 adults, 1 child",2,1,3740,0,WIC
-"2 adults, 2 children",2,2,3740,0,WIC
-"2 adults, 3 children",2,3,3740,0,WIC
+"2 adults, 2 children",2,2,3740,126.84,WIC
+"2 adults, 3 children",2,3,3740,126.84,WIC
 1 adult,1,0,3750,0,WIC
 "1 adult, 1 child",1,1,3750,0,WIC
 "1 adult, 2 children",1,2,3750,0,WIC
-"1 adult, 3 children",1,3,3750,0,WIC
+"1 adult, 3 children",1,3,3750,126.84,WIC
 2 adults,2,0,3750,0,WIC
 "2 adults, 1 child",2,1,3750,0,WIC
-"2 adults, 2 children",2,2,3750,0,WIC
-"2 adults, 3 children",2,3,3750,0,WIC
+"2 adults, 2 children",2,2,3750,126.84,WIC
+"2 adults, 3 children",2,3,3750,126.84,WIC
 1 adult,1,0,3760,0,WIC
 "1 adult, 1 child",1,1,3760,0,WIC
 "1 adult, 2 children",1,2,3760,0,WIC
-"1 adult, 3 children",1,3,3760,0,WIC
+"1 adult, 3 children",1,3,3760,126.84,WIC
 2 adults,2,0,3760,0,WIC
 "2 adults, 1 child",2,1,3760,0,WIC
-"2 adults, 2 children",2,2,3760,0,WIC
-"2 adults, 3 children",2,3,3760,0,WIC
+"2 adults, 2 children",2,2,3760,126.84,WIC
+"2 adults, 3 children",2,3,3760,126.84,WIC
 1 adult,1,0,3770,0,WIC
 "1 adult, 1 child",1,1,3770,0,WIC
 "1 adult, 2 children",1,2,3770,0,WIC
-"1 adult, 3 children",1,3,3770,0,WIC
+"1 adult, 3 children",1,3,3770,126.84,WIC
 2 adults,2,0,3770,0,WIC
 "2 adults, 1 child",2,1,3770,0,WIC
-"2 adults, 2 children",2,2,3770,0,WIC
-"2 adults, 3 children",2,3,3770,0,WIC
+"2 adults, 2 children",2,2,3770,126.84,WIC
+"2 adults, 3 children",2,3,3770,126.84,WIC
 1 adult,1,0,3780,0,WIC
 "1 adult, 1 child",1,1,3780,0,WIC
 "1 adult, 2 children",1,2,3780,0,WIC
-"1 adult, 3 children",1,3,3780,0,WIC
+"1 adult, 3 children",1,3,3780,126.84,WIC
 2 adults,2,0,3780,0,WIC
 "2 adults, 1 child",2,1,3780,0,WIC
-"2 adults, 2 children",2,2,3780,0,WIC
-"2 adults, 3 children",2,3,3780,0,WIC
+"2 adults, 2 children",2,2,3780,126.84,WIC
+"2 adults, 3 children",2,3,3780,126.84,WIC
 1 adult,1,0,3790,0,WIC
 "1 adult, 1 child",1,1,3790,0,WIC
 "1 adult, 2 children",1,2,3790,0,WIC
-"1 adult, 3 children",1,3,3790,0,WIC
+"1 adult, 3 children",1,3,3790,126.84,WIC
 2 adults,2,0,3790,0,WIC
 "2 adults, 1 child",2,1,3790,0,WIC
-"2 adults, 2 children",2,2,3790,0,WIC
-"2 adults, 3 children",2,3,3790,0,WIC
+"2 adults, 2 children",2,2,3790,126.84,WIC
+"2 adults, 3 children",2,3,3790,126.84,WIC
 1 adult,1,0,3800,0,WIC
 "1 adult, 1 child",1,1,3800,0,WIC
 "1 adult, 2 children",1,2,3800,0,WIC
-"1 adult, 3 children",1,3,3800,0,WIC
+"1 adult, 3 children",1,3,3800,126.84,WIC
 2 adults,2,0,3800,0,WIC
 "2 adults, 1 child",2,1,3800,0,WIC
-"2 adults, 2 children",2,2,3800,0,WIC
-"2 adults, 3 children",2,3,3800,0,WIC
+"2 adults, 2 children",2,2,3800,126.84,WIC
+"2 adults, 3 children",2,3,3800,126.84,WIC
 1 adult,1,0,3810,0,WIC
 "1 adult, 1 child",1,1,3810,0,WIC
 "1 adult, 2 children",1,2,3810,0,WIC
-"1 adult, 3 children",1,3,3810,0,WIC
+"1 adult, 3 children",1,3,3810,126.84,WIC
 2 adults,2,0,3810,0,WIC
 "2 adults, 1 child",2,1,3810,0,WIC
-"2 adults, 2 children",2,2,3810,0,WIC
-"2 adults, 3 children",2,3,3810,0,WIC
+"2 adults, 2 children",2,2,3810,126.84,WIC
+"2 adults, 3 children",2,3,3810,126.84,WIC
 1 adult,1,0,3820,0,WIC
 "1 adult, 1 child",1,1,3820,0,WIC
 "1 adult, 2 children",1,2,3820,0,WIC
-"1 adult, 3 children",1,3,3820,0,WIC
+"1 adult, 3 children",1,3,3820,126.84,WIC
 2 adults,2,0,3820,0,WIC
 "2 adults, 1 child",2,1,3820,0,WIC
-"2 adults, 2 children",2,2,3820,0,WIC
-"2 adults, 3 children",2,3,3820,0,WIC
+"2 adults, 2 children",2,2,3820,126.84,WIC
+"2 adults, 3 children",2,3,3820,126.84,WIC
 1 adult,1,0,3830,0,WIC
 "1 adult, 1 child",1,1,3830,0,WIC
 "1 adult, 2 children",1,2,3830,0,WIC
-"1 adult, 3 children",1,3,3830,0,WIC
+"1 adult, 3 children",1,3,3830,126.84,WIC
 2 adults,2,0,3830,0,WIC
 "2 adults, 1 child",2,1,3830,0,WIC
-"2 adults, 2 children",2,2,3830,0,WIC
-"2 adults, 3 children",2,3,3830,0,WIC
+"2 adults, 2 children",2,2,3830,126.84,WIC
+"2 adults, 3 children",2,3,3830,126.84,WIC
 1 adult,1,0,3840,0,WIC
 "1 adult, 1 child",1,1,3840,0,WIC
 "1 adult, 2 children",1,2,3840,0,WIC
-"1 adult, 3 children",1,3,3840,0,WIC
+"1 adult, 3 children",1,3,3840,126.84,WIC
 2 adults,2,0,3840,0,WIC
 "2 adults, 1 child",2,1,3840,0,WIC
-"2 adults, 2 children",2,2,3840,0,WIC
-"2 adults, 3 children",2,3,3840,0,WIC
+"2 adults, 2 children",2,2,3840,126.84,WIC
+"2 adults, 3 children",2,3,3840,126.84,WIC
 1 adult,1,0,3850,0,WIC
 "1 adult, 1 child",1,1,3850,0,WIC
 "1 adult, 2 children",1,2,3850,0,WIC
-"1 adult, 3 children",1,3,3850,0,WIC
+"1 adult, 3 children",1,3,3850,126.84,WIC
 2 adults,2,0,3850,0,WIC
 "2 adults, 1 child",2,1,3850,0,WIC
-"2 adults, 2 children",2,2,3850,0,WIC
-"2 adults, 3 children",2,3,3850,0,WIC
+"2 adults, 2 children",2,2,3850,126.84,WIC
+"2 adults, 3 children",2,3,3850,126.84,WIC
 1 adult,1,0,3860,0,WIC
 "1 adult, 1 child",1,1,3860,0,WIC
 "1 adult, 2 children",1,2,3860,0,WIC
-"1 adult, 3 children",1,3,3860,0,WIC
+"1 adult, 3 children",1,3,3860,126.84,WIC
 2 adults,2,0,3860,0,WIC
 "2 adults, 1 child",2,1,3860,0,WIC
-"2 adults, 2 children",2,2,3860,0,WIC
-"2 adults, 3 children",2,3,3860,0,WIC
+"2 adults, 2 children",2,2,3860,126.84,WIC
+"2 adults, 3 children",2,3,3860,126.84,WIC
 1 adult,1,0,3870,0,WIC
 "1 adult, 1 child",1,1,3870,0,WIC
 "1 adult, 2 children",1,2,3870,0,WIC
-"1 adult, 3 children",1,3,3870,0,WIC
+"1 adult, 3 children",1,3,3870,126.84,WIC
 2 adults,2,0,3870,0,WIC
 "2 adults, 1 child",2,1,3870,0,WIC
-"2 adults, 2 children",2,2,3870,0,WIC
-"2 adults, 3 children",2,3,3870,0,WIC
+"2 adults, 2 children",2,2,3870,126.84,WIC
+"2 adults, 3 children",2,3,3870,126.84,WIC
 1 adult,1,0,3880,0,WIC
 "1 adult, 1 child",1,1,3880,0,WIC
 "1 adult, 2 children",1,2,3880,0,WIC
@@ -19142,7 +19142,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3880,0,WIC
 "2 adults, 1 child",2,1,3880,0,WIC
 "2 adults, 2 children",2,2,3880,0,WIC
-"2 adults, 3 children",2,3,3880,0,WIC
+"2 adults, 3 children",2,3,3880,126.84,WIC
 1 adult,1,0,3890,0,WIC
 "1 adult, 1 child",1,1,3890,0,WIC
 "1 adult, 2 children",1,2,3890,0,WIC
@@ -19150,7 +19150,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3890,0,WIC
 "2 adults, 1 child",2,1,3890,0,WIC
 "2 adults, 2 children",2,2,3890,0,WIC
-"2 adults, 3 children",2,3,3890,0,WIC
+"2 adults, 3 children",2,3,3890,126.84,WIC
 1 adult,1,0,3900,0,WIC
 "1 adult, 1 child",1,1,3900,0,WIC
 "1 adult, 2 children",1,2,3900,0,WIC
@@ -19158,7 +19158,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3900,0,WIC
 "2 adults, 1 child",2,1,3900,0,WIC
 "2 adults, 2 children",2,2,3900,0,WIC
-"2 adults, 3 children",2,3,3900,0,WIC
+"2 adults, 3 children",2,3,3900,126.84,WIC
 1 adult,1,0,3910,0,WIC
 "1 adult, 1 child",1,1,3910,0,WIC
 "1 adult, 2 children",1,2,3910,0,WIC
@@ -19166,7 +19166,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3910,0,WIC
 "2 adults, 1 child",2,1,3910,0,WIC
 "2 adults, 2 children",2,2,3910,0,WIC
-"2 adults, 3 children",2,3,3910,0,WIC
+"2 adults, 3 children",2,3,3910,126.84,WIC
 1 adult,1,0,3920,0,WIC
 "1 adult, 1 child",1,1,3920,0,WIC
 "1 adult, 2 children",1,2,3920,0,WIC
@@ -19174,7 +19174,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3920,0,WIC
 "2 adults, 1 child",2,1,3920,0,WIC
 "2 adults, 2 children",2,2,3920,0,WIC
-"2 adults, 3 children",2,3,3920,0,WIC
+"2 adults, 3 children",2,3,3920,126.84,WIC
 1 adult,1,0,3930,0,WIC
 "1 adult, 1 child",1,1,3930,0,WIC
 "1 adult, 2 children",1,2,3930,0,WIC
@@ -19182,7 +19182,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3930,0,WIC
 "2 adults, 1 child",2,1,3930,0,WIC
 "2 adults, 2 children",2,2,3930,0,WIC
-"2 adults, 3 children",2,3,3930,0,WIC
+"2 adults, 3 children",2,3,3930,126.84,WIC
 1 adult,1,0,3940,0,WIC
 "1 adult, 1 child",1,1,3940,0,WIC
 "1 adult, 2 children",1,2,3940,0,WIC
@@ -19190,7 +19190,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3940,0,WIC
 "2 adults, 1 child",2,1,3940,0,WIC
 "2 adults, 2 children",2,2,3940,0,WIC
-"2 adults, 3 children",2,3,3940,0,WIC
+"2 adults, 3 children",2,3,3940,126.84,WIC
 1 adult,1,0,3950,0,WIC
 "1 adult, 1 child",1,1,3950,0,WIC
 "1 adult, 2 children",1,2,3950,0,WIC
@@ -19198,7 +19198,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3950,0,WIC
 "2 adults, 1 child",2,1,3950,0,WIC
 "2 adults, 2 children",2,2,3950,0,WIC
-"2 adults, 3 children",2,3,3950,0,WIC
+"2 adults, 3 children",2,3,3950,126.84,WIC
 1 adult,1,0,3960,0,WIC
 "1 adult, 1 child",1,1,3960,0,WIC
 "1 adult, 2 children",1,2,3960,0,WIC
@@ -19206,7 +19206,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3960,0,WIC
 "2 adults, 1 child",2,1,3960,0,WIC
 "2 adults, 2 children",2,2,3960,0,WIC
-"2 adults, 3 children",2,3,3960,0,WIC
+"2 adults, 3 children",2,3,3960,126.84,WIC
 1 adult,1,0,3970,0,WIC
 "1 adult, 1 child",1,1,3970,0,WIC
 "1 adult, 2 children",1,2,3970,0,WIC
@@ -19214,7 +19214,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3970,0,WIC
 "2 adults, 1 child",2,1,3970,0,WIC
 "2 adults, 2 children",2,2,3970,0,WIC
-"2 adults, 3 children",2,3,3970,0,WIC
+"2 adults, 3 children",2,3,3970,126.84,WIC
 1 adult,1,0,3980,0,WIC
 "1 adult, 1 child",1,1,3980,0,WIC
 "1 adult, 2 children",1,2,3980,0,WIC
@@ -19222,7 +19222,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3980,0,WIC
 "2 adults, 1 child",2,1,3980,0,WIC
 "2 adults, 2 children",2,2,3980,0,WIC
-"2 adults, 3 children",2,3,3980,0,WIC
+"2 adults, 3 children",2,3,3980,126.84,WIC
 1 adult,1,0,3990,0,WIC
 "1 adult, 1 child",1,1,3990,0,WIC
 "1 adult, 2 children",1,2,3990,0,WIC
@@ -19230,7 +19230,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,3990,0,WIC
 "2 adults, 1 child",2,1,3990,0,WIC
 "2 adults, 2 children",2,2,3990,0,WIC
-"2 adults, 3 children",2,3,3990,0,WIC
+"2 adults, 3 children",2,3,3990,126.84,WIC
 1 adult,1,0,4e3,0,WIC
 "1 adult, 1 child",1,1,4e3,0,WIC
 "1 adult, 2 children",1,2,4e3,0,WIC
@@ -19238,7 +19238,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4e3,0,WIC
 "2 adults, 1 child",2,1,4e3,0,WIC
 "2 adults, 2 children",2,2,4e3,0,WIC
-"2 adults, 3 children",2,3,4e3,0,WIC
+"2 adults, 3 children",2,3,4e3,126.84,WIC
 1 adult,1,0,4010,0,WIC
 "1 adult, 1 child",1,1,4010,0,WIC
 "1 adult, 2 children",1,2,4010,0,WIC
@@ -19246,7 +19246,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4010,0,WIC
 "2 adults, 1 child",2,1,4010,0,WIC
 "2 adults, 2 children",2,2,4010,0,WIC
-"2 adults, 3 children",2,3,4010,0,WIC
+"2 adults, 3 children",2,3,4010,126.84,WIC
 1 adult,1,0,4020,0,WIC
 "1 adult, 1 child",1,1,4020,0,WIC
 "1 adult, 2 children",1,2,4020,0,WIC
@@ -19254,7 +19254,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4020,0,WIC
 "2 adults, 1 child",2,1,4020,0,WIC
 "2 adults, 2 children",2,2,4020,0,WIC
-"2 adults, 3 children",2,3,4020,0,WIC
+"2 adults, 3 children",2,3,4020,126.84,WIC
 1 adult,1,0,4030,0,WIC
 "1 adult, 1 child",1,1,4030,0,WIC
 "1 adult, 2 children",1,2,4030,0,WIC
@@ -19262,7 +19262,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4030,0,WIC
 "2 adults, 1 child",2,1,4030,0,WIC
 "2 adults, 2 children",2,2,4030,0,WIC
-"2 adults, 3 children",2,3,4030,0,WIC
+"2 adults, 3 children",2,3,4030,126.84,WIC
 1 adult,1,0,4040,0,WIC
 "1 adult, 1 child",1,1,4040,0,WIC
 "1 adult, 2 children",1,2,4040,0,WIC
@@ -19270,7 +19270,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4040,0,WIC
 "2 adults, 1 child",2,1,4040,0,WIC
 "2 adults, 2 children",2,2,4040,0,WIC
-"2 adults, 3 children",2,3,4040,0,WIC
+"2 adults, 3 children",2,3,4040,126.84,WIC
 1 adult,1,0,4050,0,WIC
 "1 adult, 1 child",1,1,4050,0,WIC
 "1 adult, 2 children",1,2,4050,0,WIC
@@ -19278,7 +19278,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4050,0,WIC
 "2 adults, 1 child",2,1,4050,0,WIC
 "2 adults, 2 children",2,2,4050,0,WIC
-"2 adults, 3 children",2,3,4050,0,WIC
+"2 adults, 3 children",2,3,4050,126.84,WIC
 1 adult,1,0,4060,0,WIC
 "1 adult, 1 child",1,1,4060,0,WIC
 "1 adult, 2 children",1,2,4060,0,WIC
@@ -19286,7 +19286,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4060,0,WIC
 "2 adults, 1 child",2,1,4060,0,WIC
 "2 adults, 2 children",2,2,4060,0,WIC
-"2 adults, 3 children",2,3,4060,0,WIC
+"2 adults, 3 children",2,3,4060,126.84,WIC
 1 adult,1,0,4070,0,WIC
 "1 adult, 1 child",1,1,4070,0,WIC
 "1 adult, 2 children",1,2,4070,0,WIC
@@ -19294,7 +19294,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4070,0,WIC
 "2 adults, 1 child",2,1,4070,0,WIC
 "2 adults, 2 children",2,2,4070,0,WIC
-"2 adults, 3 children",2,3,4070,0,WIC
+"2 adults, 3 children",2,3,4070,126.84,WIC
 1 adult,1,0,4080,0,WIC
 "1 adult, 1 child",1,1,4080,0,WIC
 "1 adult, 2 children",1,2,4080,0,WIC
@@ -19302,7 +19302,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4080,0,WIC
 "2 adults, 1 child",2,1,4080,0,WIC
 "2 adults, 2 children",2,2,4080,0,WIC
-"2 adults, 3 children",2,3,4080,0,WIC
+"2 adults, 3 children",2,3,4080,126.84,WIC
 1 adult,1,0,4090,0,WIC
 "1 adult, 1 child",1,1,4090,0,WIC
 "1 adult, 2 children",1,2,4090,0,WIC
@@ -19310,7 +19310,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4090,0,WIC
 "2 adults, 1 child",2,1,4090,0,WIC
 "2 adults, 2 children",2,2,4090,0,WIC
-"2 adults, 3 children",2,3,4090,0,WIC
+"2 adults, 3 children",2,3,4090,126.84,WIC
 1 adult,1,0,4100,0,WIC
 "1 adult, 1 child",1,1,4100,0,WIC
 "1 adult, 2 children",1,2,4100,0,WIC
@@ -19318,7 +19318,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4100,0,WIC
 "2 adults, 1 child",2,1,4100,0,WIC
 "2 adults, 2 children",2,2,4100,0,WIC
-"2 adults, 3 children",2,3,4100,0,WIC
+"2 adults, 3 children",2,3,4100,126.84,WIC
 1 adult,1,0,4110,0,WIC
 "1 adult, 1 child",1,1,4110,0,WIC
 "1 adult, 2 children",1,2,4110,0,WIC
@@ -19326,7 +19326,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4110,0,WIC
 "2 adults, 1 child",2,1,4110,0,WIC
 "2 adults, 2 children",2,2,4110,0,WIC
-"2 adults, 3 children",2,3,4110,0,WIC
+"2 adults, 3 children",2,3,4110,126.84,WIC
 1 adult,1,0,4120,0,WIC
 "1 adult, 1 child",1,1,4120,0,WIC
 "1 adult, 2 children",1,2,4120,0,WIC
@@ -19334,7 +19334,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4120,0,WIC
 "2 adults, 1 child",2,1,4120,0,WIC
 "2 adults, 2 children",2,2,4120,0,WIC
-"2 adults, 3 children",2,3,4120,0,WIC
+"2 adults, 3 children",2,3,4120,126.84,WIC
 1 adult,1,0,4130,0,WIC
 "1 adult, 1 child",1,1,4130,0,WIC
 "1 adult, 2 children",1,2,4130,0,WIC
@@ -19342,7 +19342,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4130,0,WIC
 "2 adults, 1 child",2,1,4130,0,WIC
 "2 adults, 2 children",2,2,4130,0,WIC
-"2 adults, 3 children",2,3,4130,0,WIC
+"2 adults, 3 children",2,3,4130,126.84,WIC
 1 adult,1,0,4140,0,WIC
 "1 adult, 1 child",1,1,4140,0,WIC
 "1 adult, 2 children",1,2,4140,0,WIC
@@ -19350,7 +19350,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4140,0,WIC
 "2 adults, 1 child",2,1,4140,0,WIC
 "2 adults, 2 children",2,2,4140,0,WIC
-"2 adults, 3 children",2,3,4140,0,WIC
+"2 adults, 3 children",2,3,4140,126.84,WIC
 1 adult,1,0,4150,0,WIC
 "1 adult, 1 child",1,1,4150,0,WIC
 "1 adult, 2 children",1,2,4150,0,WIC
@@ -19358,7 +19358,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4150,0,WIC
 "2 adults, 1 child",2,1,4150,0,WIC
 "2 adults, 2 children",2,2,4150,0,WIC
-"2 adults, 3 children",2,3,4150,0,WIC
+"2 adults, 3 children",2,3,4150,126.84,WIC
 1 adult,1,0,4160,0,WIC
 "1 adult, 1 child",1,1,4160,0,WIC
 "1 adult, 2 children",1,2,4160,0,WIC
@@ -19366,7 +19366,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4160,0,WIC
 "2 adults, 1 child",2,1,4160,0,WIC
 "2 adults, 2 children",2,2,4160,0,WIC
-"2 adults, 3 children",2,3,4160,0,WIC
+"2 adults, 3 children",2,3,4160,126.84,WIC
 1 adult,1,0,4170,0,WIC
 "1 adult, 1 child",1,1,4170,0,WIC
 "1 adult, 2 children",1,2,4170,0,WIC
@@ -19374,7 +19374,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4170,0,WIC
 "2 adults, 1 child",2,1,4170,0,WIC
 "2 adults, 2 children",2,2,4170,0,WIC
-"2 adults, 3 children",2,3,4170,0,WIC
+"2 adults, 3 children",2,3,4170,126.84,WIC
 1 adult,1,0,4180,0,WIC
 "1 adult, 1 child",1,1,4180,0,WIC
 "1 adult, 2 children",1,2,4180,0,WIC
@@ -19382,7 +19382,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4180,0,WIC
 "2 adults, 1 child",2,1,4180,0,WIC
 "2 adults, 2 children",2,2,4180,0,WIC
-"2 adults, 3 children",2,3,4180,0,WIC
+"2 adults, 3 children",2,3,4180,126.84,WIC
 1 adult,1,0,4190,0,WIC
 "1 adult, 1 child",1,1,4190,0,WIC
 "1 adult, 2 children",1,2,4190,0,WIC
@@ -19390,7 +19390,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4190,0,WIC
 "2 adults, 1 child",2,1,4190,0,WIC
 "2 adults, 2 children",2,2,4190,0,WIC
-"2 adults, 3 children",2,3,4190,0,WIC
+"2 adults, 3 children",2,3,4190,126.84,WIC
 1 adult,1,0,4200,0,WIC
 "1 adult, 1 child",1,1,4200,0,WIC
 "1 adult, 2 children",1,2,4200,0,WIC
@@ -19398,7 +19398,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4200,0,WIC
 "2 adults, 1 child",2,1,4200,0,WIC
 "2 adults, 2 children",2,2,4200,0,WIC
-"2 adults, 3 children",2,3,4200,0,WIC
+"2 adults, 3 children",2,3,4200,126.84,WIC
 1 adult,1,0,4210,0,WIC
 "1 adult, 1 child",1,1,4210,0,WIC
 "1 adult, 2 children",1,2,4210,0,WIC
@@ -19406,7 +19406,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4210,0,WIC
 "2 adults, 1 child",2,1,4210,0,WIC
 "2 adults, 2 children",2,2,4210,0,WIC
-"2 adults, 3 children",2,3,4210,0,WIC
+"2 adults, 3 children",2,3,4210,126.84,WIC
 1 adult,1,0,4220,0,WIC
 "1 adult, 1 child",1,1,4220,0,WIC
 "1 adult, 2 children",1,2,4220,0,WIC
@@ -19414,7 +19414,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4220,0,WIC
 "2 adults, 1 child",2,1,4220,0,WIC
 "2 adults, 2 children",2,2,4220,0,WIC
-"2 adults, 3 children",2,3,4220,0,WIC
+"2 adults, 3 children",2,3,4220,126.84,WIC
 1 adult,1,0,4230,0,WIC
 "1 adult, 1 child",1,1,4230,0,WIC
 "1 adult, 2 children",1,2,4230,0,WIC
@@ -19422,7 +19422,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4230,0,WIC
 "2 adults, 1 child",2,1,4230,0,WIC
 "2 adults, 2 children",2,2,4230,0,WIC
-"2 adults, 3 children",2,3,4230,0,WIC
+"2 adults, 3 children",2,3,4230,126.84,WIC
 1 adult,1,0,4240,0,WIC
 "1 adult, 1 child",1,1,4240,0,WIC
 "1 adult, 2 children",1,2,4240,0,WIC
@@ -19430,7 +19430,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4240,0,WIC
 "2 adults, 1 child",2,1,4240,0,WIC
 "2 adults, 2 children",2,2,4240,0,WIC
-"2 adults, 3 children",2,3,4240,0,WIC
+"2 adults, 3 children",2,3,4240,126.84,WIC
 1 adult,1,0,4250,0,WIC
 "1 adult, 1 child",1,1,4250,0,WIC
 "1 adult, 2 children",1,2,4250,0,WIC
@@ -19438,7 +19438,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4250,0,WIC
 "2 adults, 1 child",2,1,4250,0,WIC
 "2 adults, 2 children",2,2,4250,0,WIC
-"2 adults, 3 children",2,3,4250,0,WIC
+"2 adults, 3 children",2,3,4250,126.84,WIC
 1 adult,1,0,4260,0,WIC
 "1 adult, 1 child",1,1,4260,0,WIC
 "1 adult, 2 children",1,2,4260,0,WIC
@@ -19446,7 +19446,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4260,0,WIC
 "2 adults, 1 child",2,1,4260,0,WIC
 "2 adults, 2 children",2,2,4260,0,WIC
-"2 adults, 3 children",2,3,4260,0,WIC
+"2 adults, 3 children",2,3,4260,126.84,WIC
 1 adult,1,0,4270,0,WIC
 "1 adult, 1 child",1,1,4270,0,WIC
 "1 adult, 2 children",1,2,4270,0,WIC
@@ -19454,7 +19454,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4270,0,WIC
 "2 adults, 1 child",2,1,4270,0,WIC
 "2 adults, 2 children",2,2,4270,0,WIC
-"2 adults, 3 children",2,3,4270,0,WIC
+"2 adults, 3 children",2,3,4270,126.84,WIC
 1 adult,1,0,4280,0,WIC
 "1 adult, 1 child",1,1,4280,0,WIC
 "1 adult, 2 children",1,2,4280,0,WIC
@@ -19462,7 +19462,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4280,0,WIC
 "2 adults, 1 child",2,1,4280,0,WIC
 "2 adults, 2 children",2,2,4280,0,WIC
-"2 adults, 3 children",2,3,4280,0,WIC
+"2 adults, 3 children",2,3,4280,126.84,WIC
 1 adult,1,0,4290,0,WIC
 "1 adult, 1 child",1,1,4290,0,WIC
 "1 adult, 2 children",1,2,4290,0,WIC
@@ -19470,7 +19470,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4290,0,WIC
 "2 adults, 1 child",2,1,4290,0,WIC
 "2 adults, 2 children",2,2,4290,0,WIC
-"2 adults, 3 children",2,3,4290,0,WIC
+"2 adults, 3 children",2,3,4290,126.84,WIC
 1 adult,1,0,4300,0,WIC
 "1 adult, 1 child",1,1,4300,0,WIC
 "1 adult, 2 children",1,2,4300,0,WIC
@@ -19478,7 +19478,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4300,0,WIC
 "2 adults, 1 child",2,1,4300,0,WIC
 "2 adults, 2 children",2,2,4300,0,WIC
-"2 adults, 3 children",2,3,4300,0,WIC
+"2 adults, 3 children",2,3,4300,126.84,WIC
 1 adult,1,0,4310,0,WIC
 "1 adult, 1 child",1,1,4310,0,WIC
 "1 adult, 2 children",1,2,4310,0,WIC
@@ -19486,7 +19486,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4310,0,WIC
 "2 adults, 1 child",2,1,4310,0,WIC
 "2 adults, 2 children",2,2,4310,0,WIC
-"2 adults, 3 children",2,3,4310,0,WIC
+"2 adults, 3 children",2,3,4310,126.84,WIC
 1 adult,1,0,4320,0,WIC
 "1 adult, 1 child",1,1,4320,0,WIC
 "1 adult, 2 children",1,2,4320,0,WIC
@@ -19494,7 +19494,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4320,0,WIC
 "2 adults, 1 child",2,1,4320,0,WIC
 "2 adults, 2 children",2,2,4320,0,WIC
-"2 adults, 3 children",2,3,4320,0,WIC
+"2 adults, 3 children",2,3,4320,126.84,WIC
 1 adult,1,0,4330,0,WIC
 "1 adult, 1 child",1,1,4330,0,WIC
 "1 adult, 2 children",1,2,4330,0,WIC
@@ -19502,7 +19502,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4330,0,WIC
 "2 adults, 1 child",2,1,4330,0,WIC
 "2 adults, 2 children",2,2,4330,0,WIC
-"2 adults, 3 children",2,3,4330,0,WIC
+"2 adults, 3 children",2,3,4330,126.84,WIC
 1 adult,1,0,4340,0,WIC
 "1 adult, 1 child",1,1,4340,0,WIC
 "1 adult, 2 children",1,2,4340,0,WIC
@@ -19510,7 +19510,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4340,0,WIC
 "2 adults, 1 child",2,1,4340,0,WIC
 "2 adults, 2 children",2,2,4340,0,WIC
-"2 adults, 3 children",2,3,4340,0,WIC
+"2 adults, 3 children",2,3,4340,126.84,WIC
 1 adult,1,0,4350,0,WIC
 "1 adult, 1 child",1,1,4350,0,WIC
 "1 adult, 2 children",1,2,4350,0,WIC
@@ -19518,7 +19518,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4350,0,WIC
 "2 adults, 1 child",2,1,4350,0,WIC
 "2 adults, 2 children",2,2,4350,0,WIC
-"2 adults, 3 children",2,3,4350,0,WIC
+"2 adults, 3 children",2,3,4350,126.84,WIC
 1 adult,1,0,4360,0,WIC
 "1 adult, 1 child",1,1,4360,0,WIC
 "1 adult, 2 children",1,2,4360,0,WIC
@@ -19526,7 +19526,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4360,0,WIC
 "2 adults, 1 child",2,1,4360,0,WIC
 "2 adults, 2 children",2,2,4360,0,WIC
-"2 adults, 3 children",2,3,4360,0,WIC
+"2 adults, 3 children",2,3,4360,126.84,WIC
 1 adult,1,0,4370,0,WIC
 "1 adult, 1 child",1,1,4370,0,WIC
 "1 adult, 2 children",1,2,4370,0,WIC
@@ -19534,7 +19534,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4370,0,WIC
 "2 adults, 1 child",2,1,4370,0,WIC
 "2 adults, 2 children",2,2,4370,0,WIC
-"2 adults, 3 children",2,3,4370,0,WIC
+"2 adults, 3 children",2,3,4370,126.84,WIC
 1 adult,1,0,4380,0,WIC
 "1 adult, 1 child",1,1,4380,0,WIC
 "1 adult, 2 children",1,2,4380,0,WIC
@@ -19542,7 +19542,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4380,0,WIC
 "2 adults, 1 child",2,1,4380,0,WIC
 "2 adults, 2 children",2,2,4380,0,WIC
-"2 adults, 3 children",2,3,4380,0,WIC
+"2 adults, 3 children",2,3,4380,126.84,WIC
 1 adult,1,0,4390,0,WIC
 "1 adult, 1 child",1,1,4390,0,WIC
 "1 adult, 2 children",1,2,4390,0,WIC
@@ -19550,7 +19550,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4390,0,WIC
 "2 adults, 1 child",2,1,4390,0,WIC
 "2 adults, 2 children",2,2,4390,0,WIC
-"2 adults, 3 children",2,3,4390,0,WIC
+"2 adults, 3 children",2,3,4390,126.84,WIC
 1 adult,1,0,4400,0,WIC
 "1 adult, 1 child",1,1,4400,0,WIC
 "1 adult, 2 children",1,2,4400,0,WIC
@@ -19558,7 +19558,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4400,0,WIC
 "2 adults, 1 child",2,1,4400,0,WIC
 "2 adults, 2 children",2,2,4400,0,WIC
-"2 adults, 3 children",2,3,4400,0,WIC
+"2 adults, 3 children",2,3,4400,126.84,WIC
 1 adult,1,0,4410,0,WIC
 "1 adult, 1 child",1,1,4410,0,WIC
 "1 adult, 2 children",1,2,4410,0,WIC
@@ -19566,7 +19566,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4410,0,WIC
 "2 adults, 1 child",2,1,4410,0,WIC
 "2 adults, 2 children",2,2,4410,0,WIC
-"2 adults, 3 children",2,3,4410,0,WIC
+"2 adults, 3 children",2,3,4410,126.84,WIC
 1 adult,1,0,4420,0,WIC
 "1 adult, 1 child",1,1,4420,0,WIC
 "1 adult, 2 children",1,2,4420,0,WIC
@@ -19574,7 +19574,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4420,0,WIC
 "2 adults, 1 child",2,1,4420,0,WIC
 "2 adults, 2 children",2,2,4420,0,WIC
-"2 adults, 3 children",2,3,4420,0,WIC
+"2 adults, 3 children",2,3,4420,126.84,WIC
 1 adult,1,0,4430,0,WIC
 "1 adult, 1 child",1,1,4430,0,WIC
 "1 adult, 2 children",1,2,4430,0,WIC
@@ -19582,7 +19582,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4430,0,WIC
 "2 adults, 1 child",2,1,4430,0,WIC
 "2 adults, 2 children",2,2,4430,0,WIC
-"2 adults, 3 children",2,3,4430,0,WIC
+"2 adults, 3 children",2,3,4430,126.84,WIC
 1 adult,1,0,4440,0,WIC
 "1 adult, 1 child",1,1,4440,0,WIC
 "1 adult, 2 children",1,2,4440,0,WIC
@@ -19590,7 +19590,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4440,0,WIC
 "2 adults, 1 child",2,1,4440,0,WIC
 "2 adults, 2 children",2,2,4440,0,WIC
-"2 adults, 3 children",2,3,4440,0,WIC
+"2 adults, 3 children",2,3,4440,126.84,WIC
 1 adult,1,0,4450,0,WIC
 "1 adult, 1 child",1,1,4450,0,WIC
 "1 adult, 2 children",1,2,4450,0,WIC
@@ -19598,7 +19598,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4450,0,WIC
 "2 adults, 1 child",2,1,4450,0,WIC
 "2 adults, 2 children",2,2,4450,0,WIC
-"2 adults, 3 children",2,3,4450,0,WIC
+"2 adults, 3 children",2,3,4450,126.84,WIC
 1 adult,1,0,4460,0,WIC
 "1 adult, 1 child",1,1,4460,0,WIC
 "1 adult, 2 children",1,2,4460,0,WIC
@@ -19606,7 +19606,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4460,0,WIC
 "2 adults, 1 child",2,1,4460,0,WIC
 "2 adults, 2 children",2,2,4460,0,WIC
-"2 adults, 3 children",2,3,4460,0,WIC
+"2 adults, 3 children",2,3,4460,126.84,WIC
 1 adult,1,0,4470,0,WIC
 "1 adult, 1 child",1,1,4470,0,WIC
 "1 adult, 2 children",1,2,4470,0,WIC
@@ -19614,7 +19614,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4470,0,WIC
 "2 adults, 1 child",2,1,4470,0,WIC
 "2 adults, 2 children",2,2,4470,0,WIC
-"2 adults, 3 children",2,3,4470,0,WIC
+"2 adults, 3 children",2,3,4470,126.84,WIC
 1 adult,1,0,4480,0,WIC
 "1 adult, 1 child",1,1,4480,0,WIC
 "1 adult, 2 children",1,2,4480,0,WIC
@@ -19622,7 +19622,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4480,0,WIC
 "2 adults, 1 child",2,1,4480,0,WIC
 "2 adults, 2 children",2,2,4480,0,WIC
-"2 adults, 3 children",2,3,4480,0,WIC
+"2 adults, 3 children",2,3,4480,126.84,WIC
 1 adult,1,0,4490,0,WIC
 "1 adult, 1 child",1,1,4490,0,WIC
 "1 adult, 2 children",1,2,4490,0,WIC
@@ -19630,7 +19630,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4490,0,WIC
 "2 adults, 1 child",2,1,4490,0,WIC
 "2 adults, 2 children",2,2,4490,0,WIC
-"2 adults, 3 children",2,3,4490,0,WIC
+"2 adults, 3 children",2,3,4490,126.84,WIC
 1 adult,1,0,4500,0,WIC
 "1 adult, 1 child",1,1,4500,0,WIC
 "1 adult, 2 children",1,2,4500,0,WIC
@@ -19638,7 +19638,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4500,0,WIC
 "2 adults, 1 child",2,1,4500,0,WIC
 "2 adults, 2 children",2,2,4500,0,WIC
-"2 adults, 3 children",2,3,4500,0,WIC
+"2 adults, 3 children",2,3,4500,126.84,WIC
 1 adult,1,0,4510,0,WIC
 "1 adult, 1 child",1,1,4510,0,WIC
 "1 adult, 2 children",1,2,4510,0,WIC
@@ -19646,7 +19646,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4510,0,WIC
 "2 adults, 1 child",2,1,4510,0,WIC
 "2 adults, 2 children",2,2,4510,0,WIC
-"2 adults, 3 children",2,3,4510,0,WIC
+"2 adults, 3 children",2,3,4510,126.84,WIC
 1 adult,1,0,4520,0,WIC
 "1 adult, 1 child",1,1,4520,0,WIC
 "1 adult, 2 children",1,2,4520,0,WIC
@@ -19654,7 +19654,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4520,0,WIC
 "2 adults, 1 child",2,1,4520,0,WIC
 "2 adults, 2 children",2,2,4520,0,WIC
-"2 adults, 3 children",2,3,4520,0,WIC
+"2 adults, 3 children",2,3,4520,126.84,WIC
 1 adult,1,0,4530,0,WIC
 "1 adult, 1 child",1,1,4530,0,WIC
 "1 adult, 2 children",1,2,4530,0,WIC
@@ -19662,7 +19662,7 @@ composition,adults,children,monthly_income,payment,benefit
 2 adults,2,0,4530,0,WIC
 "2 adults, 1 child",2,1,4530,0,WIC
 "2 adults, 2 children",2,2,4530,0,WIC
-"2 adults, 3 children",2,3,4530,0,WIC
+"2 adults, 3 children",2,3,4530,126.84,WIC
 1 adult,1,0,4540,0,WIC
 "1 adult, 1 child",1,1,4540,0,WIC
 "1 adult, 2 children",1,2,4540,0,WIC
