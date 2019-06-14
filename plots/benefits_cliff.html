@@ -111,7 +111,7 @@
 
 
 			// import dataset
-			d3.csv("https://ff-plots.s3.amazonaws.com/data/benefits.csv", function(d) {
+			d3.csv("benefits.csv", function(d) {
               return {
                 composition: d.composition,
                 monthly_income: +d.monthly_income,
@@ -487,7 +487,7 @@
 		            "translate(" + (width/2) + " ," +
 		                           (height + margin.top + 30) + ")")
 		      .style("text-anchor", "middle")
-		      .text("Monthly Wages");
+		      .text("Monthly Income");
 
 			// text label for the y axis
 		  svg.append("text")
@@ -496,7 +496,7 @@
 		      .attr("x",0 - (height / 2))
 		      .attr("dy", "1em")
 		      .style("text-anchor", "middle")
-		      .text("Benefit Amount");
+		      .text("Monthly Benefit Amount");
 
 			// add text saying that FPG stands for federal poverty guidelines
 			svg.append("text")
