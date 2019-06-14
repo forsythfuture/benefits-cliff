@@ -34,7 +34,7 @@ prek <- prek %>%
           payment = ifelse(children > 0, 650, 0),
           # eliminate payments if income is over limits
           payment = ifelse(monthly_income > income_limit, 0, payment),
-          benefit = "NC pre-K") %>%
+          benefit = "NC Pre-K") %>%
    select(composition, adults, children, monthly_income, payment, benefit)
 
  write_rds(prek, 'benefits_tables/tables/prek.rds')

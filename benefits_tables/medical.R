@@ -62,7 +62,7 @@ medical <- medical %>%
          payment_maf = ifelse(children == 0, 0, payment_maf),
          # sum mic and maf into one payment column
          payment = payment_mic + payment_maf,
-         benefit = "NC Medicare / Health Choice") %>%
+         benefit = "NC Medicaid / Health Choice") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
   write_rds(medical, 'benefits_tables/tables/medical.rds')

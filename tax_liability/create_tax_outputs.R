@@ -21,9 +21,9 @@ tax <- read_csv('tax_liability/tax_outputs.csv') %>%
 
 # read in dataset of all benefits
 benefits <- read_csv("plots/benefits.csv") %>%
-  # don't include pre-k subsidies
-  filter(benefit != "NC pre-K")
-
+  # don't include pre-k subsidies and medical
+  filter(benefit != "NC Pre-K",
+         benefit != "NC Medicaid / Health Choice")
 # clean data -------------------------------------------------------------------
 
 # we want to calculate total benefits for two groups:
@@ -34,19 +34,19 @@ no_child_care <- benefits %>%
 
 # create function that sums all benefits
 sum_benefits <- function(df, benefit_name) {
-  
+
   df <- df %>%
     # sum total benefits for each family type / income
     group_by(composition, monthly_income) %>%
     summarize(payment = sum(payment),
               benefit = benefit_name)
-  
+
   return(df)
 }
 
 # sum benefits for all benefits, and for benefits without child care
-total_benefits <- map2(list(benefits, no_child_care), 
-                       list("SNAP, TANF, Housing, EITC", "SNAP, TANF, Housing, EITC, Child Care"), 
+total_benefits <- map2(list(benefits, no_child_care),
+                       list("SNAP, TANF, Housing, WIC, EITC", "SNAP, TANF, Housing, WIC, EITC, Child Care"),
                        sum_benefits) %>%
   bind_rows() %>%
   ungroup()
@@ -72,7 +72,7 @@ rm(base, benefits, no_child_care, tax, total_benefits)
 # currently they are in different columns,
 # make after-tax income its own dataset, then bind to master
 after_tax <- master %>%
-  filter(benefit == "SNAP, TANF, Housing, EITC") %>%
+  filter(benefit == "SNAP, TANF, Housing, WIC, EITC") %>%
   select(composition, monthly_income, aftertax_income) %>%
   rename(net_income = aftertax_income) %>%
   mutate(benefit = "After-tax income")
@@ -83,7 +83,7 @@ master <- master %>%
   bind_rows(after_tax) %>%
   rename(payment = net_income) %>%
   arrange(composition, monthly_income, payment)
-  
+
 # write out as csv for plotting
 write_csv(master, "plots/total_income.csv")
 

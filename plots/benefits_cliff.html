@@ -41,7 +41,7 @@
   			height = 500 - margin.top - margin.bottom;
 
 				// JSON dataset of federal poverty federal_poverty_guidelines
-	 		 // will be used to draw vertical lines at 100%, 130%, 185%, and 200% of fpg
+	 		 // will be used to draw vertical lines at 100%, 130%, 185%, 200%, and 210% of fpg
 
  		 const fpl = [{
  			 "name": "1 adult",
@@ -49,7 +49,8 @@
  				 "a": 1012,
  				 "b": Math.round(1012 * 1.3),
  				 "c": Math.round(1012 * 1.85),
- 				 "d": Math.round(1012 * 2)
+ 				 "d": Math.round(1012 * 2),
+				 "e": Math.round(1012 * 2.1)
  			 }
  		 }, {
  			 "name": "1 adult, 1 child",
@@ -57,7 +58,8 @@
  				 "a": 1372,
  				 "b": Math.round(1372 * 1.3),
  				 "c": Math.round(1372 * 1.85),
- 				 "d": Math.round(1372 * 2)
+ 				 "d": Math.round(1372 * 2),
+				 "e": Math.round(1372 * 2.1)
  			 }
  		 }, {
  			 "name": "1 adult, 2 children",
@@ -65,7 +67,8 @@
  				 "a": 1732,
  				 "b": Math.round(1732 * 1.3),
  				 "c": Math.round(1732 * 1.85),
- 				 "d": Math.round(1732 * 2)
+ 				 "d": Math.round(1732 * 2),
+				 "e": Math.round(1732 * 2.1)
  			 }
  		 }, {
  			 "name": "1 adult, 3 children",
@@ -73,7 +76,8 @@
  				 "a": 2092,
  				 "b": Math.round(2092 * 1.3),
  				 "c": Math.round(2092 * 1.85),
- 				 "d": Math.round(2092 * 2)
+ 				 "d": Math.round(2092 * 2),
+				 "e": Math.round(2092 * 2.1)
  			 }
  		 }, {
  			 "name": "2 adults",
@@ -81,7 +85,8 @@
  				 "a": 1372,
  				 "b": Math.round(1372 * 1.3),
  				 "c": Math.round(1372 * 1.85),
- 				 "d": Math.round(1372 * 2)
+ 				 "d": Math.round(1372 * 2),
+				 "e": Math.round(1372 * 2.1)
  			 }
  		 }, {
  			 "name": "2 adults, 1 child",
@@ -89,7 +94,8 @@
  				 "a": 1732,
  				 "b": Math.round(1732 * 1.3),
  				 "c": Math.round(1732 * 1.85),
- 				 "d": Math.round(1732 * 2)
+ 				 "d": Math.round(1732 * 2),
+				 "e": Math.round(1732 * 2.1)
  			 }
  		 }, {
  			 "name": "2 adults, 2 children",
@@ -97,7 +103,8 @@
  				 "a": 2092,
  				 "b": Math.round(2092 * 1.3),
  				 "c": Math.round(2092 * 1.85),
- 				 "d": Math.round(2092 * 2)
+ 				 "d": Math.round(2092 * 2),
+				 "e": Math.round(2092 * 2.1)
  			 }
  		 }, {
  			 "name": "2 adults, 3 children",
@@ -105,9 +112,13 @@
  				 "a": 2452,
  				 "b": Math.round(2452 * 1.3),
  				 "c": Math.round(2452 * 1.85),
- 				 "d": Math.round(2452 * 2)
+ 				 "d": Math.round(2452 * 2),
+				 "e": Math.round(2452 * 2.1)
  			 }
  		 }];
+
+		 const poverty_levels = ['a', 'b', 'c', 'd', 'e']
+		 const poverty_text = ["100%", "130%", "185%", "200%", "210%"]
 
 
 			// import dataset
@@ -278,20 +289,17 @@
 							 }
 						 }
 
-						 var poverty_levels = ['a', 'b', 'c', 'd']
-						 var poverty_text = ["100%", "130%", "185%", "200%"]
-
 						 for(var i = 0; i < poverty_levels.length; ++i) {
 
 								var fpl_threshold = single_fpl.levels[poverty_levels[i]]
 
-								svg.append('line')//.selectAll(".fgp_lines")
+								svg.append('line')
 									.attr("x1", xScale(fpl_threshold))
 									.attr("x2", xScale(fpl_threshold))
 									.attr("y1", height - 420)
 									.attr("y2", height)
 									.style("stroke", "gray")
-									.style("stroke-width", 2)
+									.style("stroke-width", 1)
 									.style("stroke-dasharray", "2,2")
 									.attr("class", poverty_levels[i])
 
@@ -341,9 +349,6 @@
 						 { break; }
 					 }
 				 }
-
-				 var poverty_levels = ['a', 'b', 'c', 'd']
-				 var poverty_text = ["100%", "130%", "185%", "200%"]
 
 				 for(var i = 0; i < poverty_levels.length; ++i) {
 
