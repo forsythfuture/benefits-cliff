@@ -69,7 +69,7 @@ rm(base, benefits, no_child_care, tax, total_benefits)
 # currently they are in different columns,
 # make after-tax income its own dataset, then bind to master
 after_tax <- master %>%
-  filter(benefit == "SNAP, TANF, Housing, WIC") %>%
+  filter(benefit == "Child care") %>%
   select(composition, monthly_income, aftertax_income) %>%
   rename(net_income = aftertax_income) %>%
   mutate(benefit = "After-tax income")
