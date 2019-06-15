@@ -41,4 +41,4 @@ enrolles_plot <- ggplot(numbers, aes(unit, number, fill=benefit)) +
 enrolles_plot_pltly <- ggplotly(enrolles_plot, tooltip = c("benefit","unit","number","date")) %>%
   config(displayModeBar = FALSE)
 
-htmlwidgets::saveWidget(enrolles_plot_pltly, "number_benefits.html", selfcontained = T)
+htmlwidgets::saveWidget(enrolles_plot_pltly, "number_benefits.html", selfcontained = F)
