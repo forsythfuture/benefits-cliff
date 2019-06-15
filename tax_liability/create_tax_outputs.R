@@ -30,7 +30,7 @@ benefits <- read_csv("plots/benefits.csv") %>%
 # 1) all benefits except child care, and 2) all benefits, including child care
 # we want a non-child care group because we want to plot it separately since it is so high
 no_child_care <- benefits %>%
-  filter(benefit != "Child care subsidy")
+  filter(benefit != "Child Care Subsidy")
 
 # create function that sums all benefits
 sum_benefits <- function(df, benefit_name) {
@@ -46,7 +46,7 @@ sum_benefits <- function(df, benefit_name) {
 
 # sum benefits for all benefits, and for benefits without child care
 total_benefits <- map2(list(benefits, no_child_care),
-                       list("SNAP, TANF, Housing, WIC, EITC", "SNAP, TANF, Housing, WIC, EITC, Child Care"),
+                       list("SNAP, TANF, Housing, WIC, EITC, Child Care", "SNAP, TANF, Housing, WIC, EITC"),
                        sum_benefits) %>%
   bind_rows() %>%
   ungroup()
