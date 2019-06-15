@@ -122,7 +122,7 @@
 
 
 			// import dataset
-			d3.csv("benefits.csv", function(d) {
+			d3.csv("https://ff-plots.s3.amazonaws.com/data/benefits.csv", function(d) {
               return {
                 composition: d.composition,
                 monthly_income: +d.monthly_income,
