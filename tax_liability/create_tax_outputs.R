@@ -88,7 +88,7 @@ master <- master %>%
 
  # order dataset
  master <- master %>%
-  arrange(composition, monthly_income, payment)
+  arrange(composition, monthly_income, payment, desc(benefit))
 
 # write out as csv for plotting
 write_csv(master, "plots/total_income.csv")
