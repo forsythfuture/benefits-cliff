@@ -82,13 +82,12 @@ master <- master %>%
   select(-aftertax_income) %>%
   bind_rows(after_tax) %>%
   rename(payment = net_income) %>%
-  arrange(composition, monthly_income, payment)
+  arrange(composition, monthly_income, payment, desc(benefit))
   
 # write out as csv for plotting
 write_csv(master, "plots/total_income.csv")
 
 # ----------------
-
 
 # create dataset of EITC benefits ----------------------------------------------
 eitc <- base %>%
