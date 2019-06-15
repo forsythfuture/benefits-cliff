@@ -38,8 +38,8 @@ sum_benefits <- function(df, benefit_name) {
   df <- df %>%
     # sum total benefits for each family type / income
     group_by(composition, monthly_income) %>%
-    summarize(payment = sum(payment),
-              benefit = benefit_name)
+    summarize(payment = sum(payment)) %>%
+    mutate(benefit = benefit_name)
 
   return(df)
 }
@@ -81,7 +81,13 @@ after_tax <- master %>%
 master <- master %>%
   select(-aftertax_income) %>%
   bind_rows(after_tax) %>%
-  rename(payment = net_income) %>%
+  rename(payment = net_income)
+
+# replace NA values with zero
+ master$payment[is.na(master$payment)] <- 0
+
+ # order dataset
+ master <- master %>%
   arrange(composition, monthly_income, payment)
 
 # write out as csv for plotting
