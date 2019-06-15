@@ -175,9 +175,12 @@
 			    .attr("height", height + margin.top + margin.bottom)
 			  .append("g")
 			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+			///var legend_text = ["After-tax income",
+			///									 "SNAP, TANF, Housing, WIC",
+			///									 "SNAP, TANF, Housing, WIC, Child Care"]
 			// add legend
 			var legend = svg.selectAll('g')
+					//.data(function(d) {return legend_text;})
 	        .data(d3.map(data, function(d){return d.benefit;}).keys())
 	        .enter()
 	      .append('g')
@@ -189,8 +192,6 @@
 	        .attr('cx', width + 15)
 	        .attr('cy', function(d, i){ return (i *  20) + yLegendOffest;})
 					.attr('r', 7)
-	        //.attr('width', 10)
-	        //.attr('height', 10)
 	        .style('fill', function(d) {
 	          return color(d);
 	        });
