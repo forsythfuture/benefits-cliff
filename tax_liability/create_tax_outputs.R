@@ -79,6 +79,7 @@ master <- master %>%
   select(-aftertax_income) %>%
   bind_rows(after_tax) %>%
   rename(payment = net_income) %>%
+  # replace NA values with 
   arrange(composition, monthly_income, payment, desc(benefit))
 
 # write out as csv for plotting
