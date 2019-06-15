@@ -46,7 +46,7 @@ sum_benefits <- function(df, benefit_name) {
 
 # sum benefits for all benefits, and for benefits without child care
 total_benefits <- map2(list(benefits, no_child_care),
-                       list("SNAP, TANF, Housing, WIC, Child Care", "SNAP, TANF, Housing, WIC"),
+                       list("Child care", "No child care"),
                        sum_benefits) %>%
   bind_rows() %>%
   ungroup()
