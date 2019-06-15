@@ -41,7 +41,7 @@ care <- care %>%
   left_join(fpl, by='size') %>%
   # set payment to 0 if income is greater than 200% of poverty guideline
   mutate(payment = ifelse(monthly_income > guidelines_month, 0, payment),
-         benefit = "Child care subsidy") %>%
+         benefit = "Child Care Subsidy") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
 write_rds(care, 'benefits_tables/tables/child_care_subsidy.rds')
