@@ -59,14 +59,11 @@ master <- bind_cols(base, tax) %>%
   select(-c00100, -c04800, -size:-children) %>%
   # add amount received in benefites
   right_join(total_benefits, by=c("composition", "monthly_income")) %>%
-  # after tax income currently includes EITC
-  # remove EITC from it, so we have a column that is jsut after-tax income without eitc
-  mutate(aftertax_income = round(aftertax_income - eitc, 2),
-        # make column that is net income after and benefits and eitc
-        net_income = round(aftertax_income + payment + eitc, 2)) %>%
+  # make column that is net income after taxes, eitc, and benefits
+  mutate(net_income = round(aftertax_income + payment, 2)) %>%
   select(-eitc, -payment)
 
-rm(base, benefits, no_child_care, tax, total_benefits)
+rm(benefits, no_child_care, tax, total_benefits)
 
 # we need to stack after tax income and net income into long form;
 # currently they are in different columns,
@@ -86,12 +83,3 @@ master <- master %>%
 
 # write out as csv for plotting
 write_csv(master, "plots/total_income.csv")
-
-# ----------------
-
-# create dataset of EITC benefits ----------------------------------------------
-eitc <- base %>%
-  select(composition, adults, children, monthly_income, payment = eitc) %>%
-  mutate(benefit = "Earned Income Tax Credit")
-
-write_rds(eitc, 'benefits_tables/tables/eitc.rds')
