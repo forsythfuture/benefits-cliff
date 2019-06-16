@@ -26,8 +26,15 @@ numbers <- tribble(
 )
 
 # create faceted bar chart
-enrolles_plot <- ggplot(numbers, aes(unit, number, fill=benefit)) +
+ggplot(numbers, aes(unit, number, fill=benefit)) +
   geom_col() +
+  geom_text(
+    aes(label = number),
+    vjust = .5,
+    hjust = -.1,
+    size = 3.3,
+    alpha = .8
+  ) +
   facet_wrap(~benefit, ncol=1,scales = "free_y") +
   scale_y_continuous(labels = scales::comma) +
   coord_flip() +
@@ -37,8 +44,11 @@ enrolles_plot <- ggplot(numbers, aes(unit, number, fill=benefit)) +
   theme_minimal() +
   theme(legend.position="none")
 
-# convert to plotly chart so we have java script
-enrolles_plot_pltly <- ggplotly(enrolles_plot, tooltip = c("benefit","unit","number","date")) %>%
-  config(displayModeBar = FALSE)
+ggsave(filename="number_enrollees.pdf", path = "plots",
+       width = 12, height = 9, units = "in")
 
-htmlwidgets::saveWidget(enrolles_plot_pltly, "number_benefits.html", selfcontained = F)
+# convert to plotly chart so we have java script
+# enrolles_plot_pltly <- ggplotly(enrolles_plot, tooltip = c("benefit","unit","number","date")) %>%
+#   config(displayModeBar = FALSE)
+# 
+# htmlwidgets::saveWidget(enrolles_plot_pltly, "number_benefits.html", selfcontained = F)
