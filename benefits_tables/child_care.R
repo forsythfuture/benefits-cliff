@@ -33,7 +33,7 @@ fpl <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds') %>%
   # double guideline amount so it is at 200%
   mutate(guidelines_month = guidelines_month * 2) %>%
   # only keep 2018
-  filter(year == 2018) %>%
+  filter(year == 2019) %>%
   select(size = household_size, guidelines_month)
 
 # add 200% poverty limit to child care data set

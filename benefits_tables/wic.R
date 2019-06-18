@@ -28,7 +28,7 @@ fpl <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds') %>%
   # multiply guideline amount by 1.85 so it is at 185%
   mutate(guidelines_month = guidelines_month * 1.85) %>%
   # only keep 2018
-  filter(year == 2018) %>%
+  filter(year == 2019) %>%
   select(size = household_size, guidelines_month)
 
 # add 185% poverty limit to WIC data set

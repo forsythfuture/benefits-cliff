@@ -80,7 +80,7 @@ fpg <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds')
 
 # convert guideline amounts to 130% and filter for 2018
 snap_income_limit <- fpg %>%
-  filter(year == 2018) %>%
+  filter(year == 2019) %>%
   mutate(snap_income_limit = round(guidelines_month * 1.3, 0)) %>%
   rename(size = household_size) %>%
   select(size, snap_income_limit)

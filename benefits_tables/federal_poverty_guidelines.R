@@ -16,5 +16,7 @@ fpg <- data.frame(household_size = rep(seq_len(8), times = 2),
     mutate(guidelines_month = round(guidelines_year / 12,0)) %>%
     select(household_size, year, everything())
 
+fpg %>%
+  filter(year == 2019)
 
 write_rds(fpg, 'benefits_tables/tables/federal_poverty_guidelines.rds')
