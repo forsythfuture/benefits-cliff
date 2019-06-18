@@ -8,15 +8,15 @@ library(tidyverse)
 
 housing <- read_rds('benefits_tables/tables/base.rds')
 
-# income limits cannot exceed 30% of median in area (extremely low income)
-# 30% limit amounts based on family size
+# income limits cannot exceed 50% of median in area (very low income)
+# 50% limit amounts based on family size
 # https://www.huduser.gov/portal/datasets/il/il19/Section8-IncomeLimits-FY19.pdf
-income_limits <- c(`1` = 13000,
-                   `2` = 16910,
-                   `3` = 21330,
-                   `4` = 25750,
-                   `5` = 30170,
-                   `6` = 34590,
+income_limits <- c(`1` = 21700,
+                   `2` = 24800,
+                   `3` = 27900,
+                   `4` = 30950,
+                   `5` = 33450,
+                   `6` = 35950,
                    `7` = 38400,
                    `8` = 40900)
 
@@ -38,7 +38,7 @@ fmr <- housing %>%
 housing <- housing %>%
   left_join(fmr, by=c('adults', 'children')) %>%
   # tenants have to pay 30% of their income
-  mutate(payment = round(rent - (monthly_income - .3), 0),
+  mutate(payment = round(rent - (monthly_income * .3), 0),
         # add income limits
         income_limits = recode(.$size, !!!income_limits),
         # if income exceeds limits, reduce payment to 0
