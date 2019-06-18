@@ -8,7 +8,7 @@ library(tidyverse)
 
 care <- read_rds('benefits_tables/tables/base.rds')
 
-# Forsyth County market rates for subsides in 2018 are
+# Forsyth County market rates for subsides in 2019 are
 # $855 for infant and $750 for 3-5
 # we will assume that families with 2 or more children have an infant and 3-5 year old
 # while families with one child only have a 3-5 year old
@@ -32,7 +32,7 @@ care <- care %>%
 fpl <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds') %>%
   # double guideline amount so it is at 200%
   mutate(guidelines_month = guidelines_month * 2) %>%
-  # only keep 2018
+  # only keep 2019
   filter(year == 2019) %>%
   select(size = household_size, guidelines_month)
 
