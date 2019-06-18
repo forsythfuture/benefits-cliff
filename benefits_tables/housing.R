@@ -8,17 +8,17 @@ library(tidyverse)
 
 housing <- read_rds('benefits_tables/tables/base.rds')
 
-# income limits cannot exceed 30% of median in area
-# 30% limit amoutns based on family size, as named vector for mapping
-# https://www.huduser.gov/portal/datasets/il/il18/IncomeLimits-30-FY18.pdf
-income_limits <- c(`1` = 13150,
-                   `2` = 15000,
-                   `3` = 16900,
-                   `4` = 18750,
-                   `5` = 20250,
-                   `6` = 21750,
-                   `7` = 23250,
-                   `8` = 24750)
+# income limits cannot exceed 30% of median in area (extremely low income)
+# 30% limit amounts based on family size
+# https://www.huduser.gov/portal/datasets/il/il19/Section8-IncomeLimits-FY19.pdf
+income_limits <- c(`1` = 13000,
+                   `2` = 16910,
+                   `3` = 21330,
+                   `4` = 25750,
+                   `5` = 30170,
+                   `6` = 34590,
+                   `7` = 38400,
+                   `8` = 40900)
 
 # convert from yearly to monthly
 income_limits <- income_limits /12
