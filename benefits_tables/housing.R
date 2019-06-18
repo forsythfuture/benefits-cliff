@@ -23,13 +23,13 @@ income_limits <- c(`1` = 13150,
 # convert from yearly to monthly
 income_limits <- income_limits /12
 
-# create data frame of fair market rent values based on family size
+# create data frame of fair market rent values in 2019 based on family size
 # this is the max rent that can be reimbursed
-# https://www.huduser.gov/portal/datasets/fmr.html#2018_data
+# https://www.huduser.gov/portal/datasets/fmr.html#2019_data
 fmr <- housing %>%
   select(adults, children) %>%
   distinct() %>%
-  mutate(fmr = c(594, 734, 734, 1002, 594, 734, 734, 1002),
+  mutate(fmr = c(583, 729, 729, 985, 583, 729, 729, 985),
   # we will assume people's rent amount is 20% of fmr
         rent = round(fmr * .8 , 0)) %>%
   select(-fmr)
