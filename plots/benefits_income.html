@@ -120,8 +120,8 @@
 		 const poverty_levels = ['a', 'b', 'c', 'd', 'e']
 		 const poverty_text = ["100%", "130%", "185%", "200%", "210%"]
 
-			// import dataset "https://ff-plots.s3.amazonaws.com/data/total_income.csv"
-			d3.csv("total_income.csv", function(d) {
+			// import dataset
+			d3.csv("https://ff-plots.s3.amazonaws.com/data/total_income.csv", function(d) {
               return {
                 composition: d.composition,
                 monthly_income: +d.monthly_income,
