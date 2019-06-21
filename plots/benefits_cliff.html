@@ -35,10 +35,10 @@
 
 
 		//create margins
-		var margin = {top: 20, right: 220, bottom: 60, left: 70};
+		var margin = {top: 90, right: 220, bottom: 60, left: 70};
 
 		var width = 960 - margin.left - margin.right,
-  			height = 500 - margin.top - margin.bottom;
+  			height = 520 - margin.top - margin.bottom;
 
 		// JSON dataset of federal poverty federal_poverty_guidelines
 	 	// will be used to draw vertical lines at 100%, 130%, 185%, 200%, and 210% of fpg
@@ -121,8 +121,8 @@
 		 const poverty_text = ["100%", "130%", "185%", "200%", "210%"]
 
 
-			// import dataset
-			d3.csv("https://ff-plots.s3.amazonaws.com/data/benefits.csv", function(d) {
+			// import dataset "https://ff-plots.s3.amazonaws.com/data/benefits.csv"
+			d3.csv("benefits.csv", function(d) {
               return {
                 composition: d.composition,
                 monthly_income: +d.monthly_income,
@@ -134,13 +134,11 @@
 			// gridlines in x axis function
 			function make_x_gridlines() {
 			    return d3.axisBottom(xScale)
-			        //.ticks(10)
 			}
 
 			// gridlines in y axis function
 			function make_y_gridlines() {
 			    return d3.axisLeft(yScale)
-			        //.ticks(10)
 			}
 
       // scales
@@ -152,13 +150,30 @@
 							.domain([0, d3.max(data, function(d) { return d.payment; })])
 							.range([height, 0]);
 
+			// scales for hourly rates
+			var xScaleHourly = d3.scaleLinear()
+							.domain([0, d3.max(data, function(d) {
+								return +((d.monthly_income / (40*4.35)).toFixed(2));
+							})])
+							.range([0, width]);
+
 			var dollarFormat = d3.format("$")
+
+			// create variable that will be hourly wages axis lables
+			// start at 7.25, which is NC and federal minimum wage
+			var hourlyAxis = [7.25];
+			for (var i = 10; i <= 30; i = i + 2) {
+    		hourlyAxis.push(i);
+			}
 
 			// axes
 			var xAxis = d3.axisBottom(xScale)
 										.tickFormat(dollarFormat)
 			var yAxis = d3.axisLeft(yScale)
 										.tickFormat(dollarFormat);
+			var xHourly = d3.axisTop(xScaleHourly)
+										.tickValues(hourlyAxis)
+										.tickFormat(dollarFormat)
 
 			// set the colour scale for lines
 			var color = d3.scaleOrdinal(d3.schemeSet2);
@@ -190,8 +205,6 @@
 	        .attr('cx', width + 15)
 	        .attr('cy', function(d, i){ return (i *  20) + yLegendOffest;})
 					.attr('r', 7)
-	        //.attr('width', 10)
-	        //.attr('height', 10)
 	        .style('fill', function(d) {
 	          return color(d);
 	        });
@@ -203,15 +216,6 @@
 				.attr("font-size", "14px");
 
 			// end legend
-
-			// add the X gridlines
-		  // svg.append("g")
-		  //     .attr("class", "grid")
-		  //     .attr("transform", "translate(0," + height + ")")
-		  //     .call(make_x_gridlines()
-		  //         .tickSize(-height)
-		  //         .tickFormat("")
-		  //     )
 
 		  // add the Y gridlines
 		  svg.append("g")
@@ -296,7 +300,7 @@
 								svg.append('line')
 									.attr("x1", xScale(fpl_threshold))
 									.attr("x2", xScale(fpl_threshold))
-									.attr("y1", height - 420)
+									.attr("y1", height - 370)
 									.attr("y2", height)
 									.style("stroke", "gray")
 									.style("stroke-width", 1)
@@ -305,8 +309,8 @@
 
 								svg.append('text')
 									.attr("x", xScale(fpl_threshold + 30))
-									.attr("y", height - 416)
-									.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 416) + ')')
+									.attr("y", height - 366)
+									.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 366) + ')')
 									.attr("font-size", "12px")
 									.text(poverty_text[i] + "  FPG")
 									.attr("class", poverty_levels[i]+"_text")
@@ -314,6 +318,15 @@
 
 								}
 								// end lines for federal poverty levels
+
+								// subtitle showing family type
+								svg.append("text")
+								        .attr("x", (width / 2))
+								        .attr("y", 0 - (margin.top / 2.3))
+								        .attr("text-anchor", "middle")
+								        .style("font-size", "14px")
+								        .text("Family size: " + family)
+												.attr('class', 'subtitle');
          	}
 
 			// Create initial graph
@@ -364,11 +377,16 @@
 						.transition()
 							.duration(1000)
 							.attr("x", xScale(fpl_threshold  + 30))
-							.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 416) + ')')
+							.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 366) + ')')
 
 				}
 
 				// end lines for poverty levels
+
+				// update household size subtiutle
+				svg.selectAll('.subtitle')
+				.transition()
+					.text("Family size: " + family)
 
 			}
 
@@ -474,6 +492,14 @@
           });
 			// end mouseover line --------------------------
 
+			// chart title
+			svg.append("text")
+			        .attr("x", (width / 2))
+			        .attr("y", 0 - (margin.top / 1.5))
+			        .attr("text-anchor", "middle")
+			        .style("font-size", "16px")
+			        .text("Forsyth County, NC benefits cliff simulator");
+
 			// draw y axis with labels and move in from the size by the amount of padding
       svg.append("g")
       	.attr("class", "axis")
@@ -485,6 +511,12 @@
           .attr("class", "axis")
           .attr("transform", "translate(0," + (height) + ")")
           .call(xAxis);
+
+			// draw x axis for hourly wages with labels and move to the top of the chart area
+		  svg.append("g")
+		      .attr("class", "axis")
+		      .attr("transform", "translate(0," + 0 + ")")
+		      .call(xHourly);
 
 			// text label for the x axis
 		  svg.append("text")
