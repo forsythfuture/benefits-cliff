@@ -49,7 +49,7 @@ income <- incomes %>%
          # so, multiply cum_sum by size to convert number of households to number of people
          cum_sum = size * cum_sum) %>%
   ungroup() %>%
-  select(size, income = HHINCOME, cum_sum)
+  select(size, income = HHINCOME, cum_sum, grouping)
   
 write_csv(income, "plots/cliff_cdf.csv")
 
