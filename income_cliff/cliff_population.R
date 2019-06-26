@@ -32,9 +32,12 @@ income <- incomes %>%
          ) %>%
   select(SERIAL, HHWT, HHINCOME, size, children, adults) %>%
   distinct() %>%
-  # now group by size of household and number of children
-  group_by(size, children) %>%
-  arrange(size, children, HHINCOME) %>%
+  # now group by adults, number of children, and income
+  # we're grouping by income because we will sum household weights by income
+  # so they are aggregated and we don't have multiple rows of the same icome
+  group_by(size, adults, children, HHINCOME) %>%
+  summarize(HHWT = sum(HHWT)) %>%
+  arrange(adults, children, HHINCOME) %>%
   # group by family size and
   # create cumulative sum for incomes by using the weight column
   mutate(cum_sum = cumsum(HHWT),
@@ -55,7 +58,9 @@ income <- incomes %>%
                                     `2-0` = "2 adults",
                                     `2-1` = "2 adults, 1 child",
                                     `2-2` = "2 adults, 2 children",
-                                    `2-3` = "2 adults, 3 children")) %>%
+                                    `2-3` = "2 adults, 3 children"),
+         # add column that is the same thing so that the nested d3 plot works
+         grouping = "group") %>%
   ungroup() %>%
   select(composition, income = HHINCOME, cum_sum, perc_sum)
 
