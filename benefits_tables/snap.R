@@ -9,7 +9,7 @@ library(tidyverse)
 base <- read_rds('benefits_tables/tables/base.rds')
 
 snap <- base %>%
-  mutate(benefit = "SNAP (Food Stamps)")
+  mutate(benefit = "FNS (Food Stamps)")
 
 # SNAP income deductions
 

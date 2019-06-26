@@ -1,6 +1,7 @@
 #####################################################
 #
 # create dataset for creating cumulative distribution plot
+# the dataset will show the number of people at each income amount
 #
 ######################################################
 
