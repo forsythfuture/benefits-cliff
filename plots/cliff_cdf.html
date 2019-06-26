@@ -28,7 +28,7 @@
 		</style>
 	</head>
 	<body>
-	  <div id = "familyDropdown" class="dropdown">Select Family Size:  </div>
+	  <div id = "familyDropdown" class="dropdown">Select Household Size:  </div>
 		<script type="text/javascript">
 
 		// python3 -m http.server 8888 &.
@@ -48,7 +48,7 @@
 													"210% FPG", "85% SMI"]
 
  		 const fpl = [{
- 			 "name": "1 adult",
+ 			 "name": "1",
  			 "levels": {
  				 "a": 1808 * 12,
  				 "b": Math.round(1041 * 1.3) * 12,
@@ -57,7 +57,7 @@
 				 "e": 2578 * 12
  			 }
  		 }, {
- 			 "name": "1 adult, 1 child",
+ 			 "name": "2",
  			 "levels": {
 				 "a": 2067 * 12,
  				 "b": Math.round(1409 * 1.3) * 12,
@@ -66,7 +66,7 @@
 				 "e": 3372 * 12
  			 }
  		 }, {
- 			 "name": "1 adult, 2 children",
+ 			 "name": "3",
  			 "levels": {
 				 "a": 2325 * 12,
  				 "b": Math.round(1778 * 1.3) * 12,
@@ -75,7 +75,7 @@
 				 "e": 4165 * 12
  			 }
  		 }, {
- 			 "name": "1 adult, 3 children",
+ 			 "name": "4",
  			 "levels": {
 				 "a": 2579 * 12,
  				 "b": Math.round(2146 * 1.3) * 12,
@@ -84,34 +84,7 @@
 				 "e": 4958 * 12
  			 }
  		 }, {
- 			 "name": "2 adults",
- 			 "levels": {
-				 "a": 2067 * 12,
- 				 "b": Math.round(1409 * 1.3) * 12,
- 				 "c": Math.round(1409 * 1.85) * 12,
-				 "d": Math.round(1409 * 2.1) * 12,
-				 "e": 3372 * 12
- 			 }
- 		 }, {
- 			 "name": "2 adults, 1 child",
- 			 "levels": {
-				 "a": 2325 * 12,
- 				 "b": Math.round(1778 * 1.3) * 12,
- 				 "c": Math.round(1778 * 1.85) * 12,
-				 "d": Math.round(1778 * 2.1) * 12,
-				 "e": 4165 * 12
- 			 }
- 		 }, {
- 			 "name": "2 adults, 2 children",
- 			 "levels": {
-				 "a": 2579 * 12,
- 				 "b": Math.round(2146 * 1.3) * 12,
- 				 "c": Math.round(2146 * 1.85) * 12,
-				 "d": Math.round(2146 * 2.1) * 12,
-				 "e": 4958 * 12
- 			 }
- 		 }, {
- 			 "name": "2 adults, 3 children",
+ 			 "name": "5",
  			 "levels": {
 				 "a": 2788 * 12,
  				 "b": Math.round(2514 * 1.3) * 12,
@@ -124,10 +97,9 @@
 			// import dataset "https://ff-plots.s3.amazonaws.com/data/cliff_cdf.csv"
 			d3.csv("https://ff-plots.s3.amazonaws.com/data/cliff_cdf.csv", function(d) {
               return {
-                composition: d.composition,
+                size: d.size,
                 income: +d.income,
                 cum_sum: +d.cum_sum,
-                perc_sum: d.perc_sum,
                 grouping: d.grouping
               };
             }).then(function(data) {
@@ -186,7 +158,7 @@
 			// Nest the data by composition (family type)
       var nest = d3.nest()
   	  .key(function(d){
-  	    return d.composition;
+  	    return d.size;
   	  })
       .key(function(d){
         return d.grouping;
@@ -278,17 +250,22 @@
 								// end lines for federal poverty levels
 
 								// subtitle showing family type
+
+								// text for subtitle that is 'person' for 1 person, 'people' for 2 or more
+								var person_people = ""
+								person_people =  (family === '1') ? " person" : " people"
+
 								svg.append("text")
 								        .attr("x", (width / 2))
 								        .attr("y", 0 - (margin.top / 2.3))
 								        .attr("text-anchor", "middle")
 								        .style("font-size", "14px")
-								        .text("Family size: " + family)
+								        .text("Household size: " + family + person_people)
 												.attr('class', 'subtitle');
          	}
 
 			// Create initial graph
-      initialGraph("1 adult")
+      initialGraph("1")
 
       // Update the data
      	var updateGraph = function(family){
@@ -342,9 +319,11 @@
 				// end lines for poverty levels
 
 				// update household size subtiutle
+				person_people =  (family === '1') ? " person" : " people"
+
 				svg.selectAll('.subtitle')
 				.transition()
-					.text("Family size: " + family)
+					.text("Household size: " + family + person_people)
 
 			}
 
@@ -475,7 +454,7 @@
 					.attr("x", width/2)
 					.attr("y", (height + margin.bottom) - 15)
 		      .style("text-anchor", "middle")
-		      .text("Total yearly income");
+		      .text("Total yearly household income");
 
 			// text label for the y axis
 		  svg.append("text")
@@ -484,7 +463,7 @@
 		      .attr("x",0 - (height / 2))
 		      .attr("dy", "1em")
 		      .style("text-anchor", "middle")
-		      .text("Number of households at or below income level");
+		      .text("Number of people in households below income level");
 
 			// add text explaning the abbreviations FPG, AMI, SMI
 			// use for loop
