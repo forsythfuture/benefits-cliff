@@ -46,8 +46,8 @@ sum_benefits <- function(df, benefit_name) {
 
 # sum benefits for all benefits, and for benefits without child care
 total_benefits <- map2(list(benefits, no_child_care),
-                       list("Child Care, SNAP, TANF, WIC, Housing",
-                            "SNAP, TANF, WIC, Housing"),
+                       list("Child Care, FNS, TANF, WIC, Housing",
+                            "FNS, TANF, WIC, Housing"),
                        sum_benefits) %>%
   bind_rows() %>%
   ungroup()
@@ -70,7 +70,7 @@ rm(base, benefits, no_child_care, tax, total_benefits)
 # currently they are in different columns,
 # make after-tax income its own dataset, then bind to master
 after_tax <- master %>%
-  filter(benefit == "SNAP, TANF, WIC, Housing") %>%
+  filter(benefit == "FNS, TANF, WIC, Housing") %>%
   select(composition, monthly_income, aftertax_income) %>%
   rename(net_income = aftertax_income) %>%
   mutate(benefit = "After-tax income")
