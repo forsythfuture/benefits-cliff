@@ -1,7 +1,9 @@
 #####################################################
 #
-# create dataset for creating cumulative distribution plot
+# create dataset for creating cumulative sum plot
 # the dataset will show the number of people at each income amount
+#
+# the codebook for the dataset is in income_cliff/total_income_counts.pdf
 #
 ######################################################
 
@@ -9,6 +11,7 @@ library(tidyverse)
 
 incomes <- read_csv("https://forsyth-futures.s3.amazonaws.com/total_income_counts.csv.gz") %>%
   # filter for Forsyth County
+  # list of NC county fips codes is here: https://www.lib.ncsu.edu/gis/countfips
   filter(COUNTYFIP == 67)
 
 income <- incomes %>%
@@ -17,7 +20,7 @@ income <- incomes %>%
   # to have negative income
   filter(HHINCOME >= 0) %>%
   # create boolean of whether person is in school
-  # we'll later remove families where everyone is in school, 
+  # we'll later remove families where everyone is in school,
   # because such families would generally not be entitled to benefits
   mutate(in_school = ifelse(SCHOOL == 2, TRUE, FALSE)) %>%
   # group by household
@@ -50,7 +53,7 @@ income <- incomes %>%
          cum_sum = size * cum_sum) %>%
   ungroup() %>%
   select(size, income = HHINCOME, cum_sum, grouping)
-  
+
 write_csv(income, "plots/cliff_cdf.csv")
 
 ############################################################################################
@@ -72,7 +75,7 @@ write_csv(income, "plots/cliff_cdf.csv")
 #          children = sum(under_18), # number of children in household under 18
 #          total_school= sum(in_school), # number out of labor force
 #          adults = size - children # numebr of adults
-#          ) %>% 
+#          ) %>%
 #   filter(size != total_school, # remove households where all people are in school
 #          adults <= 2, # less than or equal to 2 adults
 #          children <= 3 # less than or equal to three children

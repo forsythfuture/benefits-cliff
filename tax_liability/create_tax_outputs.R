@@ -1,6 +1,7 @@
 ###############################################################################
 #
-# This file creates the final data sets that use the tax information
+# This file creates the final data that contains pre-tax incomes, after-tax incomes,
+# and after-tax plus benefits incomes.
 #
 ###############################################################################
 

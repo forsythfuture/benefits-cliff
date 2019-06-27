@@ -1,7 +1,9 @@
 ################################################################################
 #
-# This script creates a dataset that is fed to taxCalc to calculate federal taxes
+# This script creates a dataset that is fed to tax-calculator to calculate federal taxes
 # and the EITC.
+#
+# More information on using tax-calculator: https://pslmodels.github.io/Tax-Calculator/
 #
 ################################################################################
 
@@ -35,7 +37,7 @@ tax <- base %>%
         # household ID: row number
          RECID = row_number())
 
-# this csv file is then fed to the taxCalc command line tool using the command:
+# this csv file is then fed to the tax-calculator command line tool using the command:
 # tc tax_inputs.csv 2018 --dump --dvars tax_dump_vars
 # the output is renames 'tax_output.csv'
 write_csv(tax, "tax_liability/tax_inputs.csv")
