@@ -6,6 +6,7 @@ This repo contains the code used in the Forsyth Futures special issue report on 
 <!-- TOC START -->
 - [Organization of repo](#Organization-of-rep)
 - [Methodology](#Methodology)
+   - [NC CHild Care Subsidy](#NC-child-care)
 <!-- TOC END -->
 
 <a name="Organization-of-rep"/>
@@ -33,6 +34,8 @@ The dataset of household incomes comes from the 2017 US Census Public Use Microd
 ## Methodology
 
 Benefit amounts and eligibility depend on factors beyond income.  In calcualting benefit amounts, we made assumptions about these varying factors and below are our assumptions.
+
+<a name="NC-child-care"/>
 
 ### NC Child Care Subsidies
 
