@@ -5,7 +5,7 @@ This repo contains the code used in the Forsyth Futures special issue report on 
 
 <!-- TOC START -->
 - [Organization of repo](##Organization-of-rep)
-- [Methodology](##Methodoloy)
+- [Methodology](##Methodology)
 <!-- TOC END -->
 
 ## Organization of repo
