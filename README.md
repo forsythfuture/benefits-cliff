@@ -8,6 +8,8 @@ This repo contains the code used in the Forsyth Futures special issue report on 
 - [Methodology](#Methodology)
 <!-- TOC END -->
 
+<a name="Organization-of-rep"/>
+
 ## Organization of repo
 
 `benefits_tables` folder:
@@ -27,4 +29,5 @@ This folder has a single script that creates a dataset representing the cumulati
 The dataset of household incomes comes from the 2017 US Census Public Use Microdata, 5 year sample, accessed via [IPUMS](www.ipums.org).  The data is stored in a public Amazon AWS s3 bucket at this address: https://forsyth-futures.s3.amazonaws.com/total_income_counts.csv.gz. The R script automatically imports the data from AWS, there is no need to manually import.  The codebook, available as `total_income_coounts.pdf` shows the variables that were imported from IPUMS.
 
 <a name="Methodology"/>
+
 ## Methodology
