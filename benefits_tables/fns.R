@@ -1,6 +1,10 @@
 #############################################################################
 #
-# Create table of SNAP (food stamp) benefits for 2018
+# Create table of FNS (food stamp) benefits for 2018
+# FNS is called SNAP federally, and is often called SNAP in this script
+#
+# the source of the information for the calcualtion is primarily from:
+# https://www2.ncdhhs.gov/info/olm/manuals/dss/ei-30/man/FSs285.pdf
 #
 #############################################################################
 
@@ -10,8 +14,6 @@ base <- read_rds('benefits_tables/tables/base.rds')
 
 snap <- base %>%
   mutate(benefit = "FNS (Food Stamps)")
-
-# SNAP income deductions
 
 # utility allowance based on family size
 shelter_costs <- data.frame(
@@ -93,7 +95,9 @@ snap <- snap %>%
   # find benefit amount by subtracting family contribution from maximum benefit
   mutate(snap_amount = max_allotment - family_contribution,
         # for families over 130% of federal poverty line, make benefit 0
-        payment = ifelse(monthly_income > snap_income_limit, 0, snap_amount)) %>%
+        payment = ifelse(monthly_income > snap_income_limit, 0, snap_amount),
+        # one and two person families must have at least $15 in benefits
+        payment = ifelse((size %in% c(1,2) & payment < 15), 0, payment)) %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
-write_rds(snap, 'benefits_tables/tables/snap.rds')
+write_rds(snap, 'benefits_tables/tables/fns.rds')

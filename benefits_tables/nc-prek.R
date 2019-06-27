@@ -9,8 +9,9 @@ library(tidyverse)
 prek <- read_rds('benefits_tables/tables/base.rds')
 
 # participants must be under 75% of state median income for family size
-# these levels were pulled from here:
-# https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/2/2018-19_NC_Pre-K_Program_Eligibility_Form_September_2018.pdf?ver=2018-09-28-182706-393
+# these levels were pulled from page 3-7 of the policy manual:
+# https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/2/2018-19_NC_Pre-K_Program_Requirements_September_2018_FINAL.pdf?ver=2018-09-28-182336-967
+
 # make income limits a named vector that can be mapped on to family sizes
 income_limits <- c(`1` = 27300,
                    `2` = 35700,
@@ -23,7 +24,8 @@ income_limits <- c(`1` = 27300,
 income_limits <- income_limits / 12
 
 # amount of reimbursement to school is $650 per month for a private program
-# use this as the monthly payment amount
+# source is on page 6-13 of the manual linked above
+# use this as the monthly payment amount (market value of benefit)
 
 # map limits on to prek data frame
 prek <- prek %>%

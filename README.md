@@ -7,6 +7,10 @@ This repo contains the code used in the Forsyth Futures special issue report on 
 - [Organization of repo](#Organization-of-rep)
 - [Methodology](#Methodology)
    - [NC Child Care Subsidy](#NC-child-care)
+   - [NC Pre-K](#NC-prek)
+   - [FNS](#fns)
+   - [Housing Choice Voucher](#housing)
+   - [TANF](#tanf)
 <!-- TOC END -->
 
 <a name="Organization-of-rep"/>
@@ -48,12 +52,88 @@ An overview of the eligibility requirements for subsidies is on the [state's web
     * 6 to 12 year olds: household income less than 133% of the federal poverty guidelines
  * [Continued eligibility](http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1007.html)
     * All ages: household income less than 85% of the state median income
-    
+
 Since our focus is on when families lose benefits, we use the continued eligibility threshold when simulating the benefits cliff.
 
 **Market value of benefit**
 
 The market value of NC Child Care subsidies is based on the [2019 subsidized NC market rate](https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/R/Revised-8-16-Market_Rate_Centers_Eff-10-1-18.pdf?ver=2018-08-28-105655-863) for 4-star child care centers in Forsyth County.
 
-Subsidy recipients must also [pay 10% of their gross income](http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1101.html) as a copay.  To calculate the market value of the benefit, we subtract 10% of household income from the 2019 NC market rate of the subsidy.
+Subsidy recipients must also [pay 10% of their gross income](http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1101.html) as a copay.  Therefore, to calculate the market value of the benefit, we subtract 10% of household income from the 2019 NC market rate of the subsidy.
 
+<a name="NC-prek"/>
+
+### NC Pre-K
+
+The [Program Guidance and Requirements manual](https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/2/2018-19_NC_Pre-K_Program_Requirements_September_2018_FINAL.pdf?ver=2018-09-28-182336-967), hereinafter 'manual', served as our focal point for information.
+
+**Eligibility**
+
+Only children who turned four on or before August 31st of the program year are eligible (manual, pg. 3-1).  Our benefits cliff simulator assumes all famillies with at least one child have one, and only one, child eligible, age-wise, for the program.
+
+Family gross income must be at or below 75% of the state median income (manual, pg. 3-1).  These income levels can be found on page 3-7 of the manual.
+
+**Market Value of the Benefit**
+
+Private pre-K programs are reimbursed $650 per month / per student (manual, pg. 6-13).  This reimbursement amount is used as the market value of the benefit.
+
+<a name="fns"/>
+
+### Food and Nutrition Service (FNS)
+
+Our information on FNS came from the [program manual](https://www2.ncdhhs.gov/info/olm/manuals/dss/ei-30/man/).
+
+**Eligibility**
+
+The [household income threshold](https://www.ncdhhs.gov/assistance/low-income-services/food-nutrition-services-food-stamps) for FNS benefits is 130% of the federal poverty guidelines for most households and 200% for those categorically eligible.  Since most recipients are not categorically eligible, we use the 130% threshold.
+
+**Market Value of the Benefit**
+
+FNS beneficiaries receive benefits proportional to their monthly net income.   To calculate net income, we started with gross income and take the following deductions, which are outlined in the [benefits level manual](https://www2.ncdhhs.gov/info/olm/manuals/dss/ei-30/man/FSs285.pdf).  All citations below at to the benefits level manual.
+* Utility allowances based on the table in 285.01(A);
+* Standard deduction based on the table in 285.01(B);
+* Earned income deduction of 20%, 285.01(B);
+* Dependent care deduction of $60 per child per month, 285.01(E);
+* Rent in calculating the excess shelter deduction of $500, 285.01(F)
+  * This value represents the 25th percentile rental value in Forsyth County
+  * [Excess shelter deduction](https://economicbenefits.nc.gov/FN_A/FN_A/server/general/projects/Integrated%20Eligibility%20Manual/4000/4080/4080.18_Shelter_Deductions.htm) is shelter and/or utility expenses exceeding 50% of the monthly income after other deduction have been subtracted, with a max of $552, 285.01(F).
+
+Once net income is calculated, we can determine the benefit amount.  In general, households are expected to spend 30% of their own net income on food, 285.04(D)(19), with FNS covering the rest. So, we take the maximum monthly income allotment, as specified in 285.02(B), and subtract 30% of net income from this amount to arrive at the value of the benefit.
+
+One and two person households must receive benefits of at least $15 to receive anything, 285.04(D)(20).
+
+More information on calculating FNS benefits, called SNAP federally, can be found in this review by the [Center on Budget and Priorities](https://www.cbpp.org/research/food-assistance/a-quick-guide-to-snap-eligibility-and-benefits).
+
+<a name="housing"/>
+
+### NC Housing Choice Vouchers
+
+**Eligibility**
+
+The initial eligibility threshold is 50% of an area's median income.  But, once a household qualifies, they continue receiving the voucher.  Since families must pay 30% of their income in rent, they ease themselves off the program when their share of rent equals their actual rent payments.
+
+**Market Value of the Benefit**
+
+The market value of the benefit is the market value of the rental unit minus the voucher recipient's share of rent.  [Fair market rental rates](https://www.huduser.gov/portal/datasets/fmr.html#2019_data) for reimbursement are capped by HUD.  Since we know no rental rates are above these amounts, we assume that rental rates are 80% of the fair market rental.
+
+Calculating the recipient's share of rent first requires calculating the recipient's total tenant payment.  Information on the total tenat payment and the recipient's share comes from the [HUD manual](https://www.hud.gov/sites/documents/43503C5HSGH.PDF).
+
+Total tenant payment is the greater of (HUD manual, pg. 5-67):
+* 30% of monthly adjusted income,
+* 10% of monthly gross income, or
+* $25.
+
+We ignore welfare rent.
+
+We make the following deductions and assumptions in calculating monthly adjusted income:
+*  Dependent deduction: $480 year ($40 / month) for each child under 18 (HUD manual, pg. 5-41);
+* Child Care Deduction: $4000 per year / per child ($333.333 per month), but 10 year old in three person home will not have any child care costs;
+  * The value comes from the example on page 5-43
+
+To calculate tenant rent, we must subtract the utility allowance from the total tenant payment (HUD manual, pg. 5-67).  The [average Forsyth County utility allowance](https://www.huduser.gov/portal/datasets/assthsg.html#null) in 2018 was $177, so all families were assumed to receive this allowance.
+
+Now we can calculate the fair market value of the benefit, which is the rental rate minus the tenant rent.
+
+<a name="tanf"/>
+
+### TANF
