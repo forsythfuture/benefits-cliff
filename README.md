@@ -6,7 +6,7 @@ This repo contains the code used in the Forsyth Futures special issue report on 
 <!-- TOC START -->
 - [Organization of repo](#Organization-of-rep)
 - [Methodology](#Methodology)
-   - [NC CHild Care Subsidy](#NC-child-care)
+   - [NC Child Care Subsidy](#NC-child-care)
 <!-- TOC END -->
 
 <a name="Organization-of-rep"/>
