@@ -40,15 +40,15 @@ An overview of the eligibility requirements for subsidies is on the [state's web
 
 **Eligibility**
 
-* (Initial eligibility)[http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1002.pdf]
+* [Initial eligibility](http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1002.pdf)
     * 0 to 5 year olds: household income less than 200% of the federal poverty guidelines
     * 6 to 12 year olds: household income less than 133% of the federal poverty guidelines
- * (Continued eligibility)[http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1007.pdf]
+ * [Continued eligibility](http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1007.pdf)
     * All ages: household income less than 85% of the state median income
     
 Since our focus is on when families lose benefits, we use the continued eligibility threshold when simulating the benefits cliff.
 
 **Market value of benefit**
 
-The market value of NC Child Care subsidies is based on the (2019 subsidized NC market rate)[https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/R/Revised-8-16-Market_Rate_Centers_Eff-10-1-18.pdf?ver=2018-08-28-105655-863] for 4-star child care centers in Forsyth County.
+The market value of NC Child Care subsidies is based on the [2019 subsidized NC market rate](https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/R/Revised-8-16-Market_Rate_Centers_Eff-10-1-18.pdf?ver=2018-08-28-105655-863) for 4-star child care centers in Forsyth County.
 
