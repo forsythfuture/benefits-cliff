@@ -1,6 +1,7 @@
 #############################################################################
 #
 # create table of TANF (work first) benefits and income thresholds
+# Source: https://files.nc.gov/ncdhhs/documents/files/4.3.17%20FINAL%20%26%20APPROVED%202016-2019%20TANF%20STATE%20PLAN.doc
 #
 #############################################################################
 
@@ -8,8 +9,7 @@ library(tidyverse)
 
 tanf_base <- read_rds('benefits_tables/tables/base.rds')
 
-# monthly payment is 50% difference between total countable income and need standard
-# https://www2.ncdhhs.gov/info/olm/manuals/dss/csm-95/man/WF114.pdf
+# monthly payment is 50% difference between total countable income and need standard (pg. 34)
 
 # table below is need standard
 tanf_need_std <- data.frame(household_size = c(2, 3, 4, 5),

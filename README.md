@@ -140,7 +140,19 @@ In calculating the value of the silver plan, all adults were assumed to be 30 ye
 
 <a name="tanf"/>
 
-### TANF
+### Work First (TANF)
+
+Our information for Work First comes from the [NC TANF State Plan](https://files.nc.gov/ncdhhs/documents/files/4.3.17%20FINAL%20%26%20APPROVED%202016-2019%20TANF%20STATE%20PLAN.doc), hereinafter "State Plan".
+
+**Eligibility**
+
+Only families with children 17 or younger are eligible for Work First Financial Assistance, State Plan pg. 29.  We assume all children are 17 or younger.
+
+There is not an income elegibility threshold.  Instead, benefits decline with income, until they reach zero.
+
+**Market Value of the Benefit**
+
+The benefit's market value is the payment amount.  This amount is 50% of the difference between total countable income and the need standard listed on pg. 34 of the State Plan.  But, payments must be at least $25.
 
 <a name="wic"/>
 
