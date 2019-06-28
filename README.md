@@ -44,7 +44,7 @@ Benefit amounts and eligibility depend on factors beyond income.  In calcualting
 
 ### NC Child Care Subsidies
 
-An overview of the eligibility requirements for subsidies is on the [state's website](https://ncchildcare.ncdhhs.gov/Services/Financial-Assistance/Do-I-Qualify).  The administrative regulations are [also available] (http://reports.oah.state.nc.us/ncac.asp?folderName=%5CTitle%2010A%20-%20Health%20and%20Human%20Services%5CChapter%2010%20-%20Subsidized%20Child%20Care).  We used the administrative regulations when conducting our analysis.
+An overview of the eligibility requirements for subsidies is on the [state's website](https://ncchildcare.ncdhhs.gov/Services/Financial-Assistance/Do-I-Qualify).  The administrative regulations are [also available](http://reports.oah.state.nc.us/ncac.asp?folderName=%5CTitle%2010A%20-%20Health%20and%20Human%20Services%5CChapter%2010%20-%20Subsidized%20Child%20Care).  We used the administrative regulations when conducting our analysis.
 
 **Eligibility**
 
