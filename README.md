@@ -1,5 +1,5 @@
 # Benefits Cliff
-### Special issue report on the benefits cliff.
+### Special issue report on the benefits cliff
 
 This repo contains the code used in the Forsyth Futures special issue report on the benefits cliff.  The code allows users to replicate the simulation of benefit levels and the simulation of income levels.  Users can also recreate the interactive visualtions.  The analysis was conducted in R and the visualizations were created with D3.
 
