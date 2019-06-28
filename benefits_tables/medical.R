@@ -4,33 +4,36 @@
 # Medicaid for Families with Dependent Children (maf),
 # and NC Health Choices
 #
+# All eligibility limits are here:
+# https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2019_0.pdf
+#
 ###############################################################################
 
 library(tidyverse)
 
 medical <- read_rds('benefits_tables/tables/base.rds')
 
-# read in poverty guidelines and filter for 2018
+# read in poverty guidelines and filter for 2019
 fpl <- read_rds("benefits_tables/tables/federal_poverty_guidelines.rds") %>%
   filter(year == 2019) %>%
   select(household_size, guidelines_month)
 
-# the value of the health benefit is the price of a bronze plan on the ACA market
-# bronze plan prices for Forsyth County in 2018 were retrieved from:
-# https://www.kff.org/interactive/subsidy-calculator-2018/
+# the value of the health benefit is the price of a silver plan on the ACA market
+# silver plan prices for Forsyth County in 2019 were retrieved from:
+# https://www.kff.org/interactive/subsidy-calculator/
 
 # since children and adults qualify for different programs, calcualte the value
 # of their bronze plans separately
 
 # calculate value of children's bronze plans, based on number of children
-mic_value <- c(`1` = 266, # one child: 2 years old
-                `2` = 531, # two children: 2 and 4 years old
-                `3` = 797 # three children: 2, 4, and 10 years old
+mic_value <- c(`1` = 358, # one child: 2 years old
+                `2` = 716, # two children: 2 and 4 years old
+                `3` = 1074 # three children: 2, 4, and 10 years old
                 )
 
 # calculate value of adults bronze plan; adults are non-tobacco users
-maf_value <- c(`1` = 394, # one adult: 30 years old
-               `2` = 788 # two adults: both 30 years old
+maf_value <- c(`1` = 531, # one adult: 30 years old
+               `2` = 1062 # two adults: both 30 years old
                )
 
 # calculate income limits of maf based on number of caretakers

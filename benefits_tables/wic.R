@@ -8,8 +8,8 @@ library(tidyverse)
 
 wic <- read_rds('benefits_tables/tables/base.rds')
 
-# average food costs per person in 2018 was 42.28
-# https://www.fns.usda.gov/pd/wic-program
+# average benefit per person in 2018 was 42.28
+# https://fns-prod.azureedge.net/sites/default/files/resource-files/25wifyavgfd$-5.xls
 # assume recipients get this amount
 # to get benefits, the children must be under 5
 # we'll assume that all children are under 5 except

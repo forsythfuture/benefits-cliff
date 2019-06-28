@@ -9,6 +9,7 @@ library(tidyverse)
 tanf_base <- read_rds('benefits_tables/tables/base.rds')
 
 # monthly payment is 50% difference between total countable income and need standard
+# https://www2.ncdhhs.gov/info/olm/manuals/dss/csm-95/man/WF114.pdf
 
 # table below is need standard
 tanf_need_std <- data.frame(household_size = c(2, 3, 4, 5),

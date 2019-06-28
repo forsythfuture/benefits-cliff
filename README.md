@@ -10,7 +10,9 @@ This repo contains the code used in the Forsyth Futures special issue report on 
    - [NC Pre-K](#NC-prek)
    - [FNS](#fns)
    - [Housing Choice Voucher](#housing)
+   - [Medical](#medical)
    - [TANF](#tanf)
+   - [WIC](#wic)
 <!-- TOC END -->
 
 <a name="Organization-of-rep"/>
@@ -134,6 +136,42 @@ To calculate tenant rent, we must subtract the utility allowance from the total 
 
 Now we can calculate the fair market value of the benefit, which is the rental rate minus the tenant rent.
 
+<a name="medical"/>
+
+### Medical
+
+Medical is a combination of three health insurance programs: (1) Medicad for Families with Dependant Children, (2) Medicaid for Infants and Children, and (3) NC Health Choice.
+
+**Eligibility**
+
+Income eligibility thresholds for all programs were retrieved from the 2019 [Basic Medicaid Eligibility](https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2019_0.pdf) chart.
+
+**Market Value of the Benefit**
+
+The market value of all insurance programs were assumed to equal the equivalent price of a 2019 silver plan in Forsyth County on the ACA marketplace.  We pulled plan prices from the Kaiser Family Foundation's [health insurance marketplace calculator](https://www.kff.org/interactive/subsidy-calculator/).
+
+In calculating the value of the silver plan, all adults were assumed to be 30 years old and non-tobacco users.  Children's ages depend on family size and break down as follows:
+* 1 child: 2 years old,
+* 2 children: 2 and four years old,
+* 3 children: 2, 4, and 10 years old.
+
 <a name="tanf"/>
 
 ### TANF
+
+<a name="wic"/>
+
+### Women, infants, and children (WIC)
+
+**Eligibility**
+
+Mothers and children up to 5 [can receive WIC benefits](https://www.nutritionnc.com/wic/) if their household income is less than 185% of the federal poverty guidelines.  We assume that the parent is a mother in single parent households.  The ages of children are assumed as follows:
+* 1 child: 2 years old,
+* 2 children: 2 and four years old,
+* 3 children: 2, 4, and 10 years old.
+
+Therefore, one child gets benefits in one child households and two children receive benefits in two and three child households.
+
+**Market Value of the Benefit**
+
+Average monthly food benefits per person in 2018 for North Carolina was $42.28.  To verify, go to the [USDA's WIC data site](https://www.fns.usda.gov/pd/wic-program), scroll down to "Annual State Level Data FY 2009-2018:", and then open the dataset labeled "Average Monthly Food Cost Per Person."  We assume all eligible family members receive WIC benefits in this amount.
