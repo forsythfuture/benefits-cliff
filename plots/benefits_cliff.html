@@ -41,8 +41,8 @@
 		var width = 960 - margin.left - margin.right
   			height = 520 - margin.top - margin.bottom;
 
-			// import dataset https://ff-plots.s3.amazonaws.com/data/benefits.csv
-			d3.csv("benefits.csv", function(d) {
+			// import dataset
+			d3.csv("https://ff-plots.s3.amazonaws.com/data/benefits.csv", function(d) {
               return {
                 composition: d.composition,
                 monthly_income: +d.monthly_income,
