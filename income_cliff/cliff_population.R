@@ -29,7 +29,7 @@ income <- incomes %>%
          total_school= sum(in_school), # total number in school
          ) %>%
   filter(size != total_school, # remove households where all people are in school
-         size <= 6, # only keep households with 6 or fewer people, for plotting
+         size <= 5, # only keep households with 5 or fewer people, for plotting
          ) %>%
   select(SERIAL, HHWT, HHINCOME, size) %>%
   distinct() %>%
