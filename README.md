@@ -7,7 +7,6 @@ This repo contains the code used in the Forsyth Futures special issue report on 
 - [Organization of repo](#Organization-of-rep)
 - [Methodology](#Methodology)
    - [NC Child Care Subsidy](#NC-child-care)
-   - [NC Pre-K](#NC-prek)
    - [FNS](#fns)
    - [Housing Choice Voucher](#housing)
    - [Medical](#medical)
@@ -62,22 +61,6 @@ Since our focus is on when families lose benefits, we use the continued eligibil
 The market value of NC Child Care subsidies is based on the [2019 subsidized NC market rate](https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/R/Revised-8-16-Market_Rate_Centers_Eff-10-1-18.pdf?ver=2018-08-28-105655-863) for 4-star child care centers in Forsyth County.
 
 Subsidy recipients must also [pay 10% of their gross income](http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1101.html) as a copay.  Therefore, to calculate the market value of the benefit, we subtract 10% of household income from the 2019 NC market rate of the subsidy.
-
-<a name="NC-prek"/>
-
-### NC Pre-K
-
-The [Program Guidance and Requirements manual](https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/2/2018-19_NC_Pre-K_Program_Requirements_September_2018_FINAL.pdf?ver=2018-09-28-182336-967), hereinafter 'manual', served as our focal point for information.
-
-**Eligibility**
-
-Only children who turned four on or before August 31st of the program year are eligible (manual, pg. 3-1).  Our benefits cliff simulator assumes all famillies with at least one child have one, and only one, child eligible, age-wise, for the program.
-
-Family gross income must be at or below 75% of the state median income (manual, pg. 3-1).  These income levels can be found on page 3-7 of the manual.
-
-**Market Value of the Benefit**
-
-Private pre-K programs are reimbursed $650 per month / per student (manual, pg. 6-13).  This reimbursement amount is used as the market value of the benefit.
 
 <a name="fns"/>
 

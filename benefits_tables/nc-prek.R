@@ -2,6 +2,10 @@
 #
 # NC pre-K
 #
+# !!! Not used in final report because there is no cliff effect with this benefit
+# !!! There is no cliff effect because children only receive the benefit for one
+# !!! year, so there is no income recertification for parents.
+#
 ##############################################################################
 
 library(tidyverse)
