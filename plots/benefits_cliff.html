@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Benefits cliff</title>
 		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="thresholds.js"></script>
 		<style type="text/css">
 			.line {
               fill: none;
@@ -40,89 +41,8 @@
 		var width = 960 - margin.left - margin.right
   			height = 520 - margin.top - margin.bottom;
 
-		// JSON dataset of federal poverty guidelines and state median income levels
-	 	// will be used to draw vertical lines at cliffs
-
-	  const poverty_levels = ['a', 'b', 'c', 'd', 'e']
-	  const poverty_text = ["50% AMI", "130% FPG", "185% FPG",
-													"210% FPG", "85% SMI"]
-
- 		 const fpl = [{
- 			 "name": "1 adult",
- 			 "levels": {
- 				 "a": 1808,
- 				 "b": Math.round(1041 * 1.3),
- 				 "c": Math.round(1041 * 1.85),
-				 "d": Math.round(1041 * 2.1),
-				 "e": 2578
- 			 }
- 		 }, {
- 			 "name": "1 adult, 1 child",
- 			 "levels": {
-				 "a": 2067,
- 				 "b": Math.round(1409 * 1.3),
- 				 "c": Math.round(1409 * 1.85),
-				 "d": Math.round(1409 * 2.1),
-				 "e": 3372
- 			 }
- 		 }, {
- 			 "name": "1 adult, 2 children",
- 			 "levels": {
-				 "a": 2325,
- 				 "b": Math.round(1778 * 1.3),
- 				 "c": Math.round(1778 * 1.85),
-				 "d": Math.round(1778 * 2.1),
-				 "e": 4165
- 			 }
- 		 }, {
- 			 "name": "1 adult, 3 children",
- 			 "levels": {
-				 "a": 2579,
- 				 "b": Math.round(2146 * 1.3),
- 				 "c": Math.round(2146 * 1.85),
-				 "d": Math.round(2146 * 2.1),
-				 "e": 4958
- 			 }
- 		 }, {
- 			 "name": "2 adults",
- 			 "levels": {
-				 "a": 2067,
- 				 "b": Math.round(1409 * 1.3),
- 				 "c": Math.round(1409 * 1.85),
-				 "d": Math.round(1409 * 2.1),
-				 "e": 3372
- 			 }
- 		 }, {
- 			 "name": "2 adults, 1 child",
- 			 "levels": {
-				 "a": 2325,
- 				 "b": Math.round(1778 * 1.3),
- 				 "c": Math.round(1778 * 1.85),
-				 "d": Math.round(1778 * 2.1),
-				 "e": 4165
- 			 }
- 		 }, {
- 			 "name": "2 adults, 2 children",
- 			 "levels": {
-				 "a": 2579,
- 				 "b": Math.round(2146 * 1.3),
- 				 "c": Math.round(2146 * 1.85),
-				 "d": Math.round(2146 * 2.1),
-				 "e": 4958
- 			 }
- 		 }, {
- 			 "name": "2 adults, 3 children",
- 			 "levels": {
-				 "a": 2788,
- 				 "b": Math.round(2514 * 1.3),
- 				 "c": Math.round(2514 * 1.85),
-				 "d": Math.round(2514 * 2.1),
-				 "e": 5752
- 			 }
- 		 }];
-
-			// import dataset
-			d3.csv("https://ff-plots.s3.amazonaws.com/data/benefits.csv", function(d) {
+			// import dataset https://ff-plots.s3.amazonaws.com/data/benefits.csv
+			d3.csv("benefits.csv", function(d) {
               return {
                 composition: d.composition,
                 monthly_income: +d.monthly_income,
@@ -537,8 +457,7 @@
 			// add text explaning the abbreviations FPG, AMI, SMI
 			// use for loop
 			var abbreviations = ["FPG = Federal Poverty Guideines",
-													 "SMI = State Median Income",
-												 	 "AMI = Area Median Income"]
+													 "SMI = State Median Income"]
 
 			var abb_y = [26, 14, 2]
 
