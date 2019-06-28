@@ -23,15 +23,15 @@ fpl <- read_rds("benefits_tables/tables/federal_poverty_guidelines.rds") %>%
 # https://www.kff.org/interactive/subsidy-calculator/
 
 # since children and adults qualify for different programs, calcualte the value
-# of their bronze plans separately
+# of their silver plans separately
 
-# calculate value of children's bronze plans, based on number of children
+# calculate value of children's silver plans, based on number of children
 mic_value <- c(`1` = 358, # one child: 2 years old
                 `2` = 716, # two children: 2 and 4 years old
                 `3` = 1074 # three children: 2, 4, and 10 years old
                 )
 
-# calculate value of adults bronze plan; adults are non-tobacco users
+# calculate value of adults silver plan; adults are non-tobacco users
 maf_value <- c(`1` = 531, # one adult: 30 years old
                `2` = 1062 # two adults: both 30 years old
                )
