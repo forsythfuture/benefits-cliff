@@ -39,14 +39,15 @@ ggplot(numbers, aes(Unit, Number, fill=Benefit)) +
   coord_flip() +
   labs(title = 'Number of public benefit enrollees in Forsyth County',
        x = '',
-       y = "Number of enrollees",
-       caption = "Sources:\n
-       Work First: https://www.ncdhhs.gov/divisions/social-services/program-statistics-and-reviews/work-first-caseload-statistics\n
-       FNS:  https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap\n
-       Housing Choice Voucher:  http://www.haws.org/index.php/housing/87-housing-choice-voucher-section-8-housing/116-housing-choice-voucher-section-8-program-eligibility\n
-       Child Care:  https://ncchildcare.ncdhhs.gov/Home/DCDEE-Sections/Subsidy-Services/Fact-Sheets\n
-       Health Care:  https://medicaid.ncdhhs.gov/documents/reports/enrollment-reports/medicaid-and-health-choice-enrollment-reports\n
-       ") +
+       y = "Number of enrollees"#,
+       # caption = "Sources:\n
+       # Work First: https://www.ncdhhs.gov/divisions/social-services/program-statistics-and-reviews/work-first-caseload-statistics\n
+       # FNS:  https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap\n
+       # Housing Choice Voucher:  http://www.haws.org/index.php/housing/87-housing-choice-voucher-section-8-housing/116-housing-choice-voucher-section-8-program-eligibility\n
+       # Child Care:  https://ncchildcare.ncdhhs.gov/Home/DCDEE-Sections/Subsidy-Services/Fact-Sheets\n
+       # Health Care:  https://medicaid.ncdhhs.gov/documents/reports/enrollment-reports/medicaid-and-health-choice-enrollment-reports\n
+       # "
+       ) +
   theme_minimal() +
   theme(legend.position="none",
         plot.caption = element_text(hjust=0))
