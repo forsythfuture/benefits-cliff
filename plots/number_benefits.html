@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <div id="container" style="min-width: 310px; max-width: 800px; height: 600px; margin: 0 auto"></div>
+
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+
+      Highcharts.chart('container', {
+          chart: {
+              type: 'bar',
+              marginBottom: 180
+          },
+          title: {
+              text: 'Number of public benefit enrollees in Forsyth County'
+          },
+          subtitle: {
+          		text: '<b>Sources</b><br>' +
+            '- <i>FNS:</i>  https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap<br>' +
+            '- <i>Child Care:</i>  https://ncchildcare.ncdhhs.gov/Home/DCDEE-Sections/Subsidy-Services/Fact-Sheets<br>' +
+            '- <i>Housing Choice:</i>  http://www.haws.org/index.php/housing/87-housing-choice-voucher-section-8-housing/116-housing-choice-voucher-section-8-program-eligibility<br>' +
+            '- <i>Work First:</i>  https://www.ncdhhs.gov/divisions/social-services/program-statistics-and-reviews/work-first-caseload-statistics<br>' +
+            '- <i>Health Care:</i>  https://medicaid.ncdhhs.gov/documents/reports/enrollment-reports/medicaid-and-health-choice-enrollment-reports',
+              verticalAlign: 'bottom',
+              align: 'left',
+              y: -100
+          },
+          xAxis: {
+              categories: [
+              	'Food and Nutrition Service<br><i>July 2017<i>',
+                'Child Care Subsidy<br><i>2018</i>',
+                'Housing Choice Voucher<br><i>2018</i>',
+                'Work First<br><i>May 2019</i>',
+                'Aid to Families with Dep. Children<br><i>May 2019</i>',
+                'Medicaid for Infants and Children<br><i>May 2019</i>',
+                'NC Health Choice<br><i>May 2019</i>'
+                ],
+              crosshair: true,
+              title: {
+                  text: null
+              }
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Number of Beneficiaries',
+                  align: 'middle'
+              },
+              labels: {
+                  overflow: 'justify'
+              }
+          },
+          tooltip: {
+              headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+              pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                  '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
+              footerFormat: '</table>',
+              shared: true,
+              useHTML: true
+          },
+          plotOptions: {
+              column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0
+              }
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'top',
+              x: -40,
+              y: 80,
+              floating: true,
+              borderWidth: 1,
+              backgroundColor:
+                  Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+              shadow: true
+          },
+          credits: {
+              enabled: false
+          },
+          series: [{
+              name: 'Individuals',
+              data: [46392, 10402, 2914, 559, 23965, 19067, 4064]
+          }, {
+              name: 'Households',
+              data: [25079, 3936, null, 334, null, null, null]
+          }
+          ]
+      });
+
+    </script>
+
+</html>
