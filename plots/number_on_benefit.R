@@ -3,6 +3,8 @@
 # This script creates bar charts showing the number of people
 # on various benefits in Forsyth County
 #
+# !!! Not used anymore, Highcharts chart is used instead !!!
+#
 ################################################################
 
 library(tidyverse)
