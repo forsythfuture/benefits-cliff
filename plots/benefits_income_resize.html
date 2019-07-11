@@ -35,14 +35,54 @@
 	  <div id = "familyDropdown" class="dropdown">Select Family Size:  </div>
 		<script type="text/javascript">
 
-		// python3 -m http.server 8888 &.
+		// breakpoint to rescale for mobile
+		var breakPoint = 600
 
+		// Set default width and height, calculate ratio
+		var default_width = 850;
+		var default_height = 500;
+		var default_ratio = default_width / default_height;
 
-		//create margins
-		var margin = {top: 90, right: 300, bottom: 60, left: 70};
+		// Current (non-responsive) width and height are calcuated from the default, minus the margins
+		var margin = {top: 80, right: 270, bottom: 80, left: 70},
+		    width = default_width - margin.left - margin.right,
+		    height = default_height - margin.top - margin.bottom;
 
-		var width = 870 - margin.left - margin.right,
-  			height = 520 - margin.top - margin.bottom;
+		// Determine current size, which determines vars
+		function set_vars() {
+
+		  //alert('setting vars')
+		  current_width = window.innerWidth;
+		  current_height = window.innerHeight;
+
+			margin.right = (current_width < breakPoint) ? 100 : 270;
+
+		  current_ratio = current_width / current_height;
+
+		  // Check if height is limiting factor
+		  if ( current_ratio > default_ratio ){
+		    h = current_height;
+		    w = h * default_ratio;
+		  // Else width is limiting
+		  } else {
+		    w = current_width;
+		    h = w / default_ratio;
+		  }
+
+		  // Set new width and height based on graph dimensions
+		  width = w - margin.left - margin.right;
+		  height = h - margin.top - margin.bottom;
+
+		};
+
+		set_vars();
+
+		// need to track number of resizes, so we only create drop down for first resize
+		var num_resizes = 0;
+
+		function drawGraphic() {
+
+			num_resizes = num_resizes + 1
 
 			// import dataset
 			d3.csv("https://ff-plots.s3.amazonaws.com/data/total_income.csv", function(d) {
@@ -84,9 +124,14 @@
 
 			// create variable that will be hourly wages axis lables
 			// start at 7.25, which is NC and federal minimum wage
-			var hourlyAxis = [7.25];
+			var hourlyAxisFull = [7.25];
 			for (var i = 10; i <= 34; i = i + 2) {
-    		hourlyAxis.push(i);
+    		hourlyAxisFull.push(i);
+			}
+
+			var hourlyAxisSmall = [7.25];
+			for (var i = 12; i <= 34; i = i + 6) {
+    		hourlyAxisSmall.push(i);
 			}
 
 			// axes
@@ -95,8 +140,14 @@
 			var yAxis = d3.axisLeft(yScale)
 										.tickFormat(dollarFormat);
 			var xHourly = d3.axisTop(xScaleHourly)
-										.tickValues(hourlyAxis)
+										.tickValues(hourlyAxisFull)
 										.tickFormat(dollarFormat)
+
+			if(window.innerWidth < breakPoint) {
+				  xAxis.ticks(3);
+					xHourly.tickValues(hourlyAxisSmall);
+					yAxis.ticks(3);
+				}
 
 			// set the colour scale for lines
 			var color = d3.scaleOrdinal(d3.schemeSet2);
@@ -116,28 +167,45 @@
 			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 			// add legend
-			var legend = svg.selectAll('g')
-					//.data(function(d) {return legend_text;})
-	        .data(d3.map(data, function(d){return d.benefit;}).keys())
-	        .enter()
-	      .append('g')
-	        .attr('class', 'legend');
 
-			var yLegendOffest = 10
+			var legend = svg.selectAll('g')
+					.data(d3.map(data, function(d){return d.benefit;}).keys())
+					.enter()
+				.append('g')
+					.attr('class', 'legend');
+
+			//create separate positions for mobile and normal
+			if (current_width > breakPoint) {
+
+				// for non-mobile
+				var yLegendOffest = 10
+				var ySpacing = 17
+				var xPosition = width
+				var fontSize = '12px'
+				var circRadius = 6
+
+			} else {
+
+				var yLegendOffest = height + 50
+				var ySpacing = 12
+				var xPosition = 0
+				var fontSize = '10px'
+				var circRadius = 5
+			}
 
 	    legend.append('circle')
-	        .attr('cx', width + 15)
-	        .attr('cy', function(d, i){ return (i *  20) + yLegendOffest;})
-					.attr('r', 7)
+	        .attr('cx', xPosition + 15)
+	        .attr('cy', function(d, i){ return (i *  ySpacing) + yLegendOffest;})
+					.attr('r', circRadius)
 	        .style('fill', function(d) {
 	          return color(d);
 	        });
 
 			legend.append('text')
-				.attr('x', width + 28)
-				.attr('y', function(d, i){ return ((i *  20) + 5) + yLegendOffest;})
+				.attr('x', xPosition + 28)
+				.attr('y', function(d, i){ return ((i *  ySpacing) + 5) + yLegendOffest;})
 				.text(function(d){ return d; })
-				.attr("font-size", "14px");
+				.attr("font-size", fontSize);
 
 			// end legend
 
@@ -163,22 +231,23 @@
 			var focus = svg.append("g")
                 .style("display", "none");
 
-			// create drop down menu
-			var familyMenu = d3.select("#familyDropdown");
-
-			// population drop-down menu
-      familyMenu
-	  		.append("select")
-	  		.selectAll("option")
-	          .data(nest)
-	          .enter()
-	          .append("option")
-	          .attr("value", function(d){
-	              return d.key;
-	          })
-	          .text(function(d){
-	              return d.key;
-	          });
+				// create drop down menu
+				var familyMenu = d3.select("#familyDropdown");
+				if (num_resizes == 1) {
+				// population drop-down menu
+	      familyMenu
+		  		.append("select")
+		  		.selectAll("option")
+		          .data(nest)
+		          .enter()
+		          .append("option")
+		          .attr("value", function(d){
+		              return d.key;
+		          })
+		          .text(function(d){
+		              return d.key;
+		          });
+					};
 
          	// Function to create the initial graph
          	var initialGraph = function(family){
@@ -207,6 +276,8 @@
         			.style("stroke", function(d) { return color(d.key); })
 
 						// create federal poverty guideline vertical lines ----------------
+						// only create for non-mobile
+						if (current_width > breakPoint) {
 
 						// pull out poverty levels for family size, based on family composition selected
 						// from drop down
@@ -224,7 +295,7 @@
 								svg.append('line')
 									.attr("x1", xScale(fpl_threshold))
 									.attr("x2", xScale(fpl_threshold))
-									.attr("y1", height - 370)
+									.attr("y1", height * .005)
 									.attr("y2", height)
 									.style("stroke", "gray")
 									.style("stroke-width", 2)
@@ -233,14 +304,15 @@
 
 								svg.append('text')
 									.attr("x", xScale(fpl_threshold + 30))
-									.attr("y", height - 366)
-									.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 366) + ')')
+									.attr("y", height * .01)
+									.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height * .01) + ')')
 									.attr("font-size", "12px")
 									.text(poverty_text[i])
 									.attr("class", poverty_levels[i]+"_text")
 									.style("fill", "gray")
 
 								}
+							}
 								// end lines for federal poverty levels
 
 								// subtitle showing family type
@@ -248,7 +320,7 @@
 								        .attr("x", (width / 2))
 								        .attr("y", 0 - (margin.top / 2.3))
 								        .attr("text-anchor", "middle")
-								        .style("font-size", "14px")
+								        .attr("font-size", (current_width > breakPoint) ? '14px' : '12px')
 								        .text("Family size: " + family)
 												.attr('class', 'subtitle');
          	}
@@ -280,6 +352,9 @@
                 });
 
 				// add lines for poverty poverty_levels
+				// only create for non-mobile
+				if (current_width > breakPoint) {
+
 				for(var i = 0; i < fpl.length; ++i) {
 					if(fpl[i].name == family) {
 						 var single_fpl = fpl[i]
@@ -301,10 +376,10 @@
 						.transition()
 							.duration(1000)
 							.attr("x", xScale(fpl_threshold  + 30))
-							.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height - 366) + ')')
+							.attr('transform', 'rotate(90 ' + xScale(fpl_threshold + 30) + ' ' + (height * .01) + ')')
 
 				}
-
+			}
 				// end lines for poverty level
 
 				// update household size subtiutle
@@ -421,8 +496,8 @@
 			        .attr("x", (width / 2))
 			        .attr("y", 0 - (margin.top / 1.5))
 			        .attr("text-anchor", "middle")
-			        .style("font-size", "16px")
-			        .text("Forsyth County, NC income and benefits simulator");
+							.style("font-size", (current_width > breakPoint) ? '16px' : '14px')
+			        .text((current_width > breakPoint) ? "Forsyth County, NC income and benefits simulator" : "Income and benefits simulator");
 
 			// draw y axis with labels and move in from the size by the amount of padding
       svg.append("g")
@@ -445,7 +520,8 @@
 			// text label for the x axis
 		  svg.append("text")
 					.attr("x", width/2)
-					.attr("y", (height + margin.bottom) - 15)
+					.attr("y", height + 40)
+					.attr("font-size", (current_width > breakPoint) ? '14px' : '12px')
 		      .style("text-anchor", "middle")
 		      .text("Monthly Pre-tax Income");
 
@@ -456,27 +532,32 @@
 		      .attr("x",0 - (height / 2))
 		      .attr("dy", "1em")
 		      .style("text-anchor", "middle")
-		      .text("Monthly After-tax Income Plus Benefits");
-
-			// add text explaning the abbreviations FPG, AMI, SMI
-			// use for loop
-			var abbreviations = ["FPG = Federal Poverty Guideines",
-													 "SMI = State Median Income"]
-
-			var abb_y = [26, 14, 2]
-
-			for(var i = 0; i < abbreviations.length; ++i) {
-
-				svg.append("text")
-					.attr("x", 10 - margin.left)
-					.attr("y", (height + margin.bottom) - abb_y[i])
-					.text(abbreviations[i])
-					.attr("fill", "gray")
-					.attr("font-size", "12px")
-
-				}
+					.attr("font-size", (current_width > breakPoint) ? '14px' : '12px')
+		      .text((current_width > breakPoint) ? "Monthly After-tax Income Plus Benefits" : "After-tax Income Plus Benefits");
 
     });
+	}
+
+	drawGraphic();
+
+	// Use a timer so the chart is not constantly redrawn while window is being resized.
+	var resizeTimer;
+	window.onresize = function(event) {
+	 clearTimeout(resizeTimer);
+	  resizeTimer = setTimeout(function()
+	  {
+	    var s = d3.selectAll('svg');
+	    s = s.remove();
+	    set_vars();
+	    drawGraphic();
+	  }, 100);
+	}
+
+		function type(d) {
+		  d.value = +d.value;
+		  return d;
+		}
+
 
 		</script>
 	</body>
