@@ -83,7 +83,8 @@
 				pointFormat: '<tr><td style="padding:0">Benefit:  <b>${point.y:.0f}</b></td></tr>' +
 						'<tr><td style="padding:0">Income: <b>${point.x:.0f}</b></td></tr>',
 				footerFormat: '</table>',
-				useHTML: true
+				useHTML: true,
+				crosshairs: true
 		},
 
 		plotOptions: {
@@ -103,9 +104,9 @@
 							chart: {
                 height: 350
 									},
-									
+
 							 title: { text: 'Benefits Cliff' },
-                
+
           		yAxis: {
         				title: {
         						text: 'Monthly Benefit'
