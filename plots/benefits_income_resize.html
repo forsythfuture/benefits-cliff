@@ -73,17 +73,7 @@
 		  // Set new width and height based on graph dimensions
 		  width = w - margin.left - margin.right;
 
-			if (current_width > breakPoint) {
-
-		  	height = h - margin.top - margin.bottom;
-
-			} else {
-
-				height = 700;
-
-			}
-
-		};
+			height = (current_width < breakPoint) ? 400 : h - margin.top - margin.bottom;
 
 		set_vars();
 
