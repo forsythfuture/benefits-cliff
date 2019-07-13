@@ -33,7 +33,7 @@
 	</head>
 	<body>
 	  <div id = "familyDropdown" class="dropdown">Select Family Size:  </div>
-		<div id="container" style="max-width:900px; min-height:400px"></div>
+		<div id="container" style="max-width:900px"></div>
 		<script type="text/javascript">
 
 		// breakpoint to rescale for mobile
@@ -56,7 +56,7 @@
 		  current_width = window.innerWidth;
 		  current_height = window.innerHeight;
 
-			margin.right = (current_width < breakPoint) ? 30 : 270;
+			margin.right = (current_width < breakPoint) ? 30 : margin.right;
 
 		  current_ratio = current_width / current_height;
 
@@ -73,7 +73,11 @@
 		  // Set new width and height based on graph dimensions
 		  width = w - margin.left - margin.right;
 
+<<<<<<< HEAD
 			height = (current_width < 400) ? 300 : h - margin.top - margin.bottom;
+=======
+			height = (current_width < 400) ? 100 : h - margin.top - margin.bottom;
+>>>>>>> 9f5e7a0fe0a525a894572807a9777013589f0ed1
 
 		}
 
@@ -499,7 +503,7 @@
 			        .attr("y", 0 - (margin.top / 1.5))
 			        .attr("text-anchor", "middle")
 							.style("font-size", (current_width > breakPoint) ? '16px' : '14px')
-			        .text((current_width > breakPoint) ? "Forsyth County, NC income and benefits simulator" : "Income and benefits simulator");
+			        .text((current_width > breakPoint) ? "Forsyth County, NC income and benefits simulator" : "Income and benefits simulator2");
 
 			// draw y axis with labels and move in from the size by the amount of padding
       svg.append("g")
@@ -562,5 +566,6 @@
 
 
 		</script>
+		<p>"-----"</p>
 	</body>
 </html>
