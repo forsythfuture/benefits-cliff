@@ -33,6 +33,7 @@
 	</head>
 	<body>
 	  <div id = "familyDropdown" class="dropdown">Select Family Size:  </div>
+		<div id="container"></div>
 		<script type="text/javascript">
 
 		// breakpoint to rescale for mobile
@@ -55,7 +56,7 @@
 		  current_width = window.innerWidth;
 		  current_height = window.innerHeight;
 
-			margin.right = (current_width < breakPoint) ? 100 : 270;
+			margin.right = (current_width < breakPoint) ? 30 : 270;
 
 		  current_ratio = current_width / current_height;
 
@@ -160,7 +161,7 @@
 			    .y(function(d) { return yScale(d.payment); });
 
 			// Create SVG element
-			var svg = d3.select("body").append("svg")
+			var svg = d3.select("#container").append("svg")
 			    .attr("width", width + margin.left + margin.right)
 			    .attr("height", height + margin.top + margin.bottom)
 			  .append("g")
