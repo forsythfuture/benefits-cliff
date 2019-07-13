@@ -33,7 +33,7 @@
 	</head>
 	<body>
 	  <div id = "familyDropdown" class="dropdown">Select Family Size:  </div>
-		<div id="container"></div>
+		<div id="container" style="max-width:900px; min-height:400px"></div>
 		<script type="text/javascript">
 
 		// breakpoint to rescale for mobile
@@ -72,9 +72,8 @@
 
 		  // Set new width and height based on graph dimensions
 		  width = w - margin.left - margin.right;
-		  height = h - margin.top - margin.bottom;
 
-		};
+			height = (current_width < breakPoint) ? 1000 : h - margin.top - margin.bottom;
 
 		set_vars();
 

@@ -18,7 +18,7 @@
 			<OPTION VALUE="G">2 adults, 2 children</option>
 			<OPTION VALUE="H">2 adults, 3 children</option>
 	</SELECT>
-		<div id="container" style=max-width:900px></div>
+		<div id="container" style="max-width:900px"></div>
     <script type="text/javascript">
 
 		var options = {
@@ -92,6 +92,18 @@
 					pointInterval: 10,
 					xAxis: 'monthly'
 				}},
+
+		responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 400
+            },
+            chartOptions: {
+							chart: {
+                height: 300
+									}
+                }
+						}]},
 
     series: [
 
