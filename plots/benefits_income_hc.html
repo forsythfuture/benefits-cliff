@@ -18,13 +18,13 @@
 			<OPTION VALUE="G">2 adults, 2 children</option>
 			<OPTION VALUE="H">2 adults, 3 children</option>
 	</SELECT>
-		<div id="container" style="max-width:800px"></div>
+		<div id="container" style="max-width:700px"></div>
     <script type="text/javascript">
 		var options = {
     chart: {
         renderTo: 'container',
         defaultSeriesType: 'line',
-				height: '85%'
+				height: '75%'
     },
 		title: { text: 'Forsyth County, NC income and benefits' },
 		subtitle: { text: 'One adult'},
@@ -95,6 +95,9 @@
 							 title: { text: null },
 							 subtitle: { text: 'Touch lines to know group' },
 							 legend: {
+                  enabled: false
+              },
+              credits: {
                   enabled: false
               },
           		yAxis: {
