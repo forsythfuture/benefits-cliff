@@ -7,7 +7,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
-    <div id="container" style="min-width: 310px; max-width: 800px; height: 600px; margin: 0 auto"></div>
+    <div id="container" style="min-width: 310px; max-width: 600px; margin: 0 auto"></div>
 
   </head>
 
@@ -18,22 +18,12 @@
       Highcharts.chart('container', {
           chart: {
               type: 'bar',
-              marginBottom: 180
+              marginLeft: 215
           },
           title: {
               text: 'Number of benefit enrollees in Forsyth County'
           },
-          subtitle: {
-          		text: '<b>Sources</b><br>' +
-            '- <i>FNS:</i>  https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap<br>' +
-            '- <i>Child Care:</i>  https://ncchildcare.ncdhhs.gov/Home/DCDEE-Sections/Subsidy-Services/Fact-Sheets<br>' +
-            '- <i>Housing Choice:</i>  https://www.huduser.gov/portal/datasets/assthsg.html<br>' +
-            '- <i>Work First:</i>  https://www.ncdhhs.gov/divisions/social-services/program-statistics-and-reviews/work-first-caseload-statistics<br>' +
-            '- <i>Health Care:</i>  https://medicaid.ncdhhs.gov/documents/reports/enrollment-reports/medicaid-and-health-choice-enrollment-reports',
-              verticalAlign: 'bottom',
-              align: 'left',
-              y: -100
-          },
+
           xAxis: {
               categories: [
               	'Food and Nutrition Service<br><i>July 2017<i>',
@@ -86,8 +76,48 @@
               shadow: true
           },
           credits: {
-              enabled: false
+              text: 'Forsyth Futures',
+              href: 'http://forsythfutures.org'
           },
+          responsive: {
+              rules: [{
+                  condition: {
+                      maxWidth: 400
+                  },
+                  chartOptions: {
+      						   chart: {
+                        marginLeft: 75
+      							 },
+      							 title: { text: null },
+      							 subtitle: {
+                       text: "Number of enrollees",
+                       verticalAlign: 'top',
+                       align: 'center',
+                       y: null
+                     },
+      							 legend: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    xAxis: {
+                        categories: [
+                        	'FNS',
+                          'Child Care',
+                          'Housing',
+                          'Work First',
+                          'MAF',
+                          'MIC',
+                          'NCHC'
+                          ],
+                        crosshair: true,
+                        title: {
+                            text: null
+                        }
+                    }
+                  }
+                }]},
           series: [{
               name: 'Individuals',
               data: [46392, 2914, 10402, 559, 23965, 19067, 4064]
