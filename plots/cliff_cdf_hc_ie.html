@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="#" />
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	Select Household Size: <SELECT id="list">
+			<OPTION VALUE="A">1</option>
+			<OPTION VALUE="B">2</option>
+			<OPTION VALUE="C">3</option>
+			<OPTION VALUE="D">4</option>
+			<OPTION VALUE="E">5</option>
+	</SELECT>
+		<div id="container" style="max-width:800px"></div>
+    <script type="text/javascript">
+
+		var options = {
+    chart: {
+        renderTo: 'container',
+        defaultSeriesType: 'line',
+				height: '75%'
+    },
+
+		title: { text: 'Forsyth County, NC household incomes' },
+
+		subtitle: { text: 'Household size: One person'},
+
+    credits: {
+        text: 'Forsyth Futures',
+        href: 'http://forsythfutures.org'
+    },
+
+		legend: {
+				enabled: false
+		},
+
+		yAxis: {
+
+				title: {
+						text: 'Number of people below income level'
+				},
+				labels: {
+						format: '{value:.0f}'
+				}
+		},
+
+		xAxis: {
+			type: 'linear',
+			title: {
+					text: 'Yearly household income'
+			},
+			labels: {
+					format: '${value:.0f}'
+			}
+		},
+
+		plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 0
+        }
+    },
+
+		tooltip: {
+				headerFormat: '<span style="color:{series.color}"><b>{series.name}</b></span><table>',
+				pointFormat: '<tr><td style="padding:0"># of people: <b>{point.y:.0f}</b></td></tr>' +
+						'<tr><td style="padding:0">Income:  <b>${point.x:.0f}</b></td></tr>',
+				footerFormat: '</table>',
+				useHTML: true,
+				crosshairs: true
+		},
+
+		responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 400
+            },
+            chartOptions: {
+							// chart: {
+              //   height: 250
+							// 		},
+
+							 title: { text: null },
+
+							 subtitle: { text: "Number of households below income levels"},
+
+              credits: {
+                  enabled: false
+              },
+
+							xAxis: {
+								type: 'linear',
+								id: 'monthly',
+								title: {
+										text: 'Monthly Income'
+								},
+								labels: {
+										format: '${value}'
+								}
+							},
+
+          		yAxis: {
+        				title: {
+        						text: '# below income level'
+        				}
+          		}
+            }
+						}]},
+
+    series: [{
+        name: 'Installation',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+        name: 'Manufacturing',
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    }, {
+        name: 'Sales & Distribution',
+        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+    }, {
+        name: 'Project Development',
+        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+    }, {
+        name: 'Other',
+        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+    }
+]};
+
+
+		var chart = new Highcharts.Chart(options);
+
+		$("#list").on('change', function(){
+		    //alert('f')
+		    var selVal = $("#list").val();
+		    if(selVal == "A" || selVal == '')
+		    {		options.subtitle = { text: 'Household size: One person'},
+		        options.series = [{
+        name: 'Installation',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+        name: 'Manufacturing',
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    }, {
+        name: 'Sales & Distribution',
+        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+    }, {
+        name: 'Project Development',
+        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+    }, {
+        name: 'Other',
+        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+    }
+				]
+		    }
+		    else if(selVal == "B")
+		    {		options.subtitle = { text: 'Household size: Two people'},
+		        options.series = [{
+        name: 'Installation',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+        name: 'Manufacturing',
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    }, {
+        name: 'Sales & Distribution',
+        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+    }, {
+        name: 'Project Development',
+        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+    }, {
+        name: 'Other',
+        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+    }]
+		    }
+		    else if(selVal == "C")
+				{		options.subtitle = { text: 'Household size: Three people'},
+		        options.series = [{
+        name: 'Installation',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+        name: 'Manufacturing',
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    }, {
+        name: 'Sales & Distribution',
+        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+    }, {
+        name: 'Project Development',
+        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+    }, {
+        name: 'Other',
+        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+    }]
+		    }
+		    else if(selVal == "D")
+				{		options.subtitle = { text: 'Household size: Four people'},
+		        options.series = [{
+        name: 'Installation',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+        name: 'Manufacturing',
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    }, {
+        name: 'Sales & Distribution',
+        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+    }, {
+        name: 'Project Development',
+        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+    }, {
+        name: 'Other',
+        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+    }]
+				}
+			else if(selVal == "E")
+			{		options.subtitle = { text: 'Household size: Five people'},
+					options.series = [{
+        name: 'Installation',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }, {
+        name: 'Manufacturing',
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+    }, {
+        name: 'Sales & Distribution',
+        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+    }, {
+        name: 'Project Development',
+        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+    }, {
+        name: 'Other',
+        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+    }]
+			}
+		    var chart = new Highcharts.Chart(options);
+		});
+    </script>
+
+</body>
+</html>
