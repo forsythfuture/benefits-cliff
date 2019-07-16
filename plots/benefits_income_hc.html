@@ -24,6 +24,14 @@
 
     $(function () {
 
+			// colors do not work with IE, so make colors conditional on browser
+			if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
+				{
+				  color_palette = ["rgb(141,228,211)", "rgb(121,28,118)", "rgb(127,174,234)"];
+				} else {
+					color_palette = ["rgb(141,228,211,.9)", "rgb(121,28,118,.8)", "rgb(127,174,234,.8)"];
+				}
+
 		var options = {
     chart: {
         renderTo: 'container',
