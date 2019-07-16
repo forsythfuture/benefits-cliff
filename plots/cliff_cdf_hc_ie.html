@@ -22,17 +22,26 @@
     chart: {
         renderTo: 'container',
         defaultSeriesType: 'line',
-				height: '75%'
+				height: '80%'
     },
 
-		title: { text: 'Forsyth County, NC household incomes' },
-
-		subtitle: { text: 'Household size: One person'},
-
+		title: { text: 'Forsyth County, NC income and benefits' },
+		subtitle: { text: 'One adult'},
     credits: {
         text: 'Forsyth Futures',
         href: 'http://forsythfutures.org'
     },
+		colors: ["rgb(141,228,211,.9)", "rgb(121,28,118,.8)", "rgb(127,174,234,.8)"],
+
+		yAxis: {
+				max: 6000,
+				title: {
+						text: 'Monthly After-tax income plus benefits'
+				},
+				labels: {
+						format: '${value}'
+				}
+		},
 
 		legend: {
 				enabled: false
