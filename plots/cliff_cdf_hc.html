@@ -61,7 +61,20 @@
 			},
 			labels: {
 					format: '${value:.0f}'
-			}
+			},
+			plotLines: [{
+					// FNS
+          value: 16040,
+        	color: 'grey',
+          dashStyle: 'shortdash',
+          width: 1.5,
+          label: {
+              text: 'Food and Nutrition Services Threshold',
+							style: {
+									color: 'grey'
+							}
+          }
+      }]
 		},
 
 		tooltip: {
@@ -79,9 +92,6 @@
                 maxWidth: 400
             },
             chartOptions: {
-							// chart: {
-              //   height: 250
-							// 		},
 
 							 title: { text: null },
 
@@ -99,7 +109,8 @@
 								},
 								labels: {
 										format: '${value}'
-								}
+								},
+								plotLines: null
 							},
 
           		yAxis: {
@@ -127,6 +138,19 @@
 		    var selVal = $("#list").val();
 		    if(selVal == "A" || selVal == '')
 		    {		options.subtitle = { text: 'Household size: One person'},
+						options.xAxis.plotLines = [{
+									// FNS
+									value: 16040,
+									color: 'grey',
+									dashStyle: 'shortdash',
+									width: 1.5,
+									label: {
+											text: 'Food and Nutrition Services Threshold',
+											style: {
+													color: 'grey'
+											}
+									}
+							}],
 		        options.series = [{
 
 								type: 'line',
@@ -138,6 +162,19 @@
 		    }
 		    else if(selVal == "B")
 		    {		options.subtitle = { text: 'Household size: Two people'},
+						options.xAxis.plotLines = [{
+									// FNS
+				          value: 21599,
+				        	color: 'grey',
+				          dashStyle: 'shortdash',
+				          width: 1.5,
+				          label: {
+				              text: 'Food and Nutrition Services Threshold',
+											style: {
+													color: 'grey'
+											}
+				          }
+				      }],
 		        options.series = [{
 
 								type: 'line',
@@ -148,6 +185,19 @@
 		    }
 		    else if(selVal == "C")
 				{		options.subtitle = { text: 'Household size: Three people'},
+						options.xAxis.plotLines = [{
+							// FNS
+							value: 27159,
+							color: 'grey',
+							dashStyle: 'shortdash',
+							width: 1.5,
+							label: {
+									text: 'Food and Nutrition Services Threshold',
+									style: {
+											color: 'grey'
+									}
+							}
+					}],
 		        options.series = [{
 
 								type: 'line',
@@ -157,6 +207,19 @@
 		    }
 		    else if(selVal == "D")
 				{		options.subtitle = { text: 'Household size: Four people'},
+						options.xAxis.plotLines = [{
+							// FNS
+							value: 32718,
+							color: 'grey',
+							dashStyle: 'shortdash',
+							width: 1.5,
+							label: {
+									text: 'Food and Nutrition Services Threshold',
+									style: {
+											color: 'grey'
+									}
+							}
+					}],
 		        options.series = [{
 
 								type: 'line',
@@ -167,6 +230,19 @@
 				}
 			else if(selVal == "E")
 			{		options.subtitle = { text: 'Household size: Five people'},
+					options.xAxis.plotLines = [{
+						// FNS
+						value: 38277,
+						color: 'grey',
+						dashStyle: 'shortdash',
+						width: 1.5,
+						label: {
+								text: 'Food and Nutrition Services Threshold',
+								style: {
+										color: 'grey'
+								}
+						}
+				}],
 					options.series = [{
 
 							type: 'line',
