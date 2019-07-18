@@ -94,9 +94,8 @@
 		}
 		}],
 		tooltip: {
-				headerFormat: '<span style="color:{series.color}"><b>{series.name}</b></span><table>',
-				pointFormat: '<tr><td style="padding:0">After-tax income: <b>${point.y:.0f}</b></td></tr>' +
-						'<tr><td style="padding:0">Pre-tax income:  <b>${point.x:.0f}</b></td></tr>',
+				headerFormat: '<span style="color:{series.color}"><b>{series.name}:</span>  ${point.y:.0f}</b><table>',
+				pointFormat: '<tr><td style="padding:0">Pre-tax income:  <b>${point.x:.0f}</b></td></tr>',
 				footerFormat: '</table>',
 				useHTML: true,
         crosshairs: true
