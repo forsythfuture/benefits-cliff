@@ -14,6 +14,7 @@ master <- bind_rows(
     read_rds(str_c(file_dir, 'work_first.rds')),
     read_rds(str_c(file_dir, 'fns.rds')),
     read_rds(str_c(file_dir, 'child_care_subsidy.rds')),
+    read_rds(str_c(file_dir, 'smart_start.rds')),
     read_rds(str_c(file_dir, 'sec8.rds')),
     read_rds(str_c(file_dir, 'medical.rds')),
     read_rds(str_c(file_dir, 'wic.rds'))
