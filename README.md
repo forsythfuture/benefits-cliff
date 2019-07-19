@@ -75,13 +75,12 @@ The [household income threshold](https://www.ncdhhs.gov/assistance/low-income-se
 **Market Value of the Benefit**
 
 FNS beneficiaries receive benefits proportional to their monthly net income.   To calculate net income, we started with gross income and take the following deductions, which are outlined in the [benefits level manual](https://www2.ncdhhs.gov/info/olm/manuals/dss/ei-30/man/FSs285.pdf).  All citations below at to the benefits level manual.
-* Utility allowances based on the table in 285.01(A);
+* [Excess shelter deduction](https://economicbenefits.nc.gov/FN_A/FN_A/server/general/projects/Integrated%20Eligibility%20Manual/4000/4080/4080.18_Shelter_Deductions.htm) is shelter and/or utility expenses exceeding 50% of the monthly income after other deduction have been subtracted, with a max of $552, 285.01(F).
+  * Utility allowances based on the table in 285.01(A);
+  * Rent for all families is estimated at $500, which represents the 25th percentile rental value in Forsyth County;
 * Standard deduction based on the table in 285.01(B);
 * Earned income deduction of 20%, 285.01(B);
 * Dependent care deduction of $60 per child per month, 285.01(E);
-* Rent in calculating the excess shelter deduction of $500, 285.01(F)
-  * This value represents the 25th percentile rental value in Forsyth County
-  * [Excess shelter deduction](https://economicbenefits.nc.gov/FN_A/FN_A/server/general/projects/Integrated%20Eligibility%20Manual/4000/4080/4080.18_Shelter_Deductions.htm) is shelter and/or utility expenses exceeding 50% of the monthly income after other deduction have been subtracted, with a max of $552, 285.01(F).
 
 Once net income is calculated, we can determine the benefit amount.  In general, households are expected to spend 30% of their own net income on food, 285.04(D)(19), with FNS covering the rest. So, we take the maximum monthly income allotment, as specified in 285.02(B), and subtract 30% of net income from this amount to arrive at the value of the benefit.
 
@@ -107,8 +106,6 @@ Total tenant payment is the greater of (HUD manual, pg. 5-67):
 * 30% of monthly adjusted income,
 * 10% of monthly gross income, or
 * $25.
-
-We ignore welfare rent.
 
 We make the following deductions and assumptions in calculating monthly adjusted income:
 *  Dependent deduction: $480 year ($40 / month) for each child under 18 (HUD manual, pg. 5-41);
@@ -140,15 +137,13 @@ In calculating the value of the silver plan, all adults were assumed to be 30 ye
 
 <a name="tanf"/>
 
-### Work First (TANF)
+### Work First Cash Assistance (TANF)
 
 Our information for Work First comes from the [NC TANF State Plan](https://files.nc.gov/ncdhhs/documents/files/4.3.17%20FINAL%20%26%20APPROVED%202016-2019%20TANF%20STATE%20PLAN.doc), hereinafter "State Plan".
 
 **Eligibility**
 
 Only families with children 17 or younger are eligible for Work First Financial Assistance, State Plan pg. 29.  We assume all children are 17 or younger.
-
-There is not an income elegibility threshold.  Instead, benefits decline with income, until they reach zero.
 
 **Market Value of the Benefit**
 
@@ -169,4 +164,4 @@ Therefore, one child gets benefits in one child households and two children rece
 
 **Market Value of the Benefit**
 
-Average monthly food benefits per person in 2018 for North Carolina was $42.28.  To verify, go to the [USDA's WIC data site](https://www.fns.usda.gov/pd/wic-program), scroll down to "Annual State Level Data FY 2009-2018:", and then open the dataset labeled "Average Monthly Food Cost Per Person."  We assume all eligible family members receive WIC benefits in this amount.
+Average monthly food benefits per person in 2018 for North Carolina were $42.28.  To verify, go to the [USDA's WIC data site](https://www.fns.usda.gov/pd/wic-program), scroll down to "Annual State Level Data FY 2009-2018:", and then open the dataset labeled "Average Monthly Food Cost Per Person."  We assume all eligible family members receive WIC benefits in this amount.
