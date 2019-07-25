@@ -41,12 +41,12 @@ care <- care %>%
 
 # 85% state median income numbers come from here:
 # https://ncchildcare.ncdhhs.gov/Services/Financial-Assistance/Do-I-Qualify
-smi <- c(`1` = 2578,
-         `2` = 3372,
-         `3` = 4165,
-         `4` = 4958,
-         `5` = 5752,
-         `6` = 6542)
+smi <- c(`1` = 2826,
+         `2` = 3695,
+         `3` = 4565,
+         `4` = 5435,
+         `5` = 6304,
+         `6` = 7174)
 
 # add 85% SMI to child care data set
 care <- care %>%
