@@ -6,3 +6,4 @@
 send_aws.R
 create_plot_data.R
 create_javascript_array.R
+outfile.txt

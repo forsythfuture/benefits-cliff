@@ -4807,6 +4807,406 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 1 child",2,1,6000,0,Child Care Subsidy
 "2 adults, 2 children",2,2,6000,0,Child Care Subsidy
 "2 adults, 3 children",2,3,6000,1005,Child Care Subsidy
+1 adult,1,0,6010,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6010,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6010,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6010,0,Child Care Subsidy
+2 adults,2,0,6010,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6010,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6010,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6010,1004,Child Care Subsidy
+1 adult,1,0,6020,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6020,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6020,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6020,0,Child Care Subsidy
+2 adults,2,0,6020,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6020,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6020,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6020,1003,Child Care Subsidy
+1 adult,1,0,6030,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6030,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6030,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6030,0,Child Care Subsidy
+2 adults,2,0,6030,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6030,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6030,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6030,1002,Child Care Subsidy
+1 adult,1,0,6040,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6040,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6040,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6040,0,Child Care Subsidy
+2 adults,2,0,6040,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6040,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6040,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6040,1001,Child Care Subsidy
+1 adult,1,0,6050,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6050,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6050,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6050,0,Child Care Subsidy
+2 adults,2,0,6050,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6050,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6050,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6050,1000,Child Care Subsidy
+1 adult,1,0,6060,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6060,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6060,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6060,0,Child Care Subsidy
+2 adults,2,0,6060,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6060,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6060,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6060,999,Child Care Subsidy
+1 adult,1,0,6070,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6070,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6070,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6070,0,Child Care Subsidy
+2 adults,2,0,6070,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6070,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6070,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6070,998,Child Care Subsidy
+1 adult,1,0,6080,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6080,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6080,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6080,0,Child Care Subsidy
+2 adults,2,0,6080,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6080,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6080,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6080,997,Child Care Subsidy
+1 adult,1,0,6090,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6090,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6090,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6090,0,Child Care Subsidy
+2 adults,2,0,6090,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6090,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6090,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6090,996,Child Care Subsidy
+1 adult,1,0,6100,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6100,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6100,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6100,0,Child Care Subsidy
+2 adults,2,0,6100,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6100,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6100,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6100,995,Child Care Subsidy
+1 adult,1,0,6110,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6110,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6110,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6110,0,Child Care Subsidy
+2 adults,2,0,6110,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6110,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6110,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6110,994,Child Care Subsidy
+1 adult,1,0,6120,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6120,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6120,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6120,0,Child Care Subsidy
+2 adults,2,0,6120,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6120,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6120,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6120,993,Child Care Subsidy
+1 adult,1,0,6130,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6130,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6130,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6130,0,Child Care Subsidy
+2 adults,2,0,6130,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6130,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6130,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6130,992,Child Care Subsidy
+1 adult,1,0,6140,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6140,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6140,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6140,0,Child Care Subsidy
+2 adults,2,0,6140,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6140,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6140,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6140,991,Child Care Subsidy
+1 adult,1,0,6150,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6150,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6150,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6150,0,Child Care Subsidy
+2 adults,2,0,6150,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6150,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6150,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6150,990,Child Care Subsidy
+1 adult,1,0,6160,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6160,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6160,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6160,0,Child Care Subsidy
+2 adults,2,0,6160,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6160,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6160,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6160,989,Child Care Subsidy
+1 adult,1,0,6170,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6170,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6170,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6170,0,Child Care Subsidy
+2 adults,2,0,6170,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6170,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6170,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6170,988,Child Care Subsidy
+1 adult,1,0,6180,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6180,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6180,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6180,0,Child Care Subsidy
+2 adults,2,0,6180,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6180,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6180,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6180,987,Child Care Subsidy
+1 adult,1,0,6190,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6190,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6190,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6190,0,Child Care Subsidy
+2 adults,2,0,6190,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6190,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6190,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6190,986,Child Care Subsidy
+1 adult,1,0,6200,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6200,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6200,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6200,0,Child Care Subsidy
+2 adults,2,0,6200,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6200,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6200,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6200,985,Child Care Subsidy
+1 adult,1,0,6210,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6210,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6210,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6210,0,Child Care Subsidy
+2 adults,2,0,6210,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6210,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6210,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6210,984,Child Care Subsidy
+1 adult,1,0,6220,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6220,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6220,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6220,0,Child Care Subsidy
+2 adults,2,0,6220,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6220,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6220,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6220,983,Child Care Subsidy
+1 adult,1,0,6230,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6230,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6230,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6230,0,Child Care Subsidy
+2 adults,2,0,6230,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6230,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6230,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6230,982,Child Care Subsidy
+1 adult,1,0,6240,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6240,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6240,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6240,0,Child Care Subsidy
+2 adults,2,0,6240,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6240,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6240,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6240,981,Child Care Subsidy
+1 adult,1,0,6250,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6250,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6250,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6250,0,Child Care Subsidy
+2 adults,2,0,6250,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6250,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6250,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6250,980,Child Care Subsidy
+1 adult,1,0,6260,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6260,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6260,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6260,0,Child Care Subsidy
+2 adults,2,0,6260,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6260,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6260,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6260,979,Child Care Subsidy
+1 adult,1,0,6270,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6270,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6270,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6270,0,Child Care Subsidy
+2 adults,2,0,6270,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6270,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6270,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6270,978,Child Care Subsidy
+1 adult,1,0,6280,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6280,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6280,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6280,0,Child Care Subsidy
+2 adults,2,0,6280,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6280,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6280,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6280,977,Child Care Subsidy
+1 adult,1,0,6290,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6290,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6290,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6290,0,Child Care Subsidy
+2 adults,2,0,6290,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6290,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6290,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6290,976,Child Care Subsidy
+1 adult,1,0,6300,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6300,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6300,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6300,0,Child Care Subsidy
+2 adults,2,0,6300,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6300,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6300,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6300,975,Child Care Subsidy
+1 adult,1,0,6310,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6310,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6310,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6310,0,Child Care Subsidy
+2 adults,2,0,6310,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6310,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6310,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6310,0,Child Care Subsidy
+1 adult,1,0,6320,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6320,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6320,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6320,0,Child Care Subsidy
+2 adults,2,0,6320,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6320,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6320,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6320,0,Child Care Subsidy
+1 adult,1,0,6330,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6330,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6330,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6330,0,Child Care Subsidy
+2 adults,2,0,6330,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6330,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6330,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6330,0,Child Care Subsidy
+1 adult,1,0,6340,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6340,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6340,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6340,0,Child Care Subsidy
+2 adults,2,0,6340,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6340,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6340,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6340,0,Child Care Subsidy
+1 adult,1,0,6350,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6350,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6350,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6350,0,Child Care Subsidy
+2 adults,2,0,6350,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6350,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6350,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6350,0,Child Care Subsidy
+1 adult,1,0,6360,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6360,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6360,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6360,0,Child Care Subsidy
+2 adults,2,0,6360,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6360,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6360,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6360,0,Child Care Subsidy
+1 adult,1,0,6370,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6370,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6370,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6370,0,Child Care Subsidy
+2 adults,2,0,6370,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6370,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6370,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6370,0,Child Care Subsidy
+1 adult,1,0,6380,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6380,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6380,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6380,0,Child Care Subsidy
+2 adults,2,0,6380,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6380,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6380,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6380,0,Child Care Subsidy
+1 adult,1,0,6390,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6390,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6390,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6390,0,Child Care Subsidy
+2 adults,2,0,6390,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6390,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6390,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6390,0,Child Care Subsidy
+1 adult,1,0,6400,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6400,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6400,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6400,0,Child Care Subsidy
+2 adults,2,0,6400,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6400,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6400,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6400,0,Child Care Subsidy
+1 adult,1,0,6410,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6410,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6410,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6410,0,Child Care Subsidy
+2 adults,2,0,6410,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6410,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6410,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6410,0,Child Care Subsidy
+1 adult,1,0,6420,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6420,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6420,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6420,0,Child Care Subsidy
+2 adults,2,0,6420,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6420,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6420,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6420,0,Child Care Subsidy
+1 adult,1,0,6430,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6430,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6430,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6430,0,Child Care Subsidy
+2 adults,2,0,6430,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6430,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6430,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6430,0,Child Care Subsidy
+1 adult,1,0,6440,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6440,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6440,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6440,0,Child Care Subsidy
+2 adults,2,0,6440,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6440,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6440,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6440,0,Child Care Subsidy
+1 adult,1,0,6450,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6450,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6450,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6450,0,Child Care Subsidy
+2 adults,2,0,6450,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6450,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6450,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6450,0,Child Care Subsidy
+1 adult,1,0,6460,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6460,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6460,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6460,0,Child Care Subsidy
+2 adults,2,0,6460,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6460,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6460,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6460,0,Child Care Subsidy
+1 adult,1,0,6470,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6470,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6470,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6470,0,Child Care Subsidy
+2 adults,2,0,6470,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6470,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6470,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6470,0,Child Care Subsidy
+1 adult,1,0,6480,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6480,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6480,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6480,0,Child Care Subsidy
+2 adults,2,0,6480,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6480,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6480,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6480,0,Child Care Subsidy
+1 adult,1,0,6490,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6490,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6490,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6490,0,Child Care Subsidy
+2 adults,2,0,6490,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6490,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6490,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6490,0,Child Care Subsidy
+1 adult,1,0,6500,0,Child Care Subsidy
+"1 adult, 1 child",1,1,6500,0,Child Care Subsidy
+"1 adult, 2 children",1,2,6500,0,Child Care Subsidy
+"1 adult, 3 children",1,3,6500,0,Child Care Subsidy
+2 adults,2,0,6500,0,Child Care Subsidy
+"2 adults, 1 child",2,1,6500,0,Child Care Subsidy
+"2 adults, 2 children",2,2,6500,0,Child Care Subsidy
+"2 adults, 3 children",2,3,6500,0,Child Care Subsidy
 1 adult,1,0,0,192,FNS (Food Stamps)
 "1 adult, 1 child",1,1,0,353,FNS (Food Stamps)
 "1 adult, 2 children",1,2,0,505,FNS (Food Stamps)
@@ -9615,6 +10015,406 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 1 child",2,1,6000,0,FNS (Food Stamps)
 "2 adults, 2 children",2,2,6000,0,FNS (Food Stamps)
 "2 adults, 3 children",2,3,6000,0,FNS (Food Stamps)
+1 adult,1,0,6010,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6010,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6010,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6010,0,FNS (Food Stamps)
+2 adults,2,0,6010,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6010,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6010,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6010,0,FNS (Food Stamps)
+1 adult,1,0,6020,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6020,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6020,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6020,0,FNS (Food Stamps)
+2 adults,2,0,6020,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6020,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6020,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6020,0,FNS (Food Stamps)
+1 adult,1,0,6030,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6030,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6030,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6030,0,FNS (Food Stamps)
+2 adults,2,0,6030,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6030,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6030,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6030,0,FNS (Food Stamps)
+1 adult,1,0,6040,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6040,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6040,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6040,0,FNS (Food Stamps)
+2 adults,2,0,6040,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6040,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6040,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6040,0,FNS (Food Stamps)
+1 adult,1,0,6050,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6050,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6050,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6050,0,FNS (Food Stamps)
+2 adults,2,0,6050,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6050,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6050,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6050,0,FNS (Food Stamps)
+1 adult,1,0,6060,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6060,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6060,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6060,0,FNS (Food Stamps)
+2 adults,2,0,6060,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6060,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6060,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6060,0,FNS (Food Stamps)
+1 adult,1,0,6070,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6070,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6070,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6070,0,FNS (Food Stamps)
+2 adults,2,0,6070,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6070,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6070,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6070,0,FNS (Food Stamps)
+1 adult,1,0,6080,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6080,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6080,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6080,0,FNS (Food Stamps)
+2 adults,2,0,6080,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6080,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6080,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6080,0,FNS (Food Stamps)
+1 adult,1,0,6090,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6090,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6090,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6090,0,FNS (Food Stamps)
+2 adults,2,0,6090,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6090,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6090,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6090,0,FNS (Food Stamps)
+1 adult,1,0,6100,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6100,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6100,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6100,0,FNS (Food Stamps)
+2 adults,2,0,6100,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6100,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6100,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6100,0,FNS (Food Stamps)
+1 adult,1,0,6110,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6110,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6110,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6110,0,FNS (Food Stamps)
+2 adults,2,0,6110,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6110,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6110,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6110,0,FNS (Food Stamps)
+1 adult,1,0,6120,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6120,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6120,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6120,0,FNS (Food Stamps)
+2 adults,2,0,6120,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6120,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6120,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6120,0,FNS (Food Stamps)
+1 adult,1,0,6130,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6130,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6130,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6130,0,FNS (Food Stamps)
+2 adults,2,0,6130,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6130,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6130,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6130,0,FNS (Food Stamps)
+1 adult,1,0,6140,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6140,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6140,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6140,0,FNS (Food Stamps)
+2 adults,2,0,6140,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6140,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6140,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6140,0,FNS (Food Stamps)
+1 adult,1,0,6150,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6150,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6150,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6150,0,FNS (Food Stamps)
+2 adults,2,0,6150,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6150,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6150,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6150,0,FNS (Food Stamps)
+1 adult,1,0,6160,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6160,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6160,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6160,0,FNS (Food Stamps)
+2 adults,2,0,6160,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6160,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6160,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6160,0,FNS (Food Stamps)
+1 adult,1,0,6170,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6170,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6170,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6170,0,FNS (Food Stamps)
+2 adults,2,0,6170,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6170,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6170,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6170,0,FNS (Food Stamps)
+1 adult,1,0,6180,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6180,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6180,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6180,0,FNS (Food Stamps)
+2 adults,2,0,6180,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6180,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6180,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6180,0,FNS (Food Stamps)
+1 adult,1,0,6190,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6190,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6190,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6190,0,FNS (Food Stamps)
+2 adults,2,0,6190,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6190,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6190,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6190,0,FNS (Food Stamps)
+1 adult,1,0,6200,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6200,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6200,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6200,0,FNS (Food Stamps)
+2 adults,2,0,6200,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6200,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6200,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6200,0,FNS (Food Stamps)
+1 adult,1,0,6210,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6210,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6210,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6210,0,FNS (Food Stamps)
+2 adults,2,0,6210,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6210,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6210,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6210,0,FNS (Food Stamps)
+1 adult,1,0,6220,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6220,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6220,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6220,0,FNS (Food Stamps)
+2 adults,2,0,6220,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6220,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6220,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6220,0,FNS (Food Stamps)
+1 adult,1,0,6230,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6230,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6230,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6230,0,FNS (Food Stamps)
+2 adults,2,0,6230,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6230,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6230,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6230,0,FNS (Food Stamps)
+1 adult,1,0,6240,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6240,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6240,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6240,0,FNS (Food Stamps)
+2 adults,2,0,6240,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6240,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6240,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6240,0,FNS (Food Stamps)
+1 adult,1,0,6250,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6250,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6250,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6250,0,FNS (Food Stamps)
+2 adults,2,0,6250,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6250,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6250,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6250,0,FNS (Food Stamps)
+1 adult,1,0,6260,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6260,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6260,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6260,0,FNS (Food Stamps)
+2 adults,2,0,6260,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6260,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6260,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6260,0,FNS (Food Stamps)
+1 adult,1,0,6270,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6270,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6270,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6270,0,FNS (Food Stamps)
+2 adults,2,0,6270,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6270,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6270,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6270,0,FNS (Food Stamps)
+1 adult,1,0,6280,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6280,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6280,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6280,0,FNS (Food Stamps)
+2 adults,2,0,6280,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6280,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6280,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6280,0,FNS (Food Stamps)
+1 adult,1,0,6290,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6290,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6290,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6290,0,FNS (Food Stamps)
+2 adults,2,0,6290,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6290,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6290,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6290,0,FNS (Food Stamps)
+1 adult,1,0,6300,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6300,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6300,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6300,0,FNS (Food Stamps)
+2 adults,2,0,6300,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6300,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6300,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6300,0,FNS (Food Stamps)
+1 adult,1,0,6310,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6310,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6310,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6310,0,FNS (Food Stamps)
+2 adults,2,0,6310,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6310,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6310,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6310,0,FNS (Food Stamps)
+1 adult,1,0,6320,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6320,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6320,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6320,0,FNS (Food Stamps)
+2 adults,2,0,6320,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6320,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6320,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6320,0,FNS (Food Stamps)
+1 adult,1,0,6330,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6330,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6330,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6330,0,FNS (Food Stamps)
+2 adults,2,0,6330,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6330,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6330,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6330,0,FNS (Food Stamps)
+1 adult,1,0,6340,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6340,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6340,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6340,0,FNS (Food Stamps)
+2 adults,2,0,6340,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6340,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6340,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6340,0,FNS (Food Stamps)
+1 adult,1,0,6350,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6350,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6350,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6350,0,FNS (Food Stamps)
+2 adults,2,0,6350,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6350,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6350,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6350,0,FNS (Food Stamps)
+1 adult,1,0,6360,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6360,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6360,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6360,0,FNS (Food Stamps)
+2 adults,2,0,6360,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6360,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6360,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6360,0,FNS (Food Stamps)
+1 adult,1,0,6370,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6370,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6370,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6370,0,FNS (Food Stamps)
+2 adults,2,0,6370,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6370,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6370,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6370,0,FNS (Food Stamps)
+1 adult,1,0,6380,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6380,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6380,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6380,0,FNS (Food Stamps)
+2 adults,2,0,6380,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6380,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6380,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6380,0,FNS (Food Stamps)
+1 adult,1,0,6390,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6390,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6390,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6390,0,FNS (Food Stamps)
+2 adults,2,0,6390,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6390,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6390,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6390,0,FNS (Food Stamps)
+1 adult,1,0,6400,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6400,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6400,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6400,0,FNS (Food Stamps)
+2 adults,2,0,6400,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6400,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6400,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6400,0,FNS (Food Stamps)
+1 adult,1,0,6410,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6410,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6410,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6410,0,FNS (Food Stamps)
+2 adults,2,0,6410,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6410,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6410,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6410,0,FNS (Food Stamps)
+1 adult,1,0,6420,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6420,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6420,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6420,0,FNS (Food Stamps)
+2 adults,2,0,6420,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6420,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6420,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6420,0,FNS (Food Stamps)
+1 adult,1,0,6430,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6430,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6430,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6430,0,FNS (Food Stamps)
+2 adults,2,0,6430,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6430,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6430,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6430,0,FNS (Food Stamps)
+1 adult,1,0,6440,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6440,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6440,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6440,0,FNS (Food Stamps)
+2 adults,2,0,6440,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6440,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6440,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6440,0,FNS (Food Stamps)
+1 adult,1,0,6450,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6450,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6450,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6450,0,FNS (Food Stamps)
+2 adults,2,0,6450,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6450,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6450,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6450,0,FNS (Food Stamps)
+1 adult,1,0,6460,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6460,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6460,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6460,0,FNS (Food Stamps)
+2 adults,2,0,6460,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6460,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6460,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6460,0,FNS (Food Stamps)
+1 adult,1,0,6470,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6470,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6470,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6470,0,FNS (Food Stamps)
+2 adults,2,0,6470,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6470,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6470,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6470,0,FNS (Food Stamps)
+1 adult,1,0,6480,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6480,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6480,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6480,0,FNS (Food Stamps)
+2 adults,2,0,6480,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6480,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6480,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6480,0,FNS (Food Stamps)
+1 adult,1,0,6490,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6490,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6490,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6490,0,FNS (Food Stamps)
+2 adults,2,0,6490,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6490,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6490,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6490,0,FNS (Food Stamps)
+1 adult,1,0,6500,0,FNS (Food Stamps)
+"1 adult, 1 child",1,1,6500,0,FNS (Food Stamps)
+"1 adult, 2 children",1,2,6500,0,FNS (Food Stamps)
+"1 adult, 3 children",1,3,6500,0,FNS (Food Stamps)
+2 adults,2,0,6500,0,FNS (Food Stamps)
+"2 adults, 1 child",2,1,6500,0,FNS (Food Stamps)
+"2 adults, 2 children",2,2,6500,0,FNS (Food Stamps)
+"2 adults, 3 children",2,3,6500,0,FNS (Food Stamps)
 1 adult,1,0,0,618,Housing Choice Voucher
 "1 adult, 1 child",1,1,0,735,Housing Choice Voucher
 "1 adult, 2 children",1,2,0,735,Housing Choice Voucher
@@ -14423,6 +15223,406 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 1 child",2,1,6000,0,Housing Choice Voucher
 "2 adults, 2 children",2,2,6000,0,Housing Choice Voucher
 "2 adults, 3 children",2,3,6000,0,Housing Choice Voucher
+1 adult,1,0,6010,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6010,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6010,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6010,0,Housing Choice Voucher
+2 adults,2,0,6010,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6010,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6010,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6010,0,Housing Choice Voucher
+1 adult,1,0,6020,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6020,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6020,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6020,0,Housing Choice Voucher
+2 adults,2,0,6020,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6020,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6020,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6020,0,Housing Choice Voucher
+1 adult,1,0,6030,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6030,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6030,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6030,0,Housing Choice Voucher
+2 adults,2,0,6030,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6030,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6030,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6030,0,Housing Choice Voucher
+1 adult,1,0,6040,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6040,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6040,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6040,0,Housing Choice Voucher
+2 adults,2,0,6040,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6040,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6040,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6040,0,Housing Choice Voucher
+1 adult,1,0,6050,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6050,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6050,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6050,0,Housing Choice Voucher
+2 adults,2,0,6050,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6050,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6050,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6050,0,Housing Choice Voucher
+1 adult,1,0,6060,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6060,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6060,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6060,0,Housing Choice Voucher
+2 adults,2,0,6060,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6060,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6060,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6060,0,Housing Choice Voucher
+1 adult,1,0,6070,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6070,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6070,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6070,0,Housing Choice Voucher
+2 adults,2,0,6070,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6070,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6070,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6070,0,Housing Choice Voucher
+1 adult,1,0,6080,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6080,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6080,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6080,0,Housing Choice Voucher
+2 adults,2,0,6080,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6080,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6080,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6080,0,Housing Choice Voucher
+1 adult,1,0,6090,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6090,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6090,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6090,0,Housing Choice Voucher
+2 adults,2,0,6090,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6090,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6090,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6090,0,Housing Choice Voucher
+1 adult,1,0,6100,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6100,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6100,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6100,0,Housing Choice Voucher
+2 adults,2,0,6100,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6100,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6100,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6100,0,Housing Choice Voucher
+1 adult,1,0,6110,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6110,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6110,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6110,0,Housing Choice Voucher
+2 adults,2,0,6110,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6110,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6110,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6110,0,Housing Choice Voucher
+1 adult,1,0,6120,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6120,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6120,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6120,0,Housing Choice Voucher
+2 adults,2,0,6120,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6120,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6120,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6120,0,Housing Choice Voucher
+1 adult,1,0,6130,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6130,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6130,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6130,0,Housing Choice Voucher
+2 adults,2,0,6130,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6130,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6130,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6130,0,Housing Choice Voucher
+1 adult,1,0,6140,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6140,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6140,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6140,0,Housing Choice Voucher
+2 adults,2,0,6140,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6140,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6140,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6140,0,Housing Choice Voucher
+1 adult,1,0,6150,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6150,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6150,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6150,0,Housing Choice Voucher
+2 adults,2,0,6150,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6150,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6150,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6150,0,Housing Choice Voucher
+1 adult,1,0,6160,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6160,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6160,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6160,0,Housing Choice Voucher
+2 adults,2,0,6160,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6160,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6160,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6160,0,Housing Choice Voucher
+1 adult,1,0,6170,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6170,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6170,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6170,0,Housing Choice Voucher
+2 adults,2,0,6170,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6170,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6170,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6170,0,Housing Choice Voucher
+1 adult,1,0,6180,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6180,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6180,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6180,0,Housing Choice Voucher
+2 adults,2,0,6180,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6180,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6180,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6180,0,Housing Choice Voucher
+1 adult,1,0,6190,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6190,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6190,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6190,0,Housing Choice Voucher
+2 adults,2,0,6190,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6190,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6190,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6190,0,Housing Choice Voucher
+1 adult,1,0,6200,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6200,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6200,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6200,0,Housing Choice Voucher
+2 adults,2,0,6200,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6200,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6200,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6200,0,Housing Choice Voucher
+1 adult,1,0,6210,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6210,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6210,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6210,0,Housing Choice Voucher
+2 adults,2,0,6210,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6210,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6210,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6210,0,Housing Choice Voucher
+1 adult,1,0,6220,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6220,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6220,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6220,0,Housing Choice Voucher
+2 adults,2,0,6220,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6220,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6220,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6220,0,Housing Choice Voucher
+1 adult,1,0,6230,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6230,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6230,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6230,0,Housing Choice Voucher
+2 adults,2,0,6230,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6230,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6230,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6230,0,Housing Choice Voucher
+1 adult,1,0,6240,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6240,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6240,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6240,0,Housing Choice Voucher
+2 adults,2,0,6240,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6240,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6240,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6240,0,Housing Choice Voucher
+1 adult,1,0,6250,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6250,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6250,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6250,0,Housing Choice Voucher
+2 adults,2,0,6250,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6250,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6250,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6250,0,Housing Choice Voucher
+1 adult,1,0,6260,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6260,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6260,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6260,0,Housing Choice Voucher
+2 adults,2,0,6260,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6260,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6260,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6260,0,Housing Choice Voucher
+1 adult,1,0,6270,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6270,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6270,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6270,0,Housing Choice Voucher
+2 adults,2,0,6270,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6270,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6270,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6270,0,Housing Choice Voucher
+1 adult,1,0,6280,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6280,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6280,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6280,0,Housing Choice Voucher
+2 adults,2,0,6280,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6280,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6280,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6280,0,Housing Choice Voucher
+1 adult,1,0,6290,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6290,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6290,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6290,0,Housing Choice Voucher
+2 adults,2,0,6290,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6290,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6290,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6290,0,Housing Choice Voucher
+1 adult,1,0,6300,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6300,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6300,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6300,0,Housing Choice Voucher
+2 adults,2,0,6300,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6300,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6300,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6300,0,Housing Choice Voucher
+1 adult,1,0,6310,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6310,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6310,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6310,0,Housing Choice Voucher
+2 adults,2,0,6310,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6310,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6310,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6310,0,Housing Choice Voucher
+1 adult,1,0,6320,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6320,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6320,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6320,0,Housing Choice Voucher
+2 adults,2,0,6320,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6320,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6320,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6320,0,Housing Choice Voucher
+1 adult,1,0,6330,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6330,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6330,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6330,0,Housing Choice Voucher
+2 adults,2,0,6330,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6330,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6330,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6330,0,Housing Choice Voucher
+1 adult,1,0,6340,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6340,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6340,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6340,0,Housing Choice Voucher
+2 adults,2,0,6340,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6340,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6340,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6340,0,Housing Choice Voucher
+1 adult,1,0,6350,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6350,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6350,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6350,0,Housing Choice Voucher
+2 adults,2,0,6350,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6350,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6350,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6350,0,Housing Choice Voucher
+1 adult,1,0,6360,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6360,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6360,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6360,0,Housing Choice Voucher
+2 adults,2,0,6360,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6360,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6360,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6360,0,Housing Choice Voucher
+1 adult,1,0,6370,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6370,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6370,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6370,0,Housing Choice Voucher
+2 adults,2,0,6370,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6370,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6370,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6370,0,Housing Choice Voucher
+1 adult,1,0,6380,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6380,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6380,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6380,0,Housing Choice Voucher
+2 adults,2,0,6380,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6380,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6380,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6380,0,Housing Choice Voucher
+1 adult,1,0,6390,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6390,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6390,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6390,0,Housing Choice Voucher
+2 adults,2,0,6390,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6390,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6390,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6390,0,Housing Choice Voucher
+1 adult,1,0,6400,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6400,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6400,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6400,0,Housing Choice Voucher
+2 adults,2,0,6400,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6400,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6400,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6400,0,Housing Choice Voucher
+1 adult,1,0,6410,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6410,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6410,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6410,0,Housing Choice Voucher
+2 adults,2,0,6410,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6410,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6410,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6410,0,Housing Choice Voucher
+1 adult,1,0,6420,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6420,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6420,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6420,0,Housing Choice Voucher
+2 adults,2,0,6420,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6420,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6420,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6420,0,Housing Choice Voucher
+1 adult,1,0,6430,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6430,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6430,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6430,0,Housing Choice Voucher
+2 adults,2,0,6430,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6430,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6430,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6430,0,Housing Choice Voucher
+1 adult,1,0,6440,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6440,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6440,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6440,0,Housing Choice Voucher
+2 adults,2,0,6440,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6440,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6440,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6440,0,Housing Choice Voucher
+1 adult,1,0,6450,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6450,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6450,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6450,0,Housing Choice Voucher
+2 adults,2,0,6450,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6450,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6450,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6450,0,Housing Choice Voucher
+1 adult,1,0,6460,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6460,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6460,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6460,0,Housing Choice Voucher
+2 adults,2,0,6460,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6460,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6460,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6460,0,Housing Choice Voucher
+1 adult,1,0,6470,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6470,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6470,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6470,0,Housing Choice Voucher
+2 adults,2,0,6470,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6470,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6470,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6470,0,Housing Choice Voucher
+1 adult,1,0,6480,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6480,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6480,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6480,0,Housing Choice Voucher
+2 adults,2,0,6480,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6480,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6480,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6480,0,Housing Choice Voucher
+1 adult,1,0,6490,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6490,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6490,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6490,0,Housing Choice Voucher
+2 adults,2,0,6490,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6490,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6490,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6490,0,Housing Choice Voucher
+1 adult,1,0,6500,0,Housing Choice Voucher
+"1 adult, 1 child",1,1,6500,0,Housing Choice Voucher
+"1 adult, 2 children",1,2,6500,0,Housing Choice Voucher
+"1 adult, 3 children",1,3,6500,0,Housing Choice Voucher
+2 adults,2,0,6500,0,Housing Choice Voucher
+"2 adults, 1 child",2,1,6500,0,Housing Choice Voucher
+"2 adults, 2 children",2,2,6500,0,Housing Choice Voucher
+"2 adults, 3 children",2,3,6500,0,Housing Choice Voucher
 1 adult,1,0,0,0,NC Medicaid / Health Choice
 "1 adult, 1 child",1,1,0,889,NC Medicaid / Health Choice
 "1 adult, 2 children",1,2,0,1247,NC Medicaid / Health Choice
@@ -19231,6 +20431,406 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 1 child",2,1,6000,0,NC Medicaid / Health Choice
 "2 adults, 2 children",2,2,6000,0,NC Medicaid / Health Choice
 "2 adults, 3 children",2,3,6000,0,NC Medicaid / Health Choice
+1 adult,1,0,6010,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6010,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6010,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6010,0,NC Medicaid / Health Choice
+2 adults,2,0,6010,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6010,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6010,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6010,0,NC Medicaid / Health Choice
+1 adult,1,0,6020,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6020,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6020,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6020,0,NC Medicaid / Health Choice
+2 adults,2,0,6020,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6020,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6020,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6020,0,NC Medicaid / Health Choice
+1 adult,1,0,6030,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6030,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6030,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6030,0,NC Medicaid / Health Choice
+2 adults,2,0,6030,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6030,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6030,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6030,0,NC Medicaid / Health Choice
+1 adult,1,0,6040,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6040,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6040,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6040,0,NC Medicaid / Health Choice
+2 adults,2,0,6040,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6040,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6040,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6040,0,NC Medicaid / Health Choice
+1 adult,1,0,6050,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6050,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6050,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6050,0,NC Medicaid / Health Choice
+2 adults,2,0,6050,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6050,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6050,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6050,0,NC Medicaid / Health Choice
+1 adult,1,0,6060,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6060,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6060,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6060,0,NC Medicaid / Health Choice
+2 adults,2,0,6060,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6060,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6060,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6060,0,NC Medicaid / Health Choice
+1 adult,1,0,6070,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6070,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6070,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6070,0,NC Medicaid / Health Choice
+2 adults,2,0,6070,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6070,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6070,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6070,0,NC Medicaid / Health Choice
+1 adult,1,0,6080,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6080,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6080,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6080,0,NC Medicaid / Health Choice
+2 adults,2,0,6080,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6080,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6080,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6080,0,NC Medicaid / Health Choice
+1 adult,1,0,6090,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6090,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6090,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6090,0,NC Medicaid / Health Choice
+2 adults,2,0,6090,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6090,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6090,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6090,0,NC Medicaid / Health Choice
+1 adult,1,0,6100,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6100,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6100,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6100,0,NC Medicaid / Health Choice
+2 adults,2,0,6100,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6100,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6100,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6100,0,NC Medicaid / Health Choice
+1 adult,1,0,6110,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6110,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6110,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6110,0,NC Medicaid / Health Choice
+2 adults,2,0,6110,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6110,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6110,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6110,0,NC Medicaid / Health Choice
+1 adult,1,0,6120,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6120,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6120,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6120,0,NC Medicaid / Health Choice
+2 adults,2,0,6120,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6120,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6120,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6120,0,NC Medicaid / Health Choice
+1 adult,1,0,6130,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6130,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6130,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6130,0,NC Medicaid / Health Choice
+2 adults,2,0,6130,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6130,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6130,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6130,0,NC Medicaid / Health Choice
+1 adult,1,0,6140,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6140,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6140,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6140,0,NC Medicaid / Health Choice
+2 adults,2,0,6140,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6140,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6140,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6140,0,NC Medicaid / Health Choice
+1 adult,1,0,6150,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6150,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6150,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6150,0,NC Medicaid / Health Choice
+2 adults,2,0,6150,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6150,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6150,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6150,0,NC Medicaid / Health Choice
+1 adult,1,0,6160,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6160,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6160,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6160,0,NC Medicaid / Health Choice
+2 adults,2,0,6160,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6160,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6160,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6160,0,NC Medicaid / Health Choice
+1 adult,1,0,6170,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6170,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6170,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6170,0,NC Medicaid / Health Choice
+2 adults,2,0,6170,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6170,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6170,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6170,0,NC Medicaid / Health Choice
+1 adult,1,0,6180,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6180,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6180,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6180,0,NC Medicaid / Health Choice
+2 adults,2,0,6180,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6180,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6180,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6180,0,NC Medicaid / Health Choice
+1 adult,1,0,6190,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6190,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6190,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6190,0,NC Medicaid / Health Choice
+2 adults,2,0,6190,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6190,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6190,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6190,0,NC Medicaid / Health Choice
+1 adult,1,0,6200,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6200,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6200,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6200,0,NC Medicaid / Health Choice
+2 adults,2,0,6200,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6200,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6200,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6200,0,NC Medicaid / Health Choice
+1 adult,1,0,6210,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6210,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6210,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6210,0,NC Medicaid / Health Choice
+2 adults,2,0,6210,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6210,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6210,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6210,0,NC Medicaid / Health Choice
+1 adult,1,0,6220,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6220,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6220,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6220,0,NC Medicaid / Health Choice
+2 adults,2,0,6220,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6220,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6220,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6220,0,NC Medicaid / Health Choice
+1 adult,1,0,6230,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6230,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6230,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6230,0,NC Medicaid / Health Choice
+2 adults,2,0,6230,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6230,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6230,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6230,0,NC Medicaid / Health Choice
+1 adult,1,0,6240,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6240,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6240,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6240,0,NC Medicaid / Health Choice
+2 adults,2,0,6240,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6240,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6240,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6240,0,NC Medicaid / Health Choice
+1 adult,1,0,6250,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6250,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6250,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6250,0,NC Medicaid / Health Choice
+2 adults,2,0,6250,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6250,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6250,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6250,0,NC Medicaid / Health Choice
+1 adult,1,0,6260,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6260,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6260,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6260,0,NC Medicaid / Health Choice
+2 adults,2,0,6260,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6260,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6260,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6260,0,NC Medicaid / Health Choice
+1 adult,1,0,6270,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6270,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6270,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6270,0,NC Medicaid / Health Choice
+2 adults,2,0,6270,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6270,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6270,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6270,0,NC Medicaid / Health Choice
+1 adult,1,0,6280,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6280,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6280,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6280,0,NC Medicaid / Health Choice
+2 adults,2,0,6280,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6280,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6280,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6280,0,NC Medicaid / Health Choice
+1 adult,1,0,6290,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6290,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6290,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6290,0,NC Medicaid / Health Choice
+2 adults,2,0,6290,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6290,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6290,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6290,0,NC Medicaid / Health Choice
+1 adult,1,0,6300,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6300,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6300,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6300,0,NC Medicaid / Health Choice
+2 adults,2,0,6300,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6300,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6300,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6300,0,NC Medicaid / Health Choice
+1 adult,1,0,6310,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6310,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6310,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6310,0,NC Medicaid / Health Choice
+2 adults,2,0,6310,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6310,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6310,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6310,0,NC Medicaid / Health Choice
+1 adult,1,0,6320,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6320,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6320,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6320,0,NC Medicaid / Health Choice
+2 adults,2,0,6320,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6320,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6320,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6320,0,NC Medicaid / Health Choice
+1 adult,1,0,6330,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6330,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6330,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6330,0,NC Medicaid / Health Choice
+2 adults,2,0,6330,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6330,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6330,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6330,0,NC Medicaid / Health Choice
+1 adult,1,0,6340,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6340,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6340,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6340,0,NC Medicaid / Health Choice
+2 adults,2,0,6340,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6340,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6340,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6340,0,NC Medicaid / Health Choice
+1 adult,1,0,6350,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6350,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6350,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6350,0,NC Medicaid / Health Choice
+2 adults,2,0,6350,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6350,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6350,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6350,0,NC Medicaid / Health Choice
+1 adult,1,0,6360,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6360,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6360,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6360,0,NC Medicaid / Health Choice
+2 adults,2,0,6360,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6360,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6360,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6360,0,NC Medicaid / Health Choice
+1 adult,1,0,6370,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6370,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6370,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6370,0,NC Medicaid / Health Choice
+2 adults,2,0,6370,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6370,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6370,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6370,0,NC Medicaid / Health Choice
+1 adult,1,0,6380,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6380,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6380,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6380,0,NC Medicaid / Health Choice
+2 adults,2,0,6380,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6380,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6380,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6380,0,NC Medicaid / Health Choice
+1 adult,1,0,6390,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6390,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6390,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6390,0,NC Medicaid / Health Choice
+2 adults,2,0,6390,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6390,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6390,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6390,0,NC Medicaid / Health Choice
+1 adult,1,0,6400,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6400,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6400,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6400,0,NC Medicaid / Health Choice
+2 adults,2,0,6400,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6400,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6400,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6400,0,NC Medicaid / Health Choice
+1 adult,1,0,6410,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6410,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6410,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6410,0,NC Medicaid / Health Choice
+2 adults,2,0,6410,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6410,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6410,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6410,0,NC Medicaid / Health Choice
+1 adult,1,0,6420,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6420,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6420,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6420,0,NC Medicaid / Health Choice
+2 adults,2,0,6420,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6420,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6420,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6420,0,NC Medicaid / Health Choice
+1 adult,1,0,6430,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6430,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6430,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6430,0,NC Medicaid / Health Choice
+2 adults,2,0,6430,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6430,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6430,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6430,0,NC Medicaid / Health Choice
+1 adult,1,0,6440,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6440,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6440,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6440,0,NC Medicaid / Health Choice
+2 adults,2,0,6440,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6440,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6440,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6440,0,NC Medicaid / Health Choice
+1 adult,1,0,6450,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6450,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6450,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6450,0,NC Medicaid / Health Choice
+2 adults,2,0,6450,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6450,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6450,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6450,0,NC Medicaid / Health Choice
+1 adult,1,0,6460,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6460,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6460,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6460,0,NC Medicaid / Health Choice
+2 adults,2,0,6460,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6460,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6460,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6460,0,NC Medicaid / Health Choice
+1 adult,1,0,6470,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6470,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6470,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6470,0,NC Medicaid / Health Choice
+2 adults,2,0,6470,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6470,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6470,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6470,0,NC Medicaid / Health Choice
+1 adult,1,0,6480,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6480,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6480,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6480,0,NC Medicaid / Health Choice
+2 adults,2,0,6480,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6480,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6480,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6480,0,NC Medicaid / Health Choice
+1 adult,1,0,6490,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6490,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6490,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6490,0,NC Medicaid / Health Choice
+2 adults,2,0,6490,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6490,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6490,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6490,0,NC Medicaid / Health Choice
+1 adult,1,0,6500,0,NC Medicaid / Health Choice
+"1 adult, 1 child",1,1,6500,0,NC Medicaid / Health Choice
+"1 adult, 2 children",1,2,6500,0,NC Medicaid / Health Choice
+"1 adult, 3 children",1,3,6500,0,NC Medicaid / Health Choice
+2 adults,2,0,6500,0,NC Medicaid / Health Choice
+"2 adults, 1 child",2,1,6500,0,NC Medicaid / Health Choice
+"2 adults, 2 children",2,2,6500,0,NC Medicaid / Health Choice
+"2 adults, 3 children",2,3,6500,0,NC Medicaid / Health Choice
 1 adult,1,0,0,0,Smart Start
 "1 adult, 1 child",1,1,0,750,Smart Start
 "1 adult, 2 children",1,2,0,1605,Smart Start
@@ -24039,6 +25639,406 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 1 child",2,1,6000,0,Smart Start
 "2 adults, 2 children",2,2,6000,0,Smart Start
 "2 adults, 3 children",2,3,6000,0,Smart Start
+1 adult,1,0,6010,0,Smart Start
+"1 adult, 1 child",1,1,6010,0,Smart Start
+"1 adult, 2 children",1,2,6010,0,Smart Start
+"1 adult, 3 children",1,3,6010,0,Smart Start
+2 adults,2,0,6010,0,Smart Start
+"2 adults, 1 child",2,1,6010,0,Smart Start
+"2 adults, 2 children",2,2,6010,0,Smart Start
+"2 adults, 3 children",2,3,6010,0,Smart Start
+1 adult,1,0,6020,0,Smart Start
+"1 adult, 1 child",1,1,6020,0,Smart Start
+"1 adult, 2 children",1,2,6020,0,Smart Start
+"1 adult, 3 children",1,3,6020,0,Smart Start
+2 adults,2,0,6020,0,Smart Start
+"2 adults, 1 child",2,1,6020,0,Smart Start
+"2 adults, 2 children",2,2,6020,0,Smart Start
+"2 adults, 3 children",2,3,6020,0,Smart Start
+1 adult,1,0,6030,0,Smart Start
+"1 adult, 1 child",1,1,6030,0,Smart Start
+"1 adult, 2 children",1,2,6030,0,Smart Start
+"1 adult, 3 children",1,3,6030,0,Smart Start
+2 adults,2,0,6030,0,Smart Start
+"2 adults, 1 child",2,1,6030,0,Smart Start
+"2 adults, 2 children",2,2,6030,0,Smart Start
+"2 adults, 3 children",2,3,6030,0,Smart Start
+1 adult,1,0,6040,0,Smart Start
+"1 adult, 1 child",1,1,6040,0,Smart Start
+"1 adult, 2 children",1,2,6040,0,Smart Start
+"1 adult, 3 children",1,3,6040,0,Smart Start
+2 adults,2,0,6040,0,Smart Start
+"2 adults, 1 child",2,1,6040,0,Smart Start
+"2 adults, 2 children",2,2,6040,0,Smart Start
+"2 adults, 3 children",2,3,6040,0,Smart Start
+1 adult,1,0,6050,0,Smart Start
+"1 adult, 1 child",1,1,6050,0,Smart Start
+"1 adult, 2 children",1,2,6050,0,Smart Start
+"1 adult, 3 children",1,3,6050,0,Smart Start
+2 adults,2,0,6050,0,Smart Start
+"2 adults, 1 child",2,1,6050,0,Smart Start
+"2 adults, 2 children",2,2,6050,0,Smart Start
+"2 adults, 3 children",2,3,6050,0,Smart Start
+1 adult,1,0,6060,0,Smart Start
+"1 adult, 1 child",1,1,6060,0,Smart Start
+"1 adult, 2 children",1,2,6060,0,Smart Start
+"1 adult, 3 children",1,3,6060,0,Smart Start
+2 adults,2,0,6060,0,Smart Start
+"2 adults, 1 child",2,1,6060,0,Smart Start
+"2 adults, 2 children",2,2,6060,0,Smart Start
+"2 adults, 3 children",2,3,6060,0,Smart Start
+1 adult,1,0,6070,0,Smart Start
+"1 adult, 1 child",1,1,6070,0,Smart Start
+"1 adult, 2 children",1,2,6070,0,Smart Start
+"1 adult, 3 children",1,3,6070,0,Smart Start
+2 adults,2,0,6070,0,Smart Start
+"2 adults, 1 child",2,1,6070,0,Smart Start
+"2 adults, 2 children",2,2,6070,0,Smart Start
+"2 adults, 3 children",2,3,6070,0,Smart Start
+1 adult,1,0,6080,0,Smart Start
+"1 adult, 1 child",1,1,6080,0,Smart Start
+"1 adult, 2 children",1,2,6080,0,Smart Start
+"1 adult, 3 children",1,3,6080,0,Smart Start
+2 adults,2,0,6080,0,Smart Start
+"2 adults, 1 child",2,1,6080,0,Smart Start
+"2 adults, 2 children",2,2,6080,0,Smart Start
+"2 adults, 3 children",2,3,6080,0,Smart Start
+1 adult,1,0,6090,0,Smart Start
+"1 adult, 1 child",1,1,6090,0,Smart Start
+"1 adult, 2 children",1,2,6090,0,Smart Start
+"1 adult, 3 children",1,3,6090,0,Smart Start
+2 adults,2,0,6090,0,Smart Start
+"2 adults, 1 child",2,1,6090,0,Smart Start
+"2 adults, 2 children",2,2,6090,0,Smart Start
+"2 adults, 3 children",2,3,6090,0,Smart Start
+1 adult,1,0,6100,0,Smart Start
+"1 adult, 1 child",1,1,6100,0,Smart Start
+"1 adult, 2 children",1,2,6100,0,Smart Start
+"1 adult, 3 children",1,3,6100,0,Smart Start
+2 adults,2,0,6100,0,Smart Start
+"2 adults, 1 child",2,1,6100,0,Smart Start
+"2 adults, 2 children",2,2,6100,0,Smart Start
+"2 adults, 3 children",2,3,6100,0,Smart Start
+1 adult,1,0,6110,0,Smart Start
+"1 adult, 1 child",1,1,6110,0,Smart Start
+"1 adult, 2 children",1,2,6110,0,Smart Start
+"1 adult, 3 children",1,3,6110,0,Smart Start
+2 adults,2,0,6110,0,Smart Start
+"2 adults, 1 child",2,1,6110,0,Smart Start
+"2 adults, 2 children",2,2,6110,0,Smart Start
+"2 adults, 3 children",2,3,6110,0,Smart Start
+1 adult,1,0,6120,0,Smart Start
+"1 adult, 1 child",1,1,6120,0,Smart Start
+"1 adult, 2 children",1,2,6120,0,Smart Start
+"1 adult, 3 children",1,3,6120,0,Smart Start
+2 adults,2,0,6120,0,Smart Start
+"2 adults, 1 child",2,1,6120,0,Smart Start
+"2 adults, 2 children",2,2,6120,0,Smart Start
+"2 adults, 3 children",2,3,6120,0,Smart Start
+1 adult,1,0,6130,0,Smart Start
+"1 adult, 1 child",1,1,6130,0,Smart Start
+"1 adult, 2 children",1,2,6130,0,Smart Start
+"1 adult, 3 children",1,3,6130,0,Smart Start
+2 adults,2,0,6130,0,Smart Start
+"2 adults, 1 child",2,1,6130,0,Smart Start
+"2 adults, 2 children",2,2,6130,0,Smart Start
+"2 adults, 3 children",2,3,6130,0,Smart Start
+1 adult,1,0,6140,0,Smart Start
+"1 adult, 1 child",1,1,6140,0,Smart Start
+"1 adult, 2 children",1,2,6140,0,Smart Start
+"1 adult, 3 children",1,3,6140,0,Smart Start
+2 adults,2,0,6140,0,Smart Start
+"2 adults, 1 child",2,1,6140,0,Smart Start
+"2 adults, 2 children",2,2,6140,0,Smart Start
+"2 adults, 3 children",2,3,6140,0,Smart Start
+1 adult,1,0,6150,0,Smart Start
+"1 adult, 1 child",1,1,6150,0,Smart Start
+"1 adult, 2 children",1,2,6150,0,Smart Start
+"1 adult, 3 children",1,3,6150,0,Smart Start
+2 adults,2,0,6150,0,Smart Start
+"2 adults, 1 child",2,1,6150,0,Smart Start
+"2 adults, 2 children",2,2,6150,0,Smart Start
+"2 adults, 3 children",2,3,6150,0,Smart Start
+1 adult,1,0,6160,0,Smart Start
+"1 adult, 1 child",1,1,6160,0,Smart Start
+"1 adult, 2 children",1,2,6160,0,Smart Start
+"1 adult, 3 children",1,3,6160,0,Smart Start
+2 adults,2,0,6160,0,Smart Start
+"2 adults, 1 child",2,1,6160,0,Smart Start
+"2 adults, 2 children",2,2,6160,0,Smart Start
+"2 adults, 3 children",2,3,6160,0,Smart Start
+1 adult,1,0,6170,0,Smart Start
+"1 adult, 1 child",1,1,6170,0,Smart Start
+"1 adult, 2 children",1,2,6170,0,Smart Start
+"1 adult, 3 children",1,3,6170,0,Smart Start
+2 adults,2,0,6170,0,Smart Start
+"2 adults, 1 child",2,1,6170,0,Smart Start
+"2 adults, 2 children",2,2,6170,0,Smart Start
+"2 adults, 3 children",2,3,6170,0,Smart Start
+1 adult,1,0,6180,0,Smart Start
+"1 adult, 1 child",1,1,6180,0,Smart Start
+"1 adult, 2 children",1,2,6180,0,Smart Start
+"1 adult, 3 children",1,3,6180,0,Smart Start
+2 adults,2,0,6180,0,Smart Start
+"2 adults, 1 child",2,1,6180,0,Smart Start
+"2 adults, 2 children",2,2,6180,0,Smart Start
+"2 adults, 3 children",2,3,6180,0,Smart Start
+1 adult,1,0,6190,0,Smart Start
+"1 adult, 1 child",1,1,6190,0,Smart Start
+"1 adult, 2 children",1,2,6190,0,Smart Start
+"1 adult, 3 children",1,3,6190,0,Smart Start
+2 adults,2,0,6190,0,Smart Start
+"2 adults, 1 child",2,1,6190,0,Smart Start
+"2 adults, 2 children",2,2,6190,0,Smart Start
+"2 adults, 3 children",2,3,6190,0,Smart Start
+1 adult,1,0,6200,0,Smart Start
+"1 adult, 1 child",1,1,6200,0,Smart Start
+"1 adult, 2 children",1,2,6200,0,Smart Start
+"1 adult, 3 children",1,3,6200,0,Smart Start
+2 adults,2,0,6200,0,Smart Start
+"2 adults, 1 child",2,1,6200,0,Smart Start
+"2 adults, 2 children",2,2,6200,0,Smart Start
+"2 adults, 3 children",2,3,6200,0,Smart Start
+1 adult,1,0,6210,0,Smart Start
+"1 adult, 1 child",1,1,6210,0,Smart Start
+"1 adult, 2 children",1,2,6210,0,Smart Start
+"1 adult, 3 children",1,3,6210,0,Smart Start
+2 adults,2,0,6210,0,Smart Start
+"2 adults, 1 child",2,1,6210,0,Smart Start
+"2 adults, 2 children",2,2,6210,0,Smart Start
+"2 adults, 3 children",2,3,6210,0,Smart Start
+1 adult,1,0,6220,0,Smart Start
+"1 adult, 1 child",1,1,6220,0,Smart Start
+"1 adult, 2 children",1,2,6220,0,Smart Start
+"1 adult, 3 children",1,3,6220,0,Smart Start
+2 adults,2,0,6220,0,Smart Start
+"2 adults, 1 child",2,1,6220,0,Smart Start
+"2 adults, 2 children",2,2,6220,0,Smart Start
+"2 adults, 3 children",2,3,6220,0,Smart Start
+1 adult,1,0,6230,0,Smart Start
+"1 adult, 1 child",1,1,6230,0,Smart Start
+"1 adult, 2 children",1,2,6230,0,Smart Start
+"1 adult, 3 children",1,3,6230,0,Smart Start
+2 adults,2,0,6230,0,Smart Start
+"2 adults, 1 child",2,1,6230,0,Smart Start
+"2 adults, 2 children",2,2,6230,0,Smart Start
+"2 adults, 3 children",2,3,6230,0,Smart Start
+1 adult,1,0,6240,0,Smart Start
+"1 adult, 1 child",1,1,6240,0,Smart Start
+"1 adult, 2 children",1,2,6240,0,Smart Start
+"1 adult, 3 children",1,3,6240,0,Smart Start
+2 adults,2,0,6240,0,Smart Start
+"2 adults, 1 child",2,1,6240,0,Smart Start
+"2 adults, 2 children",2,2,6240,0,Smart Start
+"2 adults, 3 children",2,3,6240,0,Smart Start
+1 adult,1,0,6250,0,Smart Start
+"1 adult, 1 child",1,1,6250,0,Smart Start
+"1 adult, 2 children",1,2,6250,0,Smart Start
+"1 adult, 3 children",1,3,6250,0,Smart Start
+2 adults,2,0,6250,0,Smart Start
+"2 adults, 1 child",2,1,6250,0,Smart Start
+"2 adults, 2 children",2,2,6250,0,Smart Start
+"2 adults, 3 children",2,3,6250,0,Smart Start
+1 adult,1,0,6260,0,Smart Start
+"1 adult, 1 child",1,1,6260,0,Smart Start
+"1 adult, 2 children",1,2,6260,0,Smart Start
+"1 adult, 3 children",1,3,6260,0,Smart Start
+2 adults,2,0,6260,0,Smart Start
+"2 adults, 1 child",2,1,6260,0,Smart Start
+"2 adults, 2 children",2,2,6260,0,Smart Start
+"2 adults, 3 children",2,3,6260,0,Smart Start
+1 adult,1,0,6270,0,Smart Start
+"1 adult, 1 child",1,1,6270,0,Smart Start
+"1 adult, 2 children",1,2,6270,0,Smart Start
+"1 adult, 3 children",1,3,6270,0,Smart Start
+2 adults,2,0,6270,0,Smart Start
+"2 adults, 1 child",2,1,6270,0,Smart Start
+"2 adults, 2 children",2,2,6270,0,Smart Start
+"2 adults, 3 children",2,3,6270,0,Smart Start
+1 adult,1,0,6280,0,Smart Start
+"1 adult, 1 child",1,1,6280,0,Smart Start
+"1 adult, 2 children",1,2,6280,0,Smart Start
+"1 adult, 3 children",1,3,6280,0,Smart Start
+2 adults,2,0,6280,0,Smart Start
+"2 adults, 1 child",2,1,6280,0,Smart Start
+"2 adults, 2 children",2,2,6280,0,Smart Start
+"2 adults, 3 children",2,3,6280,0,Smart Start
+1 adult,1,0,6290,0,Smart Start
+"1 adult, 1 child",1,1,6290,0,Smart Start
+"1 adult, 2 children",1,2,6290,0,Smart Start
+"1 adult, 3 children",1,3,6290,0,Smart Start
+2 adults,2,0,6290,0,Smart Start
+"2 adults, 1 child",2,1,6290,0,Smart Start
+"2 adults, 2 children",2,2,6290,0,Smart Start
+"2 adults, 3 children",2,3,6290,0,Smart Start
+1 adult,1,0,6300,0,Smart Start
+"1 adult, 1 child",1,1,6300,0,Smart Start
+"1 adult, 2 children",1,2,6300,0,Smart Start
+"1 adult, 3 children",1,3,6300,0,Smart Start
+2 adults,2,0,6300,0,Smart Start
+"2 adults, 1 child",2,1,6300,0,Smart Start
+"2 adults, 2 children",2,2,6300,0,Smart Start
+"2 adults, 3 children",2,3,6300,0,Smart Start
+1 adult,1,0,6310,0,Smart Start
+"1 adult, 1 child",1,1,6310,0,Smart Start
+"1 adult, 2 children",1,2,6310,0,Smart Start
+"1 adult, 3 children",1,3,6310,0,Smart Start
+2 adults,2,0,6310,0,Smart Start
+"2 adults, 1 child",2,1,6310,0,Smart Start
+"2 adults, 2 children",2,2,6310,0,Smart Start
+"2 adults, 3 children",2,3,6310,0,Smart Start
+1 adult,1,0,6320,0,Smart Start
+"1 adult, 1 child",1,1,6320,0,Smart Start
+"1 adult, 2 children",1,2,6320,0,Smart Start
+"1 adult, 3 children",1,3,6320,0,Smart Start
+2 adults,2,0,6320,0,Smart Start
+"2 adults, 1 child",2,1,6320,0,Smart Start
+"2 adults, 2 children",2,2,6320,0,Smart Start
+"2 adults, 3 children",2,3,6320,0,Smart Start
+1 adult,1,0,6330,0,Smart Start
+"1 adult, 1 child",1,1,6330,0,Smart Start
+"1 adult, 2 children",1,2,6330,0,Smart Start
+"1 adult, 3 children",1,3,6330,0,Smart Start
+2 adults,2,0,6330,0,Smart Start
+"2 adults, 1 child",2,1,6330,0,Smart Start
+"2 adults, 2 children",2,2,6330,0,Smart Start
+"2 adults, 3 children",2,3,6330,0,Smart Start
+1 adult,1,0,6340,0,Smart Start
+"1 adult, 1 child",1,1,6340,0,Smart Start
+"1 adult, 2 children",1,2,6340,0,Smart Start
+"1 adult, 3 children",1,3,6340,0,Smart Start
+2 adults,2,0,6340,0,Smart Start
+"2 adults, 1 child",2,1,6340,0,Smart Start
+"2 adults, 2 children",2,2,6340,0,Smart Start
+"2 adults, 3 children",2,3,6340,0,Smart Start
+1 adult,1,0,6350,0,Smart Start
+"1 adult, 1 child",1,1,6350,0,Smart Start
+"1 adult, 2 children",1,2,6350,0,Smart Start
+"1 adult, 3 children",1,3,6350,0,Smart Start
+2 adults,2,0,6350,0,Smart Start
+"2 adults, 1 child",2,1,6350,0,Smart Start
+"2 adults, 2 children",2,2,6350,0,Smart Start
+"2 adults, 3 children",2,3,6350,0,Smart Start
+1 adult,1,0,6360,0,Smart Start
+"1 adult, 1 child",1,1,6360,0,Smart Start
+"1 adult, 2 children",1,2,6360,0,Smart Start
+"1 adult, 3 children",1,3,6360,0,Smart Start
+2 adults,2,0,6360,0,Smart Start
+"2 adults, 1 child",2,1,6360,0,Smart Start
+"2 adults, 2 children",2,2,6360,0,Smart Start
+"2 adults, 3 children",2,3,6360,0,Smart Start
+1 adult,1,0,6370,0,Smart Start
+"1 adult, 1 child",1,1,6370,0,Smart Start
+"1 adult, 2 children",1,2,6370,0,Smart Start
+"1 adult, 3 children",1,3,6370,0,Smart Start
+2 adults,2,0,6370,0,Smart Start
+"2 adults, 1 child",2,1,6370,0,Smart Start
+"2 adults, 2 children",2,2,6370,0,Smart Start
+"2 adults, 3 children",2,3,6370,0,Smart Start
+1 adult,1,0,6380,0,Smart Start
+"1 adult, 1 child",1,1,6380,0,Smart Start
+"1 adult, 2 children",1,2,6380,0,Smart Start
+"1 adult, 3 children",1,3,6380,0,Smart Start
+2 adults,2,0,6380,0,Smart Start
+"2 adults, 1 child",2,1,6380,0,Smart Start
+"2 adults, 2 children",2,2,6380,0,Smart Start
+"2 adults, 3 children",2,3,6380,0,Smart Start
+1 adult,1,0,6390,0,Smart Start
+"1 adult, 1 child",1,1,6390,0,Smart Start
+"1 adult, 2 children",1,2,6390,0,Smart Start
+"1 adult, 3 children",1,3,6390,0,Smart Start
+2 adults,2,0,6390,0,Smart Start
+"2 adults, 1 child",2,1,6390,0,Smart Start
+"2 adults, 2 children",2,2,6390,0,Smart Start
+"2 adults, 3 children",2,3,6390,0,Smart Start
+1 adult,1,0,6400,0,Smart Start
+"1 adult, 1 child",1,1,6400,0,Smart Start
+"1 adult, 2 children",1,2,6400,0,Smart Start
+"1 adult, 3 children",1,3,6400,0,Smart Start
+2 adults,2,0,6400,0,Smart Start
+"2 adults, 1 child",2,1,6400,0,Smart Start
+"2 adults, 2 children",2,2,6400,0,Smart Start
+"2 adults, 3 children",2,3,6400,0,Smart Start
+1 adult,1,0,6410,0,Smart Start
+"1 adult, 1 child",1,1,6410,0,Smart Start
+"1 adult, 2 children",1,2,6410,0,Smart Start
+"1 adult, 3 children",1,3,6410,0,Smart Start
+2 adults,2,0,6410,0,Smart Start
+"2 adults, 1 child",2,1,6410,0,Smart Start
+"2 adults, 2 children",2,2,6410,0,Smart Start
+"2 adults, 3 children",2,3,6410,0,Smart Start
+1 adult,1,0,6420,0,Smart Start
+"1 adult, 1 child",1,1,6420,0,Smart Start
+"1 adult, 2 children",1,2,6420,0,Smart Start
+"1 adult, 3 children",1,3,6420,0,Smart Start
+2 adults,2,0,6420,0,Smart Start
+"2 adults, 1 child",2,1,6420,0,Smart Start
+"2 adults, 2 children",2,2,6420,0,Smart Start
+"2 adults, 3 children",2,3,6420,0,Smart Start
+1 adult,1,0,6430,0,Smart Start
+"1 adult, 1 child",1,1,6430,0,Smart Start
+"1 adult, 2 children",1,2,6430,0,Smart Start
+"1 adult, 3 children",1,3,6430,0,Smart Start
+2 adults,2,0,6430,0,Smart Start
+"2 adults, 1 child",2,1,6430,0,Smart Start
+"2 adults, 2 children",2,2,6430,0,Smart Start
+"2 adults, 3 children",2,3,6430,0,Smart Start
+1 adult,1,0,6440,0,Smart Start
+"1 adult, 1 child",1,1,6440,0,Smart Start
+"1 adult, 2 children",1,2,6440,0,Smart Start
+"1 adult, 3 children",1,3,6440,0,Smart Start
+2 adults,2,0,6440,0,Smart Start
+"2 adults, 1 child",2,1,6440,0,Smart Start
+"2 adults, 2 children",2,2,6440,0,Smart Start
+"2 adults, 3 children",2,3,6440,0,Smart Start
+1 adult,1,0,6450,0,Smart Start
+"1 adult, 1 child",1,1,6450,0,Smart Start
+"1 adult, 2 children",1,2,6450,0,Smart Start
+"1 adult, 3 children",1,3,6450,0,Smart Start
+2 adults,2,0,6450,0,Smart Start
+"2 adults, 1 child",2,1,6450,0,Smart Start
+"2 adults, 2 children",2,2,6450,0,Smart Start
+"2 adults, 3 children",2,3,6450,0,Smart Start
+1 adult,1,0,6460,0,Smart Start
+"1 adult, 1 child",1,1,6460,0,Smart Start
+"1 adult, 2 children",1,2,6460,0,Smart Start
+"1 adult, 3 children",1,3,6460,0,Smart Start
+2 adults,2,0,6460,0,Smart Start
+"2 adults, 1 child",2,1,6460,0,Smart Start
+"2 adults, 2 children",2,2,6460,0,Smart Start
+"2 adults, 3 children",2,3,6460,0,Smart Start
+1 adult,1,0,6470,0,Smart Start
+"1 adult, 1 child",1,1,6470,0,Smart Start
+"1 adult, 2 children",1,2,6470,0,Smart Start
+"1 adult, 3 children",1,3,6470,0,Smart Start
+2 adults,2,0,6470,0,Smart Start
+"2 adults, 1 child",2,1,6470,0,Smart Start
+"2 adults, 2 children",2,2,6470,0,Smart Start
+"2 adults, 3 children",2,3,6470,0,Smart Start
+1 adult,1,0,6480,0,Smart Start
+"1 adult, 1 child",1,1,6480,0,Smart Start
+"1 adult, 2 children",1,2,6480,0,Smart Start
+"1 adult, 3 children",1,3,6480,0,Smart Start
+2 adults,2,0,6480,0,Smart Start
+"2 adults, 1 child",2,1,6480,0,Smart Start
+"2 adults, 2 children",2,2,6480,0,Smart Start
+"2 adults, 3 children",2,3,6480,0,Smart Start
+1 adult,1,0,6490,0,Smart Start
+"1 adult, 1 child",1,1,6490,0,Smart Start
+"1 adult, 2 children",1,2,6490,0,Smart Start
+"1 adult, 3 children",1,3,6490,0,Smart Start
+2 adults,2,0,6490,0,Smart Start
+"2 adults, 1 child",2,1,6490,0,Smart Start
+"2 adults, 2 children",2,2,6490,0,Smart Start
+"2 adults, 3 children",2,3,6490,0,Smart Start
+1 adult,1,0,6500,0,Smart Start
+"1 adult, 1 child",1,1,6500,0,Smart Start
+"1 adult, 2 children",1,2,6500,0,Smart Start
+"1 adult, 3 children",1,3,6500,0,Smart Start
+2 adults,2,0,6500,0,Smart Start
+"2 adults, 1 child",2,1,6500,0,Smart Start
+"2 adults, 2 children",2,2,6500,0,Smart Start
+"2 adults, 3 children",2,3,6500,0,Smart Start
 1 adult,1,0,0,0,WIC
 "1 adult, 1 child",1,1,0,84.56,WIC
 "1 adult, 2 children",1,2,0,126.84,WIC
@@ -28847,6 +30847,406 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 1 child",2,1,6000,0,WIC
 "2 adults, 2 children",2,2,6000,0,WIC
 "2 adults, 3 children",2,3,6000,0,WIC
+1 adult,1,0,6010,0,WIC
+"1 adult, 1 child",1,1,6010,0,WIC
+"1 adult, 2 children",1,2,6010,0,WIC
+"1 adult, 3 children",1,3,6010,0,WIC
+2 adults,2,0,6010,0,WIC
+"2 adults, 1 child",2,1,6010,0,WIC
+"2 adults, 2 children",2,2,6010,0,WIC
+"2 adults, 3 children",2,3,6010,0,WIC
+1 adult,1,0,6020,0,WIC
+"1 adult, 1 child",1,1,6020,0,WIC
+"1 adult, 2 children",1,2,6020,0,WIC
+"1 adult, 3 children",1,3,6020,0,WIC
+2 adults,2,0,6020,0,WIC
+"2 adults, 1 child",2,1,6020,0,WIC
+"2 adults, 2 children",2,2,6020,0,WIC
+"2 adults, 3 children",2,3,6020,0,WIC
+1 adult,1,0,6030,0,WIC
+"1 adult, 1 child",1,1,6030,0,WIC
+"1 adult, 2 children",1,2,6030,0,WIC
+"1 adult, 3 children",1,3,6030,0,WIC
+2 adults,2,0,6030,0,WIC
+"2 adults, 1 child",2,1,6030,0,WIC
+"2 adults, 2 children",2,2,6030,0,WIC
+"2 adults, 3 children",2,3,6030,0,WIC
+1 adult,1,0,6040,0,WIC
+"1 adult, 1 child",1,1,6040,0,WIC
+"1 adult, 2 children",1,2,6040,0,WIC
+"1 adult, 3 children",1,3,6040,0,WIC
+2 adults,2,0,6040,0,WIC
+"2 adults, 1 child",2,1,6040,0,WIC
+"2 adults, 2 children",2,2,6040,0,WIC
+"2 adults, 3 children",2,3,6040,0,WIC
+1 adult,1,0,6050,0,WIC
+"1 adult, 1 child",1,1,6050,0,WIC
+"1 adult, 2 children",1,2,6050,0,WIC
+"1 adult, 3 children",1,3,6050,0,WIC
+2 adults,2,0,6050,0,WIC
+"2 adults, 1 child",2,1,6050,0,WIC
+"2 adults, 2 children",2,2,6050,0,WIC
+"2 adults, 3 children",2,3,6050,0,WIC
+1 adult,1,0,6060,0,WIC
+"1 adult, 1 child",1,1,6060,0,WIC
+"1 adult, 2 children",1,2,6060,0,WIC
+"1 adult, 3 children",1,3,6060,0,WIC
+2 adults,2,0,6060,0,WIC
+"2 adults, 1 child",2,1,6060,0,WIC
+"2 adults, 2 children",2,2,6060,0,WIC
+"2 adults, 3 children",2,3,6060,0,WIC
+1 adult,1,0,6070,0,WIC
+"1 adult, 1 child",1,1,6070,0,WIC
+"1 adult, 2 children",1,2,6070,0,WIC
+"1 adult, 3 children",1,3,6070,0,WIC
+2 adults,2,0,6070,0,WIC
+"2 adults, 1 child",2,1,6070,0,WIC
+"2 adults, 2 children",2,2,6070,0,WIC
+"2 adults, 3 children",2,3,6070,0,WIC
+1 adult,1,0,6080,0,WIC
+"1 adult, 1 child",1,1,6080,0,WIC
+"1 adult, 2 children",1,2,6080,0,WIC
+"1 adult, 3 children",1,3,6080,0,WIC
+2 adults,2,0,6080,0,WIC
+"2 adults, 1 child",2,1,6080,0,WIC
+"2 adults, 2 children",2,2,6080,0,WIC
+"2 adults, 3 children",2,3,6080,0,WIC
+1 adult,1,0,6090,0,WIC
+"1 adult, 1 child",1,1,6090,0,WIC
+"1 adult, 2 children",1,2,6090,0,WIC
+"1 adult, 3 children",1,3,6090,0,WIC
+2 adults,2,0,6090,0,WIC
+"2 adults, 1 child",2,1,6090,0,WIC
+"2 adults, 2 children",2,2,6090,0,WIC
+"2 adults, 3 children",2,3,6090,0,WIC
+1 adult,1,0,6100,0,WIC
+"1 adult, 1 child",1,1,6100,0,WIC
+"1 adult, 2 children",1,2,6100,0,WIC
+"1 adult, 3 children",1,3,6100,0,WIC
+2 adults,2,0,6100,0,WIC
+"2 adults, 1 child",2,1,6100,0,WIC
+"2 adults, 2 children",2,2,6100,0,WIC
+"2 adults, 3 children",2,3,6100,0,WIC
+1 adult,1,0,6110,0,WIC
+"1 adult, 1 child",1,1,6110,0,WIC
+"1 adult, 2 children",1,2,6110,0,WIC
+"1 adult, 3 children",1,3,6110,0,WIC
+2 adults,2,0,6110,0,WIC
+"2 adults, 1 child",2,1,6110,0,WIC
+"2 adults, 2 children",2,2,6110,0,WIC
+"2 adults, 3 children",2,3,6110,0,WIC
+1 adult,1,0,6120,0,WIC
+"1 adult, 1 child",1,1,6120,0,WIC
+"1 adult, 2 children",1,2,6120,0,WIC
+"1 adult, 3 children",1,3,6120,0,WIC
+2 adults,2,0,6120,0,WIC
+"2 adults, 1 child",2,1,6120,0,WIC
+"2 adults, 2 children",2,2,6120,0,WIC
+"2 adults, 3 children",2,3,6120,0,WIC
+1 adult,1,0,6130,0,WIC
+"1 adult, 1 child",1,1,6130,0,WIC
+"1 adult, 2 children",1,2,6130,0,WIC
+"1 adult, 3 children",1,3,6130,0,WIC
+2 adults,2,0,6130,0,WIC
+"2 adults, 1 child",2,1,6130,0,WIC
+"2 adults, 2 children",2,2,6130,0,WIC
+"2 adults, 3 children",2,3,6130,0,WIC
+1 adult,1,0,6140,0,WIC
+"1 adult, 1 child",1,1,6140,0,WIC
+"1 adult, 2 children",1,2,6140,0,WIC
+"1 adult, 3 children",1,3,6140,0,WIC
+2 adults,2,0,6140,0,WIC
+"2 adults, 1 child",2,1,6140,0,WIC
+"2 adults, 2 children",2,2,6140,0,WIC
+"2 adults, 3 children",2,3,6140,0,WIC
+1 adult,1,0,6150,0,WIC
+"1 adult, 1 child",1,1,6150,0,WIC
+"1 adult, 2 children",1,2,6150,0,WIC
+"1 adult, 3 children",1,3,6150,0,WIC
+2 adults,2,0,6150,0,WIC
+"2 adults, 1 child",2,1,6150,0,WIC
+"2 adults, 2 children",2,2,6150,0,WIC
+"2 adults, 3 children",2,3,6150,0,WIC
+1 adult,1,0,6160,0,WIC
+"1 adult, 1 child",1,1,6160,0,WIC
+"1 adult, 2 children",1,2,6160,0,WIC
+"1 adult, 3 children",1,3,6160,0,WIC
+2 adults,2,0,6160,0,WIC
+"2 adults, 1 child",2,1,6160,0,WIC
+"2 adults, 2 children",2,2,6160,0,WIC
+"2 adults, 3 children",2,3,6160,0,WIC
+1 adult,1,0,6170,0,WIC
+"1 adult, 1 child",1,1,6170,0,WIC
+"1 adult, 2 children",1,2,6170,0,WIC
+"1 adult, 3 children",1,3,6170,0,WIC
+2 adults,2,0,6170,0,WIC
+"2 adults, 1 child",2,1,6170,0,WIC
+"2 adults, 2 children",2,2,6170,0,WIC
+"2 adults, 3 children",2,3,6170,0,WIC
+1 adult,1,0,6180,0,WIC
+"1 adult, 1 child",1,1,6180,0,WIC
+"1 adult, 2 children",1,2,6180,0,WIC
+"1 adult, 3 children",1,3,6180,0,WIC
+2 adults,2,0,6180,0,WIC
+"2 adults, 1 child",2,1,6180,0,WIC
+"2 adults, 2 children",2,2,6180,0,WIC
+"2 adults, 3 children",2,3,6180,0,WIC
+1 adult,1,0,6190,0,WIC
+"1 adult, 1 child",1,1,6190,0,WIC
+"1 adult, 2 children",1,2,6190,0,WIC
+"1 adult, 3 children",1,3,6190,0,WIC
+2 adults,2,0,6190,0,WIC
+"2 adults, 1 child",2,1,6190,0,WIC
+"2 adults, 2 children",2,2,6190,0,WIC
+"2 adults, 3 children",2,3,6190,0,WIC
+1 adult,1,0,6200,0,WIC
+"1 adult, 1 child",1,1,6200,0,WIC
+"1 adult, 2 children",1,2,6200,0,WIC
+"1 adult, 3 children",1,3,6200,0,WIC
+2 adults,2,0,6200,0,WIC
+"2 adults, 1 child",2,1,6200,0,WIC
+"2 adults, 2 children",2,2,6200,0,WIC
+"2 adults, 3 children",2,3,6200,0,WIC
+1 adult,1,0,6210,0,WIC
+"1 adult, 1 child",1,1,6210,0,WIC
+"1 adult, 2 children",1,2,6210,0,WIC
+"1 adult, 3 children",1,3,6210,0,WIC
+2 adults,2,0,6210,0,WIC
+"2 adults, 1 child",2,1,6210,0,WIC
+"2 adults, 2 children",2,2,6210,0,WIC
+"2 adults, 3 children",2,3,6210,0,WIC
+1 adult,1,0,6220,0,WIC
+"1 adult, 1 child",1,1,6220,0,WIC
+"1 adult, 2 children",1,2,6220,0,WIC
+"1 adult, 3 children",1,3,6220,0,WIC
+2 adults,2,0,6220,0,WIC
+"2 adults, 1 child",2,1,6220,0,WIC
+"2 adults, 2 children",2,2,6220,0,WIC
+"2 adults, 3 children",2,3,6220,0,WIC
+1 adult,1,0,6230,0,WIC
+"1 adult, 1 child",1,1,6230,0,WIC
+"1 adult, 2 children",1,2,6230,0,WIC
+"1 adult, 3 children",1,3,6230,0,WIC
+2 adults,2,0,6230,0,WIC
+"2 adults, 1 child",2,1,6230,0,WIC
+"2 adults, 2 children",2,2,6230,0,WIC
+"2 adults, 3 children",2,3,6230,0,WIC
+1 adult,1,0,6240,0,WIC
+"1 adult, 1 child",1,1,6240,0,WIC
+"1 adult, 2 children",1,2,6240,0,WIC
+"1 adult, 3 children",1,3,6240,0,WIC
+2 adults,2,0,6240,0,WIC
+"2 adults, 1 child",2,1,6240,0,WIC
+"2 adults, 2 children",2,2,6240,0,WIC
+"2 adults, 3 children",2,3,6240,0,WIC
+1 adult,1,0,6250,0,WIC
+"1 adult, 1 child",1,1,6250,0,WIC
+"1 adult, 2 children",1,2,6250,0,WIC
+"1 adult, 3 children",1,3,6250,0,WIC
+2 adults,2,0,6250,0,WIC
+"2 adults, 1 child",2,1,6250,0,WIC
+"2 adults, 2 children",2,2,6250,0,WIC
+"2 adults, 3 children",2,3,6250,0,WIC
+1 adult,1,0,6260,0,WIC
+"1 adult, 1 child",1,1,6260,0,WIC
+"1 adult, 2 children",1,2,6260,0,WIC
+"1 adult, 3 children",1,3,6260,0,WIC
+2 adults,2,0,6260,0,WIC
+"2 adults, 1 child",2,1,6260,0,WIC
+"2 adults, 2 children",2,2,6260,0,WIC
+"2 adults, 3 children",2,3,6260,0,WIC
+1 adult,1,0,6270,0,WIC
+"1 adult, 1 child",1,1,6270,0,WIC
+"1 adult, 2 children",1,2,6270,0,WIC
+"1 adult, 3 children",1,3,6270,0,WIC
+2 adults,2,0,6270,0,WIC
+"2 adults, 1 child",2,1,6270,0,WIC
+"2 adults, 2 children",2,2,6270,0,WIC
+"2 adults, 3 children",2,3,6270,0,WIC
+1 adult,1,0,6280,0,WIC
+"1 adult, 1 child",1,1,6280,0,WIC
+"1 adult, 2 children",1,2,6280,0,WIC
+"1 adult, 3 children",1,3,6280,0,WIC
+2 adults,2,0,6280,0,WIC
+"2 adults, 1 child",2,1,6280,0,WIC
+"2 adults, 2 children",2,2,6280,0,WIC
+"2 adults, 3 children",2,3,6280,0,WIC
+1 adult,1,0,6290,0,WIC
+"1 adult, 1 child",1,1,6290,0,WIC
+"1 adult, 2 children",1,2,6290,0,WIC
+"1 adult, 3 children",1,3,6290,0,WIC
+2 adults,2,0,6290,0,WIC
+"2 adults, 1 child",2,1,6290,0,WIC
+"2 adults, 2 children",2,2,6290,0,WIC
+"2 adults, 3 children",2,3,6290,0,WIC
+1 adult,1,0,6300,0,WIC
+"1 adult, 1 child",1,1,6300,0,WIC
+"1 adult, 2 children",1,2,6300,0,WIC
+"1 adult, 3 children",1,3,6300,0,WIC
+2 adults,2,0,6300,0,WIC
+"2 adults, 1 child",2,1,6300,0,WIC
+"2 adults, 2 children",2,2,6300,0,WIC
+"2 adults, 3 children",2,3,6300,0,WIC
+1 adult,1,0,6310,0,WIC
+"1 adult, 1 child",1,1,6310,0,WIC
+"1 adult, 2 children",1,2,6310,0,WIC
+"1 adult, 3 children",1,3,6310,0,WIC
+2 adults,2,0,6310,0,WIC
+"2 adults, 1 child",2,1,6310,0,WIC
+"2 adults, 2 children",2,2,6310,0,WIC
+"2 adults, 3 children",2,3,6310,0,WIC
+1 adult,1,0,6320,0,WIC
+"1 adult, 1 child",1,1,6320,0,WIC
+"1 adult, 2 children",1,2,6320,0,WIC
+"1 adult, 3 children",1,3,6320,0,WIC
+2 adults,2,0,6320,0,WIC
+"2 adults, 1 child",2,1,6320,0,WIC
+"2 adults, 2 children",2,2,6320,0,WIC
+"2 adults, 3 children",2,3,6320,0,WIC
+1 adult,1,0,6330,0,WIC
+"1 adult, 1 child",1,1,6330,0,WIC
+"1 adult, 2 children",1,2,6330,0,WIC
+"1 adult, 3 children",1,3,6330,0,WIC
+2 adults,2,0,6330,0,WIC
+"2 adults, 1 child",2,1,6330,0,WIC
+"2 adults, 2 children",2,2,6330,0,WIC
+"2 adults, 3 children",2,3,6330,0,WIC
+1 adult,1,0,6340,0,WIC
+"1 adult, 1 child",1,1,6340,0,WIC
+"1 adult, 2 children",1,2,6340,0,WIC
+"1 adult, 3 children",1,3,6340,0,WIC
+2 adults,2,0,6340,0,WIC
+"2 adults, 1 child",2,1,6340,0,WIC
+"2 adults, 2 children",2,2,6340,0,WIC
+"2 adults, 3 children",2,3,6340,0,WIC
+1 adult,1,0,6350,0,WIC
+"1 adult, 1 child",1,1,6350,0,WIC
+"1 adult, 2 children",1,2,6350,0,WIC
+"1 adult, 3 children",1,3,6350,0,WIC
+2 adults,2,0,6350,0,WIC
+"2 adults, 1 child",2,1,6350,0,WIC
+"2 adults, 2 children",2,2,6350,0,WIC
+"2 adults, 3 children",2,3,6350,0,WIC
+1 adult,1,0,6360,0,WIC
+"1 adult, 1 child",1,1,6360,0,WIC
+"1 adult, 2 children",1,2,6360,0,WIC
+"1 adult, 3 children",1,3,6360,0,WIC
+2 adults,2,0,6360,0,WIC
+"2 adults, 1 child",2,1,6360,0,WIC
+"2 adults, 2 children",2,2,6360,0,WIC
+"2 adults, 3 children",2,3,6360,0,WIC
+1 adult,1,0,6370,0,WIC
+"1 adult, 1 child",1,1,6370,0,WIC
+"1 adult, 2 children",1,2,6370,0,WIC
+"1 adult, 3 children",1,3,6370,0,WIC
+2 adults,2,0,6370,0,WIC
+"2 adults, 1 child",2,1,6370,0,WIC
+"2 adults, 2 children",2,2,6370,0,WIC
+"2 adults, 3 children",2,3,6370,0,WIC
+1 adult,1,0,6380,0,WIC
+"1 adult, 1 child",1,1,6380,0,WIC
+"1 adult, 2 children",1,2,6380,0,WIC
+"1 adult, 3 children",1,3,6380,0,WIC
+2 adults,2,0,6380,0,WIC
+"2 adults, 1 child",2,1,6380,0,WIC
+"2 adults, 2 children",2,2,6380,0,WIC
+"2 adults, 3 children",2,3,6380,0,WIC
+1 adult,1,0,6390,0,WIC
+"1 adult, 1 child",1,1,6390,0,WIC
+"1 adult, 2 children",1,2,6390,0,WIC
+"1 adult, 3 children",1,3,6390,0,WIC
+2 adults,2,0,6390,0,WIC
+"2 adults, 1 child",2,1,6390,0,WIC
+"2 adults, 2 children",2,2,6390,0,WIC
+"2 adults, 3 children",2,3,6390,0,WIC
+1 adult,1,0,6400,0,WIC
+"1 adult, 1 child",1,1,6400,0,WIC
+"1 adult, 2 children",1,2,6400,0,WIC
+"1 adult, 3 children",1,3,6400,0,WIC
+2 adults,2,0,6400,0,WIC
+"2 adults, 1 child",2,1,6400,0,WIC
+"2 adults, 2 children",2,2,6400,0,WIC
+"2 adults, 3 children",2,3,6400,0,WIC
+1 adult,1,0,6410,0,WIC
+"1 adult, 1 child",1,1,6410,0,WIC
+"1 adult, 2 children",1,2,6410,0,WIC
+"1 adult, 3 children",1,3,6410,0,WIC
+2 adults,2,0,6410,0,WIC
+"2 adults, 1 child",2,1,6410,0,WIC
+"2 adults, 2 children",2,2,6410,0,WIC
+"2 adults, 3 children",2,3,6410,0,WIC
+1 adult,1,0,6420,0,WIC
+"1 adult, 1 child",1,1,6420,0,WIC
+"1 adult, 2 children",1,2,6420,0,WIC
+"1 adult, 3 children",1,3,6420,0,WIC
+2 adults,2,0,6420,0,WIC
+"2 adults, 1 child",2,1,6420,0,WIC
+"2 adults, 2 children",2,2,6420,0,WIC
+"2 adults, 3 children",2,3,6420,0,WIC
+1 adult,1,0,6430,0,WIC
+"1 adult, 1 child",1,1,6430,0,WIC
+"1 adult, 2 children",1,2,6430,0,WIC
+"1 adult, 3 children",1,3,6430,0,WIC
+2 adults,2,0,6430,0,WIC
+"2 adults, 1 child",2,1,6430,0,WIC
+"2 adults, 2 children",2,2,6430,0,WIC
+"2 adults, 3 children",2,3,6430,0,WIC
+1 adult,1,0,6440,0,WIC
+"1 adult, 1 child",1,1,6440,0,WIC
+"1 adult, 2 children",1,2,6440,0,WIC
+"1 adult, 3 children",1,3,6440,0,WIC
+2 adults,2,0,6440,0,WIC
+"2 adults, 1 child",2,1,6440,0,WIC
+"2 adults, 2 children",2,2,6440,0,WIC
+"2 adults, 3 children",2,3,6440,0,WIC
+1 adult,1,0,6450,0,WIC
+"1 adult, 1 child",1,1,6450,0,WIC
+"1 adult, 2 children",1,2,6450,0,WIC
+"1 adult, 3 children",1,3,6450,0,WIC
+2 adults,2,0,6450,0,WIC
+"2 adults, 1 child",2,1,6450,0,WIC
+"2 adults, 2 children",2,2,6450,0,WIC
+"2 adults, 3 children",2,3,6450,0,WIC
+1 adult,1,0,6460,0,WIC
+"1 adult, 1 child",1,1,6460,0,WIC
+"1 adult, 2 children",1,2,6460,0,WIC
+"1 adult, 3 children",1,3,6460,0,WIC
+2 adults,2,0,6460,0,WIC
+"2 adults, 1 child",2,1,6460,0,WIC
+"2 adults, 2 children",2,2,6460,0,WIC
+"2 adults, 3 children",2,3,6460,0,WIC
+1 adult,1,0,6470,0,WIC
+"1 adult, 1 child",1,1,6470,0,WIC
+"1 adult, 2 children",1,2,6470,0,WIC
+"1 adult, 3 children",1,3,6470,0,WIC
+2 adults,2,0,6470,0,WIC
+"2 adults, 1 child",2,1,6470,0,WIC
+"2 adults, 2 children",2,2,6470,0,WIC
+"2 adults, 3 children",2,3,6470,0,WIC
+1 adult,1,0,6480,0,WIC
+"1 adult, 1 child",1,1,6480,0,WIC
+"1 adult, 2 children",1,2,6480,0,WIC
+"1 adult, 3 children",1,3,6480,0,WIC
+2 adults,2,0,6480,0,WIC
+"2 adults, 1 child",2,1,6480,0,WIC
+"2 adults, 2 children",2,2,6480,0,WIC
+"2 adults, 3 children",2,3,6480,0,WIC
+1 adult,1,0,6490,0,WIC
+"1 adult, 1 child",1,1,6490,0,WIC
+"1 adult, 2 children",1,2,6490,0,WIC
+"1 adult, 3 children",1,3,6490,0,WIC
+2 adults,2,0,6490,0,WIC
+"2 adults, 1 child",2,1,6490,0,WIC
+"2 adults, 2 children",2,2,6490,0,WIC
+"2 adults, 3 children",2,3,6490,0,WIC
+1 adult,1,0,6500,0,WIC
+"1 adult, 1 child",1,1,6500,0,WIC
+"1 adult, 2 children",1,2,6500,0,WIC
+"1 adult, 3 children",1,3,6500,0,WIC
+2 adults,2,0,6500,0,WIC
+"2 adults, 1 child",2,1,6500,0,WIC
+"2 adults, 2 children",2,2,6500,0,WIC
+"2 adults, 3 children",2,3,6500,0,WIC
 1 adult,1,0,0,0,Work First (TANF)
 "1 adult, 1 child",1,1,0,236,Work First (TANF)
 "1 adult, 2 children",1,2,0,272,Work First (TANF)
@@ -33655,3 +36055,403 @@ composition,adults,children,monthly_income,payment,benefit
 "2 adults, 1 child",2,1,6000,0,Work First (TANF)
 "2 adults, 2 children",2,2,6000,0,Work First (TANF)
 "2 adults, 3 children",2,3,6000,0,Work First (TANF)
+1 adult,1,0,6010,0,Work First (TANF)
+"1 adult, 1 child",1,1,6010,0,Work First (TANF)
+"1 adult, 2 children",1,2,6010,0,Work First (TANF)
+"1 adult, 3 children",1,3,6010,0,Work First (TANF)
+2 adults,2,0,6010,0,Work First (TANF)
+"2 adults, 1 child",2,1,6010,0,Work First (TANF)
+"2 adults, 2 children",2,2,6010,0,Work First (TANF)
+"2 adults, 3 children",2,3,6010,0,Work First (TANF)
+1 adult,1,0,6020,0,Work First (TANF)
+"1 adult, 1 child",1,1,6020,0,Work First (TANF)
+"1 adult, 2 children",1,2,6020,0,Work First (TANF)
+"1 adult, 3 children",1,3,6020,0,Work First (TANF)
+2 adults,2,0,6020,0,Work First (TANF)
+"2 adults, 1 child",2,1,6020,0,Work First (TANF)
+"2 adults, 2 children",2,2,6020,0,Work First (TANF)
+"2 adults, 3 children",2,3,6020,0,Work First (TANF)
+1 adult,1,0,6030,0,Work First (TANF)
+"1 adult, 1 child",1,1,6030,0,Work First (TANF)
+"1 adult, 2 children",1,2,6030,0,Work First (TANF)
+"1 adult, 3 children",1,3,6030,0,Work First (TANF)
+2 adults,2,0,6030,0,Work First (TANF)
+"2 adults, 1 child",2,1,6030,0,Work First (TANF)
+"2 adults, 2 children",2,2,6030,0,Work First (TANF)
+"2 adults, 3 children",2,3,6030,0,Work First (TANF)
+1 adult,1,0,6040,0,Work First (TANF)
+"1 adult, 1 child",1,1,6040,0,Work First (TANF)
+"1 adult, 2 children",1,2,6040,0,Work First (TANF)
+"1 adult, 3 children",1,3,6040,0,Work First (TANF)
+2 adults,2,0,6040,0,Work First (TANF)
+"2 adults, 1 child",2,1,6040,0,Work First (TANF)
+"2 adults, 2 children",2,2,6040,0,Work First (TANF)
+"2 adults, 3 children",2,3,6040,0,Work First (TANF)
+1 adult,1,0,6050,0,Work First (TANF)
+"1 adult, 1 child",1,1,6050,0,Work First (TANF)
+"1 adult, 2 children",1,2,6050,0,Work First (TANF)
+"1 adult, 3 children",1,3,6050,0,Work First (TANF)
+2 adults,2,0,6050,0,Work First (TANF)
+"2 adults, 1 child",2,1,6050,0,Work First (TANF)
+"2 adults, 2 children",2,2,6050,0,Work First (TANF)
+"2 adults, 3 children",2,3,6050,0,Work First (TANF)
+1 adult,1,0,6060,0,Work First (TANF)
+"1 adult, 1 child",1,1,6060,0,Work First (TANF)
+"1 adult, 2 children",1,2,6060,0,Work First (TANF)
+"1 adult, 3 children",1,3,6060,0,Work First (TANF)
+2 adults,2,0,6060,0,Work First (TANF)
+"2 adults, 1 child",2,1,6060,0,Work First (TANF)
+"2 adults, 2 children",2,2,6060,0,Work First (TANF)
+"2 adults, 3 children",2,3,6060,0,Work First (TANF)
+1 adult,1,0,6070,0,Work First (TANF)
+"1 adult, 1 child",1,1,6070,0,Work First (TANF)
+"1 adult, 2 children",1,2,6070,0,Work First (TANF)
+"1 adult, 3 children",1,3,6070,0,Work First (TANF)
+2 adults,2,0,6070,0,Work First (TANF)
+"2 adults, 1 child",2,1,6070,0,Work First (TANF)
+"2 adults, 2 children",2,2,6070,0,Work First (TANF)
+"2 adults, 3 children",2,3,6070,0,Work First (TANF)
+1 adult,1,0,6080,0,Work First (TANF)
+"1 adult, 1 child",1,1,6080,0,Work First (TANF)
+"1 adult, 2 children",1,2,6080,0,Work First (TANF)
+"1 adult, 3 children",1,3,6080,0,Work First (TANF)
+2 adults,2,0,6080,0,Work First (TANF)
+"2 adults, 1 child",2,1,6080,0,Work First (TANF)
+"2 adults, 2 children",2,2,6080,0,Work First (TANF)
+"2 adults, 3 children",2,3,6080,0,Work First (TANF)
+1 adult,1,0,6090,0,Work First (TANF)
+"1 adult, 1 child",1,1,6090,0,Work First (TANF)
+"1 adult, 2 children",1,2,6090,0,Work First (TANF)
+"1 adult, 3 children",1,3,6090,0,Work First (TANF)
+2 adults,2,0,6090,0,Work First (TANF)
+"2 adults, 1 child",2,1,6090,0,Work First (TANF)
+"2 adults, 2 children",2,2,6090,0,Work First (TANF)
+"2 adults, 3 children",2,3,6090,0,Work First (TANF)
+1 adult,1,0,6100,0,Work First (TANF)
+"1 adult, 1 child",1,1,6100,0,Work First (TANF)
+"1 adult, 2 children",1,2,6100,0,Work First (TANF)
+"1 adult, 3 children",1,3,6100,0,Work First (TANF)
+2 adults,2,0,6100,0,Work First (TANF)
+"2 adults, 1 child",2,1,6100,0,Work First (TANF)
+"2 adults, 2 children",2,2,6100,0,Work First (TANF)
+"2 adults, 3 children",2,3,6100,0,Work First (TANF)
+1 adult,1,0,6110,0,Work First (TANF)
+"1 adult, 1 child",1,1,6110,0,Work First (TANF)
+"1 adult, 2 children",1,2,6110,0,Work First (TANF)
+"1 adult, 3 children",1,3,6110,0,Work First (TANF)
+2 adults,2,0,6110,0,Work First (TANF)
+"2 adults, 1 child",2,1,6110,0,Work First (TANF)
+"2 adults, 2 children",2,2,6110,0,Work First (TANF)
+"2 adults, 3 children",2,3,6110,0,Work First (TANF)
+1 adult,1,0,6120,0,Work First (TANF)
+"1 adult, 1 child",1,1,6120,0,Work First (TANF)
+"1 adult, 2 children",1,2,6120,0,Work First (TANF)
+"1 adult, 3 children",1,3,6120,0,Work First (TANF)
+2 adults,2,0,6120,0,Work First (TANF)
+"2 adults, 1 child",2,1,6120,0,Work First (TANF)
+"2 adults, 2 children",2,2,6120,0,Work First (TANF)
+"2 adults, 3 children",2,3,6120,0,Work First (TANF)
+1 adult,1,0,6130,0,Work First (TANF)
+"1 adult, 1 child",1,1,6130,0,Work First (TANF)
+"1 adult, 2 children",1,2,6130,0,Work First (TANF)
+"1 adult, 3 children",1,3,6130,0,Work First (TANF)
+2 adults,2,0,6130,0,Work First (TANF)
+"2 adults, 1 child",2,1,6130,0,Work First (TANF)
+"2 adults, 2 children",2,2,6130,0,Work First (TANF)
+"2 adults, 3 children",2,3,6130,0,Work First (TANF)
+1 adult,1,0,6140,0,Work First (TANF)
+"1 adult, 1 child",1,1,6140,0,Work First (TANF)
+"1 adult, 2 children",1,2,6140,0,Work First (TANF)
+"1 adult, 3 children",1,3,6140,0,Work First (TANF)
+2 adults,2,0,6140,0,Work First (TANF)
+"2 adults, 1 child",2,1,6140,0,Work First (TANF)
+"2 adults, 2 children",2,2,6140,0,Work First (TANF)
+"2 adults, 3 children",2,3,6140,0,Work First (TANF)
+1 adult,1,0,6150,0,Work First (TANF)
+"1 adult, 1 child",1,1,6150,0,Work First (TANF)
+"1 adult, 2 children",1,2,6150,0,Work First (TANF)
+"1 adult, 3 children",1,3,6150,0,Work First (TANF)
+2 adults,2,0,6150,0,Work First (TANF)
+"2 adults, 1 child",2,1,6150,0,Work First (TANF)
+"2 adults, 2 children",2,2,6150,0,Work First (TANF)
+"2 adults, 3 children",2,3,6150,0,Work First (TANF)
+1 adult,1,0,6160,0,Work First (TANF)
+"1 adult, 1 child",1,1,6160,0,Work First (TANF)
+"1 adult, 2 children",1,2,6160,0,Work First (TANF)
+"1 adult, 3 children",1,3,6160,0,Work First (TANF)
+2 adults,2,0,6160,0,Work First (TANF)
+"2 adults, 1 child",2,1,6160,0,Work First (TANF)
+"2 adults, 2 children",2,2,6160,0,Work First (TANF)
+"2 adults, 3 children",2,3,6160,0,Work First (TANF)
+1 adult,1,0,6170,0,Work First (TANF)
+"1 adult, 1 child",1,1,6170,0,Work First (TANF)
+"1 adult, 2 children",1,2,6170,0,Work First (TANF)
+"1 adult, 3 children",1,3,6170,0,Work First (TANF)
+2 adults,2,0,6170,0,Work First (TANF)
+"2 adults, 1 child",2,1,6170,0,Work First (TANF)
+"2 adults, 2 children",2,2,6170,0,Work First (TANF)
+"2 adults, 3 children",2,3,6170,0,Work First (TANF)
+1 adult,1,0,6180,0,Work First (TANF)
+"1 adult, 1 child",1,1,6180,0,Work First (TANF)
+"1 adult, 2 children",1,2,6180,0,Work First (TANF)
+"1 adult, 3 children",1,3,6180,0,Work First (TANF)
+2 adults,2,0,6180,0,Work First (TANF)
+"2 adults, 1 child",2,1,6180,0,Work First (TANF)
+"2 adults, 2 children",2,2,6180,0,Work First (TANF)
+"2 adults, 3 children",2,3,6180,0,Work First (TANF)
+1 adult,1,0,6190,0,Work First (TANF)
+"1 adult, 1 child",1,1,6190,0,Work First (TANF)
+"1 adult, 2 children",1,2,6190,0,Work First (TANF)
+"1 adult, 3 children",1,3,6190,0,Work First (TANF)
+2 adults,2,0,6190,0,Work First (TANF)
+"2 adults, 1 child",2,1,6190,0,Work First (TANF)
+"2 adults, 2 children",2,2,6190,0,Work First (TANF)
+"2 adults, 3 children",2,3,6190,0,Work First (TANF)
+1 adult,1,0,6200,0,Work First (TANF)
+"1 adult, 1 child",1,1,6200,0,Work First (TANF)
+"1 adult, 2 children",1,2,6200,0,Work First (TANF)
+"1 adult, 3 children",1,3,6200,0,Work First (TANF)
+2 adults,2,0,6200,0,Work First (TANF)
+"2 adults, 1 child",2,1,6200,0,Work First (TANF)
+"2 adults, 2 children",2,2,6200,0,Work First (TANF)
+"2 adults, 3 children",2,3,6200,0,Work First (TANF)
+1 adult,1,0,6210,0,Work First (TANF)
+"1 adult, 1 child",1,1,6210,0,Work First (TANF)
+"1 adult, 2 children",1,2,6210,0,Work First (TANF)
+"1 adult, 3 children",1,3,6210,0,Work First (TANF)
+2 adults,2,0,6210,0,Work First (TANF)
+"2 adults, 1 child",2,1,6210,0,Work First (TANF)
+"2 adults, 2 children",2,2,6210,0,Work First (TANF)
+"2 adults, 3 children",2,3,6210,0,Work First (TANF)
+1 adult,1,0,6220,0,Work First (TANF)
+"1 adult, 1 child",1,1,6220,0,Work First (TANF)
+"1 adult, 2 children",1,2,6220,0,Work First (TANF)
+"1 adult, 3 children",1,3,6220,0,Work First (TANF)
+2 adults,2,0,6220,0,Work First (TANF)
+"2 adults, 1 child",2,1,6220,0,Work First (TANF)
+"2 adults, 2 children",2,2,6220,0,Work First (TANF)
+"2 adults, 3 children",2,3,6220,0,Work First (TANF)
+1 adult,1,0,6230,0,Work First (TANF)
+"1 adult, 1 child",1,1,6230,0,Work First (TANF)
+"1 adult, 2 children",1,2,6230,0,Work First (TANF)
+"1 adult, 3 children",1,3,6230,0,Work First (TANF)
+2 adults,2,0,6230,0,Work First (TANF)
+"2 adults, 1 child",2,1,6230,0,Work First (TANF)
+"2 adults, 2 children",2,2,6230,0,Work First (TANF)
+"2 adults, 3 children",2,3,6230,0,Work First (TANF)
+1 adult,1,0,6240,0,Work First (TANF)
+"1 adult, 1 child",1,1,6240,0,Work First (TANF)
+"1 adult, 2 children",1,2,6240,0,Work First (TANF)
+"1 adult, 3 children",1,3,6240,0,Work First (TANF)
+2 adults,2,0,6240,0,Work First (TANF)
+"2 adults, 1 child",2,1,6240,0,Work First (TANF)
+"2 adults, 2 children",2,2,6240,0,Work First (TANF)
+"2 adults, 3 children",2,3,6240,0,Work First (TANF)
+1 adult,1,0,6250,0,Work First (TANF)
+"1 adult, 1 child",1,1,6250,0,Work First (TANF)
+"1 adult, 2 children",1,2,6250,0,Work First (TANF)
+"1 adult, 3 children",1,3,6250,0,Work First (TANF)
+2 adults,2,0,6250,0,Work First (TANF)
+"2 adults, 1 child",2,1,6250,0,Work First (TANF)
+"2 adults, 2 children",2,2,6250,0,Work First (TANF)
+"2 adults, 3 children",2,3,6250,0,Work First (TANF)
+1 adult,1,0,6260,0,Work First (TANF)
+"1 adult, 1 child",1,1,6260,0,Work First (TANF)
+"1 adult, 2 children",1,2,6260,0,Work First (TANF)
+"1 adult, 3 children",1,3,6260,0,Work First (TANF)
+2 adults,2,0,6260,0,Work First (TANF)
+"2 adults, 1 child",2,1,6260,0,Work First (TANF)
+"2 adults, 2 children",2,2,6260,0,Work First (TANF)
+"2 adults, 3 children",2,3,6260,0,Work First (TANF)
+1 adult,1,0,6270,0,Work First (TANF)
+"1 adult, 1 child",1,1,6270,0,Work First (TANF)
+"1 adult, 2 children",1,2,6270,0,Work First (TANF)
+"1 adult, 3 children",1,3,6270,0,Work First (TANF)
+2 adults,2,0,6270,0,Work First (TANF)
+"2 adults, 1 child",2,1,6270,0,Work First (TANF)
+"2 adults, 2 children",2,2,6270,0,Work First (TANF)
+"2 adults, 3 children",2,3,6270,0,Work First (TANF)
+1 adult,1,0,6280,0,Work First (TANF)
+"1 adult, 1 child",1,1,6280,0,Work First (TANF)
+"1 adult, 2 children",1,2,6280,0,Work First (TANF)
+"1 adult, 3 children",1,3,6280,0,Work First (TANF)
+2 adults,2,0,6280,0,Work First (TANF)
+"2 adults, 1 child",2,1,6280,0,Work First (TANF)
+"2 adults, 2 children",2,2,6280,0,Work First (TANF)
+"2 adults, 3 children",2,3,6280,0,Work First (TANF)
+1 adult,1,0,6290,0,Work First (TANF)
+"1 adult, 1 child",1,1,6290,0,Work First (TANF)
+"1 adult, 2 children",1,2,6290,0,Work First (TANF)
+"1 adult, 3 children",1,3,6290,0,Work First (TANF)
+2 adults,2,0,6290,0,Work First (TANF)
+"2 adults, 1 child",2,1,6290,0,Work First (TANF)
+"2 adults, 2 children",2,2,6290,0,Work First (TANF)
+"2 adults, 3 children",2,3,6290,0,Work First (TANF)
+1 adult,1,0,6300,0,Work First (TANF)
+"1 adult, 1 child",1,1,6300,0,Work First (TANF)
+"1 adult, 2 children",1,2,6300,0,Work First (TANF)
+"1 adult, 3 children",1,3,6300,0,Work First (TANF)
+2 adults,2,0,6300,0,Work First (TANF)
+"2 adults, 1 child",2,1,6300,0,Work First (TANF)
+"2 adults, 2 children",2,2,6300,0,Work First (TANF)
+"2 adults, 3 children",2,3,6300,0,Work First (TANF)
+1 adult,1,0,6310,0,Work First (TANF)
+"1 adult, 1 child",1,1,6310,0,Work First (TANF)
+"1 adult, 2 children",1,2,6310,0,Work First (TANF)
+"1 adult, 3 children",1,3,6310,0,Work First (TANF)
+2 adults,2,0,6310,0,Work First (TANF)
+"2 adults, 1 child",2,1,6310,0,Work First (TANF)
+"2 adults, 2 children",2,2,6310,0,Work First (TANF)
+"2 adults, 3 children",2,3,6310,0,Work First (TANF)
+1 adult,1,0,6320,0,Work First (TANF)
+"1 adult, 1 child",1,1,6320,0,Work First (TANF)
+"1 adult, 2 children",1,2,6320,0,Work First (TANF)
+"1 adult, 3 children",1,3,6320,0,Work First (TANF)
+2 adults,2,0,6320,0,Work First (TANF)
+"2 adults, 1 child",2,1,6320,0,Work First (TANF)
+"2 adults, 2 children",2,2,6320,0,Work First (TANF)
+"2 adults, 3 children",2,3,6320,0,Work First (TANF)
+1 adult,1,0,6330,0,Work First (TANF)
+"1 adult, 1 child",1,1,6330,0,Work First (TANF)
+"1 adult, 2 children",1,2,6330,0,Work First (TANF)
+"1 adult, 3 children",1,3,6330,0,Work First (TANF)
+2 adults,2,0,6330,0,Work First (TANF)
+"2 adults, 1 child",2,1,6330,0,Work First (TANF)
+"2 adults, 2 children",2,2,6330,0,Work First (TANF)
+"2 adults, 3 children",2,3,6330,0,Work First (TANF)
+1 adult,1,0,6340,0,Work First (TANF)
+"1 adult, 1 child",1,1,6340,0,Work First (TANF)
+"1 adult, 2 children",1,2,6340,0,Work First (TANF)
+"1 adult, 3 children",1,3,6340,0,Work First (TANF)
+2 adults,2,0,6340,0,Work First (TANF)
+"2 adults, 1 child",2,1,6340,0,Work First (TANF)
+"2 adults, 2 children",2,2,6340,0,Work First (TANF)
+"2 adults, 3 children",2,3,6340,0,Work First (TANF)
+1 adult,1,0,6350,0,Work First (TANF)
+"1 adult, 1 child",1,1,6350,0,Work First (TANF)
+"1 adult, 2 children",1,2,6350,0,Work First (TANF)
+"1 adult, 3 children",1,3,6350,0,Work First (TANF)
+2 adults,2,0,6350,0,Work First (TANF)
+"2 adults, 1 child",2,1,6350,0,Work First (TANF)
+"2 adults, 2 children",2,2,6350,0,Work First (TANF)
+"2 adults, 3 children",2,3,6350,0,Work First (TANF)
+1 adult,1,0,6360,0,Work First (TANF)
+"1 adult, 1 child",1,1,6360,0,Work First (TANF)
+"1 adult, 2 children",1,2,6360,0,Work First (TANF)
+"1 adult, 3 children",1,3,6360,0,Work First (TANF)
+2 adults,2,0,6360,0,Work First (TANF)
+"2 adults, 1 child",2,1,6360,0,Work First (TANF)
+"2 adults, 2 children",2,2,6360,0,Work First (TANF)
+"2 adults, 3 children",2,3,6360,0,Work First (TANF)
+1 adult,1,0,6370,0,Work First (TANF)
+"1 adult, 1 child",1,1,6370,0,Work First (TANF)
+"1 adult, 2 children",1,2,6370,0,Work First (TANF)
+"1 adult, 3 children",1,3,6370,0,Work First (TANF)
+2 adults,2,0,6370,0,Work First (TANF)
+"2 adults, 1 child",2,1,6370,0,Work First (TANF)
+"2 adults, 2 children",2,2,6370,0,Work First (TANF)
+"2 adults, 3 children",2,3,6370,0,Work First (TANF)
+1 adult,1,0,6380,0,Work First (TANF)
+"1 adult, 1 child",1,1,6380,0,Work First (TANF)
+"1 adult, 2 children",1,2,6380,0,Work First (TANF)
+"1 adult, 3 children",1,3,6380,0,Work First (TANF)
+2 adults,2,0,6380,0,Work First (TANF)
+"2 adults, 1 child",2,1,6380,0,Work First (TANF)
+"2 adults, 2 children",2,2,6380,0,Work First (TANF)
+"2 adults, 3 children",2,3,6380,0,Work First (TANF)
+1 adult,1,0,6390,0,Work First (TANF)
+"1 adult, 1 child",1,1,6390,0,Work First (TANF)
+"1 adult, 2 children",1,2,6390,0,Work First (TANF)
+"1 adult, 3 children",1,3,6390,0,Work First (TANF)
+2 adults,2,0,6390,0,Work First (TANF)
+"2 adults, 1 child",2,1,6390,0,Work First (TANF)
+"2 adults, 2 children",2,2,6390,0,Work First (TANF)
+"2 adults, 3 children",2,3,6390,0,Work First (TANF)
+1 adult,1,0,6400,0,Work First (TANF)
+"1 adult, 1 child",1,1,6400,0,Work First (TANF)
+"1 adult, 2 children",1,2,6400,0,Work First (TANF)
+"1 adult, 3 children",1,3,6400,0,Work First (TANF)
+2 adults,2,0,6400,0,Work First (TANF)
+"2 adults, 1 child",2,1,6400,0,Work First (TANF)
+"2 adults, 2 children",2,2,6400,0,Work First (TANF)
+"2 adults, 3 children",2,3,6400,0,Work First (TANF)
+1 adult,1,0,6410,0,Work First (TANF)
+"1 adult, 1 child",1,1,6410,0,Work First (TANF)
+"1 adult, 2 children",1,2,6410,0,Work First (TANF)
+"1 adult, 3 children",1,3,6410,0,Work First (TANF)
+2 adults,2,0,6410,0,Work First (TANF)
+"2 adults, 1 child",2,1,6410,0,Work First (TANF)
+"2 adults, 2 children",2,2,6410,0,Work First (TANF)
+"2 adults, 3 children",2,3,6410,0,Work First (TANF)
+1 adult,1,0,6420,0,Work First (TANF)
+"1 adult, 1 child",1,1,6420,0,Work First (TANF)
+"1 adult, 2 children",1,2,6420,0,Work First (TANF)
+"1 adult, 3 children",1,3,6420,0,Work First (TANF)
+2 adults,2,0,6420,0,Work First (TANF)
+"2 adults, 1 child",2,1,6420,0,Work First (TANF)
+"2 adults, 2 children",2,2,6420,0,Work First (TANF)
+"2 adults, 3 children",2,3,6420,0,Work First (TANF)
+1 adult,1,0,6430,0,Work First (TANF)
+"1 adult, 1 child",1,1,6430,0,Work First (TANF)
+"1 adult, 2 children",1,2,6430,0,Work First (TANF)
+"1 adult, 3 children",1,3,6430,0,Work First (TANF)
+2 adults,2,0,6430,0,Work First (TANF)
+"2 adults, 1 child",2,1,6430,0,Work First (TANF)
+"2 adults, 2 children",2,2,6430,0,Work First (TANF)
+"2 adults, 3 children",2,3,6430,0,Work First (TANF)
+1 adult,1,0,6440,0,Work First (TANF)
+"1 adult, 1 child",1,1,6440,0,Work First (TANF)
+"1 adult, 2 children",1,2,6440,0,Work First (TANF)
+"1 adult, 3 children",1,3,6440,0,Work First (TANF)
+2 adults,2,0,6440,0,Work First (TANF)
+"2 adults, 1 child",2,1,6440,0,Work First (TANF)
+"2 adults, 2 children",2,2,6440,0,Work First (TANF)
+"2 adults, 3 children",2,3,6440,0,Work First (TANF)
+1 adult,1,0,6450,0,Work First (TANF)
+"1 adult, 1 child",1,1,6450,0,Work First (TANF)
+"1 adult, 2 children",1,2,6450,0,Work First (TANF)
+"1 adult, 3 children",1,3,6450,0,Work First (TANF)
+2 adults,2,0,6450,0,Work First (TANF)
+"2 adults, 1 child",2,1,6450,0,Work First (TANF)
+"2 adults, 2 children",2,2,6450,0,Work First (TANF)
+"2 adults, 3 children",2,3,6450,0,Work First (TANF)
+1 adult,1,0,6460,0,Work First (TANF)
+"1 adult, 1 child",1,1,6460,0,Work First (TANF)
+"1 adult, 2 children",1,2,6460,0,Work First (TANF)
+"1 adult, 3 children",1,3,6460,0,Work First (TANF)
+2 adults,2,0,6460,0,Work First (TANF)
+"2 adults, 1 child",2,1,6460,0,Work First (TANF)
+"2 adults, 2 children",2,2,6460,0,Work First (TANF)
+"2 adults, 3 children",2,3,6460,0,Work First (TANF)
+1 adult,1,0,6470,0,Work First (TANF)
+"1 adult, 1 child",1,1,6470,0,Work First (TANF)
+"1 adult, 2 children",1,2,6470,0,Work First (TANF)
+"1 adult, 3 children",1,3,6470,0,Work First (TANF)
+2 adults,2,0,6470,0,Work First (TANF)
+"2 adults, 1 child",2,1,6470,0,Work First (TANF)
+"2 adults, 2 children",2,2,6470,0,Work First (TANF)
+"2 adults, 3 children",2,3,6470,0,Work First (TANF)
+1 adult,1,0,6480,0,Work First (TANF)
+"1 adult, 1 child",1,1,6480,0,Work First (TANF)
+"1 adult, 2 children",1,2,6480,0,Work First (TANF)
+"1 adult, 3 children",1,3,6480,0,Work First (TANF)
+2 adults,2,0,6480,0,Work First (TANF)
+"2 adults, 1 child",2,1,6480,0,Work First (TANF)
+"2 adults, 2 children",2,2,6480,0,Work First (TANF)
+"2 adults, 3 children",2,3,6480,0,Work First (TANF)
+1 adult,1,0,6490,0,Work First (TANF)
+"1 adult, 1 child",1,1,6490,0,Work First (TANF)
+"1 adult, 2 children",1,2,6490,0,Work First (TANF)
+"1 adult, 3 children",1,3,6490,0,Work First (TANF)
+2 adults,2,0,6490,0,Work First (TANF)
+"2 adults, 1 child",2,1,6490,0,Work First (TANF)
+"2 adults, 2 children",2,2,6490,0,Work First (TANF)
+"2 adults, 3 children",2,3,6490,0,Work First (TANF)
+1 adult,1,0,6500,0,Work First (TANF)
+"1 adult, 1 child",1,1,6500,0,Work First (TANF)
+"1 adult, 2 children",1,2,6500,0,Work First (TANF)
+"1 adult, 3 children",1,3,6500,0,Work First (TANF)
+2 adults,2,0,6500,0,Work First (TANF)
+"2 adults, 1 child",2,1,6500,0,Work First (TANF)
+"2 adults, 2 children",2,2,6500,0,Work First (TANF)
+"2 adults, 3 children",2,3,6500,0,Work First (TANF)
