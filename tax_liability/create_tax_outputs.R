@@ -22,9 +22,9 @@ tax <- read_csv('tax_liability/tax_outputs.csv') %>%
 
 # read in dataset of all benefits
 benefits <- read_csv("plots/benefits.csv") %>%
-  # don't include pre-k subsidies and medical
-  filter(benefit != "NC Pre-K",
-         benefit != "NC Medicaid / Health Choice")
+  # don't include pre-k subsidies, medical, and smart start
+  filter(!(benefit %in% c("NC Pre-K", "NC Medicaid / Health Choice", "Smart Start")))
+
 # clean data -------------------------------------------------------------------
 
 # we want to calculate total benefits for two groups:
