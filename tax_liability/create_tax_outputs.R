@@ -62,7 +62,7 @@ master <- bind_cols(base, tax) %>%
   # add amount received in benefites
   right_join(total_benefits, by=c("composition", "monthly_income")) %>%
   # make column that is net income after taxes, eitc, and benefits
-  mutate(net_income = round(aftertax_income + payment, 2)) %>%
+  mutate(net_income = round(aftertax_income + eitc + payment, 2)) %>%
   select(-eitc, -payment)
 
 rm(base, benefits, no_child_care, tax, total_benefits)
