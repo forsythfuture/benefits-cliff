@@ -10,7 +10,7 @@ library(tidyverse)
 
 base <- read_rds('benefits_tables/tables/base.rds')
 
-tax <- read_csv('tax_liability/tax_outputs.csv') %>%
+tax <- read_csv('tax_liability/tax_outputs_long.csv') %>%
   # calcualte NC income taxes (flat tax of 5.5% of taxable income)
   mutate(nc_tax = c04800 * .055,
         # recomputed after-tax income
@@ -59,7 +59,7 @@ master <- bind_cols(base, tax) %>%
   # add amount received in benefites
   right_join(total_benefits, by=c("composition", "monthly_income")) %>%
   # make column that is net income after taxes, eitc, and benefits
-  mutate(net_income = round(aftertax_income + payment, 2),
+  mutate(net_income = round(aftertax_income + eitc + payment, 2),
          # add hourly pay
          hourly = monthly_income / (40*4.35),
          # if it's two adults, divide hourly by two to represent both working
@@ -114,6 +114,19 @@ no_benefit <- c("1 adult", "2 adults")
 
 # child care
 
+# create extended dataframe that is jsut taxes and income
+extended <- bind_cols(base, tax) %>%
+  # don't need c00100 because it is the monthly_income column in base
+  # also don't need regular taxable income (c04800)
+  select(-c00100, -c04800, -size:-children) %>%
+  # make column that is net income after taxes, eitc, and benefits
+  mutate(net_income = round(aftertax_income + eitc, 2),
+         # add hourly pay
+         hourly = monthly_income / (40*4.35),
+         # if it's two adults, divide hourly by two to represent both working
+         hourly = ifelse(str_detect(composition,"2 adults"), hourly / 2, hourly)) %>%
+  select(-eitc)
+
 child_care <- master %>%
   filter(benefit == "Child Care Subsidy") %>%
   mutate(threshold = recode(size, !!! smi),
@@ -121,6 +134,7 @@ child_care <- master %>%
                               FALSE, TRUE))
 
 # fns
+
 fns <- master %>%
   filter(benefit == "FNS (Food Stamps)") %>%
   left_join(fns_threshold, by = "size") %>%
