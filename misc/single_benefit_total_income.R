@@ -22,7 +22,7 @@ tax <- read_csv('tax_liability/tax_outputs_long.csv') %>%
 # read in dataset of all benefits
 benefits <- read_csv("plots/benefits.csv") %>%
   # don't include pre-k subsidies, medical, and smart start
-  filter(!(benefit %in% c("WIC", "Housing Choice Voucher", "Smart Start", "Work First (TANF)")))
+  filter(benefit == "Child Care Subsidy")
 
 # clean data -------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ master <- bind_cols(base, tax) %>%
   # also don't need regular taxable income (c04800)
   select(-c00100, -c04800, -size:-children) %>%
   # add amount received in benefites
-  right_join(total_benefits, by=c("composition", "monthly_income")) %>%
+  full_join(total_benefits, by=c("composition", "monthly_income")) %>%
   # make column that is net income after taxes, eitc, and benefits
   mutate(net_income = round(aftertax_income + eitc + payment, 2),
          # add hourly pay
