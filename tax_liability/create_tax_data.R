@@ -17,7 +17,7 @@ base <- read_rds('benefits_tables/tables/base.rds')
 filing_unit <- data.frame(composition = unique(base$composition),
                           DSI = 0, # claimed as dependent on anyone else's return
                           EIC = rep(seq(0, 3), 2), # EIC qualifying children
-                          FLPDYR = 2018, # caldenar year to calculate taxes
+                          FLPDYR = 2019, # caldenar year to calculate taxes
                           MARS = c(rep(1, 4), rep(2, 4)), # filing status
                           XTOT = c(seq(1, 4), seq(2, 5)) # total number of exemptions
                           )
