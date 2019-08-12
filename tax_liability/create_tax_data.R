@@ -38,6 +38,6 @@ tax <- base %>%
          RECID = row_number())
 
 # this csv file is then fed to the tax-calculator command line tool using the command:
-# tc tax_inputs.csv 2018 --dump --dvars tax_dump_vars
+# tc tax_inputs.csv 2019 --dump --dvars tax_dump_vars
 # the output is renames 'tax_output.csv'
 write_csv(tax, "tax_liability/tax_inputs.csv")
