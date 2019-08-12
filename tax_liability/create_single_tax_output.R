@@ -5,18 +5,18 @@
 ######################################################
 
 library(tidyverse)
+library(jsonlite)
 
 # import data and create base dataset -------------
 
-tax <- read_csv('tax_liability/tax_outputs_long.csv') %>%
+tax <- read_csv('tax_liability/tax_output_long.csv') %>%
   # calcualte NC income taxes (flat tax of 5.5% of taxable income)
   mutate(nc_tax = c04800 * .055,
          # recomputed after-tax income
          aftertax_income = round(aftertax_income - nc_tax, 2)) %>%
   select(aftertax_inc = aftertax_income, pretax_inc = c00100, eitc) %>%
-  # remove EITC from after tax income, so that it is on the same playing field
-  # as benefits
-  #mutate(aftertax_inc = aftertax_inc - eitc) %>%
+  # remove EITC from after tax income, so that it is on the same playing field as benefits
+  mutate(aftertax_inc = aftertax_inc - eitc) %>%
   # convert all amounts to monthly amounts by dividing by 12
   mutate_all(list(~(round(. / 12, 2))))
 
@@ -51,7 +51,8 @@ benefits <- benefits %>%
   rename(value = payment, pretax_inc = monthly_income, category = benefit)
 
 # bind master to benefits
-master <- bind_rows(master, benefits)
+master <- bind_rows(master, benefits) %>%
+  mutate(hourly = pretax_inc / (40*4.35))
 
 # create column of differences ------------------
 
@@ -59,9 +60,8 @@ difference <- master %>%
   group_by(composition) %>%
   mutate(diff = value - lag(value),
          # if pre-tax income is 0, make difference 0
-         diff = ifelse(pretax_inc == 0, 0, diff),
-         # the incomes are in $10 increments, so divide the difference by
-         # 10 to get the difference per dollar of income change
-         diff = round(diff / 10, 2))
+         diff = ifelse(pretax_inc == 0, 0, diff))
 
-         
+write_json(difference, "plots/income_diff.json")   
+write_csv(difference, "plots/income_diff.csv")
+write_rds(difference, "plots/income_diff.rds")
