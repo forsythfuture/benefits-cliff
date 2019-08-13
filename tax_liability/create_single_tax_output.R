@@ -43,7 +43,10 @@ master <- bind_rows(after_tax, eitc) %>%
 
 # import and attach benefit data ------------------
 
-benefits <- read_rds("plots/benefits.rds")
+benefits <- read_rds("plots/benefits.rds") %>%
+  # remove smart start because no one will receive child care subsidies and smart start
+  # also remove health care because it is tricky
+  filter(!(benefit %in% c("Smart Start","NC Medicaid / Health Choice")))
 
 benefits <- benefits %>%
   select(-adults, -children) %>%
