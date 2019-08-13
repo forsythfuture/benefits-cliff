@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="shortcut icon" href="#" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<style>
+			#familySize  {
+			  font-family: Sans-Serif;
+			  font-size: 90%;
+			}
+		</style>
+</head>
+<body>
+    
+    // unique categories
+    // "After-tax income"       "EITC"  "Child Care Subsidy"     "FNS (Food Stamps)"     
+    // "Housing Choice Voucher" "WIC"   "Work First (TANF)"  
+	<span id = "familySize">Select Family Size: </span><SELECT id="list">
+			<OPTION VALUE="A">1 adult</option>
+			<OPTION VALUE="B">1 adult, 1 child</option>
+			<OPTION VALUE="C">1 adult, 2 children</option>
+			<OPTION VALUE="D">1 adult, 3 children</option>
+			<OPTION VALUE="E">2 adults</option>
+			<OPTION VALUE="F">2 adults, 1 child</option>
+			<OPTION VALUE="G">2 adults, 2 children</option>
+			<OPTION VALUE="H">2 adults, 3 children</option>
+	</SELECT>
+		<div id="container" style="max-width:800px"></div>
+    <script type="text/javascript">
+    
+        const json_file = "https://raw.githubusercontent.com/forsythfuture/benefits-cliff/master/plots/income_diff.json"
+
+        $.getJSON(json_file, function(data) {
+            console.log(data);
+        
+        // get value of family composition drop down and filter dataset
+        $("#list").on('change', function(){
+            
+            // get drop down value of family composition
+		    var selText = $("#list option:selected").text();
+		    
+		    // filter for new valuse
+		    var comp = data.filter(function(d) { return d.composition == selText; });
+		    
+        });
+        
+        // filtre dataset for family composition
+            
+        });
+
+
+    </script>
+
+</body>
+</html>
