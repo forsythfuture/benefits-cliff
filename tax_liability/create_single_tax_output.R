@@ -63,7 +63,11 @@ difference <- master %>%
   group_by(composition) %>%
   mutate(diff = value - lag(value),
          # if pre-tax income is 0, make difference 0
-         diff = ifelse(pretax_inc == 0, 0, diff))
+         diff = ifelse(pretax_inc == 0, 0, diff),
+        # Work first is acting wonky, add $1 to all differencecs less than 1 and 
+        # greater than 0
+        diff = ifelse((category == "Work First (TANF)" & diff < 0), diff + 1, diff))
+  
 
 # write out full dataset with hourly to an rds file
 write_rds(difference, "tax_liability/income_diff.rds")
@@ -73,3 +77,14 @@ difference %>%
   select(-hourly) %>%
   filter(pretax_inc <= 7500) %>%
   write_json("plots/income_diff.json") 
+
+sum_diff1 <- difference %>%
+  #filter(category != "Work First (TANF)") %>%
+  group_by(composition, pretax_inc) %>%
+  summarize(diff = sum(diff))
+
+tanf <- difference %>%
+  filter(category == "Work First (TANF)") %>%
+  select(composition, category, pretax_inc, value)
+
+diff <- left_join(tanf, sum_diff1, by=c("composition", "pretax_inc"))
