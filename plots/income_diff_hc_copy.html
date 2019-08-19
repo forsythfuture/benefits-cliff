@@ -40,9 +40,12 @@
 	    <label><input type="checkbox" name="benefit_check" value="Work First (TANF)"> Work First</label><p></p>
 	    <button id= "calculator" type="button">Calculate</button>
 	</div>
+		<hr>
 		<div id="container-full" style="max-width:1000px"></div>
 		<hr>
-		<div id="container-tax" style="max-width:1000px"></div>
+		<div id="container-diff-min" style="max-width:1000px"></div>
+		<hr>
+		<div id="container-diff-full" style="max-width:1000px"></div>
     	<script type="text/javascript">
     
         const json_file = "https://raw.githubusercontent.com/forsythfuture/benefits-cliff/master/plots/income_diff.json"
@@ -115,7 +118,7 @@
         
         $.getJSON(json_file, function(data) {
         
-        function create_chart(container, column, title, y_title) {
+        function create_chart(container, column, title, y_title, yAxisFull = false) {
         	
         	// get after-tax income and FNS for 1 adult as initial values for first plot
         
@@ -128,8 +131,16 @@
 	        var benefits = sum_arrays([after_tax, fns]);
 	        
 	        // y axis max depends on column type
-	        var yAxis_min = (column == 'value') ? 0 : -1.5;
-	        var yAxis_max = (column == 'value') ? 10000 : 1.5;
+	        if (column == 'value') {
+	        	var yAxis_min = 0;
+	        	var yAxis_max = 7000;
+	        } else if (column == 'diff' & yAxisFull == true){
+	        	var yAxis_min = null;
+	        	var yAxis_max = null;
+	        } else if (column == 'diff') {
+	        	var yAxis_min = -1.5;
+	        	var yAxis_max = 1.5;
+	        }
         	
 	        // create initial chart
 			var options = {
@@ -226,12 +237,16 @@
         };
         
         // initial chart for total income
-        var chart_full_options = create_chart("container-full", "value", "Forsyth County, NC Income", "After Tax Income")
+        var chart_full_options = create_chart("container-full", "value", "Forsyth County, NC After and Pre Tax Incomes", "After Tax Income");
 		var chart_full = new Highcharts.Chart(chart_full_options); 
 	
-		// initial chart for difference in income
-        var chart_diff_options = create_chart("container-tax", "diff", "Forsyth County, NC difference", "After Tax Income")
-		var chart_diff = new Highcharts.Chart(chart_diff_options); 
+		// initial chart for full difference in income
+        var chart_diff_options = create_chart("container-diff-full", "diff", "Forsyth County, NC Implicit Tax Rates", "Amount earned per dollar of pre-tax income", yAxisFull = true);
+		var chart_diff = new Highcharts.Chart(chart_diff_options);
+		
+		// initial chart for min difference in income
+        var chart_diff_min_options = create_chart("container-diff-min", "diff", "Forsyth County, NC Implicit Tax Rates", "Amount earned per dollar of pre-tax income", yAxisFull = false);
+		var chart_diff_min = new Highcharts.Chart(chart_diff_min_options); 
         
         // get value of family composition drop down and filter dataset
         $(document).on('click', '#calculator', function(e) {
@@ -286,9 +301,8 @@
 			
         	// create updated data for difference income plots
         	var update_diff = update_data('diff');
-        	console.log(update_diff);
         	
-        	// update full plot
+        	// update difference plot
         	chart_diff_options.series = [{
 					name: 'After-tax income',
 					data: update_diff[0]
@@ -298,6 +312,17 @@
 					}]        	
         	
 			var chart_diff = new Highcharts.Chart(chart_diff_options);
+			
+        	// update difference plot ---------
+        	chart_diff_min_options.series = [{
+					name: 'After-tax income',
+					data: update_diff[0]
+						}, {
+					name: 'After-tax income plus benefits',
+					data: update_diff[1]
+					}]        	
+        	
+			var chart_diff_min = new Highcharts.Chart(chart_diff_min_options);
         	
 		    
         }); // click calculator button
