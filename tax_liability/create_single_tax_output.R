@@ -65,6 +65,11 @@ difference <- master %>%
          # if pre-tax income is 0, make difference 0
          diff = ifelse(pretax_inc == 0, 0, diff))
 
-write_json(difference, "plots/income_diff.json")   
-write_csv(difference, "plots/income_diff.csv")
-write_rds(difference, "plots/income_diff.rds")
+# write out full dataset with hourly to an rds file
+write_rds(difference, "tax_liability/income_diff.rds")
+
+# write out condensed json dataset for plotting
+difference %>%
+  select(-hourly) %>%
+  filter(pretax_inc <= 7500) %>%
+  write_json("plots/income_diff.json") 
