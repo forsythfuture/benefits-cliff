@@ -12,13 +12,23 @@
 			  font-family: Sans-Serif;
 			  font-size: 90%;
 			}
+			
+			.grayout {
+			    opacity: 0.5; /* Real browsers */
+			    filter: alpha(opacity = 50); /* MSIE */
+			}
+			
+			.nogray {
+			    opacity: 1; /* Real browsers */
+			    filter: alpha(opacity = 100); /* MSIE */
+			}
 		</style>
 </head>
 <body>
     
     <div id = "selections">
 		Select Family Size:
-		<SELECT id="list">
+		<SELECT id="list" onchange=disable_checks()>
 			<OPTION VALUE="A">1 adult</option>
 			<OPTION VALUE="B">1 adult, 1 child</option>
 			<OPTION VALUE="C">1 adult, 2 children</option>
@@ -32,27 +42,59 @@
 		Include the Earned Income Tax Credit in tax calcuations:<br>
 		<label><input type="radio" value='No EITC' name="EITC" checked> No</label>
 	    <label><input type="radio" value='EITC' name="EITC"> Yes</label><p></p>
-	    Choose benefits:<br>
-	    <label><input type="checkbox" name="benefit_check" value="FNS (Food Stamps)" checked> FNS (Food Stamps)</label>
-	    <label><input type="checkbox" name="benefit_check" value="Child Care Subsidy"> Child Care Subsidy</label>
-	    <label><input type="checkbox" name="benefit_check" value="Housing Choice Voucher"> Housing Choice Voucher</label>
-	    <label><input type="checkbox" name="benefit_check" value="WIC"> WIC</label>
-	    <label><input type="checkbox" name="benefit_check" value="Work First (TANF)"> Work First</label><p></p>
+	    Choose benefits (Greyed out options are unavailable for the family size):<br>
+	    <label><input type="checkbox" name="benefit_check" id='fns-check' value="FNS (Food Stamps)" checked><span id='fns-text'> FNS (Food Stamps)</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='chid-check' value="Child Care Subsidy"><span id='child-text' class="grayout"> Child Care Subsidy</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='housing-check' value="Housing Choice Voucher"><span id='house-text'> Housing Choice Voucher</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='wic-check' value="WIC"><span id='wic-text' class="grayout"> WIC</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='tanf-check' value="Work First (TANF)"><span id='tanf-text' class="grayout"> Work First</span></label><p></p>
 	    <button id= "calculator" type="button">Calculate</button>
 	</div>
-		<div id="container-full" style="max-width:1000px"></div>
-		<div id="container-tax" style="max-width:1000px"></div>
+		<hr>
+		<div id="container-full" style="max-width:800px"></div>
+		<hr>
+		<div id="container-diff-min" style="max-width:800px"></div>
     	<script type="text/javascript">
     
         const json_file = "https://raw.githubusercontent.com/forsythfuture/benefits-cliff/master/plots/income_diff.json"
         
+        // create function for disabling checkboxes
+        function disable_checks() {
+        	
+        	// reset each checkbox by activating it
+        	
+        	// create array of checkbox element ID's
+        	var check_element_id = ['fns-text', 'child-text', 'house-text', 'wic-text', 'tanf-text']
+        	
+        	// initially convert all to no gray out, so we only have to gray out
+			check_element_id.forEach(function(checkbox) {
+		      document.getElementById(checkbox).className = "nogray";
+		    });
+        	
+        	// get family composition
+        	var selVal = $("#list option:selected").val();
+        	
+        	// families with no kids
+        	
+        	// elements to gray out for families without children
+        	var gray_out_no_child = ['child-text', 'wic-text', 'tanf-text']
+        	
+        	if (selVal == 'A' || selVal == 'E') {
+        		
+				gray_out_no_child.forEach(function(checkbox) {
+			      document.getElementById(checkbox).className = "grayout";
+			    });
+        		
+        	}
+        }
+        
         // create function to pull values from single columns
-        function get_values(master, benefit ){
+        function get_values(master, benefit, column){
         	    
         	    var single_benefit = master.filter(function(d) { return d.category == benefit; });
 		        var single_benefit_total = []
 		        for (var i in single_benefit) {
-		        	single_benefit_total.push(single_benefit[i]["value"])
+		        	single_benefit_total.push(single_benefit[i][column])
 		        };
 		        
 		        return single_benefit_total
@@ -93,17 +135,18 @@
 	        		sum.push(+(array_benefit[0][i] + array_benefit[1][i] + array_benefit[2][i] + array_benefit[3][i] + array_benefit[4][i] + array_benefit[5][i] + array_benefit[6][i]).toFixed(2));
 	        	};
 	        }
+	        
 	        return sum
         };
         
     	// this function creates the sum of incomes for the benefits
-    	function create_new_series(array, benefit_checks) {
+    	function create_new_series(array, benefit_checks, column) {
     		
     		new_series = []
     		
     		// create arrays for each benefit
     		for (var i=0; i<benefit_checks.length; i++) {
-    			new_series.push(get_values(array, benefit_checks[i]))
+    			new_series.push(get_values(array, benefit_checks[i], column))
     		}
     		
     		// sum the arrays
@@ -113,150 +156,268 @@
     	};
         
         $.getJSON(json_file, function(data) {
-        	
-        // get after-tax income and FNS for 1 adult as initial values for first plot
         
-        // we need one adult for after tax income and fns so pull it out
-        var family_comp = data.filter(function(d) { return d.composition == "1 adult"; });
-
-		// sum after tax income and fns for initial chart
-        var after_tax = get_values(family_comp, "After-tax income");
-        var fns = get_values(family_comp, "FNS (Food Stamps)");
-        var benefits = sum_arrays([after_tax, fns]);
+        function create_chart(container, column, title, y_title, yAxisFull = false) {
         	
-        // create initial chart
-		var options_full = {
-			    chart: {
-			        renderTo: 'container-full',
-			        defaultSeriesType: 'line',
-							height: '80%'
+        	// get after-tax income and FNS for 1 adult as initial values for first plot
+        
+	        // we need one adult for after tax income and fns so pull it out
+	        var family_comp = data.filter(function(d) { return d.composition == "1 adult"; });
+	
+			// sum after tax income and fns for initial chart
+	        var after_tax = get_values(family_comp, "After-tax income", column);
+	        var fns = get_values(family_comp, "FNS (Food Stamps)", column);
+	        var benefits = sum_arrays([after_tax, fns]);
+	        
+	        // remove first index item and add null so plots look better
+	        after_tax.shift();
+	        benefits.shift();
+
+	        after_tax.unshift(null);
+	        benefits.unshift(null);
+	        
+	        // create variables for the horizontal red line, depending on if plot is for difference
+	        // we only want red line for difference plot
+	        var horz_line = (column === 'diff') ? 0 : null;
+	        
+	        // y axis max depends on column type
+	        if (column == 'value') {
+	        	var yAxis_min = 0;
+	        	var yAxis_max = 7000;
+	        } else if (column == 'diff' & yAxisFull == true){
+	        	var yAxis_min = null;
+	        	var yAxis_max = null;
+	        } else if (column == 'diff') {
+	        	var yAxis_min = -0.05;
+	        	var yAxis_max = 1.5;
+	        }
+	       
+	        // x axis series names, which show up in tooltips depend in chart
+	        if (column == 'value') {
+	        	var x_series_name = {
+				    'after_tax': 'After-tax income',
+				    'benefit': 'After-tax income plus benefits'
+	        	}
+	        } else {
+	        	var x_series_name = {
+				    'after_tax': 'After-tax income increase per dollar of wage increase',
+				    'benefit': 'After-tax income plus benefits increase per dollar of wage increase'
+	        	}
+	        }
+
+        	
+	        // create initial chart
+			var options = {
+				    chart: {
+				        renderTo: container,
+				        defaultSeriesType: 'line',
+								height: '80%'
+				    },
+				
+				colors: ["rgb(141,228,211)", "rgb(127,174,234)"],
+			
+			    title: {
+			        text: title
 			    },
-		
-		    title: {
-		        text: 'Forsyth County, NC income and benefits'
-		    },
-		
-		    subtitle: {
-		        text: 'One adult'
-		    },
-		    
-		    credits: {
-		        text: 'Forsyth Futures',
-		        href: 'http://forsythfutures.org'
-		    },
-		
-		
-			yAxis: {
-					max: 10000,
-					title: {
-							text: 'Monthly After-tax income plus benefits'
-					},
-					labels: {
-							format: '${value}'
-					}
-			},
-		
-			plotOptions: {
-				series: {
-						pointStart: 0,
-						pointInterval: 1,
-						xAxis: 'monthly'
-					}},
-					
-		xAxis: [{
-			type: 'linear',
-			id: 'monthly',
-			title: {
-					text: 'Monthly pre-tax income'
-			},
-			labels: {
-					format: '${value}'
-			}
-		}, {
-			type: 'linear',
-			id: 'hourly',
-			title: {
-					text: 'Full-time hourly wage',
-					align: 'low'
-			},
-			opposite: true,
-			linkedTo: 0,
-			labels: {
-				formatter: function () {
-					var hourly_wage = this.value /  (40*4.35);
-					return '$' + hourly_wage.toFixed(2);
-			}
-		}
-		}],
-		
-		tooltip: {
-			        formatter: function () {
-			        	var hourly = this.x /  (40*4.35);
-			        	hourly = hourly.toFixed(2);
-			        	
-			            return '<b>'+this.series.name+': </b>$'+this.y+'<br/>'+
-			            '<b>Pre-tax income: </b>$'+this.x+'<br/>'+
-			            '<b>Full-time hourly wage: </b>$'+hourly;
-			        },
-			        
-			        crosshairs: true
-			        
+			
+			    subtitle: {
+			        text: 'One adult'
 			    },
+			    
+			    credits: {
+			        text: 'Forsyth Futures',
+			        href: 'http://forsythfutures.org'
+			    },
+			
+			
+				yAxis: {
+						max: yAxis_max,
+						min: yAxis_min,
+						title: {
+								text: y_title
+						},
+						labels: {
+								format: '${value}'
+						},
+						plotLines: [{
+			                value: horz_line,
+			                color: 'red',
+			                dashStyle: 'shortdash',
+			                width: 2
+			                }]
+						},
+			
+				plotOptions: {
+					series: {
+							pointStart: 0,
+							pointInterval: 1,
+							xAxis: 'monthly'
+						}},
+						
+			xAxis: [{
+				type: 'linear',
+				id: 'monthly',
+				title: {
+						text: 'Monthly pre-tax income'
+				},
+				labels: {
+						format: '${value}'
+				}
+			}, {
+				type: 'linear',
+				id: 'hourly',
+				title: {
+						text: 'Full-time hourly wage',
+						align: 'low'
+				},
+				opposite: true,
+				linkedTo: 0,
+				labels: {
+					formatter: function () {
+						var hourly_wage = this.value /  (40*4.35);
+						return '$' + hourly_wage.toFixed(2);
+				}
+			}
+			}],
+			
+			tooltip: {
+				        formatter: function () {
+				        	var hourly = this.x /  (40*4.35);
+				        	hourly = hourly.toFixed(2);
+				        	
+				            return '<b>'+this.series.name+': </b>$'+this.y+'<br/>'+
+				            '<b>Pre-tax income: </b>$'+this.x+'<br/>'+
+				            '<b>Full-time hourly wage: </b>$'+hourly;
+				        },
+				        
+				        crosshairs: true
+				        
+				    },
+			
+			series: [{
+			    name: x_series_name.after_tax,
+			    data:  after_tax
+			 }, {
+			    name: x_series_name.benefit,
+			    data: benefits
+			 }]
+			
+			}; // end chart options
+			
+			return options
 		
-		series: [{
-		    name: 'After-tax income',
-		    data: after_tax
-		 }, {
-		    name: 'After-tax income plus benefits',
-		    data: benefits
-		 }]
+        };
+        
+        // initial chart for total income
+        var chart_full_options = create_chart("container-full", "value", "Forsyth County, NC After and Pre Tax Incomes", "After Tax Income");
+		var chart_full = new Highcharts.Chart(chart_full_options); 
+	
+		// initial chart for full difference in income
+        // var chart_diff_options = create_chart("container-diff-full", "diff", "Forsyth County, NC Implicit Tax Rates", "Amount earned per dollar of pre-tax income", yAxisFull = true);
+		// var chart_diff = new Highcharts.Chart(chart_diff_options);
 		
-		}; // end chart options
-		
-		var chart_full = new Highcharts.Chart(options_full); // initial chart
+		// initial chart for min difference in income
+        var chart_diff_min_options = create_chart("container-diff-min", "diff", "Forsyth County, NC Implicit Tax Rates", "Increase in income plus benefits for each dollar increase in income", yAxisFull = false);
+		var chart_diff_min = new Highcharts.Chart(chart_diff_min_options); 
         
         // get value of family composition drop down and filter dataset
         $(document).on('click', '#calculator', function(e) {
-            
-            // get drop down value of family composition
-		    var selText = $("#list option:selected").text();
-		    
-		    // checkbox values
-		    var checkedBenefits = [];
-		    $("input[name='benefit_check']:checked").each(function() {
-            	checkedBenefits.push($(this).val());
-        	});
         	
-        	// if eitc is checked, add it to benefits list
-        	var eitc_val = $("input[name='EITC']:checked").val();
-        	if (eitc_val == 'EITC') {
-        		checkedBenefits.push(eitc_val);
-        	}
+        	// get drop down value of family composition
+			var selText = $("#list option:selected").text();
         	
-        	// since it is benefits plus income, after tax income needs to be added
-        	checkedBenefits.push("After-tax income")
+        	// this function updates the data for the plots each time the calculate button is pushed
+        	function update_data(column, familyComp) {
+			    
+			    // checkbox values
+			    var checkedBenefits = [];
+			    $("input[name='benefit_check']:checked").each(function() {
+	            	checkedBenefits.push($(this).val());
+	        	});
+	        	
+	        	// if eitc is checked, add it to benefits list
+	        	var eitc_val = $("input[name='EITC']:checked").val();
+	        	if (eitc_val == 'EITC') {
+	        		checkedBenefits.push(eitc_val);
+	        	}
+	        	
+	        	// since it is benefits plus income, after tax income needs to be added
+	        	checkedBenefits.push("After-tax income");
+	        	
+	        	// filter for new family composition
+	        	var family_comp = data.filter(function(d) { return d.composition == selText; });
+	        	
+	        	// get after tax income
+	        	// add eitc if needed
+	        	if (eitc_val == 'EITC') {
+	        		var after_tax = create_new_series(family_comp, ["After-tax income", "EITC"], column);
+	        	} else {
+	        		var after_tax = get_values(family_comp, "After-tax income", column);
+	        	}
+	        	
+	        	// create the new income series based on the sum of benefits checked
+	        	var benefits = create_new_series(family_comp, checkedBenefits, column);
+	        	
+	        	// for difference types, remove first index item and replace with null
+	        	// first index item is 0 and this plots oddly
+	        	if (column == 'diff') {
+	        		
+	        		// remove first item
+	        		after_tax.shift();
+	        		benefits.shift();
+	        		
+	        		// add null as first item
+	        		after_tax.unshift(null);
+	        		benefits.unshift(null);
+	        		
+	        	}
+	        	
+	        	return [after_tax, benefits];
+			
+        	}; // update_data
         	
-        	console.log(checkedBenefits);
+        	// create updated data for total income plots
+        	var update_full = update_data('value', selText);
         	
-        	// filter for new family composition
-        	family_comp = data.filter(function(d) { return d.composition == selText; });
-        	
-        	// get after tax income
-        	after_tax = get_values(family_comp, "After-tax income");
-        	
-        	// create the new income series based on the sum of benefits checked
-        	benefits = create_new_series(family_comp, checkedBenefits);
-        	
-        	// update plot
-		    options_full.series = [{
-							    name: 'After-tax income',
-							    data: after_tax
-							 }, {
-							    name: 'After-tax income plus benefits',
-							    data: benefits
-							 }]
+        	// update full plot
+        	chart_full_options.series = [{
+					name: 'After-tax income',
+					data: update_full[0]
+						}, {
+					name: 'After-tax income plus benefits',
+					data: update_full[1]
+					}]
 					
-			var chart_full = new Highcharts.Chart(options_full);		
+			chart_full_options.subtitle= { text: selText}
+        	
+			var chart_full = new Highcharts.Chart(chart_full_options);
+			
+        	// create updated data for difference income plots
+        	var update_diff = update_data('diff', selText);
+        	
+        	// update difference plot
+   //     	chart_diff_options.series = [{
+			// 		name: 'After-tax income',
+			// 		data: update_diff[0]
+			// 			}, {
+			// 		name: 'After-tax income plus benefits',
+			// 		data: update_diff[1]
+			// 		}]        	
+        	
+			// var chart_diff = new Highcharts.Chart(chart_diff_options);
+			
+        	// update difference plot
+        	chart_diff_min_options.series = [{
+					name: 'After-tax income increase per dollar of wage increase',
+					data: update_diff[0]
+						}, {
+					name: 'After-tax income plus benefits increase per dollar of wage increase',
+					data: update_diff[1]
+					}]
+					
+			chart_diff_min_options.subtitle= { text: selText}
+        	
+			var chart_diff_min = new Highcharts.Chart(chart_diff_min_options);
         	
 		    
         }); // click calculator button
