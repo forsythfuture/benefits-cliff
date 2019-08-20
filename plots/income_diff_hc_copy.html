@@ -12,13 +12,23 @@
 			  font-family: Sans-Serif;
 			  font-size: 90%;
 			}
+			
+			.grayout {
+			    opacity: 0.5; /* Real browsers */
+			    filter: alpha(opacity = 50); /* MSIE */
+			}
+			
+			.nogray {
+			    opacity: 1; /* Real browsers */
+			    filter: alpha(opacity = 100); /* MSIE */
+			}
 		</style>
 </head>
 <body>
     
     <div id = "selections">
 		Select Family Size:
-		<SELECT id="list">
+		<SELECT id="list" onchange=disable_checks()>
 			<OPTION VALUE="A">1 adult</option>
 			<OPTION VALUE="B">1 adult, 1 child</option>
 			<OPTION VALUE="C">1 adult, 2 children</option>
@@ -32,12 +42,12 @@
 		Include the Earned Income Tax Credit in tax calcuations:<br>
 		<label><input type="radio" value='No EITC' name="EITC" checked> No</label>
 	    <label><input type="radio" value='EITC' name="EITC"> Yes</label><p></p>
-	    Choose benefits:<br>
-	    <label><input type="checkbox" name="benefit_check" value="FNS (Food Stamps)" checked> FNS (Food Stamps)</label>
-	    <label><input type="checkbox" name="benefit_check" value="Child Care Subsidy"> Child Care Subsidy</label>
-	    <label><input type="checkbox" name="benefit_check" value="Housing Choice Voucher"> Housing Choice Voucher</label>
-	    <label><input type="checkbox" name="benefit_check" value="WIC"> WIC</label>
-	    <label><input type="checkbox" name="benefit_check" value="Work First (TANF)"> Work First</label><p></p>
+	    Choose benefits (Greyed out options are unavailable for the family size):<br>
+	    <label><input type="checkbox" name="benefit_check" id='fns-check' value="FNS (Food Stamps)" checked><span id='fns-text'> FNS (Food Stamps)</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='chid-check' value="Child Care Subsidy"><span id='child-text' class="grayout"> Child Care Subsidy</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='housing-check' value="Housing Choice Voucher"><span id='house-text'> Housing Choice Voucher</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='wic-check' value="WIC"><span id='wic-text' class="grayout"> WIC</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='tanf-check' value="Work First (TANF)"><span id='tanf-text' class="grayout"> Work First</span></label><p></p>
 	    <button id= "calculator" type="button">Calculate</button>
 	</div>
 		<hr>
@@ -49,6 +59,36 @@
     	<script type="text/javascript">
     
         const json_file = "https://raw.githubusercontent.com/forsythfuture/benefits-cliff/master/plots/income_diff.json"
+        
+        // create function for disabling checkboxes
+        function disable_checks() {
+        	
+        	// reset each checkbox by activating it
+        	
+        	// create array of checkbox element ID's
+        	var check_element_id = ['fns-text', 'child-text', 'house-text', 'wic-text', 'tanf-text']
+        	
+        	// initially convert all to no gray out, so we only have to gray out
+			check_element_id.forEach(function(checkbox) {
+		      document.getElementById(checkbox).className = "nogray";
+		    });
+        	
+        	// get family composition
+        	var selVal = $("#list option:selected").val();
+        	
+        	// families with no kids
+        	
+        	// elements to gray out for families without children
+        	var gray_out_no_child = ['child-text', 'wic-text', 'tanf-text']
+        	
+        	if (selVal == 'A' || selVal == 'E') {
+        		
+				gray_out_no_child.forEach(function(checkbox) {
+			      document.getElementById(checkbox).className = "grayout";
+			    });
+        		
+        	}
+        }
         
         // create function to pull values from single columns
         function get_values(master, benefit, column){
@@ -97,6 +137,7 @@
 	        		sum.push(array_benefit[0][i] + array_benefit[1][i] + array_benefit[2][i] + array_benefit[3][i] + array_benefit[4][i] + array_benefit[5][i] + array_benefit[6][i]);
 	        	};
 	        }
+	        
 	        return sum
         };
         
@@ -138,7 +179,7 @@
 	        	var yAxis_min = null;
 	        	var yAxis_max = null;
 	        } else if (column == 'diff') {
-	        	var yAxis_min = -1.5;
+	        	var yAxis_min = -0.05;
 	        	var yAxis_max = 1.5;
 	        }
         	
@@ -270,16 +311,35 @@
 	        	}
 	        	
 	        	// since it is benefits plus income, after tax income needs to be added
-	        	checkedBenefits.push("After-tax income")
+	        	checkedBenefits.push("After-tax income");
 	        	
 	        	// filter for new family composition
 	        	var family_comp = data.filter(function(d) { return d.composition == selText; });
 	        	
 	        	// get after tax income
-	        	var after_tax = get_values(family_comp, "After-tax income", column);
+	        	// add eitc if needed
+	        	if (eitc_val == 'EITC') {
+	        		var after_tax = create_new_series(family_comp, ["After-tax income", "EITC"], column);
+	        	} else {
+	        		var after_tax = get_values(family_comp, "After-tax income", column);
+	        	}
 	        	
 	        	// create the new income series based on the sum of benefits checked
 	        	var benefits = create_new_series(family_comp, checkedBenefits, column);
+	        	
+	        	// for difference types, remove first index item and replace with null
+	        	// first index item is 0 and this plots oddly
+	        	if (column == 'diff') {
+	        		
+	        		// remove first item
+	        		after_tax.shift();
+	        		benefits.shift();
+	        		
+	        		// add null as first item
+	        		after_tax.unshift(null);
+	        		benefits.unshift(null);
+	        		
+	        	}
 	        	
 	        	return [after_tax, benefits];
 			
@@ -313,7 +373,7 @@
         	
 			var chart_diff = new Highcharts.Chart(chart_diff_options);
 			
-        	// update difference plot ---------
+        	// update difference plot
         	chart_diff_min_options.series = [{
 					name: 'After-tax income',
 					data: update_diff[0]
