@@ -77,14 +77,3 @@ difference %>%
   select(-hourly) %>%
   filter(pretax_inc <= 7500) %>%
   write_json("plots/income_diff.json") 
-
-sum_diff1 <- difference %>%
-  #filter(category != "Work First (TANF)") %>%
-  group_by(composition, pretax_inc) %>%
-  summarize(diff = sum(diff))
-
-tanf <- difference %>%
-  filter(category == "Work First (TANF)") %>%
-  select(composition, category, pretax_inc, value)
-
-diff <- left_join(tanf, sum_diff1, by=c("composition", "pretax_inc"))
