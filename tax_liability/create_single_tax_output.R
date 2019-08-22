@@ -1,8 +1,9 @@
-#####################################################
+##################################################################################
 #
-# This script creates output for only taxable income
+# This script creates output for after tax income and each benefit.  The results
+# are sent to a json file for input into a java script visualization.
 #
-######################################################
+##################################################################################
 
 library(tidyverse)
 library(jsonlite)
@@ -72,19 +73,8 @@ difference <- master %>%
 # write out full dataset with hourly to an rds file
 write_rds(difference, "tax_liability/income_diff.rds")
 
-# write out condensed json dataset for plotting
+# write out condensed json dataset for plotting with java script
 difference %>%
   select(-hourly) %>%
   filter(pretax_inc <= 7500) %>%
   write_json("plots/income_diff.json") 
-
-sum_diff1 <- difference %>%
-  #filter(category != "Work First (TANF)") %>%
-  group_by(composition, pretax_inc) %>%
-  summarize(diff = sum(diff))
-
-tanf <- difference %>%
-  filter(category == "Work First (TANF)") %>%
-  select(composition, category, pretax_inc, value)
-
-diff <- left_join(tanf, sum_diff1, by=c("composition", "pretax_inc"))
