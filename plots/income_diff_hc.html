@@ -8,6 +8,9 @@
 		<script src="https://code.highcharts.com/highcharts.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		<style>
+			body {
+				font-family: Sans-Serif;	
+			} 
 			#selections  {
 			  font-family: Sans-Serif;
 			  font-size: 90%;
@@ -39,10 +42,10 @@
 			<OPTION VALUE="H">2 adults, 3 children</option>
 		</SELECT>
 		<p></p>
-		Include the Earned Income Tax Credit in tax calcuations:<br>
+		Include the Earned Income Tax Credit in tax calcuations (prorated monthly):<br>
 		<label><input type="radio" value='No EITC' name="EITC" checked> No</label>
 	    <label><input type="radio" value='EITC' name="EITC"> Yes</label><p></p>
-	    Choose benefits (Greyed out options are unavailable for the family size):<br>
+	    Choose benefits (Grayed out options are unavailable for the family size):<br>
 	    <label><input type="checkbox" name="benefit_check" id='fns-check' value="FNS (Food Stamps)" checked><span id='fns-text'> FNS (Food Stamps)</span></label>
 	    <label><input type="checkbox" name="benefit_check" id='chid-check' value="Child Care Subsidy"><span id='child-text' class="grayout"> Child Care Subsidy</span></label>
 	    <label><input type="checkbox" name="benefit_check" id='housing-check' value="Housing Choice Voucher"><span id='house-text'> Housing Choice Voucher</span></label>
@@ -139,6 +142,25 @@
 	        return sum
         };
         
+        // function to create vertical plot lines for plots
+    //     function create_plotlines(dollar_value, string_text) {
+        	
+    //     	var plot_lines = {
+		  //      value: dollar_value,
+		  //      color: 'grey',
+		  //      dashStyle: 'shortdash',
+		  //      width: 1,
+				// zIndex: 5,
+		  //      label: {
+		  //           text: string_text,
+				// 	 style: { color: 'grey' }
+		  //        }
+		  //    }
+		      
+		  //  return plot_lines;
+        	
+    //     };
+        
     	// this function creates the sum of incomes for the benefits
     	function create_new_series(array, benefit_checks, column) {
     		
@@ -204,7 +226,6 @@
 				    'benefit': 'After-tax income plus benefits increase per dollar of wage increase'
 	        	}
 	        }
-
         	
 	        // create initial chart
 			var options = {
@@ -262,7 +283,8 @@
 				},
 				labels: {
 						format: '${value}'
-				}
+				},
+			// plotLines: [create_plotlines(1350, "FNS")]
 			}, {
 				type: 'linear',
 				id: 'hourly',
@@ -309,15 +331,11 @@
         };
         
         // initial chart for total income
-        var chart_full_options = create_chart("container-full", "value", "Forsyth County, NC After and Pre Tax Incomes", "After Tax Income");
+        var chart_full_options = create_chart("container-full", "value", "Forsyth County, NC After and Pre Tax Incomes", "Monthly after tax income plus benefits");
 		var chart_full = new Highcharts.Chart(chart_full_options); 
 	
-		// initial chart for full difference in income
-        // var chart_diff_options = create_chart("container-diff-full", "diff", "Forsyth County, NC Implicit Tax Rates", "Amount earned per dollar of pre-tax income", yAxisFull = true);
-		// var chart_diff = new Highcharts.Chart(chart_diff_options);
-		
 		// initial chart for min difference in income
-        var chart_diff_min_options = create_chart("container-diff-min", "diff", "Forsyth County, NC Implicit Tax Rates", "Increase in income plus benefits for each dollar increase in income", yAxisFull = false);
+        var chart_diff_min_options = create_chart("container-diff-min", "diff", "For each additional dollar you earn, how much do you keep?", "After-tax income plus benefits increase for each dollar increase in pre-tax income", yAxisFull = false);
 		var chart_diff_min = new Highcharts.Chart(chart_diff_min_options); 
         
         // get value of family composition drop down and filter dataset
@@ -376,6 +394,22 @@
 			
         	}; // update_data
         	
+ 		// 	// update vertical plotlines based on family selection
+			// function update_vertical_plotLines() {
+				
+			// 	// get the value of the family composition selector
+			// 	var familyVal = $("#list option:selected").val();
+			// 	if (familyVal == "A") {
+			// 		return [create_plotlines(1350, "FNS")]
+			// 	} else if (familyVal == "B") {
+			// 		return [create_plotlines(1830, "FNS"),
+			// 				create_plotlines(3695, "Child Care"),
+			// 				create_plotlines(2600, "WIC"),
+			// 				create_plotlines(420, "Work First")]
+			// 	}
+				
+			// };
+        	
         	// create updated data for total income plots
         	var update_full = update_data('value', selText);
         	
@@ -389,22 +423,13 @@
 					}]
 					
 			chart_full_options.subtitle= { text: selText}
+			
+			// chart_full_options.xAxis[0].plotLines = update_vertical_plotLines()
         	
 			var chart_full = new Highcharts.Chart(chart_full_options);
 			
         	// create updated data for difference income plots
         	var update_diff = update_data('diff', selText);
-        	
-        	// update difference plot
-   //     	chart_diff_options.series = [{
-			// 		name: 'After-tax income',
-			// 		data: update_diff[0]
-			// 			}, {
-			// 		name: 'After-tax income plus benefits',
-			// 		data: update_diff[1]
-			// 		}]        	
-        	
-			// var chart_diff = new Highcharts.Chart(chart_diff_options);
 			
         	// update difference plot
         	chart_diff_min_options.series = [{
