@@ -10,7 +10,7 @@ library(jsonlite)
 
 # import data and create base dataset -------------
 
-tax <- read_csv('tax_liability/tax_output_long.csv') %>%
+tax <- read_csv('tax_liability/tax_output.csv') %>%
   # calcualte NC income taxes (flat tax of 5.5% of taxable income)
   mutate(nc_tax = c04800 * .055,
          # recomputed after-tax income
