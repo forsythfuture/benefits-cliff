@@ -76,14 +76,14 @@ snap_amounts <- c(`1` = 192,
                   `7` = 1011,
                   `8` = 1155)
 
-# maximum income is set at 130% of federal poverty guideline
+# maximum income is set at 200% of federal poverty guideline
 # read in federal poverty guidelines
 fpg <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds')
 
-# convert guideline amounts to 130% and filter for 2019
+# convert guideline amounts to 200% and filter for 2019
 snap_income_limit <- fpg %>%
   filter(year == 2019) %>%
-  mutate(snap_income_limit = round(guidelines_month * 1.3, 0)) %>%
+  mutate(snap_income_limit = round(guidelines_month * 2, 0)) %>%
   rename(size = household_size) %>%
   select(size, snap_income_limit)
 
