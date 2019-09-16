@@ -145,6 +145,7 @@
         };
         
         // function to create vertical plot lines for plots
+        
         function create_plotlines(dollar_value, string_text) {
         	
         	var plot_lines = {
@@ -321,7 +322,7 @@
 				labels: {
 						format: '${value}'
 				},
-			plotLines: [create_plotlines(1350, "FNS (Food Stamps)")]
+			plotLines: [create_plotlines(2082, "FNS (Food Stamps)")]
 			}, {
 				type: 'linear',
 				id: 'hourly',
@@ -435,49 +436,49 @@
  			
  			// create object that maps family size and benefit cliff levels
  			const benefit_levels = {"A": 
- 									{"fns-check": 1350,
+ 									{"fns-check": 2082,
  									"child-check": null,
  									"wic-check": null,
  									"tanf-check": null
  								}, 
  								"B":
-									{"fns-check": 1830,
+									{"fns-check": 2818,
  									"child-check": 3695,
  									"wic-check": 2600,
  									"tanf-check": 420
  								},  
  								"C":
-									{"fns-check": 2310,
+									{"fns-check": 3556,
  									"child-check": 4565,
  									"wic-check": 3280,
  									"tanf-check": 490
  								},
   								"D":
-									{"fns-check": 2790,
+									{"fns-check": 4292,
  									"child-check": 5435,
  									"wic-check": 3970,
  									"tanf-check": 540
  								},
  								"E": 
- 									{"fns-check": 1830,
+ 									{"fns-check": 2818,
  									"child-check": null,
  									"wic-check": null,
  									"tanf-check": null
  								},
   								"F":
-									{"fns-check": 2310,
+									{"fns-check": 3556,
  									"child-check": 4565,
  									"wic-check": 3280,
  									"tanf-check": 490
  								},  
  								"G":
-									{"fns-check": 2790,
+									{"fns-check": 4292,
  									"child-check": 5435,
  									"wic-check": 3970,
  									"tanf-check": 540
  								},
   								"H":
-									{"fns-check": 3260,
+									{"fns-check": 5028,
  									"child-check": 6304,
  									"wic-check": 4650,
  									"tanf-check": 590
