@@ -24,4 +24,8 @@ master <- bind_rows(
 
 write_csv(master, "plots/data/benefits.csv")
 write_rds(master, "plots/data/benefits.rds")
-write_json(master, "plots/data/benefits.json") 
+
+# trim down prior to sending to JSON, since we will be importing this
+master %>%
+  select(-adults, -children) %>%
+  write_json("plots/data/benefits.json") 
