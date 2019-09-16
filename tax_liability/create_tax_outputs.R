@@ -11,7 +11,7 @@ library(tidyverse)
 
 base <- read_rds('benefits_tables/tables/base.rds')
 
-tax <- read_csv('tax_liability/tax_outputs.csv') %>%
+tax <- read_csv('tax_liability/tax_output.csv') %>%
   # calcualte NC income taxes (flat tax of 5.5% of taxable income)
   mutate(nc_tax = c04800 * .055,
         # recomputed after-tax income
@@ -21,7 +21,7 @@ tax <- read_csv('tax_liability/tax_outputs.csv') %>%
   mutate_all(list(~(round(. / 12, 2))))
 
 # read in dataset of all benefits
-benefits <- read_csv("plots/benefits.csv") %>%
+benefits <- read_csv("plots/data/benefits.csv") %>%
   # don't include pre-k subsidies, medical, and smart start
   filter(!(benefit %in% c("NC Pre-K", "NC Medicaid / Health Choice", "Smart Start")))
 
@@ -85,4 +85,4 @@ master <- master %>%
   arrange(composition, monthly_income, payment, desc(benefit))
 
 # write out as csv for plotting
-write_csv(master, "plots/total_income.csv")
+write_csv(master, "plots/data/total_income.csv")

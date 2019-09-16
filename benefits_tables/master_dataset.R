@@ -6,6 +6,7 @@
 ##############################################################################
 
 library(tidyverse)
+library(jsonlite)
 
 file_dir <- "benefits_tables/tables/"
 
@@ -21,5 +22,6 @@ master <- bind_rows(
   )) %>%
   arrange(benefit, monthly_income, adults, children)
 
-write_csv(master, "plots/benefits.csv")
-write_rds(master, "plots/benefits.rds")
+write_csv(master, "plots/data/benefits.csv")
+write_rds(master, "plots/data/benefits.rds")
+write_json(master, "plots/data/benefits.json") 
