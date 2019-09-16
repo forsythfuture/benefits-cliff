@@ -3,8 +3,6 @@ library(tidyverse)
 income <- read_rds("tax_liability/income_diff.rds") %>%
   ungroup()
 
-fns <- calc_scenerios(income, "1 adult, 3 children", "FNS (Food Stamps)")
-
 calc_scenerios <- function(input_df, family_comp, benefit) {
   
   df <- input_df %>%
@@ -34,3 +32,5 @@ calc_scenerios <- function(input_df, family_comp, benefit) {
   
   return(df)
 }
+
+fns <- calc_scenerios(income, "1 adult, 3 children", "FNS (Food Stamps)")
