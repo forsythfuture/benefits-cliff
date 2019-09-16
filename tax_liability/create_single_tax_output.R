@@ -2,7 +2,7 @@
 #
 # This script creates output for after tax income and each benefit.  The results
 # are sent to a json file for input into a java script visualization.
-#
+# This creates the data for the plot income_diff_hc.html
 ##################################################################################
 
 library(tidyverse)
