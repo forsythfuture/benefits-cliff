@@ -6,6 +6,7 @@
 ##############################################################################
 
 library(tidyverse)
+library(jsonlite)
 
 file_dir <- "benefits_tables/tables/"
 
@@ -21,5 +22,10 @@ master <- bind_rows(
   )) %>%
   arrange(benefit, monthly_income, adults, children)
 
-write_csv(master, "plots/benefits.csv")
-write_rds(master, "plots/benefits.rds")
+write_csv(master, "plots/data/benefits.csv")
+write_rds(master, "plots/data/benefits.rds")
+
+# trim down prior to sending to JSON, since we will be importing this
+master %>%
+  select(-adults, -children) %>%
+  write_json("plots/data/benefits.json") 

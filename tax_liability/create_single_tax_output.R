@@ -44,7 +44,7 @@ master <- bind_rows(after_tax, eitc) %>%
 
 # import and attach benefit data ------------------
 
-benefits <- read_rds("plots/benefits.rds") %>%
+benefits <- read_rds("plots/data/benefits.rds") %>%
   # remove smart start because no one will receive child care subsidies and smart start
   # also remove health care because it is tricky
   filter(!(benefit %in% c("Smart Start","NC Medicaid / Health Choice")))
@@ -77,4 +77,4 @@ write_rds(difference, "tax_liability/income_diff.rds")
 difference %>%
   select(-hourly) %>%
   filter(pretax_inc <= 7500) %>%
-  write_json("plots/income_diff.json") 
+  write_json("plots/data/income_diff.json") 
