@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="shortcut icon" href="#" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<style>
+			#familySize, #p  {
+			  font-family: Sans-Serif;
+			  font-size: 90%;
+				color: #383838
+			}
+
+			ul li{
+			  margin: 10px 0;
+			}
+
+			@media (max-width: 400px)
+			{
+			    #p
+			    {
+			        display: none;
+			    }
+			}
+
+			</style>
+</head>
+<body>
+	<span id = "familySize">Select Family Size: </span><SELECT id="list">
+			<OPTION VALUE="A">1 adult</option>
+			<OPTION VALUE="B">1 adult, 1 child</option>
+			<OPTION VALUE="C">1 adult, 2 children</option>
+			<OPTION VALUE="D">1 adult, 3 children</option>
+			<OPTION VALUE="E">2 adults</option>
+			<OPTION VALUE="F">2 adults, 1 child</option>
+			<OPTION VALUE="G">2 adults, 2 children</option>
+			<OPTION VALUE="H">2 adults, 3 children</option>
+	</SELECT>
+		<div id="container" style="max-width:800px">
+		</div>
+		<p id="p">Click on legend to see description of benefit.</p>
+    <script type="text/javascript">
+    
+    // create function that makes an array of data
+    function make_data_series(data_input, benefit_name) {
+    
+    	// parameters:
+    	// data_input: input data that is already filtered by family composition
+    	// benefit_name: name of the benefit to convert to an array
+    	
+    	// output: an array of the single benefit, to be used for the plot
+    	
+    	// extract single benefit from the data
+		var benefit = data_input.filter(function(d) { return d.benefit == benefit_name; });
+		
+		var series = [];
+		// iterate through each objec value, converting to array
+		for(var i in benefit) {
+		    series.push(benefit[i].payment);
+		    // end loop if zero value
+		    if (benefit[i].payment == 0) break;
+		    
+		}
+		return series
+    	
+    }
+    
+    
+    const json_file = "https://raw.githubusercontent.com/forsythfuture/benefits-cliff/master/plots/data/benefits.json"
+
+	$.getJSON(json_file, function(data) {
+
+    	$(function () {
+    		
+    		// initial plot has one adult, so pull out this data
+    		var one_adult = data.filter(function(d) { return d.composition == "1 adult"; });
+        
+        	var benefit_descriptions = ['Food and Nutrition Services (FNS), previously known as food stamps and federally referred to as SNAP, provides low-income families with cash assistance for food.  Families receive an Electronic Benefits Transfer Card that is pre-loaded monthly with their benefit amount.  They can then use this card at grocery stores to buy food.',
+									'The Housing Choice Voucher program, often referred to as Section 8 vouchers, is administered by the Housing Authority of Winston-Salem and provides rent subsidies to low-income households.    Families can choose any housing in the private market, assuming the owner agrees to rent under the program.  In general, families must pay 10% of their gross income or 30% of their adjusted gross income in rent and the housing voucher covers the rest.',
+									"<p>The North Carolina Child Care Subsidy Program provides subsidized child care to families using state and federal funds.  Most families pay 10% of their gross income in child care costs and the subsidy program covers the rest, up to a given maximum.</p><p>The subsidy program has different initial income eligibility and continued income eligibility thresholds.  For a 0-5 year old to initially qualify for subsidies, a household's income must fall under 200% of the federal poverty guidelines, or $4,100 for a family of four; but to remain in the program, household's income only needs to fall under 85% of the state median income, or $4,958 for a family of four.<p>",
+									"Smart Start child care scholarships are managed by <a href='https://smartstart-fc.org/'>Smart Start of Forsyth County</a> and mirror NC child care subsidies.  They are scholarships that help pay for child care and are available to children 0-5.   Guardians must generally pay a copay equaling 10% of household income.   Like NC child care subsidies, the initial eligibility threshold is 200% of the federal poverty guidelines. But unlike NC child care subsidies, this number is also the threshold to remain in the program.",
+									"The benefits cliff simulator combines three North Carolina health insurance programs: (1) Medicaid for Families with Dependent Children, (2) Medicaid for Infants and Children, and (3) NC Health Choice.  Here's an overview of each program:<ul><li>Medicaid for Families with Dependent Children (MAF): Full medicaid coverage for parents, caretakers relatives, and spouses who are caring for a related child under 18 in their household.  The family must be very low income.  For example, the monthly income of a family of four cannot exceed $744.</li><li>Medicaid for Infants and Children (MIF):  Full medicaid coverage for children 18 and under living in low-income households.  Children under 6 receive coverage when their family income is less than 210% of the federal poverty level, while children 6 to 18 gain coverage when their family income is less than 133% of the federal poverty level.</li><li>NC Health Choice:  Limited medicaid coverage for children 6 to 18 who live with families earning too much to qualify for Medicaid for Infants and Children.  Family income must fall under 210% of the federal poverty level to qualify for NC Health Choice.  The reason that only children 6 to 18 qualify for the program is because children 1 to 5 will qualify for Medicaid for Infants and Children.  This is because Medicaid for Infant Children and NC Health Choice have the same income threshold for children 1 to 5, and children eligible for both  must elect Medicaid for Infants and Children.</li></ul><p>Families with incomes between 100% and 400% of the Federal Poverty Guidelines may also qualify for health insurance tax credits under the Affordable Care Act (ACA).  ACA tax credits help mitigate the cost of health insurance purchased on the ACA marketplace.  Our simulator does not account for ACA tax credits, but their availability could turn the NC Medicaid / Health Choice cliff into a slope for some.</p>",
+									"WIC is formally called the Special Supplemental Nutrition Program for Women, Infants, and Children.  It provides food for women, infants, and children under five through an electronic benefit transfer (EBT) card that can be used at grocery stores.  WIC participants also receive coupons for use at farmers' markets.",
+									"North Carolina's Work First Cash Assistance Program, called Temporary Assistance for Needy Families (TANF) federally, provides cash assistance and job training to low income families."]
+
+			var options = {
+		    
+		    chart: {
+		        renderTo: 'container',
+		        defaultSeriesType: 'line',
+						height: '80%'//,
+						//marginBottom: 50
+		    },
+		
+				title: { text: 'Forsyth County, NC Benefits Cliff' },
+		
+				subtitle: { text: 'Click on legend to see description of benefit',
+									  style: {
+											fontSize:'12px'
+										}},
+		
+		    credits: {
+		        enabled: false
+		    },
+		
+				colors: ["rgb(117,234,182)", "rgb(111,25,150)", "rgb(116,175,243)", "rgb(32,216,253)", "rgb(90,57,110)","rgb(11,82,46)", "rgb(244,184,171)"],
+				//["rgb(141,228,211)", "rgb(78,45,166)", "rgb(26,167,238)", "rgb(197,8,158)", "rgb(208,188,254)", "rgb(66,65,117)"],
+		
+				yAxis: {
+						max: 2500,
+						title: {
+								text: 'Monthly Benefit Amount'
+						},
+						labels: {
+								format: '${value}'
+						}
+				},
+		
+				xAxis: [{
+					type: 'linear',
+					max: 6500,
+					id: 'monthly',
+					title: {
+							text: 'Monthly Income'
+					},
+					labels: {
+							format: '${value}'
+					}
+				}, {
+					type: 'linear',
+					id: 'hourly',
+					title: {
+							text: 'Full-time Hourly Wage',
+							align: 'low',
+					},
+					opposite: true,
+					linkedTo: 0,
+					labels: {
+						formatter: function () {
+		
+							var hourly_wage = this.value /  (40*4.35);
+		
+							return '$' + hourly_wage.toFixed(2);
+					}
+				}
+				}],
+		
+				tooltip: {
+						headerFormat: '<span style="color:{series.color}"><b>{series.name}</b></span><table>',
+						pointFormat: '<tr><td style="padding:0">Benefit:  <b>${point.y:.0f}</b></td></tr>' +
+								'<tr><td style="padding:0">Income: <b>${point.x:.0f}</b></td></tr>',
+						footerFormat: '</table>',
+						useHTML: true,
+						crosshairs: true
+				},
+		
+				plotOptions: {
+		
+					series: {
+							pointStart: 0,
+							pointInterval: 10,
+							xAxis: 'monthly',
+							events: {
+									legendItemClick: function () {
+											var description = '<p><strong>'+this.name + '</strong>:</p>' + benefit_descriptions[this.index];
+											document.getElementById("p").innerHTML = description;
+											return false;
+									}
+								}
+							}
+						},
+		
+				responsive: {
+		        rules: [{
+		            condition: {
+		                maxWidth: 400
+		            },
+		            chartOptions: {
+		
+									xAxis: {
+										type: 'linear',
+										id: 'monthly',
+										title: {
+												text: 'Monthly Income'
+										},
+										labels: {
+												format: '${value}'
+										}
+									},
+		
+									events: null,
+		
+									 title: { text: null },
+		
+									 subtitle: { text: 'Touch lines to know benefit' },
+		
+									 legend: {
+		                  enabled: false
+		              },
+		
+		              credits: {
+		                  enabled: false
+		              },
+		
+		          		yAxis: {
+		        				title: {
+		        						text: 'Monthly Benefit'
+		        				}
+		          		}
+		            }
+								}]},
+		
+		    series: [
+		
+				{name: 'FNS (Food Stamps)', data: make_data_series(one_adult, "FNS (Food Stamps)")},
+				{name: 'Housing Choice Voucher', data: make_data_series(one_adult, "Housing Choice Voucher")},
+				{name: 'NC Child Care Subsidy', data: [null]},
+				{name: 'Smart Start', data: [null]},
+				{name: 'NC Medicaid / Health Choice', data: [null]},
+				{name: 'Women, Infants, and Children (WIC)', data: [null]},
+				{name: 'Work First', data: [null]}
+				
+				]
+			}; // options
+			
+        // initial chart for total income
+		var chart = new Highcharts.Chart(options); 
+		
+		// update chart when drop-down changes
+		$("#list").on('change', function(){
+			
+			// get drop down value of family composition
+			var selText = $("#list option:selected").text();
+			
+			// filter for this family composition
+			var family_comp = data.filter(function(d) { return d.composition == selText; });
+			
+			options.subtitle = { text: selText}, //Work First (TANF)
+		    options.series = [
+		
+				{name: 'FNS (Food Stamps)', data: make_data_series(family_comp, "FNS (Food Stamps)")},
+				{name: 'Housing Choice Voucher', data: make_data_series(family_comp, "Housing Choice Voucher")},
+				{name: 'NC Child Care Subsidy', data: make_data_series(family_comp, "Child Care Subsidy")},
+				{name: 'Smart Start', data: make_data_series(family_comp, "Smart Start")},
+				{name: 'NC Medicaid / Health Choice', data: make_data_series(family_comp, "NC Medicaid / Health Choice")},
+				{name: 'Women, Infants, and Children (WIC)', data: make_data_series(family_comp, "WIC")},
+				{name: 'Work First', data: make_data_series(family_comp, "WIC")}
+				
+				]
+				
+			console.log(make_data_series(family_comp, "FNS (Food Stamps)"));
+			
+			var chart = new Highcharts.Chart(options);
+		}); // update chart when drop down changes
+      }); // chart function
+    }); // getJSON
+
+</script>
+</body>
+</html>
