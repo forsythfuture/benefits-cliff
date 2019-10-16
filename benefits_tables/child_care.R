@@ -31,28 +31,21 @@ care <- care %>%
   # if payment is negative, convert to 0
   payment = ifelse(payment < 0, 0, payment))
 
-# can receive child care subsidies up to 200% of fpl, and can keep
-# benefits up to 85% of the state median income, which is higher
+# can receive benefits up to 200% fpg
 
-# since our focus is on when you lose benefits, we will use the 85% state median income
+# read in federal poverty guidelines
+fpg <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds') %>%
+  # convert guideline amounts to 200% and filter for 2019
+  filter(year == 2019) %>%
+  mutate(income_limit = round(guidelines_month * 2, 0)) %>%
+  rename(size = household_size) %>%
+  select(size, income_limit)
 
-# state site of levels: https://ncchildcare.ncdhhs.gov/Services/Financial-Assistance/Do-I-Qualify
-# administrative regulations: http://reports.oah.state.nc.us/ncac/title%2010a%20-%20health%20and%20human%20services/chapter%2010%20-%20subsidized%20child%20care/10a%20ncac%2010%20.1007.pdf
-
-# 85% state median income numbers come from here:
-# https://ncchildcare.ncdhhs.gov/Services/Financial-Assistance/Do-I-Qualify
-smi <- c(`1` = 2826,
-         `2` = 3695,
-         `3` = 4565,
-         `4` = 5435,
-         `5` = 6304,
-         `6` = 7174)
-
-# add 85% SMI to child care data set
+# add 200% fpl to child care data set
 care <- care %>%
-  mutate(guidelines_month = recode(.$size, !!! smi)) %>%
+  left_join(fpg, by = "size") %>%
   # set payment to 0 if income is greater than 200% of poverty guideline
-  mutate(payment = ifelse(monthly_income > guidelines_month, 0, payment),
+  mutate(payment = ifelse(monthly_income > income_limit, 0, payment),
          benefit = "Child Care Subsidy") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
