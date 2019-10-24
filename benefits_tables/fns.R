@@ -24,8 +24,8 @@ shelter_costs <- tibble(
     # rent starts at $600 and each additional person adds $200
     rent = 600 + (200*size)
   ) %>%
-    # sum all utility expenses
-    mutate(shelter = sua + bua + tua + rent) %>%
+    # make the shelter deduction the standard utility deduction and rent
+    mutate(shelter = sua + rent) %>%
     select(size, shelter)
 
 # merge utilitiy allowances to snap dataset
@@ -46,8 +46,8 @@ snap <- snap %>%
     # 20 percent of earned income is deducted,
     # so add column showing this amount
     ded_20 = monthly_income * .2,
-    # for dependent care deduction, assume $60 per child per month
-    dep_care = children * 300)
+    # for dependent care deduction, assume $400 per child per month
+    dep_care = children * 400)
 
 # calculate SNAP amounts
 snap <- snap %>%
