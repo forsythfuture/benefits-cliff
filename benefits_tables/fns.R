@@ -16,14 +16,13 @@ snap <- base %>%
   mutate(benefit = "FNS (Food Stamps)")
 
 # utility allowance based on family size
-shelter_costs <- data.frame(
+shelter_costs <- tibble(
     size = seq(1, 5),
     sua = c(437, 480, 528, 576, 628),
     bua = c(246, 270, 297, 324, 353),
     tua = 38,
-    # assume rent is $500 for all people
-    # this is 25th percentile of Forsyth County
-    rent = 500
+    # rent starts at $600 and each additional person adds $200
+    rent = 500 + (200*size)
   ) %>%
     # sum all utility expenses
     mutate(shelter = sua + bua + tua + rent) %>%
@@ -48,7 +47,7 @@ snap <- snap %>%
     # so add column showing this amount
     ded_20 = monthly_income * .2,
     # for dependent care deduction, assume $60 per child per month
-    dep_care = children * 60)
+    dep_care = children * 200)
 
 # calculate SNAP amounts
 snap <- snap %>%
@@ -83,7 +82,7 @@ fpg <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds')
 # convert guideline amounts to 200% and filter for 2019
 snap_income_limit <- fpg %>%
   filter(year == 2019) %>%
-  mutate(snap_income_limit = round(guidelines_month * 1.35, 0)) %>%
+  mutate(snap_income_limit = round(guidelines_month * 2, 0)) %>%
   rename(size = household_size) %>%
   select(size, snap_income_limit)
 
