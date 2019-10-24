@@ -47,7 +47,7 @@ snap <- snap %>%
     # so add column showing this amount
     ded_20 = monthly_income * .2,
     # for dependent care deduction, assume $600 per child per month
-    dep_care = children * 600)
+    dep_care = children * 300)
 
 # calculate SNAP amounts
 snap <- snap %>%
