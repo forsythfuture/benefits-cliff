@@ -46,8 +46,8 @@ snap <- snap %>%
     # 20 percent of earned income is deducted,
     # so add column showing this amount
     ded_20 = monthly_income * .2,
-    # for dependent care deduction, assume $400 per child per month
-    dep_care = children * 400)
+    # for dependent care deduction, assume $600 per child per month
+    dep_care = children * 600)
 
 # calculate SNAP amounts
 snap <- snap %>%
