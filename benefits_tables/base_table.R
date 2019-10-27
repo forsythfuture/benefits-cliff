@@ -8,7 +8,7 @@ library(tidyverse)
 
 # create a base data frame that is the household size, household composition, and income
 # columns for all benefit data frames
-incomes <- seq(0, 12000, by=10)
+incomes <- seq(0, 12000, by = 1)
 
 # create base composition, and then we will paste sizes on to this
 composition <- c("1 adult", "1 adult, 1 child", "1 adult, 2 children", "1 adult, 3 children",
