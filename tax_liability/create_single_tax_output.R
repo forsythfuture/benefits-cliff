@@ -77,4 +77,4 @@ write_rds(difference, "tax_liability/income_diff.rds")
 difference %>%
   select(-hourly) %>%
   filter(pretax_inc <= 7500) %>%
-  write_json("plots/data/income_diff.json") 
+  write_json("plots/data/income_diff.json")
