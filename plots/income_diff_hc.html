@@ -47,7 +47,7 @@
 	    <label><input type="radio" value='EITC' name="EITC"> Yes</label><p></p>
 	    Choose benefits (Grayed out options are unavailable for the family size):<br>
 	    <label><input type="checkbox" name="benefit_check" id='fns-check' value="FNS (Food Stamps)" checked><span id='fns-text'> FNS (Food Stamps)</span></label>
-	    <label><input type="checkbox" name="benefit_check" id='child-check' value="Child Care Subsidy"><span id='child-text' class="grayout"> Child Care Subsidy</span></label>
+	    <label><input type="checkbox" name="benefit_check" id='child-check' value="NC Child Care Subsidy / Smart Start"><span id='child-text' class="grayout"> NC Child Care Subsidy / Smart Start</span></label>
 	    <label><input type="checkbox" name="benefit_check" id='housing-check' value="Housing Choice Voucher"><span id='house-text'> Housing Choice Voucher</span></label>
 	    <label><input type="checkbox" name="benefit_check" id='wic-check' value="WIC"><span id='wic-text' class="grayout"> WIC</span></label>
 	    <label><input type="checkbox" name="benefit_check" id='tanf-check' value="Work First (TANF)"><span id='tanf-text' class="grayout"> Work First</span></label><p></p>
@@ -144,7 +144,7 @@
 	        return sum
         };
         
-        // function to create vertical plot lines for plots
+/*         // function to create vertical plot lines for plots
         
         function create_plotlines(dollar_value, string_text) {
         	
@@ -162,9 +162,7 @@
 		      
 		    return plot_lines;
         	
-        };
-        
-        
+        }; */
         
     	// this function creates the sum of incomes for the benefits
     	function create_new_series(array, benefit_checks, column) {
@@ -321,8 +319,8 @@
 				},
 				labels: {
 						format: '${value}'
-				},
-			plotLines: [create_plotlines(2082, "FNS (Food Stamps)")]
+				}//,
+			//plotLines: [create_plotlines(2082, "FNS (Food Stamps)")]
 			}, {
 				type: 'linear',
 				id: 'hourly',
@@ -432,7 +430,7 @@
 			
         	}; // update_data
         	
- 			// update vertical plotlines based on family selection
+/*  			// update vertical plotlines based on family selection
  			
  			// create object that maps family size and benefit cliff levels
  			const benefit_levels = {"A": 
@@ -483,16 +481,16 @@
  									"wic-check": 4650,
  									"tanf-check": 590
  								}
- 			};
+ 			}; */
  			
-			// get checkbox values so we can add plot lines for benefits that were checked
+/* 			// get checkbox values so we can add plot lines for benefits that were checked
 			var familyVal = $("#list option:selected").val();
-			var plotLinesUpdate = [];
+			// var plotLinesUpdate = [];
 			$("input[name='benefit_check']:checked").each(function() {
 				var dollar_amount = benefit_levels[familyVal][$(this).attr('id')]
 				var plot_text = $(this).val();
-				plotLinesUpdate.push(create_plotlines(dollar_amount, plot_text));
-	        });
+				// plotLinesUpdate.push(create_plotlines(dollar_amount, plot_text));
+	        }); */
         	
         	// create updated data for total income plots
         	var update_full = update_data('value', selText);
@@ -508,7 +506,7 @@
 					
 			chart_full_options.subtitle= { text: selText}
 			
-			chart_full_options.xAxis[0].plotLines = plotLinesUpdate
+			// chart_full_options.xAxis[0].plotLines = plotLinesUpdate
         	
 			var chart_full = new Highcharts.Chart(chart_full_options);
 			
@@ -526,7 +524,7 @@
 					
 			chart_diff_min_options.subtitle= { text: selText}
 			
-			chart_diff_min_options.xAxis[0].plotLines = plotLinesUpdate
+			// chart_diff_min_options.xAxis[0].plotLines = plotLinesUpdate
         	
 			var chart_diff_min = new Highcharts.Chart(chart_diff_min_options);
         	
