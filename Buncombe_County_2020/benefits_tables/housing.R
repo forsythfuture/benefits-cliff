@@ -26,15 +26,15 @@ tenant_rent <- function(kids, income) {
   # total tenant payment (ttp) is the amount tenants have to pay in rent
   # it is the greater of 30% of their monthly adjusted income,
   # 10% of their monthly gross income, or $24
-  # this function calcualtes the amount
+  # this function calculates the amount
   # source: https://www.hud.gov/sites/documents/43503C5HSGH.PDF
 
   # first, we'll calculate monthly adjusted income and multiply by .3
-  # calculate adjsuted income by starting with income and subtracting the following deductions:
+  # calculate adjusted income by starting with income and subtracting the following deductions:
   #    dependent deduction of $480 (40 / month) for children 18 and under
   #    child care deduction for child care costs
   #         we'll assume $4000 (333.33 / month) per child, based on the example on pg. 43 of above link
-  #         but, 10 year old in 3 person home will not have any chiold care costs
+  #         but, 10 year old in 3 person home will not have any child care costs
 
   # calculate adjusted income and multiply by .3
   adjusted_income <-(income-(40*kids)-(333.33*kids)) * .3
@@ -50,11 +50,12 @@ tenant_rent <- function(kids, income) {
   ttp <- ifelse(ttp < 25, 25, ttp)
 
   # to calculate tentant rent, you subtract a utility allowance from ttp
-  # $177 is the average Forsyth County utility allowance, so we will use it
-  # https://www.huduser.gov/portal/datasets/assthsg.html#null
+  # $153 is the average Buncombe County utility allowance, so we will use it
+  # https://www.huduser.gov/portal/datasets/assthsg.html#null 
+  # go to Data, 2020 - Based on Census 2010 geographies, Public Housing Agency
   # if ttp is smaller than the allowance, the tenant gets a utility reimbursement
   # due to this, we will keep negative numbers negative
-  rent_payment <- ttp - 177
+  rent_payment <- ttp - 153
 
   return(rent_payment)
 

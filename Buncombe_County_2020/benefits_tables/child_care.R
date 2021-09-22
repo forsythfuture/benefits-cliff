@@ -9,17 +9,17 @@ library(tidyverse)
 care <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
 # the market value of subsidies are based on the 2019 NC subsidized child care
-# market rates for Forsyth County 4-star child care centers
+# market rates for Buncombe County 4-star child care centers
 # https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/R/Revised-8-16-Market_Rate_Centers_Eff-10-1-18.pdf?ver=2018-08-28-105655-863
 
-# Forsyth County market rates for $855 for infant and $750 for 3-5
+# Buncombe County market rates for $793 for infant and $747 for 3-5
 # we will assume that families with 2 or more children have an infant and 3-5 year old
 # while families with one child only have a 3-5 year old
 # create named vector to map number of children to total market rate amounts
 market_rates <- c(`0` = 0,
-                  `1` = 750,
-                  `2` = 1605, # 855 + 750 (infant plut 3 to 5)
-                  `3` = 1605 # for three child families, only two are under 5
+                  `1` = 747,
+                  `2` = 1540, # 793 + 747 (infant plut 3 to 5)
+                  `3` = 1540 # for three child families, only two are under 5
                   )
 
 # create new column for market rates, which signifies benefit level
