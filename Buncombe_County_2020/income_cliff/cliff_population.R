@@ -10,9 +10,9 @@
 library(tidyverse)
 
 incomes <- read_csv("https://forsyth-futures.s3.amazonaws.com/total_income_counts.csv.gz") %>%
-  # filter for Forsyth County
+  # filter for Buncombe County
   # list of NC county fips codes is here: https://www.lib.ncsu.edu/gis/countfips
-  filter(COUNTYFIP == 67)
+  filter(COUNTYFIP == 21)
 
 income <- incomes %>%
   # remove household incomes less than 0
@@ -42,13 +42,13 @@ income <- incomes %>%
   # create cumulative sum for incomes by using the weight column
   mutate(cum_sum = cumsum(HHWT),
          perc_sum = round(percent_rank(cum_sum), 2)) %>%
-  # remove household incomes less than 7200, which is a monthly income of 6000
+  # remove household incomes less than 72000, which is a monthly income of 6000
   # this is the amount we use for our other charts
   filter(HHINCOME <= 72000) %>%
   # add column that is the same thing with all values, so that the nested d3 plot works
-  # this column is irrelevant, but lets use recylce the d3 code from the otehr plots
+  # this column is irrelevant, but lets use recycle the d3 code from the other plots
   mutate(grouping = "group",
-         # the y axis of the plot should reflect numebr of people, not number of households,
+         # the y axis of the plot should reflect number of people, not number of households,
          # so, multiply cum_sum by size to convert number of households to number of people
          cum_sum = size * cum_sum) %>%
   ungroup() %>%
@@ -74,7 +74,7 @@ write_csv(income, "plots/cliff_cdf.csv")
 #   mutate(size = n(), # household size
 #          children = sum(under_18), # number of children in household under 18
 #          total_school= sum(in_school), # number out of labor force
-#          adults = size - children # numebr of adults
+#          adults = size - children # number of adults
 #          ) %>%
 #   filter(size != total_school, # remove households where all people are in school
 #          adults <= 2, # less than or equal to 2 adults
@@ -84,7 +84,7 @@ write_csv(income, "plots/cliff_cdf.csv")
 #   distinct() %>%
 #   # now group by adults, number of children, and income
 #   # we're grouping by income because we will sum household weights by income
-#   # so they are aggregated and we don't have multiple rows of the same icome
+#   # so they are aggregated and we don't have multiple rows of the same income
 #   group_by(size, adults, children, HHINCOME) %>%
 #   summarize(HHWT = sum(HHWT)) %>%
 #   arrange(adults, children, HHINCOME) %>%
@@ -94,7 +94,7 @@ write_csv(income, "plots/cliff_cdf.csv")
 #          perc_sum = round(percent_rank(cum_sum), 2)) %>%
 #   # only keep households where size does not equal children
 #   filter(size != children,
-#          # remove household incomes less than 7200, which is a monthly income of 6000
+#          # remove household incomes less than 72000, which is a monthly income of 6000
 #          # this is the amount we use for our other charts
 #          HHINCOME <= 72000) %>%
 #   # create single column signifying number of adults and children
