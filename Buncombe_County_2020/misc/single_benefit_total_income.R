@@ -8,9 +8,9 @@ library(tidyverse)
 
 # read in data ----------------------------------------------------------------
 
-base <- read_rds('benefits_tables/tables/base.rds')
+base <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
-tax <- read_csv('tax_liability/tax_outputs_long.csv') %>%
+tax <- read_csv('Buncombe_County_2020/tax_liability/tax_outputs_long.csv') %>%
   # calcualte NC income taxes (flat tax of 5.5% of taxable income)
   mutate(nc_tax = c04800 * .055,
         # recomputed after-tax income
@@ -20,7 +20,7 @@ tax <- read_csv('tax_liability/tax_outputs_long.csv') %>%
   mutate_all(list(~(round(. / 12, 2))))
 
 # read in dataset of all benefits
-benefits <- read_csv("plots/benefits.csv") %>%
+benefits <- read_csv("Buncombe_County_2020/plots/benefits.csv") %>%
   # don't include pre-k subsidies, medical, and smart start
   filter(benefit == "Child Care Subsidy")
 
@@ -90,7 +90,7 @@ smi <- c(`1` = 2826,
          `6` = 7174)
 
 # federal poverty guidelines for FNS and medicaid
-fpg <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds')
+fpg <- read_rds('Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds')
 
 # fns is 130% and NC Health Choice is 210%
 create_fpg_mapping <- function(threshold) {

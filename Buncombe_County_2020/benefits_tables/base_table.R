@@ -32,4 +32,4 @@ comp_size <- data.frame(composition = composition,
 # then add the data frame to the main data frame containing all incomes
 base <- map_df(incomes, function(x) mutate(comp_size, monthly_income = x))
 
-write_rds(base, 'benefits_tables/tables/base.rds')
+write_rds(base, 'Buncombe_County_2020/benefits_tables/tables/base.rds')

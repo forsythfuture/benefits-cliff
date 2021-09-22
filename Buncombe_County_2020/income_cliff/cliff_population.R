@@ -54,7 +54,7 @@ income <- incomes %>%
   ungroup() %>%
   select(size, income = HHINCOME, cum_sum, grouping)
 
-write_csv(income, "plots/cliff_cdf.csv")
+write_csv(income, "Buncombe_County_2020/plots/cliff_cdf.csv")
 
 ############################################################################################
 

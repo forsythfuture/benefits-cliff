@@ -10,7 +10,7 @@ library(jsonlite)
 
 # import data and create base dataset -------------
 
-tax <- read_csv('tax_liability/tax_output.csv') %>%
+tax <- read_csv('Buncombe_County_2020/tax_liability/tax_output.csv') %>%
   # calcualte NC income taxes (flat tax of 5.5% of taxable income)
   mutate(nc_tax = c04800 * .055,
          # recomputed after-tax income
@@ -21,7 +21,7 @@ tax <- read_csv('tax_liability/tax_output.csv') %>%
   # convert all amounts to monthly amounts by dividing by 12
   mutate_all(list(~(round(. / 12, 2))))
 
-base <- read_rds('benefits_tables/tables/base.rds')
+base <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
 master <- bind_cols(tax, base) %>%
   select(-monthly_income)
@@ -44,7 +44,7 @@ master <- bind_rows(after_tax, eitc) %>%
 
 # import and attach benefit data ------------------
 
-benefits <- read_rds("plots/data/benefits.rds") %>%
+benefits <- read_rds("Buncombe_County_2020/plots/data/benefits.rds") %>%
   # remove smart start because no one will receive child care subsidies and smart start
   # also remove health care because it is tricky
   filter(!(benefit %in% c("Smart Start","NC Medicaid / Health Choice")))
@@ -71,10 +71,10 @@ difference <- master %>%
   
 
 # write out full dataset with hourly to an rds file
-write_rds(difference, "tax_liability/income_diff.rds")
+write_rds(difference, "Buncombe_County_2020/tax_liability/income_diff.rds")
 
 # write out condensed json dataset for plotting with java script
 difference %>%
   select(-hourly) %>%
   filter(pretax_inc <= 7500) %>%
-  write_json("plots/data/income_diff.json")
+  write_json("Buncombe_County_2020/plots/data/income_diff.json")
