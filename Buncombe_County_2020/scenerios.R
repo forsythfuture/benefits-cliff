@@ -1,6 +1,6 @@
 library(tidyverse)
 
-income <- read_rds("tax_liability/income_diff.rds") %>%
+income <- read_rds("Buncombe_County_2020/tax_liability/income_diff.rds") %>%
   ungroup()
 
 calc_scenerios <- function(input_df, family_comp, benefit) {

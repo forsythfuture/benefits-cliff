@@ -8,7 +8,7 @@
 library(tidyverse)
 library(aws.s3)
 
-put_object("plots/data/income_diff.json",
-           object = "plots/data/income_diff.json",
+put_object("Buncombe_County_2020/plots/data/income_diff.json",
+           object = "Buncombe_County_2020/plots/data/income_diff.json",
            bucket = "benefits-cliff",
            acl = "public-read")
