@@ -10,7 +10,7 @@
 
 library(tidyverse)
 
-prek <- read_rds('benefits_tables/tables/base.rds')
+prek <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
 # participants must be under 75% of state median income for family size
 # these levels were pulled from page 3-7 of the policy manual:
@@ -43,4 +43,4 @@ prek <- prek %>%
           benefit = "NC Pre-K") %>%
    select(composition, adults, children, monthly_income, payment, benefit)
 
- write_rds(prek, 'benefits_tables/tables/prek.rds')
+ write_rds(prek, 'Buncombe_County_2020/benefits_tables/tables/prek.rds')

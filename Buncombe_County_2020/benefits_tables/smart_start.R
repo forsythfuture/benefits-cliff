@@ -6,7 +6,7 @@
 
 library(tidyverse)
 
-care <- read_rds('benefits_tables/tables/base.rds')
+care <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
 # the market value of subsidies are based on the 2019 NC subsidized child care
 # market rates for Forsyth County 4-star child care centers
@@ -34,7 +34,7 @@ care <- care %>%
 # can receive child care subsidies up to 200% of fpl, which is the TANF cut-off
 
 # read in federal poverty guidelines
-fpg <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds') %>%
+fpg <- read_rds('Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds') %>%
   # convert guideline amounts to 200% and filter for 2019
   filter(year == 2019) %>%
   mutate(income_limit = round(guidelines_month * 2, 0)) %>%
@@ -49,4 +49,4 @@ care <- care %>%
          benefit = "Smart Start") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
-write_rds(care, 'benefits_tables/tables/smart_start.rds')
+write_rds(care, 'Buncombe_County_2020/benefits_tables/tables/smart_start.rds')

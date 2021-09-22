@@ -6,7 +6,7 @@
 
 library(tidyverse)
 
-housing <- read_rds('benefits_tables/tables/base.rds')
+housing <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
 # create data frame of fair market rent values in 2019 based on family size
 # this is the max rent that can be reimbursed
@@ -79,4 +79,4 @@ housing <- housing %>%
         benefit = "Housing Choice Voucher") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
-write_rds(housing, 'benefits_tables/tables/sec8.rds')
+write_rds(housing, 'Buncombe_County_2020/benefits_tables/tables/sec8.rds')

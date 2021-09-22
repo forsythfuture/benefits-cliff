@@ -11,10 +11,10 @@
 
 library(tidyverse)
 
-medical <- read_rds('benefits_tables/tables/base.rds')
+medical <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
 # read in poverty guidelines and filter for 2019
-fpl <- read_rds("benefits_tables/tables/federal_poverty_guidelines.rds") %>%
+fpl <- read_rds("Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds") %>%
   filter(year == 2019) %>%
   select(household_size, guidelines_month)
 
@@ -68,4 +68,4 @@ medical <- medical %>%
          benefit = "NC Medicaid / Health Choice") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
-  write_rds(medical, 'benefits_tables/tables/medical.rds')
+  write_rds(medical, 'Buncombe_County_2020/benefits_tables/tables/medical.rds')

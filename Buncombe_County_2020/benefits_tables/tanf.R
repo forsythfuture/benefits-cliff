@@ -7,7 +7,7 @@
 
 library(tidyverse)
 
-tanf_base <- read_rds('benefits_tables/tables/base.rds')
+tanf_base <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
 # monthly payment is 50% difference between total countable income and need standard (pg. 34)
 
@@ -31,4 +31,4 @@ tanf <- tanf_base %>%
   select(composition, adults, children, monthly_income, payment) %>%
   mutate(benefit = 'Work First (TANF)')
 
-write_rds(tanf, 'benefits_tables/tables/work_first.rds')
+write_rds(tanf, 'Buncombe_County_2020/benefits_tables/tables/work_first.rds')
