@@ -73,3 +73,8 @@ net_worth_zero <- srvdata_zero %>%
 # calculate proportion of nc pop with zero or neg net worth
 total_zero <- paste0(round(net_worth_zero$total / net_worth_test$total * 100, 2), "%")
 
+
+HH_poverty <- data.frame(persons_HH = rep(1,8),
+                         pov_guideline = c())
+
+
