@@ -16,7 +16,7 @@ This repo contains the code used in the Forsyth Futures special issue report on 
 
 <a name="Organization-of-rep"/>
 
-## Organization of repo
+## Organization of repo 
 
 `benefits_tables` folder:
 
