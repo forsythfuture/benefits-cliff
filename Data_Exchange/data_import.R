@@ -1,3 +1,12 @@
+################################################################################################
+
+# the primary data and replicate weights were downloaded from https://www.census.gov/programs-surveys/sipp/data/datasets/2018-data/2018.html
+# SIPP 2018 Metadata describes the variables, the Users' Guide helps to provide an understanding of SIPP
+# and the replicate weights
+# the code below helps import and join both the primary data and the replicate weights into one dataset
+
+################################################################################################
+
 # The following code is an example of reading the pipe-delimited Survey of Income and Program Participation (SIPP) 
 # 	data into an R dataframe in preparation for analysis. Specifically, this code loads in both the primary data file 
 #   and the calendar-year replicate weights file (as opposed to the longitudinal replicate weights). These files are 
@@ -30,10 +39,10 @@ pu <- fread(ds, sep = "|", select = c(
   
   #Common demographics variables, including age at time of interview (TAGE)
   #	and monthly age during the reference period (TAGE_EHC)
-  'ESEX','TAGE','TAGE_EHC','ERACE','EORIGIN',
+  'ESEX','TAGE','TAGE_EHC','ERACE','EORIGIN','TEHC_ST','THHLDSTATUS',
   
   #Example additional variables for analysis
-  'TPTOTINC'))
+  'TPTOTINC','THNETWORTH','THINC_BANK','THINC_BOND','THINC_OTH','THINC_AST'))
 
 #Make sure all the column names are upper-case
 names(pu) <- toupper(names(pu))
@@ -65,4 +74,10 @@ data <- left_join(pu, rw, by = c("SSUID","PNUM","MONTHCODE","SPANEL","SWAVE"))
 
 #preview the merged data
 head(data, 20)
+
+# used https://www2.census.gov/programs-surveys/sipp/Select_approp_wgt_2014SIPPpanel.pdf as a reference
+# to calculate annual estimates, used the filters below to do so
+data <- data %>%
+  filter(ERELRPE %in% c(1,2)) %>%
+  filter(MONTHCODE == 12)
 
