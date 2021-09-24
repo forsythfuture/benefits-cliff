@@ -36,7 +36,7 @@ net_worth_test <- srvdata %>%
   mutate(`Median MOE` = Median_se * 1.96)
 
 # combine median and median MOE
-median_net_worth <- paste0(format(round(net_worth_test$Median), big.mark =","), " +/- ", 
+median_net_worth <- paste0("$", format(round(net_worth_test$Median), big.mark =","), " +/- $", 
                            format(round(net_worth_test$`Median MOE`), big.mark =","))
   
 ##################################################################
