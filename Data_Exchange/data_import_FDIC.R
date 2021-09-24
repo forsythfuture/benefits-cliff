@@ -2,9 +2,10 @@
 
 ##################################################################################################################################
 
-library(survey)
-options("survey.replicates.mse=TRUE")
-options(scipen=999)
+# library(survey)
+# options("survey.replicates.mse=TRUE")
+# options(scipen=999)
+library(sryvr)
 
 ##################################################################################################################################
 
@@ -51,13 +52,12 @@ hh=applyFormats(hh)
 
 # pull only NC
 hh <- hh %>%
-  filter(gestfips == 37) %>%
-  mutate(identifier = if_else(hrhhid >0, 1, 0))
+  filter(gestfips == 37)
 
 #subset to respondents
 #hh=subset(hh, hsupresp=='Respondent') #this does not work, I am not sure what's it purpose
 
 # survey design object
-hh_svy <- svydesign(id = ~1, weights = ~h, data = hh, repweights = hh[,grepl("repwgt.*",names(hh)) & !grepl("repwgt0.*", names(hh))],
-                    type="JKn", scale = 0.025, rscales = rep(1, 160), combined.weights = TRUE)
+# hh_svy <- svydesign(id = ~1, weights = ~h, data = hh, repweights = hh[,grepl("repwgt.*",names(hh)) & !grepl("repwgt0.*", names(hh))],
+#                     type="JKn", scale = 0.025, rscales = rep(1, 160), combined.weights = TRUE)
 
