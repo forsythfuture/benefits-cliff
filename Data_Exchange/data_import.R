@@ -39,10 +39,10 @@ pu <- fread(ds, sep = "|", select = c(
   
   #Common demographics variables, including age at time of interview (TAGE)
   #	and monthly age during the reference period (TAGE_EHC)
-  'ESEX','TAGE','TAGE_EHC','ERACE','EORIGIN','TEHC_ST','THHLDSTATUS',
+  'ESEX','TAGE','TAGE_EHC','ERACE','EORIGIN','TEHC_ST','THHLDSTATUS','RHNUMPER',
   
   #Example additional variables for analysis
-  'TPTOTINC','THNETWORTH','THINC_BANK','THINC_BOND','THINC_OTH','THINC_AST'))
+  'TPTOTINC','THNETWORTH','THINC_BANK','THVAL_BANK','THINC_BOND','THINC_STMF','TTHR401VAL','TIRAKEOVAL','THINC_OTH','THINC_AST'))
 
 #Make sure all the column names are upper-case
 names(pu) <- toupper(names(pu))
