@@ -29,16 +29,22 @@ srvdata <- as_survey_rep(data_worth, weights = WPFINWGT, repweights = REPWGT0:RE
 
 # total and median net worth using srvyr
 net_worth_test <- srvdata %>%
+  group_by(`Race Ethnicity`) %>%
   summarise(total = survey_total(),
-            Median = survey_median(THNETWORTH)) %>%
+            median = survey_median(THNETWORTH)) %>%
   mutate(total_cv = total_se/total * 100) %>%
   mutate(total_moe = total_se * 1.96) %>%
-  mutate(`Median MOE` = Median_se * 1.96)
+  mutate(`Median MOE` = median_se * 1.96)
 
-# combine median and median MOE
-median_net_worth <- paste0("$", format(round(net_worth_test$Median), big.mark =","), " +/- $", 
-                           format(round(net_worth_test$`Median MOE`), big.mark =","))
-  
+# output median by race/ethnicity
+output_net_worth <- net_worth_test %>%
+  select(`Race Ethnicity`, median, `Median MOE`) %>%
+  mutate(median = paste0("$", format(round(median), big.mark =",")),
+         `Median MOE` = paste0("$", format(round(`Median MOE`), big.mark =",")),
+         Median = paste0(median, " +/- ", `Median MOE`)
+         ) %>%
+  select(-median, -`Median MOE`)
+
 ##################################################################
 
 # Housholds with Zero Net Worth
@@ -56,19 +62,20 @@ srvdata_zero <- as_survey_rep(data_zero, weights = WPFINWGT, repweights = REPWGT
 
 # total net worth of zero or neg
 net_worth_zero <- srvdata_zero %>%
+  group_by(`Race Ethnicity`) %>%
   summarise(total = survey_total()) %>%
   mutate(total_cv = total_se/total * 100) %>%
   mutate(total_moe = total_se * 1.96)
 
-# calculate proportion
-total_zero_prop <- paste0(format(round(net_worth_zero$total / net_worth_test$total * 100, 2), nsmall = 1), "%")
-
-# calculate proportion MOE
-total_zero_prop_moe <- paste0(format(round(moe_prop(net_worth_zero$total, net_worth_test$total, net_worth_zero$total_moe,
-                                                   net_worth_test$total_moe) * 100, 1), nsmall = 1), "%")
-
-# combine proportion and proportion MOE
-total_zero <- paste0(total_zero_prop, " +/- ", total_zero_prop_moe)
+# output proportions by race/ethnicity
+output_net_worth_zero <- net_worth_zero %>%
+  select(`Race Ethnicity`, total, total_moe) %>%
+  mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
+         `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
+                                                         net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
+         Proportion = paste0(prop, " +/- ", `Proportion MOE`)
+         ) %>%
+  select(-total, -total_moe, -`Proportion MOE`, -prop)
 
 ##################################################################
 
@@ -98,19 +105,20 @@ srvdata_asset <- as_survey_rep(combined_data_asset, weights = WPFINWGT, repweigh
 
 # total net worth of zero or neg
 asset_poverty <- srvdata_asset %>%
+  group_by(`Race Ethnicity`) %>%
   summarise(total = survey_total(asset_pov)) %>%
   mutate(total_cv = total_se/total * 100) %>%
   mutate(total_moe = total_se * 1.96)
 
-# calculate proportion
-asset_pov_prop <- paste0(format(round(asset_poverty$total / net_worth_test$total * 100, 1), nsmall = 1), "%")
-
-# calculate proportion MOE
-asset_pov_prop_moe <- paste0(format(round(moe_prop(asset_poverty$total, net_worth_test$total, asset_poverty$total_moe,
-                                                   net_worth_test$total_moe) * 100, 1), nsmall = 1), "%")
-
-# combine proportion and proportion MOE
-asset_pov <- paste0(asset_pov_prop, " +/- ", asset_pov_prop_moe)
+# output proportions by race/ethnicity
+output_asset_poverty <- asset_poverty %>%
+  select(`Race Ethnicity`, total, total_moe) %>%
+  mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
+         `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
+                                                         net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
+         Proportion = paste0(prop, " +/- ", `Proportion MOE`)
+  ) %>%
+  select(-total, -total_moe, -`Proportion MOE`, -prop)
 
 ##################################################################
 
@@ -137,20 +145,20 @@ srvdata_liquid <- as_survey_rep(combined_data_liquid, weights = WPFINWGT, repwei
 
 # total net worth of zero or neg
 liquid_poverty <- srvdata_liquid %>%
+  group_by(`Race Ethnicity`) %>%
   summarise(total = survey_total(liquid_pov)) %>%
   mutate(total_cv = total_se/total * 100) %>%
   mutate(total_moe = total_se * 1.96)
 
-# calculate proportion
-liquid_asset_pov_prop <- paste0(format(round(liquid_poverty$total / net_worth_test$total * 100, 1), nsmall = 1), "%")
-
-# calculate proportion MOE
-liquid_asset_pov_prop_moe <- paste0(format(round(moe_prop(liquid_poverty$total, net_worth_test$total, liquid_poverty$total_moe,
-                                                           net_worth_test$total_moe) * 100, 1), nsmall = 1), "%")
-
-# combine proportion and proportion MOE
-liquid_asset_pov <- paste0(liquid_asset_pov_prop, " +/- ", liquid_asset_pov_prop_moe)
-
+# output proportions by race/ethnicity
+output_liquid_poverty <- liquid_poverty %>%
+  select(`Race Ethnicity`, total, total_moe) %>%
+  mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
+         `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
+                                                         net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
+         Proportion = paste0(prop, " +/- ", `Proportion MOE`)
+  ) %>%
+  select(-total, -total_moe, -`Proportion MOE`, -prop)
 
 #testing 
 # test_liquid <- combined_data_liquid %>% select(SSUID,PNUM,RHNUMPER,liquid_income,income,liquid_pov)

@@ -81,3 +81,8 @@ data <- data %>%
   filter(ERELRPE %in% c(1,2)) %>%
   filter(MONTHCODE == 12)
 
+# race/ethnicity recode
+data <- data %>%
+  mutate(`Race Ethnicity` = if_else(EORIGIN == 1, "Hispanic/Latino", if_else(ERACE == 1, "White, NH", 
+                            if_else(ERACE == 2, "Black/AA, NH", "Other Race"))))
+
