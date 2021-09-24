@@ -82,6 +82,8 @@ total_zero_prop <- paste0(format(round(net_worth_zero$total / net_worth_test$tot
 total_zero_prop_moe <- paste0(format(round(moe_prop(net_worth_zero$total, net_worth_test$total, net_worth_zero$total_moe,
                                                    net_worth_test$total_moe) * 100, 1), nsmall = 1), "%")
 
+total_zero <- paste0(total_zero_prop, " +/- ", total_zero_prop_moe)
+
 ##################################################################
 
 # Asset Poverty Rate Calculation
@@ -115,6 +117,8 @@ asset_pov_prop <- paste0(format(round(asset_poverty$total / net_worth_test$total
 asset_pov_prop_moe <- paste0(format(round(moe_prop(asset_poverty$total, net_worth_test$total, asset_poverty$total_moe,
                                                    net_worth_test$total_moe) * 100, 1), nsmall = 1), "%")
 
+asset_pov <- paste0(asset_pov_prop, " +/- ", asset_pov_prop_moe)
+
 ##################################################################
 
 # Liquid Asset Poverty Rate
@@ -145,3 +149,5 @@ liquid_asset_pov_prop <- paste0(format(round(liquid_poverty$total / net_worth_te
 
 liquid_asset_pov_prop_moe <- paste0(format(round(moe_prop(liquid_poverty$total, net_worth_test$total, liquid_poverty$total_moe,
                                                            net_worth_test$total_moe) * 100, 1), nsmall = 1), "%")
+
+liquid_asset_pov <- paste0(liquid_asset_pov_prop, " +/- ", liquid_asset_pov_prop_moe)
