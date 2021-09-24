@@ -82,6 +82,7 @@ data <- data %>%
   filter(MONTHCODE == 12)
 
 # race/ethnicity recode
+# https://www2.census.gov/programs-surveys/sipp/data/datasets/2018/2018_SIPP_Metadata_v2.pdf
 data <- data %>%
   mutate(`Race Ethnicity` = if_else(EORIGIN == 1, "Hispanic/Latino", if_else(ERACE == 1, "White, NH", 
                             if_else(ERACE == 2, "Black/AA, NH", "Other Race"))))

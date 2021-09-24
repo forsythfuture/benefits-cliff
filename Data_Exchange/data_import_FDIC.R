@@ -5,7 +5,7 @@
 # library(survey)
 # options("survey.replicates.mse=TRUE")
 # options(scipen=999)
-library(sryvr)
+library(srvyr)
 
 ##################################################################################################################################
 
@@ -53,6 +53,11 @@ hh=applyFormats(hh)
 # pull only NC
 hh <- hh %>%
   filter(gestfips == 37)
+
+# race/ethnicity recode
+hh <- hh %>%
+  mutate(`Race Ethnicity` = if_else(praceeth == 2, "Hispanic/Latino", if_else(praceeth == 6, "White, NH", 
+                                                                             if_else(praceeth == 1, "Black/AA, NH", "Other Race"))))
 
 #subset to respondents
 #hh=subset(hh, hsupresp=='Respondent') #this does not work, I am not sure what's it purpose
