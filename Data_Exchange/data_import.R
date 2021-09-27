@@ -5,6 +5,12 @@
 # and the replicate weights
 # the code below helps import and join both the primary data and the replicate weights into one dataset
 
+# important links:
+  # https://www2.census.gov/programs-surveys/sipp/data/datasets/2018/2018_SIPP_Metadata_v2.pdf
+  # https://www2.census.gov/programs-surveys/sipp/tech-documentation/methodology/2018_SIPP_Users_Guide.pdf
+  # https://www2.census.gov/programs-surveys/sipp/Select_approp_wgt_2014SIPPpanel.pdf
+  
+
 ################################################################################################
 
 # The following code is an example of reading the pipe-delimited Survey of Income and Program Participation (SIPP) 
