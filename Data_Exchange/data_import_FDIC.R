@@ -1,5 +1,9 @@
 ##################################################################################################################################
 
+# the script imports 2019 data from the FDIC https://economicinclusion.gov/downloads/#yearly to perform an analysis
+# on the unbanked population with NC. No data was present to perform an analysis on the underbanked population so
+# one should view https://scorecard.prosperitynow.org/data-by-issue#finance/outcome/underbanked-households 2017 results
+
 ##################################################################################################################################
 
 # library(survey)
@@ -54,6 +58,7 @@ hh=applyFormats(hh)
 hh <- hh %>%
   filter(gestfips == 37)
 
+# go to the metadata folder and open the metadata.csv to view the different variables and their corresponding levels
 # race/ethnicity recode
 hh <- hh %>%
   mutate(`Race Ethnicity` = if_else(praceeth == 2, "Hispanic/Latino", if_else(praceeth == 6, "White, NH", 
