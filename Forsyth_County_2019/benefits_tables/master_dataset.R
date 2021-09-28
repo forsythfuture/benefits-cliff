@@ -27,4 +27,4 @@ write_rds(master, "plots/data/benefits.rds")
 # trim down prior to sending to JSON, since we will be importing this
 master %>%
   select(-adults, -children) %>%
-  write_json("plots/data/benefits.json") 
+  write_json("Forsyth_county_2019/plots/data/benefits.json") 
