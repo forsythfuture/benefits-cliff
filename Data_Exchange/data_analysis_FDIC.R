@@ -70,3 +70,29 @@ shiny_output_unbanked <- output_unbanked_total_test %>%
 
 #writing the shiny data into csvs in designated locations for each measure variable 
 write.csv(shiny_output_unbanked, file = "Data_Exchange/Shiny_Unbanked.csv")
+
+# output totals by race/ethnicity
+OR_unbanked_test <- unbanked_total_test %>%
+  select(hryear4, gestfips, `Race Ethnicity`, total) %>%
+  mutate(unbanked_total = total,
+         banked_total = total_test$total - total
+  )
+
+test_unbanked <- OR_unbanked_test %>%
+  select(`Race Ethnicity`,unbanked_total,banked_total)
+
+test_unbanked_black <- test_unbanked %>%
+  filter(`Race Ethnicity` != "Hispanic/Latino")
+
+OR_unbanked_black <- (test_unbanked_black[1,2]*test_unbanked_black[2,3]) / (test_unbanked_black[2,2]*test_unbanked_black[1,3])
+colnames(OR_unbanked_black) <- "Odds Ratio"
+
+test_unbanked_hisp <- test %>%
+  filter(`Race Ethnicity` != "Black/AA, NH")
+
+OR_unbanked_hisp <- (test_unbanked_hisp[1,2]*test_unbanked_hisp[2,3]) / (test_unbanked_hisp[2,2]*test_unbanked_hisp[1,3])
+colnames(OR_unbanked_hisp) <- "Odds Ratio"
+
+unbanked_join_OR <- full_join(OR_unbanked_black, OR_unbanked_hisp, by = "Odds Ratio")
+  
+unbanked_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White,NH")
