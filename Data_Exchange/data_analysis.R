@@ -134,7 +134,7 @@ colnames(OR_net_worth_zero_hisp) <- "Odds Ratio"
 
 net_worth_zero_join_OR <- full_join(OR_net_worth_zero_black, OR_net_worth_zero_hisp, by = "Odds Ratio")
 
-net_worth_zero_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White,NH")
+net_worth_zero_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 ##################################################################
 
@@ -220,7 +220,7 @@ colnames(OR_asset_poverty_hisp) <- "Odds Ratio"
 
 asset_poverty_join_OR <- full_join(OR_asset_poverty_black, OR_asset_poverty_hisp, by = "Odds Ratio")
 
-asset_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White,NH")
+asset_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 ##################################################################
 
@@ -303,7 +303,7 @@ colnames(OR_liquid_poverty_hisp) <- "Odds Ratio"
 
 liquid_poverty_join_OR <- full_join(OR_liquid_poverty_black, OR_liquid_poverty_hisp, by = "Odds Ratio")
 
-liquid_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White,NH")
+liquid_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 #testing 
 # test_liquid <- combined_data_liquid %>% select(SSUID,PNUM,RHNUMPER,liquid_income,income,liquid_pov)
