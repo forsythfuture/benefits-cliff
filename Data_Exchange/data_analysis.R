@@ -50,7 +50,7 @@ shiny_output_net_worth <- net_worth_test %>%
          ) %>%
   select(year, geo_description, type, subtype, estimate, success, trials, moe)
 
-#writing the shiny data into csvs in designated locations for each measure variable
+#writing the shiny data into csvs in designated locations for each measure variable 
 write.csv(shiny_output_net_worth, file = "Data_Exchange/Shiny_Net_Worth.csv")
 
 # # output median by race/ethnicity

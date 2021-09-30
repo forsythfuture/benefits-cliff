@@ -68,5 +68,5 @@ shiny_output_unbanked <- output_unbanked_total_test %>%
   ) %>%
   select(year, geo_description, type, subtype, estimate, success, trials, moe)
 
-#writing the shiny data into csvs in designated locations for each measure variable
+#writing the shiny data into csvs in designated locations for each measure variable 
 write.csv(shiny_output_unbanked, file = "Data_Exchange/Shiny_Unbanked.csv")
