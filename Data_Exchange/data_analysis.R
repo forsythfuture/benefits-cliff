@@ -29,21 +29,38 @@ srvdata <- as_survey_rep(data_worth, weights = WPFINWGT, repweights = REPWGT0:RE
 
 # total and median net worth using srvyr
 net_worth_test <- srvdata %>%
-  group_by(`Race Ethnicity`) %>%
+  group_by(SPANEL, TEHC_ST, `Race Ethnicity`) %>%
   summarise(total = survey_total(),
             median = survey_median(THNETWORTH)) %>%
   mutate(total_cv = total_se/total * 100) %>%
   mutate(total_moe = total_se * 1.96) %>%
-  mutate(`Median MOE` = median_se * 1.96)
+  mutate(`Median MOE` = median_se * 1.96) %>%
+  ungroup()
 
-# output median by race/ethnicity
-output_net_worth <- net_worth_test %>%
-  select(`Race Ethnicity`, median, `Median MOE`) %>%
-  mutate(median = paste0("$", format(round(median), big.mark =",")),
-         `Median MOE` = paste0("$", format(round(`Median MOE`), big.mark =",")),
-         Median = paste0(median, " +/- ", `Median MOE`)
+# formatting for shiny output
+shiny_output_net_worth <- net_worth_test %>%
+  mutate(year = SPANEL,
+         geo_description= TEHC_ST,
+         type = "Race Ethnicity",
+         subtype = `Race Ethnicity`,
+         estimate = median,
+         success = "",
+         trials = "",
+         moe = `Median MOE`
          ) %>%
-  select(-median, -`Median MOE`)
+  select(year, geo_description, type, subtype, estimate, success, trials, moe)
+
+#writing the shiny data into csvs in designated locations for each measure variable
+write.csv(shiny_output_net_worth, file = "Data_Exchange/Shiny_Net_Worth.csv")
+
+# # output median by race/ethnicity
+# output_net_worth <- net_worth_test %>%
+#   select(`Race Ethnicity`, median, `Median MOE`) %>%
+#   mutate(median = paste0("$", format(round(median), big.mark =",")),
+#          `Median MOE` = paste0("$", format(round(`Median MOE`), big.mark =",")),
+#          Median = paste0(median, " +/- ", `Median MOE`)
+#          ) %>%
+#   select(-median, -`Median MOE`)
 
 ##################################################################
 
@@ -62,20 +79,36 @@ srvdata_zero <- as_survey_rep(data_zero, weights = WPFINWGT, repweights = REPWGT
 
 # total net worth of zero or neg
 net_worth_zero <- srvdata_zero %>%
-  group_by(`Race Ethnicity`) %>%
+  group_by(SPANEL, TEHC_ST, `Race Ethnicity`) %>%
   summarise(total = survey_total()) %>%
   mutate(total_cv = total_se/total * 100) %>%
-  mutate(total_moe = total_se * 1.96)
+  mutate(total_moe = total_se * 1.96) %>%
+  ungroup()
 
 # output proportions by race/ethnicity
 output_net_worth_zero <- net_worth_zero %>%
-  select(`Race Ethnicity`, total, total_moe) %>%
+  select(SPANEL, TEHC_ST, `Race Ethnicity`, total, total_moe) %>%
   mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
          `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
                                                          net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
          Proportion = paste0(prop, " +/- ", `Proportion MOE`)
-         ) %>%
-  select(-total, -total_moe, -`Proportion MOE`, -prop)
+         )
+
+# formatting for shiny output
+shiny_output_worth_zero <- output_net_worth_zero %>%
+  mutate(year = SPANEL,
+         geo_description= TEHC_ST,
+         type = "Race Ethnicity",
+         subtype = `Race Ethnicity`,
+         estimate = prop,
+         success = "",
+         trials = "",
+         moe = `Proportion MOE`
+  ) %>%
+  select(year, geo_description, type, subtype, estimate, success, trials, moe)
+
+#writing the shiny data into csvs in designated locations for each measure variable
+write.csv(shiny_output_worth_zero, file = "Data_Exchange/Shiny_Worth_Zero.csv")
 
 ##################################################################
 
@@ -105,20 +138,37 @@ srvdata_asset <- as_survey_rep(combined_data_asset, weights = WPFINWGT, repweigh
 
 # total net worth of zero or neg
 asset_poverty <- srvdata_asset %>%
-  group_by(`Race Ethnicity`) %>%
-  summarise(total = survey_total(asset_pov)) %>%
+  filter(asset_pov == 1) %>%
+  group_by(SPANEL, TEHC_ST, `Race Ethnicity`) %>%
+  summarise(total = survey_total()) %>%
   mutate(total_cv = total_se/total * 100) %>%
-  mutate(total_moe = total_se * 1.96)
+  mutate(total_moe = total_se * 1.96) %>%
+  ungroup()
 
 # output proportions by race/ethnicity
 output_asset_poverty <- asset_poverty %>%
-  select(`Race Ethnicity`, total, total_moe) %>%
+  select(SPANEL, TEHC_ST, `Race Ethnicity`, total, total_moe) %>%
   mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
          `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
                                                          net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
          Proportion = paste0(prop, " +/- ", `Proportion MOE`)
+  )
+
+# formatting for shiny output
+shiny_output_asset_poverty <- output_asset_poverty %>%
+  mutate(year = SPANEL,
+         geo_description= TEHC_ST,
+         type = "Race Ethnicity",
+         subtype = `Race Ethnicity`,
+         estimate = prop,
+         success = "",
+         trials = "",
+         moe = `Proportion MOE`
   ) %>%
-  select(-total, -total_moe, -`Proportion MOE`, -prop)
+  select(year, geo_description, type, subtype, estimate, success, trials, moe)
+
+#writing the shiny data into csvs in designated locations for each measure variable
+write.csv(shiny_output_asset_poverty, file = "Data_Exchange/Shiny_Asset_Poverty.csv")
 
 ##################################################################
 
@@ -145,20 +195,37 @@ srvdata_liquid <- as_survey_rep(combined_data_liquid, weights = WPFINWGT, repwei
 
 # total net worth of zero or neg
 liquid_poverty <- srvdata_liquid %>%
-  group_by(`Race Ethnicity`) %>%
+  filter(liquid_pov == 1) %>%
+  group_by(SPANEL, TEHC_ST, `Race Ethnicity`) %>%
   summarise(total = survey_total(liquid_pov)) %>%
   mutate(total_cv = total_se/total * 100) %>%
-  mutate(total_moe = total_se * 1.96)
+  mutate(total_moe = total_se * 1.96) %>%
+  ungroup()
 
 # output proportions by race/ethnicity
 output_liquid_poverty <- liquid_poverty %>%
-  select(`Race Ethnicity`, total, total_moe) %>%
+  select(SPANEL, TEHC_ST, `Race Ethnicity`, total, total_moe) %>%
   mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
          `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
                                                          net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
          Proportion = paste0(prop, " +/- ", `Proportion MOE`)
+  )
+
+# formatting for shiny output
+shiny_output_liquid_poverty <- output_liquid_poverty %>%
+  mutate(year = SPANEL,
+         geo_description= TEHC_ST,
+         type = "Race Ethnicity",
+         subtype = `Race Ethnicity`,
+         estimate = prop,
+         success = "",
+         trials = "",
+         moe = `Proportion MOE`
   ) %>%
-  select(-total, -total_moe, -`Proportion MOE`, -prop)
+  select(year, geo_description, type, subtype, estimate, success, trials, moe)
+
+#writing the shiny data into csvs in designated locations for each measure variable
+write.csv(shiny_output_liquid_poverty, file = "Data_Exchange/Shiny_Liquid_Poverty.csv")
 
 #testing 
 # test_liquid <- combined_data_liquid %>% select(SSUID,PNUM,RHNUMPER,liquid_income,income,liquid_pov)
