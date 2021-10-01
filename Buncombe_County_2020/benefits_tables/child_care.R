@@ -8,7 +8,7 @@ library(tidyverse)
 
 care <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
-# the market value of subsidies are based on the 2019 NC subsidized child care
+# the market value of subsidies are based on the 2018 NC subsidized child care
 # market rates for Buncombe County 4-star child care centers
 # https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/R/Revised-8-16-Market_Rate_Centers_Eff-10-1-18.pdf?ver=2018-08-28-105655-863
 
@@ -18,7 +18,7 @@ care <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 # create named vector to map number of children to total market rate amounts
 market_rates <- c(`0` = 0,
                   `1` = 747,
-                  `2` = 1540, # 793 + 747 (infant plut 3 to 5)
+                  `2` = 1540, # 793 + 747 (infant plus 3 to 5)
                   `3` = 1540 # for three child families, only two are under 5
                   )
 
@@ -35,8 +35,8 @@ care <- care %>%
 
 # read in federal poverty guidelines
 fpg <- read_rds('Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds') %>%
-  # convert guideline amounts to 200% and filter for 2019
-  filter(year == 2019) %>%
+  # convert guideline amounts to 200% and filter for 2021
+  filter(year == 2021) %>%
   mutate(income_limit = round(guidelines_month * 2, 0)) %>%
   rename(size = household_size) %>%
   select(size, income_limit)

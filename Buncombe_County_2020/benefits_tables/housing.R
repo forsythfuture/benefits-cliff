@@ -8,13 +8,13 @@ library(tidyverse)
 
 housing <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
-# create data frame of fair market rent values in 2019 based on family size
+# create data frame of fair market rent values in 2021 based on family size
 # this is the max rent that can be reimbursed
-# https://www.huduser.gov/portal/datasets/fmr.html#2019_data
+# https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2021_code/2021summary.odn
 fmr <- housing %>%
   select(adults, children) %>%
   distinct() %>%
-  mutate(fmr = c(583, 729, 729, 985, 583, 729, 729, 985),
+  mutate(fmr = c(1099, 1279, 1279, 1751, 1099, 1279, 1279, 1751),
   # we will assume people's rent amount is 80% of fmr
         rent = round(fmr * .8 , 0)) %>%
   select(-fmr)

@@ -6,15 +6,19 @@
 
 library(tidyverse)
 
-# federal poverty guidelines for 2017, 2018, 2019 ---------------------------
+# federal poverty guidelines for 2019, 2020, 2021 ---------------------------
+
+# 2021: https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines/prior-hhs-poverty-guidelines-federal-register-references/2021-poverty-guidelines
+# 2020: https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines/prior-hhs-poverty-guidelines-federal-register-references/2020-poverty-guidelines
+# 2019: https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines/prior-hhs-poverty-guidelines-federal-register-references/2019-poverty-guidelines
 
 fpg <- data.frame(household_size = rep(seq_len(8), times = 3),
-                    guidelines_year = c(12490, 16910, 21330, 25750, 30170, 34590, 39010, 43430,
-                                        12140, 16460, 20780, 25100, 29420, 33740, 38060, 42380,
-                                        12060, 16240, 20420, 24600, 28780, 32960, 37140, 41320),
-                    year = rep(c(2019, 2018, 2017), each=8)) %>%
+                    guidelines_year = c(12880, 17420, 21960, 26500, 31040, 35580, 40120, 44660,
+                                        12760, 17240, 21720, 26200, 30680, 35160, 39640, 44120,
+                                        12490, 16910, 21330, 25750, 30170, 34590, 39010, 43430),
+                    year = rep(c(2021, 2020, 2019), each = 8)) %>%
     # add montly guidelines
-    mutate(guidelines_month = round(guidelines_year / 12,0)) %>%
+    mutate(guidelines_month = round(guidelines_year / 12, 0)) %>%
     select(household_size, year, everything())
 
 write_rds(fpg, 'Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds')

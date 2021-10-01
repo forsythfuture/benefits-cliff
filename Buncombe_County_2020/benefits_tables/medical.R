@@ -5,7 +5,7 @@
 # and NC Health Choices
 #
 # All eligibility limits are here:
-# https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2019_0.pdf
+# https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2020.pdf
 #
 ###############################################################################
 
@@ -13,9 +13,9 @@ library(tidyverse)
 
 medical <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
-# read in poverty guidelines and filter for 2019
+# read in poverty guidelines and filter for 2021
 fpl <- read_rds("Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds") %>%
-  filter(year == 2019) %>%
+  filter(year == 2021) %>%
   select(household_size, guidelines_month)
 
 # the value of the health benefit is the price of a silver plan on the ACA market
