@@ -20,7 +20,7 @@ This repo contains the code used in the Forsyth Futures special issue report on 
 
 `benefits_tables` folder:
 
-This folder contains R scripts that calculate benefit levels as a function of monthly household income for 2019, for incomes from $0 to $6000 per month.  Each file represents a different benefit.  Users should run the `base_table.R` file first and the `federal_poverty_guidelines.R` file second because the other files depend on the output of these two files.  `master_dataset.R` should be run last because it combines the output from the individual files in to one dataframe.  The resulting dataset is used in the first visualtion, created with the file `benefits_cliff.html`.
+This folder contains R scripts that calculate benefit levels as a function of monthly household income for 2019, for incomes from $0 to $6000 per month.  Each file represents a different benefit.  Users should run the `base_table.R` file first and the `federal_poverty_guidelines.R` file second because the other files depend on the output of these two files.  `master_dataset.R` should be run last because it combines the output from the individual files in to one dataframe.  The resulting dataset is used in the first visualization, created with the file `benefits_cliff.html`.
 
 `tax_liability` folder:
 
@@ -38,7 +38,7 @@ The dataset of household incomes comes from the 2017 US Census Public Use Microd
 
 ## Methodology
 
-Benefit amounts and eligibility depend on factors beyond income.  In calcualting benefit amounts, we made assumptions about these varying factors and below are our assumptions.
+Benefit amounts and eligibility depend on factors beyond income.  In calculating benefit amounts, we made assumptions about these varying factors and below are our assumptions.
 
 <a name="NC-child-care"/>
 
