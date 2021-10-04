@@ -10,7 +10,7 @@ housing <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
 # create data frame of fair market rent values in 2021 based on family size
 # this is the max rent that can be reimbursed
-# https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2021_code/2021summary.odn
+# https://www.huduser.gov/portal/datasets/fmr.html#2021
 fmr <- housing %>%
   select(adults, children) %>%
   distinct() %>%
@@ -25,9 +25,9 @@ tenant_rent <- function(kids, income) {
 
   # total tenant payment (ttp) is the amount tenants have to pay in rent
   # it is the greater of 30% of their monthly adjusted income,
-  # 10% of their monthly gross income, or $24
+  # 10% of their monthly gross income, or $25
   # this function calculates the amount
-  # source: https://www.hud.gov/sites/documents/43503C5HSGH.PDF
+  # source: https://www.hud.gov/sites/documents/DOC_35649.PDF
 
   # first, we'll calculate monthly adjusted income and multiply by .3
   # calculate adjusted income by starting with income and subtracting the following deductions:

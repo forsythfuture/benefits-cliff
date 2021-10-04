@@ -1,6 +1,6 @@
 #############################################################################
 #
-# Create table of FNS (food stamp) benefits for 2018
+# Create table of FNS (food stamp) benefits for 2021
 # FNS is called SNAP federally, and is often called SNAP in this script
 #
 # the source of the information for the calculation is primarily from:

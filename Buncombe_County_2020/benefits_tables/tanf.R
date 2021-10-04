@@ -1,7 +1,7 @@
 #############################################################################
 #
 # create table of TANF (work first) benefits and income thresholds
-# Source: https://files.nc.gov/ncdhhs/documents/files/4.3.17%20FINAL%20%26%20APPROVED%202016-2019%20TANF%20STATE%20PLAN.doc
+# Old Source: https://files.nc.gov/ncdhhs/documents/files/4.3.17%20FINAL%20%26%20APPROVED%202016-2019%20TANF%20STATE%20PLAN.doc
 # New Source: https://files.nc.gov/ncdhhs/documents/files/2019-2022%20TANF%20STATE%20PLAN%20DRAFT.pdf
 # The numbers are the same
 #
