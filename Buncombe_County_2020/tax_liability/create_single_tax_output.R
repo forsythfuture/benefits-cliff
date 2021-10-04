@@ -11,7 +11,7 @@ library(jsonlite)
 # import data and create base dataset -------------
 
 tax <- read_csv('Buncombe_County_2020/tax_liability/tax_output.csv') %>%
-  # calcualte NC income taxes (flat tax of 5.5% of taxable income)
+  # calculate NC income taxes (flat tax of 5.5% of taxable income)
   mutate(nc_tax = c04800 * .055,
          # recomputed after-tax income
          aftertax_income = round(aftertax_income - nc_tax, 2)) %>%
@@ -65,7 +65,7 @@ difference <- master %>%
   mutate(diff = value - lag(value),
          # if pre-tax income is 0, make difference 0
          diff = ifelse(pretax_inc == 0, 0, diff),
-        # Work first is acting wonky, add $1 to all differencecs less than 1 and 
+        # Work first is acting wonky, add $1 to all differences less than 1 and 
         # greater than 0
         diff = ifelse((category == "Work First (TANF)" & diff < 0), diff + 1, diff))
   
