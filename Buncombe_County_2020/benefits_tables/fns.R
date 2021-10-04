@@ -3,8 +3,8 @@
 # Create table of FNS (food stamp) benefits for 2018
 # FNS is called SNAP federally, and is often called SNAP in this script
 #
-# the source of the information for the calcualtion is primarily from:
-# https://www2.ncdhhs.gov/info/olm/manuals/dss/ei-30/man/FSs285.pdf
+# the source of the information for the calculation is primarily from:
+# https://fns-prod.azureedge.net/sites/default/files/resource-files/COLAMemoFY2021.pdf
 #
 #############################################################################
 
@@ -15,12 +15,13 @@ base <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 snap <- base %>%
   mutate(benefit = "FNS (Food Stamps)")
 
-# utility allowance based on family size
+# utility allowance based on family size https://www.fns.usda.gov/snap/eligibility/deduction/standard-utility-allowances or 
+# https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Ffns-prod.azureedge.net%2Fsites%2Fdefault%2Ffiles%2Fmedia%2Ffile%2FSNAP_SUA_Table_FY2021.xlsx&wdOrigin=BROWSELINK
 shelter_costs <- tibble(
     size = seq(1, 5),
-    sua = c(437, 480, 528, 576, 628),
-    bua = c(246, 270, 297, 324, 353),
-    tua = 38,
+    sua = c(440, 483, 531, 579, 631),
+    bua = c(263, 289, 318, 347, 378),
+    tua = 31,
     # rent starts at $600 and each additional person adds $200
     rent = 600 + (200*size)
   ) %>%
@@ -28,17 +29,17 @@ shelter_costs <- tibble(
     mutate(shelter = sua + rent) %>%
     select(size, shelter)
 
-# merge utilitiy allowances to snap dataset
+# merge utility allowances to snap dataset
 snap <- snap %>%
   left_join(shelter_costs, by="size")
 
-# standard deductions based on family size
-std_ded <- c(`1` = 164,
-             `2` = 164,
-             `3` = 164,
-             `4` = 174,
-             `5` = 204,
-             `6` = 234)
+# standard deductions based on family size https://fns-prod.azureedge.net/sites/default/files/resource-files/COLAMemoFY2021.pdf
+std_ded <- c(`1` = 167,
+             `2` = 167,
+             `3` = 167,
+             `4` = 181,
+             `5` = 212,
+             `6` = 243)
 
 # add column to dataset showing standard deduction amount
 snap <- snap %>%
@@ -56,8 +57,8 @@ snap <- snap %>%
   mutate(net_income = monthly_income - std_ded - dep_care - ded_20,
         # deduct shelter expenses that exceed half of net income
         shelter_ded = shelter - (net_income/2),
-        # shelter deduction is maxed out at 552
-        shelter_ded = ifelse(shelter_ded > 552, 552, shelter_ded),
+        # shelter deduction is maxed out at 586 https://www.fns.usda.gov/snap/fy-2021-cost-living-adjustments
+        shelter_ded = ifelse(shelter_ded > 586, 586, shelter_ded),
         # subtract shelter deduction from net income
         net_income = net_income - shelter_ded,
         # family is expected to contribute 30% of income to food
@@ -65,23 +66,23 @@ snap <- snap %>%
         # convert this amount to 0 if it is negative
         family_contribution = ifelse(family_contribution < 0, 0, family_contribution))
 
-# SNAP max allotment amounts Oct 2018 - Sep 2019
-snap_amounts <- c(`1` = 192,
-                  `2` = 353,
-                  `3` = 505,
-                  `4` = 642,
-                  `5` = 762,
-                  `6` = 914,
-                  `7` = 1011,
-                  `8` = 1155)
+# SNAP max allotment amounts Oct 2020 - Sep 2021 https://fns-prod.azureedge.net/sites/default/files/resource-files/COLAMemoFY2021.pdf
+snap_amounts <- c(`1` = 204,
+                  `2` = 374,
+                  `3` = 535,
+                  `4` = 680,
+                  `5` = 807,
+                  `6` = 969,
+                  `7` = 1071,
+                  `8` = 1224)
 
 # maximum income is set at 200% of federal poverty guideline
 # read in federal poverty guidelines
 fpg <- read_rds('Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds')
 
-# convert guideline amounts to 200% and filter for 2019
+# convert guideline amounts to 200% and filter for 2021
 snap_income_limit <- fpg %>%
-  filter(year == 2019) %>%
+  filter(year == 2021) %>%
   mutate(snap_income_limit = round(guidelines_month * 2, 0)) %>%
   rename(size = household_size) %>%
   select(size, snap_income_limit)
