@@ -19,24 +19,27 @@ fpl <- read_rds("Buncombe_County_2020/benefits_tables/tables/federal_poverty_gui
   select(household_size, guidelines_month)
 
 # the value of the health benefit is the price of a silver plan on the ACA market
-# silver plan prices for Forsyth County in 2019 were retrieved from:
-# https://www.kff.org/interactive/subsidy-calculator/
+# silver plan prices for Buncombe County in 2021 were retrieved from: 
+# https://www.kff.org/interactive/subsidy-calculator-2021-before-covid-relief/
 
-# since children and adults qualify for different programs, calcualte the value
+# since children and adults qualify for different programs, calculate the value 
 # of their silver plans separately
+# filter for North Carolina and input a Buncombe County zip code
+# put zero for 3. Enter your yearly household income (dollars)
 
 # calculate value of children's silver plans, based on number of children
-mic_value <- c(`1` = 358, # one child: 2 years old
-                `2` = 716, # two children: 2 and 4 years old
-                `3` = 1074 # three children: 2, 4, and 10 years old
+mic_value <- c(`1` = 372, # one child: 2 years old
+                `2` = 744, # two children: 2 and 4 years old
+                `3` = 1115 # three children: 2, 4, and 10 years old
                 )
 
 # calculate value of adults silver plan; adults are non-tobacco users
-maf_value <- c(`1` = 531, # one adult: 30 years old
-               `2` = 1062 # two adults: both 30 years old
+maf_value <- c(`1` = 552, # one adult: 30 years old
+               `2` = 1103 # two adults: both 30 years old
                )
 
-# calculate income limits of maf based on number of caretakers
+# calculate income limits of maf based on number of caretakers in 2020 
+# https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2020.pdf
 maf_income_limits <- c(`1` = 434,
                        `2` = 569,
                        `3` = 667,
