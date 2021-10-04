@@ -97,7 +97,7 @@ create_fpg_mapping <- function(threshold) {
   
   fpg %>%
     mutate(guidelines_month = guidelines_month * threshold) %>%
-    filter(year == 2019) %>%
+    filter(year == 2021) %>%
     select(household_size, guidelines_month) %>%
     rename(size = household_size)
   
