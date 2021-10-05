@@ -62,6 +62,27 @@ write.csv(shiny_output_net_worth, file = "Data_Exchange/Shiny_Net_Worth.csv")
 #          ) %>%
 #   select(-median, -`Median MOE`)
 
+# output totals by race/ethnicity
+OR_net_worth_test <- net_worth_test %>%
+  select(SPANEL, TEHC_ST, `Race Ethnicity`, median)
+
+test_net_worth_black <- OR_net_worth_test %>%
+  filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
+
+OR_net_worth_black <- test_net_worth_black[1,4]/test_net_worth_black[2,4]
+colnames(OR_net_worth_black) <- "Proportion"
+
+test_net_worth_hisp <- OR_net_worth_test %>%
+  filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
+
+OR_net_worth_hisp <- test_net_worth_hisp[1,4]/test_net_worth_hisp[2,4]
+colnames(OR_net_worth_hisp) <- "Proportion"
+
+net_worth_join_OR <- full_join(OR_net_worth_black, OR_net_worth_hisp, by = "Proportion")
+
+net_worth_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
+
+
 ##################################################################
 
 # Housholds with Zero Net Worth
@@ -121,13 +142,13 @@ test_net_worth_zero <- OR_net_worth_zero_test %>%
   select(`Race Ethnicity`,worth_zero_total,worth_nonzero_total)
 
 test_net_worth_zero_black <- test_net_worth_zero %>%
-  filter(`Race Ethnicity` != "Hispanic/Latino")
+  filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
 
 OR_net_worth_zero_black <- (test_net_worth_zero_black[1,2]*test_net_worth_zero_black[2,3]) / (test_net_worth_zero_black[2,2]*test_net_worth_zero_black[1,3])
 colnames(OR_net_worth_zero_black) <- "Odds Ratio"
 
 test_net_worth_zero_hisp <- test_net_worth_zero %>%
-  filter(`Race Ethnicity` != "Black/AA, NH")
+  filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
 
 OR_net_worth_zero_hisp <- (test_net_worth_zero_hisp[1,2]*test_net_worth_zero_hisp[2,3]) / (test_net_worth_zero_hisp[2,2]*test_net_worth_zero_hisp[1,3])
 colnames(OR_net_worth_zero_hisp) <- "Odds Ratio"
@@ -207,13 +228,13 @@ test_asset_poverty <- OR_asset_poverty_test %>%
   select(`Race Ethnicity`,asset_total,nonasset_total)
 
 test_asset_poverty_black <- test_asset_poverty %>%
-  filter(`Race Ethnicity` != "Hispanic/Latino")
+  filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
 
 OR_asset_poverty_black <- (test_asset_poverty_black[1,2]*test_asset_poverty_black[2,3]) / (test_asset_poverty_black[2,2]*test_asset_poverty_black[1,3])
 colnames(OR_asset_poverty_black) <- "Odds Ratio"
 
 test_asset_poverty_hisp <- test_asset_poverty %>%
-  filter(`Race Ethnicity` != "Black/AA, NH")
+  filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
 
 OR_asset_poverty_hisp <- (test_asset_poverty_hisp[1,2]*test_asset_poverty_hisp[2,3]) / (test_asset_poverty_hisp[2,2]*test_asset_poverty_hisp[1,3])
 colnames(OR_asset_poverty_hisp) <- "Odds Ratio"
@@ -290,13 +311,13 @@ test_liquid_poverty <- OR_liquid_poverty_test %>%
   select(`Race Ethnicity`,liquid_total,illiquid_total)
 
 test_liquid_poverty_black <- test_liquid_poverty %>%
-  filter(`Race Ethnicity` != "Hispanic/Latino")
+  filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
 
 OR_liquid_poverty_black <- (test_liquid_poverty_black[1,2]*test_liquid_poverty_black[2,3]) / (test_liquid_poverty_black[2,2]*test_liquid_poverty_black[1,3])
 colnames(OR_liquid_poverty_black) <- "Odds Ratio"
 
 test_liquid_poverty_hisp <- test_liquid_poverty %>%
-  filter(`Race Ethnicity` != "Black/AA, NH")
+  filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
 
 OR_liquid_poverty_hisp <- (test_liquid_poverty_hisp[1,2]*test_liquid_poverty_hisp[2,3]) / (test_liquid_poverty_hisp[2,2]*test_liquid_poverty_hisp[1,3])
 colnames(OR_liquid_poverty_hisp) <- "Odds Ratio"
