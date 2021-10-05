@@ -49,11 +49,13 @@ unbanked_total_test <- fdic_srvdata_unbanked %>%
 # output proportions by race/ethnicity
 output_unbanked_total_test <- unbanked_total_test %>%
   select(hryear4, gestfips, `Race Ethnicity`, total, total_moe) %>%
-  mutate(prop = paste0(format(round(total / total_test$total * 100, 1), nsmall = 1), "%"),
-         `Proportion MOE` = paste0(format(round(moe_prop(total, total_test$total, total_moe, 
-                                                         total_test$total_moe) * 100, 1), nsmall = 1), "%"),
-         Proportion = paste0(prop, " +/- ", `Proportion MOE`)
-  ) 
+  mutate(prop = total / total_test$total,
+         `Proportion MOE` = moe_prop(total, total_test$total, total_moe, 
+                                                         total_test$total_moe)
+  )
+
+relative_risk_unbank_black <- output_unbanked_total_test[1,6]/output_unbanked_total_test[3,6]
+relative_risk_unbank_hisp <- output_unbanked_total_test[2,6]/output_unbanked_total_test[3,6]
 
 # formatting for shiny output
 shiny_output_unbanked <- output_unbanked_total_test %>%
@@ -71,28 +73,28 @@ shiny_output_unbanked <- output_unbanked_total_test %>%
 #writing the shiny data into csvs in designated locations for each measure variable 
 write.csv(shiny_output_unbanked, file = "Data_Exchange/Shiny_Unbanked.csv")
 
-# output totals by race/ethnicity
-OR_unbanked_test <- unbanked_total_test %>%
-  select(hryear4, gestfips, `Race Ethnicity`, total) %>%
-  mutate(unbanked_total = total,
-         banked_total = total_test$total - total
-  )
-
-test_unbanked <- OR_unbanked_test %>%
-  select(`Race Ethnicity`,unbanked_total,banked_total)
-
-test_unbanked_black <- test_unbanked %>%
-  filter(`Race Ethnicity` != "Hispanic/Latino")
-
-OR_unbanked_black <- (test_unbanked_black[1,2]*test_unbanked_black[2,3]) / (test_unbanked_black[2,2]*test_unbanked_black[1,3])
-colnames(OR_unbanked_black) <- "Odds Ratio"
-
-test_unbanked_hisp <- test_unbanked %>%
-  filter(`Race Ethnicity` != "Black/AA, NH")
-
-OR_unbanked_hisp <- (test_unbanked_hisp[1,2]*test_unbanked_hisp[2,3]) / (test_unbanked_hisp[2,2]*test_unbanked_hisp[1,3])
-colnames(OR_unbanked_hisp) <- "Odds Ratio"
-
-unbanked_join_OR <- full_join(OR_unbanked_black, OR_unbanked_hisp, by = "Odds Ratio")
-  
-unbanked_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
+# # output totals by race/ethnicity
+# OR_unbanked_test <- unbanked_total_test %>%
+#   select(hryear4, gestfips, `Race Ethnicity`, total) %>%
+#   mutate(unbanked_total = total,
+#          banked_total = total_test$total - total
+#   )
+# 
+# test_unbanked <- OR_unbanked_test %>%
+#   select(`Race Ethnicity`,unbanked_total,banked_total)
+# 
+# test_unbanked_black <- test_unbanked %>%
+#   filter(`Race Ethnicity` != "Hispanic/Latino")
+# 
+# OR_unbanked_black <- (test_unbanked_black[1,2]*test_unbanked_black[2,3]) / (test_unbanked_black[2,2]*test_unbanked_black[1,3])
+# colnames(OR_unbanked_black) <- "Odds Ratio"
+# 
+# test_unbanked_hisp <- test_unbanked %>%
+#   filter(`Race Ethnicity` != "Black/AA, NH")
+# 
+# OR_unbanked_hisp <- (test_unbanked_hisp[1,2]*test_unbanked_hisp[2,3]) / (test_unbanked_hisp[2,2]*test_unbanked_hisp[1,3])
+# colnames(OR_unbanked_hisp) <- "Odds Ratio"
+# 
+# unbanked_join_OR <- full_join(OR_unbanked_black, OR_unbanked_hisp, by = "Odds Ratio")
+#   
+# unbanked_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")

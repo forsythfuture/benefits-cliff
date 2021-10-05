@@ -37,6 +37,12 @@ net_worth_test <- srvdata %>%
   mutate(`Median MOE` = median_se * 1.96) %>%
   ungroup()
 
+net_worth_median_black <- net_worth_test[1,6]/net_worth_test[4,6]
+net_worth_median_hisp <- net_worth_test[2,6]/net_worth_test[4,6]
+
+relative_risk_unbank_black <- output_unbanked_total_test[1,6]/output_unbanked_total_test[3,6]
+relative_risk_unbank_hisp <- output_unbanked_total_test[2,6]/output_unbanked_total_test[3,6]
+
 # formatting for shiny output
 shiny_output_net_worth <- net_worth_test %>%
   mutate(year = SPANEL,
@@ -109,11 +115,12 @@ net_worth_zero <- srvdata_zero %>%
 # output proportions by race/ethnicity
 output_net_worth_zero <- net_worth_zero %>%
   select(SPANEL, TEHC_ST, `Race Ethnicity`, total, total_moe) %>%
-  mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
-         `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
-                                                         net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
-         Proportion = paste0(prop, " +/- ", `Proportion MOE`)
+  mutate(prop = total / net_worth_test$total,
+         `Proportion MOE` = moe_prop(total, net_worth_test$total, total_moe, net_worth_test$total_moe)
          )
+
+relative_risk_zero_black <- output_net_worth_zero[1,6]/output_net_worth_zero[4,6]
+relative_risk_zero_hisp <- output_net_worth_zero[2,6]/output_net_worth_zero[4,6]
 
 # formatting for shiny output
 shiny_output_worth_zero <- output_net_worth_zero %>%
@@ -131,31 +138,31 @@ shiny_output_worth_zero <- output_net_worth_zero %>%
 #writing the shiny data into csvs in designated locations for each measure variable
 write.csv(shiny_output_worth_zero, file = "Data_Exchange/Shiny_Worth_Zero.csv")
 
-# output totals by race/ethnicity
-OR_net_worth_zero_test <- net_worth_zero %>%
-  select(SPANEL, TEHC_ST, `Race Ethnicity`, total) %>%
-  mutate(worth_zero_total = total,
-         worth_nonzero_total = net_worth_test$total - total
-  )
-
-test_net_worth_zero <- OR_net_worth_zero_test %>%
-  select(`Race Ethnicity`,worth_zero_total,worth_nonzero_total)
-
-test_net_worth_zero_black <- test_net_worth_zero %>%
-  filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
-
-OR_net_worth_zero_black <- (test_net_worth_zero_black[1,2]*test_net_worth_zero_black[2,3]) / (test_net_worth_zero_black[2,2]*test_net_worth_zero_black[1,3])
-colnames(OR_net_worth_zero_black) <- "Odds Ratio"
-
-test_net_worth_zero_hisp <- test_net_worth_zero %>%
-  filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
-
-OR_net_worth_zero_hisp <- (test_net_worth_zero_hisp[1,2]*test_net_worth_zero_hisp[2,3]) / (test_net_worth_zero_hisp[2,2]*test_net_worth_zero_hisp[1,3])
-colnames(OR_net_worth_zero_hisp) <- "Odds Ratio"
-
-net_worth_zero_join_OR <- full_join(OR_net_worth_zero_black, OR_net_worth_zero_hisp, by = "Odds Ratio")
-
-net_worth_zero_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
+# # output totals by race/ethnicity
+# OR_net_worth_zero_test <- net_worth_zero %>%
+#   select(SPANEL, TEHC_ST, `Race Ethnicity`, total) %>%
+#   mutate(worth_zero_total = total,
+#          worth_nonzero_total = net_worth_test$total - total
+#   )
+# 
+# test_net_worth_zero <- OR_net_worth_zero_test %>%
+#   select(`Race Ethnicity`,worth_zero_total,worth_nonzero_total)
+# 
+# test_net_worth_zero_black <- test_net_worth_zero %>%
+#   filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
+# 
+# OR_net_worth_zero_black <- (test_net_worth_zero_black[1,2]*test_net_worth_zero_black[2,3]) / (test_net_worth_zero_black[2,2]*test_net_worth_zero_black[1,3])
+# colnames(OR_net_worth_zero_black) <- "Odds Ratio"
+# 
+# test_net_worth_zero_hisp <- test_net_worth_zero %>%
+#   filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
+# 
+# OR_net_worth_zero_hisp <- (test_net_worth_zero_hisp[1,2]*test_net_worth_zero_hisp[2,3]) / (test_net_worth_zero_hisp[2,2]*test_net_worth_zero_hisp[1,3])
+# colnames(OR_net_worth_zero_hisp) <- "Odds Ratio"
+# 
+# net_worth_zero_join_OR <- full_join(OR_net_worth_zero_black, OR_net_worth_zero_hisp, by = "Odds Ratio")
+# 
+# net_worth_zero_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 ##################################################################
 
@@ -195,11 +202,12 @@ asset_poverty <- srvdata_asset %>%
 # output proportions by race/ethnicity
 output_asset_poverty <- asset_poverty %>%
   select(SPANEL, TEHC_ST, `Race Ethnicity`, total, total_moe) %>%
-  mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
-         `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
-                                                         net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
-         Proportion = paste0(prop, " +/- ", `Proportion MOE`)
+  mutate(prop = total / net_worth_test$total,
+         `Proportion MOE` = moe_prop(total, net_worth_test$total, total_moe, net_worth_test$total_moe)
   )
+
+relative_risk_asset_black <- output_asset_poverty[1,6]/output_asset_poverty[4,6]
+relative_risk_asset_hisp <- output_asset_poverty[2,6]/output_asset_poverty[4,6]
 
 # formatting for shiny output
 shiny_output_asset_poverty <- output_asset_poverty %>%
@@ -217,31 +225,31 @@ shiny_output_asset_poverty <- output_asset_poverty %>%
 #writing the shiny data into csvs in designated locations for each measure variable
 write.csv(shiny_output_asset_poverty, file = "Data_Exchange/Shiny_Asset_Poverty.csv")
 
-# output totals by race/ethnicity
-OR_asset_poverty_test <- asset_poverty %>%
-  select(SPANEL, TEHC_ST, `Race Ethnicity`, total) %>%
-  mutate(asset_total = total,
-         nonasset_total = net_worth_test$total - total
-  )
-
-test_asset_poverty <- OR_asset_poverty_test %>%
-  select(`Race Ethnicity`,asset_total,nonasset_total)
-
-test_asset_poverty_black <- test_asset_poverty %>%
-  filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
-
-OR_asset_poverty_black <- (test_asset_poverty_black[1,2]*test_asset_poverty_black[2,3]) / (test_asset_poverty_black[2,2]*test_asset_poverty_black[1,3])
-colnames(OR_asset_poverty_black) <- "Odds Ratio"
-
-test_asset_poverty_hisp <- test_asset_poverty %>%
-  filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
-
-OR_asset_poverty_hisp <- (test_asset_poverty_hisp[1,2]*test_asset_poverty_hisp[2,3]) / (test_asset_poverty_hisp[2,2]*test_asset_poverty_hisp[1,3])
-colnames(OR_asset_poverty_hisp) <- "Odds Ratio"
-
-asset_poverty_join_OR <- full_join(OR_asset_poverty_black, OR_asset_poverty_hisp, by = "Odds Ratio")
-
-asset_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
+# # output totals by race/ethnicity
+# OR_asset_poverty_test <- asset_poverty %>%
+#   select(SPANEL, TEHC_ST, `Race Ethnicity`, total) %>%
+#   mutate(asset_total = total,
+#          nonasset_total = net_worth_test$total - total
+#   )
+# 
+# test_asset_poverty <- OR_asset_poverty_test %>%
+#   select(`Race Ethnicity`,asset_total,nonasset_total)
+# 
+# test_asset_poverty_black <- test_asset_poverty %>%
+#   filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
+# 
+# OR_asset_poverty_black <- (test_asset_poverty_black[1,2]*test_asset_poverty_black[2,3]) / (test_asset_poverty_black[2,2]*test_asset_poverty_black[1,3])
+# colnames(OR_asset_poverty_black) <- "Odds Ratio"
+# 
+# test_asset_poverty_hisp <- test_asset_poverty %>%
+#   filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
+# 
+# OR_asset_poverty_hisp <- (test_asset_poverty_hisp[1,2]*test_asset_poverty_hisp[2,3]) / (test_asset_poverty_hisp[2,2]*test_asset_poverty_hisp[1,3])
+# colnames(OR_asset_poverty_hisp) <- "Odds Ratio"
+# 
+# asset_poverty_join_OR <- full_join(OR_asset_poverty_black, OR_asset_poverty_hisp, by = "Odds Ratio")
+# 
+# asset_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 ##################################################################
 
@@ -278,11 +286,12 @@ liquid_poverty <- srvdata_liquid %>%
 # output proportions by race/ethnicity
 output_liquid_poverty <- liquid_poverty %>%
   select(SPANEL, TEHC_ST, `Race Ethnicity`, total, total_moe) %>%
-  mutate(prop = paste0(format(round(total / net_worth_test$total * 100, 1), nsmall = 1), "%"),
-         `Proportion MOE` = paste0(format(round(moe_prop(total, net_worth_test$total, total_moe, 
-                                                         net_worth_test$total_moe) * 100, 1), nsmall = 1), "%"),
-         Proportion = paste0(prop, " +/- ", `Proportion MOE`)
+  mutate(prop = total / net_worth_test$total,
+         `Proportion MOE` = moe_prop(total, net_worth_test$total, total_moe, net_worth_test$total_moe)
   )
+
+relative_risk_liquid_black <- output_liquid_poverty[1,6]/output_liquid_poverty[4,6]
+relative_risk_liquid_hisp <- output_liquid_poverty[2,6]/output_liquid_poverty[4,6]
 
 # formatting for shiny output
 shiny_output_liquid_poverty <- output_liquid_poverty %>%
@@ -300,31 +309,31 @@ shiny_output_liquid_poverty <- output_liquid_poverty %>%
 #writing the shiny data into csvs in designated locations for each measure variable
 write.csv(shiny_output_liquid_poverty, file = "Data_Exchange/Shiny_Liquid_Poverty.csv")
 
-# output totals by race/ethnicity
-OR_liquid_poverty_test <- liquid_poverty %>%
-  select(SPANEL, TEHC_ST, `Race Ethnicity`, total) %>%
-  mutate(liquid_total = total,
-         illiquid_total = net_worth_test$total - total
-  )
-
-test_liquid_poverty <- OR_liquid_poverty_test %>%
-  select(`Race Ethnicity`,liquid_total,illiquid_total)
-
-test_liquid_poverty_black <- test_liquid_poverty %>%
-  filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
-
-OR_liquid_poverty_black <- (test_liquid_poverty_black[1,2]*test_liquid_poverty_black[2,3]) / (test_liquid_poverty_black[2,2]*test_liquid_poverty_black[1,3])
-colnames(OR_liquid_poverty_black) <- "Odds Ratio"
-
-test_liquid_poverty_hisp <- test_liquid_poverty %>%
-  filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
-
-OR_liquid_poverty_hisp <- (test_liquid_poverty_hisp[1,2]*test_liquid_poverty_hisp[2,3]) / (test_liquid_poverty_hisp[2,2]*test_liquid_poverty_hisp[1,3])
-colnames(OR_liquid_poverty_hisp) <- "Odds Ratio"
-
-liquid_poverty_join_OR <- full_join(OR_liquid_poverty_black, OR_liquid_poverty_hisp, by = "Odds Ratio")
-
-liquid_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
+# # output totals by race/ethnicity
+# OR_liquid_poverty_test <- liquid_poverty %>%
+#   select(SPANEL, TEHC_ST, `Race Ethnicity`, total) %>%
+#   mutate(liquid_total = total,
+#          illiquid_total = net_worth_test$total - total
+#   )
+# 
+# test_liquid_poverty <- OR_liquid_poverty_test %>%
+#   select(`Race Ethnicity`,liquid_total,illiquid_total)
+# 
+# test_liquid_poverty_black <- test_liquid_poverty %>%
+#   filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
+# 
+# OR_liquid_poverty_black <- (test_liquid_poverty_black[1,2]*test_liquid_poverty_black[2,3]) / (test_liquid_poverty_black[2,2]*test_liquid_poverty_black[1,3])
+# colnames(OR_liquid_poverty_black) <- "Odds Ratio"
+# 
+# test_liquid_poverty_hisp <- test_liquid_poverty %>%
+#   filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
+# 
+# OR_liquid_poverty_hisp <- (test_liquid_poverty_hisp[1,2]*test_liquid_poverty_hisp[2,3]) / (test_liquid_poverty_hisp[2,2]*test_liquid_poverty_hisp[1,3])
+# colnames(OR_liquid_poverty_hisp) <- "Odds Ratio"
+# 
+# liquid_poverty_join_OR <- full_join(OR_liquid_poverty_black, OR_liquid_poverty_hisp, by = "Odds Ratio")
+# 
+# liquid_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 #testing 
 # test_liquid <- combined_data_liquid %>% select(SSUID,PNUM,RHNUMPER,liquid_income,income,liquid_pov)
