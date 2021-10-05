@@ -118,7 +118,7 @@ OR_net_worth_zero_test <- net_worth_zero %>%
   )
 
 test_net_worth_zero <- OR_net_worth_zero_test %>%
-  select(`Race Ethnicity`,unbanked_total,banked_total)
+  select(`Race Ethnicity`,worth_zero_total,worth_nonzero_total)
 
 test_net_worth_zero_black <- test_net_worth_zero %>%
   filter(`Race Ethnicity` != "Hispanic/Latino")
@@ -204,7 +204,7 @@ OR_asset_poverty_test <- asset_poverty %>%
   )
 
 test_asset_poverty <- OR_asset_poverty_test %>%
-  select(`Race Ethnicity`,unbanked_total,banked_total)
+  select(`Race Ethnicity`,asset_total,nonasset_total)
 
 test_asset_poverty_black <- test_asset_poverty %>%
   filter(`Race Ethnicity` != "Hispanic/Latino")
@@ -287,7 +287,7 @@ OR_liquid_poverty_test <- liquid_poverty %>%
   )
 
 test_liquid_poverty <- OR_liquid_poverty_test %>%
-  select(`Race Ethnicity`,unbanked_total,banked_total)
+  select(`Race Ethnicity`,liquid_total,illiquid_total)
 
 test_liquid_poverty_black <- test_liquid_poverty %>%
   filter(`Race Ethnicity` != "Hispanic/Latino")

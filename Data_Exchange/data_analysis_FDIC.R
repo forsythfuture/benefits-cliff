@@ -87,7 +87,7 @@ test_unbanked_black <- test_unbanked %>%
 OR_unbanked_black <- (test_unbanked_black[1,2]*test_unbanked_black[2,3]) / (test_unbanked_black[2,2]*test_unbanked_black[1,3])
 colnames(OR_unbanked_black) <- "Odds Ratio"
 
-test_unbanked_hisp <- test %>%
+test_unbanked_hisp <- test_unbanked %>%
   filter(`Race Ethnicity` != "Black/AA, NH")
 
 OR_unbanked_hisp <- (test_unbanked_hisp[1,2]*test_unbanked_hisp[2,3]) / (test_unbanked_hisp[2,2]*test_unbanked_hisp[1,3])
