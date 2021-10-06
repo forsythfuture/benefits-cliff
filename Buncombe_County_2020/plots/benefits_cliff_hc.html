@@ -122,13 +122,19 @@
 		
 				xAxis: [{
 					type: 'linear',
-					max: 15000,
+					max: 65000,
 					id: 'monthly',
 					title: {
 							text: 'Monthly Income'
 					},
 					labels: {
-							format: '${value}'
+							//format: '${value}'
+							formatter: function () {
+		
+							var x_value = this.value / 10;
+		
+							return '$' + x_value.toFixed(0);
+					}
 					}
 				}, {
 					type: 'linear',
@@ -142,7 +148,7 @@
 					labels: {
 						formatter: function () {
 		
-							var hourly_wage = this.value /  (40*4.35);
+							var hourly_wage = (this.value /  (40*4.35)) / 10;
 		
 							return '$' + hourly_wage.toFixed(2);
 					}
