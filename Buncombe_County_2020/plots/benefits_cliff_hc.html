@@ -156,12 +156,21 @@
 				}],
 		
 				tooltip: {
-						headerFormat: '<span style="color:{series.color}"><b>{series.name}</b></span><table>',
-						pointFormat: '<tr><td style="padding:0">Benefit:  <b>${point.y:.0f}</b></td></tr>' +
-								'<tr><td style="padding:0">Income: <b>${point.x:.0f}</b></td></tr>',
+						//headerFormat: '<span style="color:{series.color}"><b>{series.name}</b></span><table>',
+						//pointFormat: '<tr><td style="padding:0">Benefit:  <b>${point.y:.0f}</b></td></tr>' +
+						//		'<tr><td style="padding:0">Income: <b>${point.x:.0f}</b></td></tr>',
 						footerFormat: '</table>',
 						useHTML: true,
-						crosshairs: true
+						//crosshairs: true
+						formatter() {
+						  let x = `${this.x}` / 10;
+						  let z = `<strong>${x}</strong>`;
+						  let y = Math.round(`${this.y}`);
+						  let w = `<strong>${y}</strong>`;
+						  let series = `<strong>${this.series.name}</strong>`;
+						
+						  return series + '<br>Benefit: <b>$</b>' + w + '<br>Income: <b>$</b>' + z;
+						},
 				},
 		
 				plotOptions: {
