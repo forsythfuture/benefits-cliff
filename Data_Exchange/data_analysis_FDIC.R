@@ -119,7 +119,3 @@ row_bind$V1 <- c("Median Net Worth", "Median Net Worth", "Zero Net Worth", "Zero
 
 #pivot wider
 row_bind_pivot <- row_bind %>% pivot_wider(names_from = "Race / Ethnicity", values_from = "Relative Risk")
-
-library(writexl)
-
-write_xlsx(row_bind_pivot, "C:\\Users\\daniel ludolf\\Documents\\benefits-cliff\\Data_Exchange\\benefits-cliff.xlsx")
