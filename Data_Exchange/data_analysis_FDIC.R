@@ -54,8 +54,17 @@ output_unbanked_total_test <- unbanked_total_test %>%
                                                          total_test$total_moe)
   )
 
+#calculate relative risk
 relative_risk_unbank_black <- output_unbanked_total_test[1,6]/output_unbanked_total_test[3,6]
 relative_risk_unbank_hisp <- output_unbanked_total_test[2,6]/output_unbanked_total_test[3,6]
+
+#full join relative risk
+unbanked_join_OR <- full_join(relative_risk_unbank_black, relative_risk_unbank_hisp, by = "prop")
+#update column name
+colnames(unbanked_join_OR) <- "Relative Risk"
+
+#add race column
+unbanked_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 # formatting for shiny output
 shiny_output_unbanked <- output_unbanked_total_test %>%
@@ -98,3 +107,19 @@ write.csv(shiny_output_unbanked, file = "Data_Exchange/Shiny_Unbanked.csv")
 # unbanked_join_OR <- full_join(OR_unbanked_black, OR_unbanked_hisp, by = "Odds Ratio")
 #   
 # unbanked_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
+
+##################################################################################################################################
+
+#row bind all
+row_bind <- rbind(net_worth_join_OR, net_worth_zero_join_OR,asset_poverty_join_OR,liquid_poverty_join_OR,unbanked_join_OR)
+
+#add a column for each metric
+row_bind$V1 <- c("Median Net Worth", "Median Net Worth", "Zero Net Worth", "Zero Net Worth", "Asset Poverty", "Asset Poverty",
+                 "Liquid Poverty", "Liquid Poverty", "Unbanked", "Unbanked")
+
+#pivot wider
+row_bind_pivot <- row_bind %>% pivot_wider(names_from = "Race / Ethnicity", values_from = "Relative Risk")
+
+library(writexl)
+
+write_xlsx(row_bind_pivot, "C:\\Users\\daniel ludolf\\Documents\\benefits-cliff\\Data_Exchange\\benefits-cliff.xlsx")

@@ -37,12 +37,6 @@ net_worth_test <- srvdata %>%
   mutate(`Median MOE` = median_se * 1.96) %>%
   ungroup()
 
-net_worth_median_black <- net_worth_test[1,6]/net_worth_test[4,6]
-net_worth_median_hisp <- net_worth_test[2,6]/net_worth_test[4,6]
-
-relative_risk_unbank_black <- output_unbanked_total_test[1,6]/output_unbanked_total_test[3,6]
-relative_risk_unbank_hisp <- output_unbanked_total_test[2,6]/output_unbanked_total_test[3,6]
-
 # formatting for shiny output
 shiny_output_net_worth <- net_worth_test %>%
   mutate(year = SPANEL,
@@ -72,22 +66,27 @@ write.csv(shiny_output_net_worth, file = "Data_Exchange/Shiny_Net_Worth.csv")
 OR_net_worth_test <- net_worth_test %>%
   select(SPANEL, TEHC_ST, `Race Ethnicity`, median)
 
+#filter race
 test_net_worth_black <- OR_net_worth_test %>%
   filter(`Race Ethnicity` == "Black/AA, NH" | `Race Ethnicity` == "White, NH")
 
+#change column name
 OR_net_worth_black <- test_net_worth_black[1,4]/test_net_worth_black[2,4]
-colnames(OR_net_worth_black) <- "Proportion"
+colnames(OR_net_worth_black) <- "Relative Risk"
 
+#filter race
 test_net_worth_hisp <- OR_net_worth_test %>%
   filter(`Race Ethnicity` == "Hispanic/Latino" | `Race Ethnicity` == "White, NH")
 
+#change column name
 OR_net_worth_hisp <- test_net_worth_hisp[1,4]/test_net_worth_hisp[2,4]
-colnames(OR_net_worth_hisp) <- "Proportion"
+colnames(OR_net_worth_hisp) <- "Relative Risk"
 
-net_worth_join_OR <- full_join(OR_net_worth_black, OR_net_worth_hisp, by = "Proportion")
+#full join proportions
+net_worth_join_OR <- full_join(OR_net_worth_black, OR_net_worth_hisp, by = "Relative Risk")
 
+#add race column
 net_worth_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
-
 
 ##################################################################
 
@@ -119,8 +118,17 @@ output_net_worth_zero <- net_worth_zero %>%
          `Proportion MOE` = moe_prop(total, net_worth_test$total, total_moe, net_worth_test$total_moe)
          )
 
+#calculate relative risk
 relative_risk_zero_black <- output_net_worth_zero[1,6]/output_net_worth_zero[4,6]
 relative_risk_zero_hisp <- output_net_worth_zero[2,6]/output_net_worth_zero[4,6]
+
+#full join relative risk
+net_worth_zero_join_OR <- full_join(relative_risk_zero_black, relative_risk_zero_hisp, by = "prop")
+#update column name
+colnames(net_worth_zero_join_OR) <- "Relative Risk"
+
+#add race column
+net_worth_zero_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 # formatting for shiny output
 shiny_output_worth_zero <- output_net_worth_zero %>%
@@ -206,8 +214,17 @@ output_asset_poverty <- asset_poverty %>%
          `Proportion MOE` = moe_prop(total, net_worth_test$total, total_moe, net_worth_test$total_moe)
   )
 
+#calculate relative risk
 relative_risk_asset_black <- output_asset_poverty[1,6]/output_asset_poverty[4,6]
 relative_risk_asset_hisp <- output_asset_poverty[2,6]/output_asset_poverty[4,6]
+
+#full join relative risk
+asset_poverty_join_OR <- full_join(relative_risk_asset_black, relative_risk_asset_hisp, by = "prop")
+#update column name
+colnames(asset_poverty_join_OR) <- "Relative Risk"
+
+#add race column
+asset_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 # formatting for shiny output
 shiny_output_asset_poverty <- output_asset_poverty %>%
@@ -290,8 +307,17 @@ output_liquid_poverty <- liquid_poverty %>%
          `Proportion MOE` = moe_prop(total, net_worth_test$total, total_moe, net_worth_test$total_moe)
   )
 
+#calculate relative risk
 relative_risk_liquid_black <- output_liquid_poverty[1,6]/output_liquid_poverty[4,6]
 relative_risk_liquid_hisp <- output_liquid_poverty[2,6]/output_liquid_poverty[4,6]
+
+#full join relative risk
+liquid_poverty_join_OR <- full_join(relative_risk_liquid_black, relative_risk_liquid_hisp, by = "prop")
+#update column name
+colnames(liquid_poverty_join_OR) <- "Relative Risk"
+
+#add race column
+liquid_poverty_join_OR$`Race / Ethnicity` <- c("Black/AA, NH : White, NH", "Hispanic/Latino : White, NH")
 
 # formatting for shiny output
 shiny_output_liquid_poverty <- output_liquid_poverty %>%

@@ -1,4 +1,4 @@
 "","year","geo_description","type","subtype","estimate","success","trials","moe"
-"1",2019,37,"Race Ethnicity","Black/AA, NH","8.7%","","","4.6%"
-"2",2019,37,"Race Ethnicity","Hispanic/Latino","7.0%","","","7.3%"
-"3",2019,37,"Race Ethnicity","White, NH","1.6%","","","0.9%"
+"1",2019,37,"Race Ethnicity","Black/AA, NH",0.0873566714350949,"","",0.0460571230583684
+"2",2019,37,"Race Ethnicity","Hispanic/Latino",0.0702840255586358,"","",0.0730593843757028
+"3",2019,37,"Race Ethnicity","White, NH",NA,"","",NA
