@@ -1,5 +1,5 @@
 
-
+# read in data from google drive
 test <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_210001 Buncombe County Benefits Cliff Microsite/usa_00001.csv.gz")
 
 # filter for 5 year 2017 ACS data by state and county --- matches Shane's data
@@ -9,6 +9,7 @@ test_2017 <- test %>%
          YEAR == 2017,
          MULTYEAR %in% 2013:2017)
 
+# filter for 5 year 2019 ACS data by state and county
 test_2019 <- test %>%
   filter(STATEFIP == 37,
          COUNTYFIP == 21,
@@ -56,5 +57,31 @@ income_2019 <- incomes %>%
   select(size, income = HHINCOME, cum_sum, grouping)
 
 write_csv(income, "Buncombe_County_2020/plots/cliff_cdf.csv")
+
+fns_ <- income_2019 %>%
+  group_by(size) %>%
+  mutate(FNS_threshold = case_when(size == 1 ~ 17040,
+                                   size == 2 ~ 21599,
+                                   size == 3 ~ 27159,
+                                   size == 4 ~ 32718,
+                                   size == 5 ~ 38277,
+                                   TRUE ~ 0),
+         indicator = if_else(income < FNS_threshold, "Below", "Above")) %>%
+  group_by(size, indicator) %>%
+  summarise(total = sum(cum_sum))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
