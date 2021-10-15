@@ -58,7 +58,7 @@ income_2019 <- incomes %>%
 
 write_csv(income, "Buncombe_County_2020/plots/cliff_cdf.csv")
 
-fns_ <- income_2019 %>%
+fns_output2 <- income_2019 %>%
   group_by(size) %>%
   mutate(FNS_threshold = case_when(size == 1 ~ 17040,
                                    size == 2 ~ 21599,
@@ -66,12 +66,66 @@ fns_ <- income_2019 %>%
                                    size == 4 ~ 32718,
                                    size == 5 ~ 38277,
                                    TRUE ~ 0),
-         indicator = if_else(income < FNS_threshold, "Below", "Above")) %>%
+         indicator = if_else(income < FNS_threshold, "Below", "Above")) #%>%
+  # group_by(size, indicator) %>%
+  # summarise(total = sum(cum_sum))
+
+
+
+income_2019_test3 <- incomes %>%
+  # remove household incomes less than 0
+  # we are interested in low-income / low net-worth people, and such people are unlikely
+  # to have negative income
+  filter(HHINCOME >= 0) %>%
+  # create boolean of whether person is in school
+  # we'll later remove families where everyone is in school,
+  # because such families would generally not be entitled to benefits
+  mutate(in_school = ifelse(SCHOOL == 2, TRUE, FALSE)) %>%
+  # group by household
+  group_by(SERIAL) %>%
+  mutate(size = n(), # household size
+         total_school= sum(in_school), # total number in school
+  ) %>%
+  filter(size != total_school, # remove households where all people are in school
+         size <= 5, # only keep households with 5 or fewer people, for plotting
+  ) %>%
+  select(SERIAL, HHWT, HHINCOME, size) %>%
+  distinct() %>%
+  # now group by size and income
+  # we're grouping by income because we will sum household weights by income
+  # so they are aggregated and we don't have multiple rows of the same income
+  group_by(size, HHINCOME) %>%
+  summarize(HHWT = sum(HHWT)) %>%
+  arrange(size, HHINCOME) %>%
+  # remove household incomes less than 72000, which is a monthly income of 6000
+  # this is the amount we use for our other charts
+  filter(HHINCOME <= 72000) %>%
+  # the y axis of the plot should reflect number of people, not number of households,
+  # so, multiply HHWT by size to convert number of households to number of people
+  mutate(total = size * HHWT) %>%
+  ungroup() %>%
+  group_by(size) %>%
+  # group by size and add column with corresponding FNS thresholds
+  # then add a column stating whether the HHINCOME is below or above the threshold
+  mutate(FNS_threshold = case_when(size == 1 ~ 17040,
+                                   size == 2 ~ 21599,
+                                   size == 3 ~ 27159,
+                                   size == 4 ~ 32718,
+                                   size == 5 ~ 38277,
+                                   TRUE ~ 0),
+         indicator = if_else(HHINCOME < FNS_threshold, "Below", "Above")) %>%
+  ungroup() %>%
+  select(size, HHINCOME, total, FNS_threshold, indicator)
+
+#totals by household size
+totals_by_household_size <- income_2019_test3 %>%
   group_by(size, indicator) %>%
-  summarise(total = sum(cum_sum))
+  summarise(sum = sum(total))
 
-
-
+#totals overall
+totals_overall <- income_2019_test3 %>%
+  group_by(indicator) %>%
+  summarise(sum = sum(total))
 
 
 
