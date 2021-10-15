@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <div id="container" style="min-width: 310px; max-width: 600px; margin: 0 auto"></div>
+
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+
+      Highcharts.chart('container', {
+          chart: {
+              type: 'bar',
+              marginLeft: 215,
+              style: {
+                  'float': 'left'
+              }
+          },
+          title: {
+              text: 'Income level status by household size in Buncombe County'
+          },
+
+          xAxis: {
+              categories: [
+              	'Household size: One person<br><i>2019<i>',
+                'Household size: Two people<br><i>2019</i>',
+                'Household size: Three people<br><i>2019</i>',
+                'Household size: Four people<br><i>2019</i>',
+                'Household size: Five people<br><i>2019</i>'
+                ],
+              crosshair: true,
+              title: {
+                  text: null
+              }
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Number of people',
+                  align: 'middle'
+              },
+              labels: {
+                  overflow: 'justify'
+              }
+          },
+          tooltip: {
+              headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+              pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                  '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
+              footerFormat: '</table>',
+              shared: true,
+              useHTML: true
+          },
+          plotOptions: {
+              column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0
+              }
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'top',
+              x: -40,
+              y: 80,
+              floating: true,
+              borderWidth: 1,
+              backgroundColor:
+                  Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+              shadow: true
+          },
+          credits: {
+              text: 'Forsyth Futures',
+              href: 'http://forsythfutures.org'
+          },
+          responsive: {
+              rules: [{
+                  condition: {
+                      maxWidth: 400
+                  },
+                  chartOptions: {
+      						   chart: {
+                        marginLeft: 75
+      							 },
+      							 title: { text: null },
+      							 subtitle: {
+                       text: "Number of enrollees",
+                       verticalAlign: 'top',
+                       align: 'center',
+                       y: null
+                     },
+      							 legend: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    xAxis: {
+                        categories: [
+                        	'1 person',
+                          '2 people',
+                          '3 people',
+                          '4 people',
+                          '5 people'
+                          ],
+                        crosshair: true,
+                        title: {
+                            text: null
+                        }
+                    }
+                  }
+                }]},
+          series: [{
+              name: 'Below income level',
+              data: [10321, 7858, 5280, 5704, 5030]
+          }, {
+              name: 'Above income level',
+              data: [20359, 39138, 16707, 12580, 6565]
+          }
+          ]
+      });
+
+    </script>
+
+</html>
