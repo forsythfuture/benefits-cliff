@@ -1,6 +1,10 @@
 #############################################################################################################################################
 
-
+# create dataset for creating plots to show individuals either below/above income level, 
+# whether they are enrolled in FNS, and race/ethnicity breakouts
+# the dataset will show the number of people at each income amount
+#
+# the codebook for the dataset is in Forsyth_County_2019/income_cliff/total_income_counts.pdf
 
 #############################################################################################################################################
 
