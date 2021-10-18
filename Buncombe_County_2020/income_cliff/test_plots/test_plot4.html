@@ -24,15 +24,15 @@
               }
           },
           title: {
-              text: 'Income level status by race/ethnicity in Buncombe County'
+              text: 'Income level status by race/ethnicity in Buncombe County, NC'
           },
 
           xAxis: {
               categories: [
-              	'Black/AA, NH<br><i>2019<i>',
-              	'Hispanic/Latino<br><i>2019<i>',
-              	'Other Race<br><i>2019<i>',
-              	'White, NH<br><i>2019<i>'
+              	'Black/AA, NH',
+              	'Hispanic/Latino',
+              	'Other Race',
+              	'White, NH'
                ],
               crosshair: true,
               title: {
@@ -103,8 +103,10 @@
                     },
                     xAxis: {
                         categories: [
-                        	'On FNS',
-                          'Not on FNS'
+                        	'Black',
+                          'Hispanic',
+                          'Other',
+                          'White'
                           ],
                         crosshair: true,
                         title: {
@@ -115,10 +117,10 @@
                 }]},
           series: [{
               name: 'Below income level',
-              data: [3262,5978,1246,23707]
+              data: [3235,5823,919,20625] //from totals_by_race_ethnicity table in cliff_population_2019.R
           }, {
               name: 'Above income level',
-              data: [5952,4038,3070,82289]
+              data: [5376,4640,2823,81507] //from totals_by_race_ethnicity table in cliff_population_2019.R
           }]
       });
 

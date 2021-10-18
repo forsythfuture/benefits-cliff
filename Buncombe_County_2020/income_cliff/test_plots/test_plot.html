@@ -24,20 +24,21 @@
               }
           },
           title: {
-              text: 'Income level status by household size in Buncombe County'
+              text: 'Income level status by household size in Buncombe County, NC'
           },
 
           xAxis: {
               categories: [
-              	'Household size: One person<br><i>2019<i>',
-                'Household size: Two people<br><i>2019</i>',
-                'Household size: Three people<br><i>2019</i>',
-                'Household size: Four people<br><i>2019</i>',
-                'Household size: Five people<br><i>2019</i>'
+              	'One person',
+                'Two people',
+                'Three people',
+                'Four people',
+                'Five people'
                 ],
               crosshair: true,
               title: {
-                  text: null
+                  text: 'Household size',
+                  align: 'middle'
               }
           },
           yAxis: {
@@ -119,10 +120,10 @@
                 }]},
           series: [{
               name: 'Below income level',
-              data: [10321, 7858, 5280, 5704, 5030]
+              data: [9204,7352,5205,5136,3705] //from totals_by_household_size table in cliff_population_2019.R
           }, {
               name: 'Above income level',
-              data: [20359, 39138, 16707, 12580, 6565]
+              data: [20782,37400,17748,12556,5860] //from totals_by_household_size table in cliff_population_2019.R
           }
           ]
       });

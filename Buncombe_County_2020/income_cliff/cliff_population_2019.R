@@ -4,15 +4,18 @@
 
 #############################################################################################################################################
 
+#load library
+library(tidyverse)
+
 # read in data from google drive
 test <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_210001 Buncombe County Benefits Cliff Microsite/usa_00001.csv.gz")
 
 # filter for 5 year 2017 ACS data by state and county --- matches Shane's data
-test_2017 <- test %>%
-  filter(STATEFIP == 37,
-         COUNTYFIP == 21,
-         YEAR == 2017,
-         MULTYEAR %in% 2013:2017)
+# test_2017 <- test %>%
+#   filter(STATEFIP == 37,
+#          COUNTYFIP == 21,
+#          YEAR == 2017,
+#          MULTYEAR %in% 2013:2017)
 
 # filter for 5 year 2019 ACS data by state and county
 test_2019 <- test %>%
@@ -225,7 +228,7 @@ myFun <- function(vector, thresh) {
 }
 
 # vector of serial numbers mentioned at least 2+ times
-multiple_serials <- myFun(incomes$SERIAL, 1) %>% unique()
+multiple_serials <- myFun(test_2019$SERIAL, 1) %>% unique()
 
 #pick up the recode
 income_2019_race2 <- income_2019_race %>%
