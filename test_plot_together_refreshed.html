@@ -14,9 +14,9 @@
 			</style>
 </head>
 <body>
-	<span id = "familySize">Select option: </span><SELECT id="list">
-			<OPTION VALUE="A">Household Size</option>
-			<OPTION VALUE="B">Total Population</option>
+	<span id = "familySize">Select Option: </span><SELECT id="list">
+			<OPTION VALUE="A">Total Population</option>
+			<OPTION VALUE="B">Household Size</option>
 			<OPTION VALUE="C">Race/Ethnicity</option>
 	</SELECT>
 		<div id="container" style="max-width:700px"></div>
@@ -26,26 +26,21 @@
     chart: {
         renderTo: 'container',
         defaultSeriesType: 'bar',
-                      marginLeft: 215,
+              marginLeft: 215,
               style: {
                   'float': 'left'
               }
           },
           title: {
-              text: 'Income Level and FNS Status by Household Size in Buncombe County, NC'
+              text: 'Income Level and FNS Status for Total Population in Buncombe County, NC'
           },
           xAxis: {
               categories: [
-              	'One Person',
-                'Two People',
-                'Three People',
-                'Four People',
-                'Five People'
-                ],
+              	'Total Population'
+               ],
               crosshair: true,
               title: {
-                  text: 'Household Size',
-                  align: 'middle'
+                  text: null
               }
           },
           yAxis: {
@@ -112,11 +107,8 @@
                     },
                     xAxis: {
                         categories: [
-                        	'1 person',
-                          '2 people',
-                          '3 people',
-                          '4 people',
-                          '5 people'
+                        	'Below',
+                          'Above'
                           ],
                         crosshair: true,
                         title: {
@@ -127,16 +119,16 @@
                 }]},
           series: [{
               color: '#f38538',
-              name: 'Enrolled in FNS', //from totals_by_household_size_foodstamps table in cliff_population_2019.R
-              data: [3002,3724,4071,3440,2915]
+              name: 'Enrolled in FNS', //from totals_by_fns table in cliff_population_2019.R
+              data: [17152]
           }, {
               color: '#004c89',
-              name: 'Below Income Level',
-              data: [9204,7352,5205,5136,3705] //from totals_by_household_size table in cliff_population_2019.R
+              name: 'Below Income Level', //from totals_overall table in cliff_population_2019.R
+              data: [30602]
           }, {
               color: '#478aa1',
-              name: 'Above Income Level',
-              data: [20782,37400,17748,12556,5860] //from totals_by_household_size table in cliff_population_2019.R
+              name: 'Above Income Level', //from totals_overall table in cliff_population_2019.R
+              data: [94346]
           }]
 	};
 
@@ -146,125 +138,6 @@
 		    //alert('f')
 		    var selVal = $("#list").val();
 		    if(selVal == "A" || selVal == '')
-		    {var options = {
-          chart: {
-            renderTo: 'container',
-            defaultSeriesType: 'bar',
-                      marginLeft: 215,
-              style: {
-                  'float': 'left'
-              }
-          },
-          title: {
-              text: 'Income Level and FNS Status by Household Size in Buncombe County, NC'
-          },
-          xAxis: {
-              categories: [
-              	'One Person',
-                'Two People',
-                'Three People',
-                'Four People',
-                'Five People'
-                ],
-              crosshair: true,
-              title: {
-                  text: 'Household Size',
-                  align: 'middle'
-              }
-          },
-          yAxis: {
-              min: 0,
-              title: {
-                  text: 'Number of People',
-                  align: 'middle'
-              },
-              labels: {
-                  overflow: 'justify'
-              }
-          },
-          tooltip: {
-              headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-              pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                  '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
-              footerFormat: '</table>',
-              shared: true,
-              useHTML: true
-          },
-          plotOptions: {
-              column: {
-                  pointPadding: 0.2,
-                  borderWidth: 0
-              }
-          },
-          legend: {
-              layout: 'vertical',
-              align: 'right',
-              verticalAlign: 'top',
-              x: -40,
-              y: 80,
-              floating: true,
-              borderWidth: 1,
-              backgroundColor:
-                  Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
-              shadow: true
-          },
-          credits: {
-              text: 'Forsyth Futures',
-              href: 'http://forsythfutures.org'
-          },
-          responsive: {
-              rules: [{
-                  condition: {
-                      maxWidth: 400
-                  },
-                  chartOptions: {
-      						   chart: {
-                        marginLeft: 75
-      							 },
-      							 title: { text: null },
-      							 subtitle: {
-                       text: "Number of enrollees",
-                       verticalAlign: 'top',
-                       align: 'center',
-                       y: null
-                     },
-      							 legend: {
-                        enabled: false
-                    },
-                    credits: {
-                        enabled: false
-                    },
-                    xAxis: {
-                        categories: [
-                        	'1 person',
-                          '2 people',
-                          '3 people',
-                          '4 people',
-                          '5 people'
-                          ],
-                        crosshair: true,
-                        title: {
-                            text: null
-                        }
-                    }
-                  }
-                }]},
-          series: [{
-              color: '#f38538',
-              name: 'Enrolled in FNS', //from totals_by_household_size_foodstamps table in cliff_population_2019.R
-              data: [3002,3724,4071,3440,2915]
-          }, {
-              color: '#004c89',
-              name: 'Below Income Level',
-              data: [9204,7352,5205,5136,3705] //from totals_by_household_size table in cliff_population_2019.R
-          }, {
-              color: '#478aa1',
-              name: 'Above Income Level',
-              data: [20782,37400,17748,12556,5860] //from totals_by_household_size table in cliff_population_2019.R
-          }]
-	};
-}
-		    else if(selVal == "B")
 		    {var options = {
           chart: {
             renderTo: 'container',
@@ -372,6 +245,125 @@
               color: '#478aa1',
               name: 'Above Income Level', //from totals_overall table in cliff_population_2019.R
               data: [94346]
+          }]
+	};
+}
+		    else if(selVal == "B")
+		    {var options = {
+          chart: {
+            renderTo: 'container',
+            defaultSeriesType: 'bar',
+                      marginLeft: 215,
+              style: {
+                  'float': 'left'
+              }
+          },
+          title: {
+              text: 'Income Level and FNS Status by Household Size in Buncombe County, NC'
+          },
+          xAxis: {
+              categories: [
+              	'One Person',
+                'Two People',
+                'Three People',
+                'Four People',
+                'Five People'
+                ],
+              crosshair: true,
+              title: {
+                  text: 'Household Size',
+                  align: 'middle'
+              }
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Number of People',
+                  align: 'middle'
+              },
+              labels: {
+                  overflow: 'justify'
+              }
+          },
+          tooltip: {
+              headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+              pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                  '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
+              footerFormat: '</table>',
+              shared: true,
+              useHTML: true
+          },
+          plotOptions: {
+              column: {
+                  pointPadding: 0.2,
+                  borderWidth: 0
+              }
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'top',
+              x: -40,
+              y: 80,
+              floating: true,
+              borderWidth: 1,
+              backgroundColor:
+                  Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+              shadow: true
+          },
+          credits: {
+              text: 'Forsyth Futures',
+              href: 'http://forsythfutures.org'
+          },
+          responsive: {
+              rules: [{
+                  condition: {
+                      maxWidth: 400
+                  },
+                  chartOptions: {
+      						   chart: {
+                        marginLeft: 75
+      							 },
+      							 title: { text: null },
+      							 subtitle: {
+                       text: "Number of enrollees",
+                       verticalAlign: 'top',
+                       align: 'center',
+                       y: null
+                     },
+      							 legend: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    xAxis: {
+                        categories: [
+                        	'1 person',
+                          '2 people',
+                          '3 people',
+                          '4 people',
+                          '5 people'
+                          ],
+                        crosshair: true,
+                        title: {
+                            text: null
+                        }
+                    }
+                  }
+                }]},
+          series: [{
+              color: '#f38538',
+              name: 'Enrolled in FNS', //from totals_by_household_size_foodstamps table in cliff_population_2019.R
+              data: [3002,3724,4071,3440,2915]
+          }, {
+              color: '#004c89',
+              name: 'Below Income Level',
+              data: [9204,7352,5205,5136,3705] //from totals_by_household_size table in cliff_population_2019.R
+          }, {
+              color: '#478aa1',
+              name: 'Above Income Level',
+              data: [20782,37400,17748,12556,5860] //from totals_by_household_size table in cliff_population_2019.R
           }]
 	};
 }
