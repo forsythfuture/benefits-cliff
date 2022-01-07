@@ -67,7 +67,7 @@ for(i in seq(1:5)){
     select(income, cum_sum) %>%
     mutate(output = paste0("[",income,",",cum_sum,"],")) %>%
     select(output) %>%
-    write_xlsx(paste0("~/benefits-cliff/Buncombe_County_2020/income_cliff/data/cliff_pop_size", i ,".xlsx"))
+    write_xlsx(paste0("~/benefits-cliff/Buncombe_County_2020/income_cliff/data/cliff_pop_size", i,".xlsx"))
   
 }
 
