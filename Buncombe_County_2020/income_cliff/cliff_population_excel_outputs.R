@@ -1,50 +1,73 @@
-#####################################################
-#
+############################################################################
+
 # create dataset excel outputs for creating cumulative sum plot
 # the dataset will show the number of people at each income amount
-#
-# run cliff_population_2019.R script before running these scripts
-#
-######################################################
 
-#HH size of 1
-cliff_pop_size1 <- test_2019 %>% 
-  filter(size == 1) %>%
-  select(income, cum_sum) %>%
-  mutate(output = paste0("[",income,",",cum_sum,"],")) %>%
-  select(output) %>%
-  writexl::write_xlsx("C:\\Users\\daniel ludolf\\Documents\\benefits-cliff\\Buncombe_County_2020\\income_cliff\\cliff_pop_size1.xlsx")
+##############################################################################
 
-#HH size of 2
-cliff_pop_size2 <- test_2019 %>% 
-  filter(size == 2) %>%
-  select(income, cum_sum) %>%
-  mutate(output = paste0("[",income,",",cum_sum,"],")) %>%
-  select(output) %>%
-  writexl::write_xlsx("C:\\Users\\daniel ludolf\\Documents\\benefits-cliff\\Buncombe_County_2020\\income_cliff\\cliff_pop_size2.xlsx")
+library(tidyverse)
+library(writexl)
 
-#HH size of 3
-cliff_pop_size3 <- test_2019 %>% 
-  filter(size == 3) %>%
-  select(income, cum_sum) %>%
-  mutate(output = paste0("[",income,",",cum_sum,"],")) %>%
-  select(output) %>%
-  writexl::write_xlsx("C:\\Users\\daniel ludolf\\Documents\\benefits-cliff\\Buncombe_County_2020\\income_cliff\\cliff_pop_size3.xlsx")
+# read in data from google drive
+data <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_210001 Buncombe County Benefits Cliff Microsite/usa_00001.csv.gz")
 
-#HH size of 4
-cliff_pop_size4 <- test_2019 %>% 
-  filter(size == 4) %>%
-  select(income, cum_sum) %>%
-  mutate(output = paste0("[",income,",",cum_sum,"],")) %>%
-  select(output) %>%
-  writexl::write_xlsx("C:\\Users\\daniel ludolf\\Documents\\benefits-cliff\\Buncombe_County_2020\\income_cliff\\cliff_pop_size4.xlsx")
+# filter for 5 year 2019 ACS data by state and county
+data_2019 <- data %>%
+  filter(STATEFIP == 37,
+         COUNTYFIP == 21,
+         YEAR == 2019,
+         MULTYEAR %in% 2015:2019)
 
-#HH size of 5
-cliff_pop_size5 <- test_2019 %>% 
-  filter(size == 5) %>%
-  select(income, cum_sum) %>%
-  mutate(output = paste0("[",income,",",cum_sum,"],")) %>%
-  select(output) %>%
-  writexl::write_xlsx("C:\\Users\\daniel ludolf\\Documents\\benefits-cliff\\Buncombe_County_2020\\income_cliff\\cliff_pop_size5.xlsx")
+income_2019 <- test_2019 %>%
+  # remove household incomes less than 0
+  # we are interested in low-income / low net-worth people, and such people are unlikely
+  # to have negative income
+  filter(HHINCOME >= 0) %>%
+  # create boolean of whether person is in school
+  # we'll later remove families where everyone is in school,
+  # because such families would generally not be entitled to benefits
+  mutate(in_school = ifelse(SCHOOL == 2, TRUE, FALSE)) %>%
+  # group by household
+  group_by(SERIAL) %>%
+  mutate(size = n(), # household size
+         total_school= sum(in_school), # total number in school
+  ) %>%
+  filter(size != total_school, # remove households where all people are in school
+         size <= 5, # only keep households with 5 or fewer people, for plotting
+  ) %>%
+  select(SERIAL, HHWT, HHINCOME, size) %>%
+  distinct() %>%
+  # now group by size and income
+  # we're grouping by income because we will sum household weights by income
+  # so they are aggregated and we don't have multiple rows of the same income
+  group_by(size, HHINCOME) %>%
+  summarize(HHWT = sum(HHWT)) %>%
+  arrange(size, HHINCOME) %>%
+  # create cumulative sum for incomes by using the weight column
+  mutate(cum_sum = cumsum(HHWT),
+         perc_sum = round(percent_rank(cum_sum), 2)) %>%
+  # remove household incomes less than 72000, which is a monthly income of 6000
+  # this is the amount we use for our other charts
+  filter(HHINCOME <= 72000) %>%
+  # add column that is the same thing with all values, so that the nested d3 plot works
+  # this column is irrelevant, but lets use recycle the d3 code from the other plots
+  mutate(grouping = "group",
+         # the y axis of the plot should reflect number of people, not number of households,
+         # so, multiply cum_sum by size to convert number of households to number of people
+         cum_sum = size * cum_sum) %>%
+  ungroup() %>%
+  select(size, income = HHINCOME, cum_sum, grouping)
 
+cliff_pop_size <- list()
+
+for(i in seq(1:5)){
+  
+  cliff_pop_size[[i]] <- income_2019 %>% 
+    filter(size == i) %>%
+    select(income, cum_sum) %>%
+    mutate(output = paste0("[",income,",",cum_sum,"],")) %>%
+    select(output) %>%
+    write_xlsx(paste0("~/benefits-cliff/Buncombe_County_2020/income_cliff/data/cliff_pop_size", i ,".xlsx"))
+  
+}
 
