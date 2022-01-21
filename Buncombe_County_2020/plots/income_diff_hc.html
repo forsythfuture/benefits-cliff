@@ -367,11 +367,11 @@
         };
         
         // initial chart for total income
-        var chart_full_options = create_chart("container-full", "value", "Buncombe County, NC After and Pre Tax Incomes", "Monthly after tax income plus benefits");
+        var chart_full_options = create_chart("container-full", "value", "Buncombe County, NC After and Pre Tax Incomes", "Monthly after-tax income plus benefits");
 		var chart_full = new Highcharts.Chart(chart_full_options); 
 	
 		// initial chart for min difference in income
-        var chart_diff_min_options = create_chart("container-diff-min", "diff", "For each additional dollar you earn, how much do you keep in afer-tax income plus benefits?", "After-tax income plus benefits increase for each dollar increase in pre-tax income", yAxisFull = false);
+        var chart_diff_min_options = create_chart("container-diff-min", "diff", "For each additional dollar you earn, how much do you keep in after-tax income plus benefits?", "After-tax income plus benefits increase for each dollar increase in pre-tax income", yAxisFull = false);
 		var chart_diff_min = new Highcharts.Chart(chart_diff_min_options); 
         
         // get value of family composition drop down and filter dataset
