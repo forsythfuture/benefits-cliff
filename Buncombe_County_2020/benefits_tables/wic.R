@@ -23,8 +23,8 @@ wic <- wic %>%
 fpl <- read_rds('Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds') %>%
   # multiply guideline amount by 1.85 so it is at 185%
   mutate(guidelines_month = guidelines_month * 1.85) %>%
-  # only keep 2018
-  filter(year == 2021) %>%
+  # only keep 2022
+  filter(year == 2022) %>%
   select(size = household_size, guidelines_month)
 
 # add 185% poverty limit to WIC data set

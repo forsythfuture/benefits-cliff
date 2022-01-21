@@ -80,9 +80,9 @@ snap_amounts <- c(`1` = 250,
 # read in federal poverty guidelines
 fpg <- read_rds('Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds')
 
-# convert guideline amounts to 200% and filter for 2021
+# convert guideline amounts to 200% and filter for 2022
 snap_income_limit <- fpg %>%
-  filter(year == 2021) %>%
+  filter(year == 2022) %>%
   mutate(snap_income_limit = round(guidelines_month * 2, 0)) %>%
   rename(size = household_size) %>%
   select(size, snap_income_limit)
