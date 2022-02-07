@@ -6,7 +6,7 @@
 
 library(tidyverse)
 
-care <- read_rds('benefits_tables/tables/base.rds')
+care <- read_rds('Forsyth_County_2019/benefits_tables/tables/base.rds')
 
 # the market value of subsidies are based on the 2019 NC subsidized child care
 # market rates for Forsyth County 4-star child care centers
@@ -34,7 +34,7 @@ care <- care %>%
 # can receive benefits up to 200% fpg
 
 # read in federal poverty guidelines
-fpg <- read_rds('benefits_tables/tables/federal_poverty_guidelines.rds') %>%
+fpg <- read_rds('Forsyth_County_2019/benefits_tables/tables/federal_poverty_guidelines.rds') %>%
   # convert guideline amounts to 200% and filter for 2019
   filter(year == 2019) %>%
   mutate(income_limit = round(guidelines_month * 2, 0)) %>%
