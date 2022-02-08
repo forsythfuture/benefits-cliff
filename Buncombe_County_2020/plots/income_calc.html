@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="mystyles.css">
+    
+    <style>
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+  
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        
+    </style>
+</head>
+
+<body>
+  
+		Select Number of Jobs:
+		<select id="list" onchange="changecat(this.value);">
+		  <option value="" selected="selected"></option>
+			<option value="A">1</option>
+			<option value="B">2</option>
+			<option value="C">3</option>
+			<option value="D">4</option>
+		</select>
+		<p></p>
+		
+		<div class="types" id="A">
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Monthly Income: $<output type="text" id="total" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="B">
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount2" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity2" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount3" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity3" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Monthly Income: $<output type="text" id="total2" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="C">
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount4" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity4" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount5" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity5" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount6" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity6" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Monthly Income: $<output type="text" id="total3" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="D">
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount7" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity7" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount8" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity8" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount9" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity9" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount10" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity10" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Monthly Income: $<output type="text" id="total4" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+
+	<script>
+	
+    $("#list").on("change", function() {
+      var val = $(this).val();
+      $(".types").hide().find('input:text').val(''); // hide and empty
+      if (val) $("#" + val).show();
+    });
+
+		function calculate(){
+			var amount = document.getElementById("amount").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity").value;
+			var quantity = +quantity;
+			var total = amount * quantity * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total").value = total;
+		}
+		
+	</script>
+</body>
+</html>
