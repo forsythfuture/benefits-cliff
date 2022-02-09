@@ -115,8 +115,8 @@
 		</SELECT>
 		<p></p>
 		Include the Earned Income Tax Credit in tax calcuations (prorated monthly):<br>
-		<label><input type="radio" value='No EITC' name="EITC" checked> No</label>
-	    <label><input type="radio" value='EITC' name="EITC"> Yes</label><p></p>
+		<label><input type="radio" value='No EITC' name="EITC" checked><span id='eitc-no' class="grayout"> No</span></label>
+	    <label><input type="radio" value='EITC' name="EITC"><span id='eitc-yes' class="grayout"> Yes</span></label><p></p>
 	    Choose benefits (Grayed out options are unavailable for the family size):<br>
 	    <label><input type="checkbox" name="benefit_check" id='fns-check' value="FNS (Food Stamps)" checked><span id='fns-text'> FNS (Food Stamps)</span></label>
 	    <label><input type="checkbox" name="benefit_check" id='child-check' value="NC Child Care Subsidy / Smart Start"><span id='child-text' class="grayout"> NC Child Care Subsidy / Smart Start</span></label>
@@ -213,7 +213,7 @@
         	// reset each checkbox by activating it
         	
         	// create array of checkbox element ID's
-        	var check_element_id = ['fns-text', 'child-text', 'house-text', 'wic-text', 'tanf-text']
+        	var check_element_id = ['fns-text', 'child-text', 'house-text', 'wic-text', 'tanf-text', 'eitc-no', 'eitc-yes']
         	
         	// initially convert all to no gray out, so we only have to gray out
 			check_element_id.forEach(function(checkbox) {
@@ -226,7 +226,7 @@
         	// families with no kids
         	
         	// elements to gray out for families without children
-        	var gray_out_no_child = ['child-text', 'wic-text', 'tanf-text']
+        	var gray_out_no_child = ['child-text', 'wic-text', 'tanf-text', 'eitc-no', 'eitc-yes']
         	
         	if (selVal == 'A' || selVal == 'E') {
         		
