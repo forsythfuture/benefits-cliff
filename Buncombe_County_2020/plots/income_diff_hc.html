@@ -7,6 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://code.highcharts.com/highcharts.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link rel="stylesheet" href="mystyles.css">
 		<style>
 			body {
 				font-family: Sans-Serif;	
@@ -42,13 +43,65 @@
     
     <div id = "selections">
     
-    Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount" name="amount" min="0.01" step="0.01" max="2500" value="0"/>
-    Hourly Wage: $<input type="number" oninput="calculate()" id="quantity" name="quantity" min="0.01" step="0.01" max="2500" value="0.00"/>
-    <p></p>
-    Monthly Income: $<input type="text" id="total" name="total" oninput="this.setCustomValidity('')"/>  
-    <p></p>
-    <hr>
+		Select Number of Jobs:
+		<select id="list2" onchange="changecat(this.value);">
+		  <option value="" selected="selected"></option>
+			<option value="A">1</option>
+			<option value="B">2</option>
+			<option value="C">3</option>
+			<option value="D">4</option>
+		</select>
+		<p></p>
+		
+		<div class="types" id="A">
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Monthly Income: $<output type="text" id="total" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="B">
+      Hours Worked Per Week: <input type="number" oninput="calculate2()" id="amount2" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate2()" id="quantity2" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate2()" id="amount3" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate2()" id="quantity3" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Monthly Income: $<output type="text" id="total2" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="C">
+      Hours Worked Per Week: <input type="number" oninput="calculate3()" id="amount4" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate3()" id="quantity4" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate3()" id="amount5" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate3()" id="quantity5" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate3()" id="amount6" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate3()" id="quantity6" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Monthly Income: $<output type="text" id="total3" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="D">
+      Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount7" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity7" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount8" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity8" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount9" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity9" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount10" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity10" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Monthly Income: $<output type="text" id="total4" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
 
+    <hr>
+    <p></p>
 		Select Family Size:
 		<SELECT id="list" onchange=disable_checks()>
 			<OPTION VALUE="A">1 adult</option>
@@ -78,15 +131,77 @@
 		<div id="container-diff-min" style="max-width:800px"></div>
     	<script type="text/javascript">
     	
-        	function calculate(){
-      			var amount = document.getElementById("amount").value;
-      			var amount = +amount;
-      			var quantity = document.getElementById("quantity").value;
-      			var quantity = +quantity;
-      			var total = amount * quantity * 4.35;
-      			var total = +total.toFixed(2);
-      			document.getElementById("total").value = total;
-    		}
+    $("#list2").on("change", function() {
+      var val = $(this).val();
+      $(".types").hide().find('input:text').val(''); // hide and empty
+      if (val) $("#" + val).show();
+    });
+
+		function calculate(){
+			var amount = document.getElementById("amount").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity").value;
+			var quantity = +quantity;
+			var total = amount * quantity * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total").value = total;
+		}
+		
+		function calculate2(){
+			var amount = document.getElementById("amount2").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity2").value;
+			var quantity = +quantity;
+			var amount2 = document.getElementById("amount3").value;
+			var amount2 = +amount2;
+			var quantity2 = document.getElementById("quantity3").value;
+			var quantity2 = +quantity2;
+			var total = ((amount * quantity) + (amount2 * quantity2)) * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total2").value = total;
+		}
+		
+		function calculate3(){
+		  var amount = document.getElementById("amount4").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity4").value;
+			var quantity = +quantity;
+			var amount2 = document.getElementById("amount5").value;
+			var amount2 = +amount2;
+			var quantity2 = document.getElementById("quantity5").value;
+			var quantity2 = +quantity2;
+			var amount3 = document.getElementById("amount6").value;
+			var amount3 = +amount3;
+			var quantity3 = document.getElementById("quantity6").value;
+			var quantity3 = +quantity3;
+			var total = ((amount * quantity) + (amount2 * quantity2) + (amount3 * quantity3)) * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total3").value = total;
+		}
+		
+		function calculate4(){
+			var amount = document.getElementById("amount7").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity7").value;
+			var quantity = +quantity;
+			var amount2 = document.getElementById("amount8").value;
+			var amount2 = +amount2;
+			var quantity2 = document.getElementById("quantity8").value;
+			var quantity2 = +quantity2;
+			var amount3 = document.getElementById("amount9").value;
+			var amount3 = +amount3;
+			var quantity3 = document.getElementById("quantity9").value;
+			var quantity3 = +quantity3;
+			var amount4 = document.getElementById("amount10").value;
+			var amount4 = +amount4;
+			var quantity4 = document.getElementById("quantity10").value;
+			var quantity4 = +quantity4;
+			var total = ((amount * quantity) + (amount2 * quantity2) + (amount3 * quantity3) + (amount4 * quantity4)) * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total4").value = total;
+		}
+		
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
         const json_file = "https://raw.githubusercontent.com/forsythfuture/benefits-cliff/master/Buncombe_County_2020/plots/data/income_diff.json"
         
