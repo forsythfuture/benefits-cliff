@@ -7,3 +7,6 @@ create_plot_data.R
 create_javascript_array.R
 outfile.txt
 *ipynb_check*
+.RDataTmp
+.RDataTmp1
+.RDataTmp2
