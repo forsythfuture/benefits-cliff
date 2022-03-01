@@ -57,7 +57,7 @@
       Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount" name="amount" min="0" step="0.01" max="2500" value="0"/>
       Hourly Wage: $<input type="number" oninput="calculate()" id="quantity" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
       <p></p>
-      Monthly Income: $<output type="text" id="total" name="total" oninput="this.setCustomValidity('')"/>  
+      Pre-Tax Monthly Income: $<output type="text" id="total" name="total" oninput="this.setCustomValidity('')"/>  
       <p></p>
     </div>
     <div class="types" id="B">
@@ -67,7 +67,7 @@
       Hours Worked Per Week: <input type="number" oninput="calculate2()" id="amount3" name="amount" min="0" step="0.01" max="2500" value="0"/>
       Hourly Wage: $<input type="number" oninput="calculate2()" id="quantity3" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
       <p></p>
-      Monthly Income: $<output type="text" id="total2" name="total" oninput="this.setCustomValidity('')"/>  
+      Pre-Tax Monthly Income: $<output type="text" id="total2" name="total" oninput="this.setCustomValidity('')"/>  
       <p></p>
     </div>
     <div class="types" id="C">
@@ -80,7 +80,7 @@
       Hours Worked Per Week: <input type="number" oninput="calculate3()" id="amount6" name="amount" min="0" step="0.01" max="2500" value="0"/>
       Hourly Wage: $<input type="number" oninput="calculate3()" id="quantity6" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
       <p></p>
-      Monthly Income: $<output type="text" id="total3" name="total" oninput="this.setCustomValidity('')"/>  
+      Pre-Tax Monthly Income: $<output type="text" id="total3" name="total" oninput="this.setCustomValidity('')"/>  
       <p></p>
     </div>
     <div class="types" id="D">
@@ -96,7 +96,7 @@
       Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount10" name="amount" min="0" step="0.01" max="2500" value="0"/>
       Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity10" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
       <p></p>
-      Monthly Income: $<output type="text" id="total4" name="total" oninput="this.setCustomValidity('')"/>  
+      Pre-Tax Monthly Income: $<output type="text" id="total4" name="total" oninput="this.setCustomValidity('')"/>  
       <p></p>
     </div>
 
@@ -511,7 +511,7 @@
         };
         
         // initial chart for total income
-        var chart_full_options = create_chart("container-full", "value", "Buncombe County, NC After and Pre Tax Incomes", "Monthly after-tax income plus benefits");
+        var chart_full_options = create_chart("container-full", "value", "Buncombe County, NC After and Pre-Tax Incomes", "Monthly after-tax income plus benefits");
 		var chart_full = new Highcharts.Chart(chart_full_options); 
 	
 		// initial chart for min difference in income
