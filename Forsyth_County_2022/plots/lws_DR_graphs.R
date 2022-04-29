@@ -21,7 +21,7 @@ benefits_payment_loss <- c(106.36,'1,249.40',0,126.84)
 # function to create benefit plot
 benefits_plot <- function(benefit, wage, loss){
   
-  benefits_wage %>% 
+  p <- benefits_wage %>% 
     filter(benefit == {{benefit}}) %>% 
     ggplot((aes(x = hourly_wage, y = payment))) +
     geom_line(color = "#004c89", size = 1.5) +
@@ -29,10 +29,15 @@ benefits_plot <- function(benefit, wage, loss){
     scale_y_continuous(labels = scales::dollar_format(prefix = "$")) +
     labs(y = "Benefit Payment", 
          x = "Full-Time Hourly Wage",
-         title = "Benefit Payment by Full-Time Hourly Wage",
-         subtitle = glue::glue("After Reaching a Hourly Wage of ${wage}, {benefit}\nExhibits a Cliff with the Recipient Losing ${loss}")) +
-    ff_style()
+         title = "Benefit Payment by Full-Time Hourly Wage in a 1 Adult, 2 Children\nUnder 5 Years Old Household",
+         subtitle = glue::glue("After reaching an hourly wage of ${wage}, the recipient experiences the cliff and\nloses ${loss} worth of monthly benefits."),
+         caption = "The amount of benefit loss varies based on household size.") +
+    ff_style() +
+    theme(plot.caption = element_text(size = 9))
   
+  # left align text
+  ggpubr::ggarrange(left_align(p, c("subtitle", "title", "caption")))
+    
 }
 
 # output plots for the four benefit programs
