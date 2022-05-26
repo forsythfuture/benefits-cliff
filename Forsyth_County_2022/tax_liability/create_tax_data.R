@@ -9,7 +9,7 @@
 
 library(tidyverse)
 
-base <- read_rds('Forsyth_County_2022/benefits_tables/tables/base.rds')
+base <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
 # there are 8 different family types, and each family type is a different
 # tax filing unit type
@@ -40,4 +40,11 @@ tax <- base %>%
 # this csv file is then fed to the tax-calculator command line tool using the command:
 # tc tax_inputs.csv 2022 --dump --dvars tax_dump_vars
 # the output is renames 'tax_output.csv'
-write_csv(tax, "Forsyth_County_2022/tax_liability/tax_inputs.csv")
+write_csv(tax, "~/benefits-cliff/Forsyth_County_2022/tax_liability/tax_inputs.csv")
+
+
+
+
+
+
+
