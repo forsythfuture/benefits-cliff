@@ -11,10 +11,10 @@
 
 library(tidyverse)
 
-medical <- read_rds('Forsyth_County_2022/benefits_tables/tables/base.rds')
+medical <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
 # read in poverty guidelines and filter for 2022
-fpl <- read_rds("Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds") %>%
+fpl <- read_rds("~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds") %>%
   filter(year == 2022) %>%
   select(household_size, guidelines_month)
 
@@ -72,4 +72,4 @@ medical <- medical %>%
          benefit = "NC Medicaid / Health Choice") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
-  write_rds(medical, 'Forsyth_County_2022/benefits_tables/tables/medical.rds')
+write_rds(medical, '~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/medical.rds')

@@ -10,7 +10,7 @@
 
 library(tidyverse)
 
-prek <- read_rds('Forsyth_County_2022/benefits_tables/tables/base.rds')
+prek <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
 # participants must be under 75% of state median income for family size
 # these levels were pulled from page 3-5 of the policy manual:
@@ -44,4 +44,4 @@ prek <- prek %>%
           benefit = "NC Pre-K") %>%
    select(composition, adults, children, monthly_income, payment, benefit)
 
- write_rds(prek, 'Forsyth_County_2022/benefits_tables/tables/prek.rds')
+write_rds(prek, '~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/prek.rds')

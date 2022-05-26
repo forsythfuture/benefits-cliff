@@ -6,7 +6,7 @@
 
 library(tidyverse)
 
-housing <- read_rds('Forsyth_County_2022/benefits_tables/tables/base.rds')
+housing <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
 # create data frame of fair market rent values in 2022 based on family size
 # this is the max rent that can be reimbursed
@@ -80,4 +80,4 @@ housing <- housing %>%
         benefit = "Housing Choice Voucher") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
-write_rds(housing, 'Forsyth_County_2022/benefits_tables/tables/sec8.rds')
+write_rds(housing, '~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/sec8.rds')

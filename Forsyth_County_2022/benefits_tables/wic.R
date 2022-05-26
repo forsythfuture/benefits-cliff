@@ -6,7 +6,7 @@
 
 library(tidyverse)
 
-wic <- read_rds('Forsyth_County_2022/benefits_tables/tables/base.rds')
+wic <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
 # average benefit per person in 2021 was 31.87
 # https://www.fns.usda.gov/pd/wic-program go to Monthly Data – State Level Participation by Category and Program Costs: FY 2021 (preliminary)
@@ -21,7 +21,7 @@ wic <- wic %>%
          payment = ifelse(children == 3, payment - 31.87, payment))
 
 # can receive wic up to 185% of fpl
-fpl <- read_rds('Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds') %>%
+fpl <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds') %>%
   # multiply guideline amount by 1.85 so it is at 185%
   mutate(guidelines_month = guidelines_month * 1.85) %>%
   # only keep 2018
@@ -36,4 +36,4 @@ wic <- wic %>%
          benefit = "WIC") %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
-write_rds(wic, 'Forsyth_County_2022/benefits_tables/tables/wic.rds')
+write_rds(wic, '~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/wic.rds')

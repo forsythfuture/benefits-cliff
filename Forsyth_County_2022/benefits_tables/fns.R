@@ -11,7 +11,7 @@
 
 library(tidyverse)
 
-base <- read_rds('Forsyth_County_2022/benefits_tables/tables/base.rds')
+base <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
 snap <- base %>%
   mutate(benefit = "FNS (Food Stamps)")
@@ -78,7 +78,7 @@ snap_amounts <- c(`1` = 250,
 
 # maximum income is set at 200% of federal poverty guideline
 # read in federal poverty guidelines
-fpg <- read_rds('Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds')
+fpg <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds')
 
 # convert guideline amounts to 200% and filter for 2019
 snap_income_limit <- fpg %>%
@@ -102,4 +102,4 @@ snap <- snap %>%
          payment = ifelse((size %in% c(1,2) & payment < 15), 0, payment)) %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
-write_rds(snap, 'Forsyth_County_2022/benefits_tables/tables/fns.rds')
+write_rds(snap, '~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/fns.rds')

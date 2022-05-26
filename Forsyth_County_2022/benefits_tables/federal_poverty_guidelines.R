@@ -22,4 +22,4 @@ fpg <- data.frame(household_size = rep(seq_len(8), times = 3),
   select(household_size, year, everything())
 
 
-write_rds(fpg, 'Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds')
+write_rds(fpg, '~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds')
