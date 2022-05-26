@@ -4,6 +4,7 @@
 # and the EITC.
 #
 # More information on using tax-calculator: https://pslmodels.github.io/Tax-Calculator/
+# For reference: https://taxcalc.pslmodels.org/guide/cli.html
 #
 ################################################################################
 
@@ -38,13 +39,7 @@ tax <- base %>%
          RECID = row_number())
 
 # this csv file is then fed to the tax-calculator command line tool using the command:
+# NOTE: make sure you use Anaconda Prompt on Windows
 # tc tax_inputs.csv 2022 --dump --dvars tax_dump_vars
-# the output is renames 'tax_output.csv'
+# rename the output to 'tax_output.csv'
 write_csv(tax, "~/benefits-cliff/Forsyth_County_2022/tax_liability/tax_inputs.csv")
-
-
-
-
-
-
-
