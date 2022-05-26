@@ -12,10 +12,10 @@
 library(tidyverse)
 
 # read in data from google drive
-test <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_210001 Buncombe County Benefits Cliff Microsite/usa_00001.csv.gz")
+df <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_210001 Buncombe County Benefits Cliff Microsite/usa_00001.csv.gz")
 
 # filter for 5 year 2019 ACS data by state and county
-test_2019 <- test %>%
+df_2019 <- df %>%
   filter(STATEFIP == 37,
          COUNTYFIP == 67,
          YEAR == 2019,
@@ -23,7 +23,7 @@ test_2019 <- test %>%
 
 # 2019 Household size Forsyth County counts below/above income level
 
-income_2019_HH <- test_2019 %>%
+income_2019_HH <- df_2019 %>%
   # remove household incomes less than 0
   # we are interested in low-income / low net-worth people, and such people are unlikely
   # to have negative income
@@ -82,7 +82,7 @@ totals_overall <- income_2019_HH %>%
 
 # 2019 Household size Forsyth County counts by foodstamp status
 
-income_2019_HH_foodstamps <- test_2019 %>%
+income_2019_HH_foodstamps <- df_2019 %>%
   # remove household incomes less than 0
   # we are interested in low-income / low net-worth people, and such people are unlikely
   # to have negative income
@@ -126,7 +126,7 @@ totals_by_household_size_foodstamps <- income_2019_HH_foodstamps %>%
 
 # 2019 FNS Forsyth County counts
 
-income_2019_fns <- test_2019 %>%
+income_2019_fns <- df_2019 %>%
   # remove household incomes less than 0
   # we are interested in low-income / low net-worth people, and such people are unlikely
   # to have negative income
@@ -190,7 +190,7 @@ totals_by_fns<- income_2019_fns %>%
 # sum(boo$officialHHWT)
 # sum(boo2$HHWT)
 
-income_2019_race <- test_2019 %>%
+income_2019_race <- df_2019 %>%
   #race/ethnicity recode
   mutate(race_ethnicity = if_else(between(HISPAN,1,4), "Hispanic/Latino", 
                                   if_else((HISPAN == 0 | HISPAN == 9) & RACE == 1, "White, NH", 
@@ -221,7 +221,7 @@ myFun <- function(vector, thresh) {
 }
 
 # vector of serial numbers mentioned at least 2+ times
-multiple_serials <- myFun(test_2019$SERIAL, 1) %>% unique()
+multiple_serials <- myFun(df_2019$SERIAL, 1) %>% unique()
 
 #pick up the recode
 income_2019_race2 <- income_2019_race %>%
@@ -264,7 +264,7 @@ totals_by_race_ethnicity <- income_2019_race2 %>%
 # 2019 race/ethnicity Forsyth County counts by foodstamp status
 # the myFun function in the script above needs to be ran first before running this code
 
-income_2019_race_foodstamps <- test_2019 %>%
+income_2019_race_foodstamps <- df_2019 %>%
   #race/ethnicity recode
   mutate(race_ethnicity = if_else(between(HISPAN,1,4), "Hispanic/Latino", 
                                   if_else((HISPAN == 0 | HISPAN == 9) & RACE == 1, "White, NH", 
