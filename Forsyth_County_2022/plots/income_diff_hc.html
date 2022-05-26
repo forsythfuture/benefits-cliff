@@ -7,6 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://code.highcharts.com/highcharts.js"></script>
 		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link rel="stylesheet" href="mystyles.css">
 		<style>
 			body {
 				font-family: Sans-Serif;	
@@ -25,11 +26,82 @@
 			    opacity: 1; /* Real browsers */
 			    filter: alpha(opacity = 100); /* MSIE */
 			}
+			
+			input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+  
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+			
 		</style>
 </head>
 <body>
     
     <div id = "selections">
+    
+		Select Number of Jobs:
+		<select id="list2" onchange="changecat(this.value);">
+		  <option value="" selected="selected"></option>
+			<option value="A">1</option>
+			<option value="B">2</option>
+			<option value="C">3</option>
+			<option value="D">4</option>
+		</select>
+		<p></p>
+		
+		<div class="types" id="A">
+      Hours Worked Per Week: <input type="number" oninput="calculate()" id="amount" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate()" id="quantity" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Pre-Tax Monthly Income: $<output type="text" id="total" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="B">
+      Hours Worked Per Week: <input type="number" oninput="calculate2()" id="amount2" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate2()" id="quantity2" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate2()" id="amount3" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate2()" id="quantity3" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Pre-Tax Monthly Income: $<output type="text" id="total2" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="C">
+      Hours Worked Per Week: <input type="number" oninput="calculate3()" id="amount4" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate3()" id="quantity4" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate3()" id="amount5" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate3()" id="quantity5" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate3()" id="amount6" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate3()" id="quantity6" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Pre-Tax Monthly Income: $<output type="text" id="total3" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+    <div class="types" id="D">
+      Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount7" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity7" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount8" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity8" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount9" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity9" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <br>
+      Hours Worked Per Week: <input type="number" oninput="calculate4()" id="amount10" name="amount" min="0" step="0.01" max="2500" value="0"/>
+      Hourly Wage: $<input type="number" oninput="calculate4()" id="quantity10" name="quantity" min="0" step="0.01" max="2500" value="0.00"/>
+      <p></p>
+      Pre-Tax Monthly Income: $<output type="text" id="total4" name="total" oninput="this.setCustomValidity('')"/>  
+      <p></p>
+    </div>
+
+    <hr>
+    <p></p>
 		Select Family Size:
 		<SELECT id="list" onchange=disable_checks()>
 			<OPTION VALUE="A">1 adult</option>
@@ -43,8 +115,8 @@
 		</SELECT>
 		<p></p>
 		Include the Earned Income Tax Credit in tax calcuations (prorated monthly):<br>
-		<label><input type="radio" value='No EITC' name="EITC" checked> No</label>
-	    <label><input type="radio" value='EITC' name="EITC"> Yes</label><p></p>
+		<label><input type="radio" value='No EITC' name="EITC" checked><span id='eitc-no' class="grayout"> No</span></label>
+	    <label><input type="radio" value='EITC' name="EITC"><span id='eitc-yes' class="grayout"> Yes</span></label><p></p>
 	    Choose benefits (Grayed out options are unavailable for the family size):<br>
 	    <label><input type="checkbox" name="benefit_check" id='fns-check' value="FNS (Food Stamps)" checked><span id='fns-text'> FNS (Food Stamps)</span></label>
 	    <label><input type="checkbox" name="benefit_check" id='child-check' value="NC Child Care Subsidy / Smart Start"><span id='child-text' class="grayout"> NC Child Care Subsidy / Smart Start</span></label>
@@ -58,8 +130,82 @@
 		<hr>
 		<div id="container-diff-min" style="max-width:800px"></div>
     	<script type="text/javascript">
+    	
+    $("#list2").on("change", function() {
+      var val = $(this).val();
+      $(".types").hide().find('input:text').val(''); // hide and empty
+      if (val) $("#" + val).show();
+    });
+
+		function calculate(){
+			var amount = document.getElementById("amount").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity").value;
+			var quantity = +quantity;
+			var total = amount * quantity * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total").value = total;
+		}
+		
+		function calculate2(){
+			var amount = document.getElementById("amount2").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity2").value;
+			var quantity = +quantity;
+			var amount2 = document.getElementById("amount3").value;
+			var amount2 = +amount2;
+			var quantity2 = document.getElementById("quantity3").value;
+			var quantity2 = +quantity2;
+			var total = ((amount * quantity) + (amount2 * quantity2)) * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total2").value = total;
+		}
+		
+		function calculate3(){
+		  var amount = document.getElementById("amount4").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity4").value;
+			var quantity = +quantity;
+			var amount2 = document.getElementById("amount5").value;
+			var amount2 = +amount2;
+			var quantity2 = document.getElementById("quantity5").value;
+			var quantity2 = +quantity2;
+			var amount3 = document.getElementById("amount6").value;
+			var amount3 = +amount3;
+			var quantity3 = document.getElementById("quantity6").value;
+			var quantity3 = +quantity3;
+			var total = ((amount * quantity) + (amount2 * quantity2) + (amount3 * quantity3)) * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total3").value = total;
+		}
+		
+		function calculate4(){
+			var amount = document.getElementById("amount7").value;
+			var amount = +amount;
+			var quantity = document.getElementById("quantity7").value;
+			var quantity = +quantity;
+			var amount2 = document.getElementById("amount8").value;
+			var amount2 = +amount2;
+			var quantity2 = document.getElementById("quantity8").value;
+			var quantity2 = +quantity2;
+			var amount3 = document.getElementById("amount9").value;
+			var amount3 = +amount3;
+			var quantity3 = document.getElementById("quantity9").value;
+			var quantity3 = +quantity3;
+			var amount4 = document.getElementById("amount10").value;
+			var amount4 = +amount4;
+			var quantity4 = document.getElementById("quantity10").value;
+			var quantity4 = +quantity4;
+			var total = ((amount * quantity) + (amount2 * quantity2) + (amount3 * quantity3) + (amount4 * quantity4)) * 4.35;
+			var total = +total.toFixed(2);
+			document.getElementById("total4").value = total;
+		}
+		
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
         const json_file = "https://raw.githubusercontent.com/forsythfuture/benefits-cliff/master/Forsyth_County_2022/plots/data/income_diff.json"
+        
+        // const json_file = "https://benefits-cliff.s3.amazonaws.com/data/income_diff.json"        
         
         // create function for disabling checkboxes
         function disable_checks() {
@@ -67,7 +213,7 @@
         	// reset each checkbox by activating it
         	
         	// create array of checkbox element ID's
-        	var check_element_id = ['fns-text', 'child-text', 'house-text', 'wic-text', 'tanf-text']
+        	var check_element_id = ['fns-text', 'child-text', 'house-text', 'wic-text', 'tanf-text', 'eitc-no', 'eitc-yes']
         	
         	// initially convert all to no gray out, so we only have to gray out
 			check_element_id.forEach(function(checkbox) {
@@ -80,7 +226,7 @@
         	// families with no kids
         	
         	// elements to gray out for families without children
-        	var gray_out_no_child = ['child-text', 'wic-text', 'tanf-text']
+        	var gray_out_no_child = ['child-text', 'wic-text', 'tanf-text', 'eitc-no', 'eitc-yes']
         	
         	if (selVal == 'A' || selVal == 'E') {
         		
@@ -365,7 +511,7 @@
         };
         
         // initial chart for total income
-        var chart_full_options = create_chart("container-full", "value", "Forsyth County, NC After and Pre Tax Incomes", "Monthly after-tax income plus benefits");
+        var chart_full_options = create_chart("container-full", "value", "Forsyth County, NC After and Pre-Tax Incomes", "Monthly after-tax income plus benefits");
 		var chart_full = new Highcharts.Chart(chart_full_options); 
 	
 		// initial chart for min difference in income
