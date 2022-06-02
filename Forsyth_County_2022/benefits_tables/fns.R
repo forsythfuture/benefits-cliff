@@ -4,8 +4,8 @@
 # FNS is called SNAP federally, and is often called SNAP in this script
 #
 # the source of the information for the calculation is primarily from:
-# https://fns-prod.azureedge.net/sites/default/files/resource-files/COLA%20Memo%20FY2022%20Without%20Maximum%20Allotments.pdf
-# https://fns-prod.azureedge.net/sites/default/files/resource-files/2022-SNAP-COLA-%20Maximum-Allotments.pdf#page=2
+# https://fns-prod.azureedge.us/sites/default/files/resource-files/COLA%20Memo%20FY2022%20Without%20Maximum%20Allotments.pdf
+# https://fns-prod.azureedge.us/sites/default/files/resource-files/2022-SNAP-COLA-%20Maximum-Allotments.pdf#page=2
 #
 #############################################################################
 

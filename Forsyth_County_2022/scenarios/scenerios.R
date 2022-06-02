@@ -1,6 +1,6 @@
 library(tidyverse)
 
-income <- read_rds("tax_liability/income_diff.rds") %>%
+income <- read_rds("~/benefits-cliff/Forsyth_County_2022/tax_liability/income_diff.rds") %>%
   ungroup()
 
 calc_scenerios <- function(input_df, family_comp, benefit) {
@@ -18,8 +18,8 @@ calc_scenerios <- function(input_df, family_comp, benefit) {
   
   df <- df %>%
     mutate(total_inc = aftertax_inc + benefit,
-           hourly = round(pretax_inc / (40*4.35),  2),
-           hourly_two = round(hourly / 2, 2))
+           hourly = pretax_inc / (40*4.35),
+           hourly_two = hourly / 2)
   
   # find row where benefits end and subtract one
   # these are the rows we want to keep
@@ -33,4 +33,4 @@ calc_scenerios <- function(input_df, family_comp, benefit) {
   return(df)
 }
 
-fns <- calc_scenerios(income, "1 adult, 3 children", "FNS (Food Stamps)")
+output <- calc_scenerios(income, "1 adult, 2 children", "NC Child Care Subsidy / Smart Start")
