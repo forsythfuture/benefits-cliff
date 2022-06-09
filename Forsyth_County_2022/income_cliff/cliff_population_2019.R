@@ -15,6 +15,7 @@ library(tidyverse)
 df <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_210001 Buncombe County Benefits Cliff Microsite/usa_00001.csv.gz")
 
 # filter for 5 year 2019 ACS data by state and county
+# TODO update to 5 year 2020 ACS
 df_2019 <- df %>%
   filter(STATEFIP == 37,
          COUNTYFIP == 67,
