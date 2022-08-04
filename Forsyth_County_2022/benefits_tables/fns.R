@@ -98,8 +98,9 @@ snap <- snap %>%
          payment = ifelse(monthly_income > snap_income_limit, 0, snap_amount),
          # families with negative values for payment get zero in benefits
          payment = ifelse(payment < 0, 0, payment),
-         # one and two person families must have at least $15 in benefits
-         payment = ifelse((size %in% c(1,2) & payment < 15), 0, payment)) %>%
+         # one and two person families must have at least $20 in benefits
+         # TODO RERUN
+         payment = ifelse((size %in% c(1,2) & payment < 20), 0, payment)) %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
 write_rds(snap, '~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/fns.rds')
