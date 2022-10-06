@@ -1,6 +1,9 @@
 ######################################################################################################
 
-# this script creates mock situations where the benefits cliff affects different types of households
+# This script creates mock situations where the benefits cliff affects different types of households.
+# The three situations are modeled after the 'How might the Benefits Cliff affect Buncombe County residents?' 
+# stories found at https://www.justeconomicswnc.org/buncombe-benefits/. The benefits and the household
+# types are the same in the Forsyth County analysis below.
 
 ######################################################################################################
 
