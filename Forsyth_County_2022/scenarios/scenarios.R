@@ -17,7 +17,6 @@ benefits <- c('NC Child Care Subsidy / Smart Start', rep('FNS (Food Stamps)', 2)
 # household compositions used in the scenarios
 household <- c('1 adult, 3 children', '1 adult', '2 adults, 3 children')
 
-# REVIEW find the most amount of monthly income a household can make before losing benefits
 map2(household, benefits, ~ dat %>% 
        # filter by benefit and household composition when payments are zero 
        filter(benefit == .y,
@@ -39,7 +38,6 @@ benefits2 <- c(rep('NC Child Care Subsidy / Smart Start', 2), rep('FNS (Food Sta
 # household compositions used in the scenarios
 household2 <- c(rep('1 adult, 3 children', 2), rep('1 adult', 2), rep('2 adults, 3 children', 2))
 
-# REVIEW find the most amount of monthly income a household can make before losing benefits
 pmap(list(household2, benefits2, monthly_income), ~ dat %>% 
        # filter by benefit, household composition, and monthly income
        filter(benefit == ..2,
