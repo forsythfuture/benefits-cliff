@@ -5,7 +5,8 @@
 # and NC Health Choices
 #
 # All eligibility limits are here:
-# https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2020.pdf
+# 2020: https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2020.pdf
+# 2023: https://policies.ncdhhs.gov/divisional/health-benefits-nc-medicaid/family-and-childrens-medicaid/family-and-childrens-medicaid/ma-3321.pdf
 #
 ###############################################################################
 
@@ -13,14 +14,14 @@ library(tidyverse)
 
 medical <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
-# read in poverty guidelines and filter for 2021
+# read in poverty guidelines and filter for 2023
 fpl <- read_rds("Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds") %>%
-  filter(year == 2022) %>%
+  filter(year == 2023) %>%
   select(household_size, guidelines_month)
 
 # the value of the health benefit is the price of a silver plan on the ACA market
-# silver plan prices for Buncombe County in 2021 were retrieved from: 
-# https://www.kff.org/interactive/subsidy-calculator-2021-before-covid-relief/
+# silver plan prices for Buncombe County in 2023 were retrieved from: 
+# https://www.kff.org/interactive/subsidy-calculator/
 
 # since children and adults qualify for different programs, calculate the value 
 # of their silver plans separately
@@ -28,18 +29,19 @@ fpl <- read_rds("Buncombe_County_2020/benefits_tables/tables/federal_poverty_gui
 # put zero for 3. Enter your yearly household income (dollars)
 
 # calculate value of children's silver plans, based on number of children
-mic_value <- c(`1` = 372, # one child: 2 years old
-                `2` = 744, # two children: 2 and 4 years old
-                `3` = 1115 # three children: 2, 4, and 10 years old
+mic_value <- c(`1` = 341, # one child: 2 years old
+                `2` = 682, # two children: 2 and 4 years old
+                `3` = 1023 # three children: 2, 4, and 10 years old
                 )
 
 # calculate value of adults silver plan; adults are non-tobacco users
-maf_value <- c(`1` = 552, # one adult: 30 years old
-               `2` = 1103 # two adults: both 30 years old
+maf_value <- c(`1` = 506, # one adult: 30 years old
+               `2` = 1012 # two adults: both 30 years old
                )
 
-# calculate income limits of maf based on number of caretakers in 2020 
-# https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2020.pdf
+# calculate income limits of maf based on number of caretakers in 2023
+  # no updates in 2023
+# https://policies.ncdhhs.gov/divisional/health-benefits-nc-medicaid/family-and-childrens-medicaid/family-and-childrens-medicaid/ma-3321.pdf
 maf_income_limits <- c(`1` = 434,
                        `2` = 569,
                        `3` = 667,

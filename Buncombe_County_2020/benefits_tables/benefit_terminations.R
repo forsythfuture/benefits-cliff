@@ -7,7 +7,7 @@ fpl <- read_rds('Buncombe_County_2020/benefits_tables/tables/federal_poverty_gui
 # table displaying for each benefit at what monthly income threshold the benefit terminates 
 benefit_terminations <- fpl %>% 
   # use the most up-to-date FPG
-  filter(year == 2022) %>% 
+  filter(year == 2023) %>% 
   mutate(FNS = guidelines_month * 2,
          Work_First = c(362, 472, 544, 594, 648, 698, 746, 772),
          WIC = guidelines_month * 1.85,

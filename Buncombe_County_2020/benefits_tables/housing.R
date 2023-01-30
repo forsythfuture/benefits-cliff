@@ -8,13 +8,13 @@ library(tidyverse)
 
 housing <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 
-# create data frame of fair market rent values in 2021 based on family size
+# create data frame of fair market rent values in 2023 based on family size
 # this is the max rent that can be reimbursed
-# https://www.huduser.gov/portal/datasets/fmr.html#2021
+# https://www.huduser.gov/portal/datasets/fmr.html#2023
 fmr <- housing %>%
   select(adults, children) %>%
   distinct() %>%
-  mutate(fmr = c(1099, 1279, 1279, 1751, 1099, 1279, 1279, 1751),
+  mutate(fmr = c(1298, 1466, 1466, 1949, 1298, 1466, 1466, 1949),
   # we will assume people's rent amount is 80% of fmr
         rent = round(fmr * .8 , 0)) %>%
   select(-fmr)
@@ -50,12 +50,12 @@ tenant_rent <- function(kids, income) {
   ttp <- ifelse(ttp < 25, 25, ttp)
 
   # to calculate tentant rent, you subtract a utility allowance from ttp
-  # $153 is the average Buncombe County utility allowance, so we will use it
+  # $148 is the average Buncombe County utility allowance, so we will use it
   # https://www.huduser.gov/portal/datasets/assthsg.html#null 
-  # go to Data, 2020 - Based on Census 2010 geographies, Public Housing Agency
+  # go to Data, 2021 - Based on Census 2010 geographies, Public Housing Agency -> ave_util_allow
   # if ttp is smaller than the allowance, the tenant gets a utility reimbursement
   # due to this, we will keep negative numbers negative
-  rent_payment <- ttp - 153
+  rent_payment <- ttp - 148
 
   return(rent_payment)
 

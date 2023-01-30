@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# This script creates the base table that will be used for all beneftis tables
+# This script creates the base table that will be used for all benefits tables
 #
 ###############################################################################
 
