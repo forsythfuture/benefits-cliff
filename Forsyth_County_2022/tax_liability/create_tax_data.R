@@ -18,7 +18,7 @@ base <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/ba
 filing_unit <- data.frame(composition = unique(base$composition),
                           DSI = 0, # claimed as dependent on anyone else's return
                           EIC = rep(seq(0, 3), 2), # EIC qualifying children
-                          FLPDYR = 2022, # calendar year to calculate taxes
+                          FLPDYR = 2023, # calendar year to calculate taxes
                           MARS = c(rep(1, 4), rep(2, 4)), # filing status
                           XTOT = c(seq(1, 4), seq(2, 5)) # total number of exemptions
                           )
@@ -40,6 +40,6 @@ tax <- base %>%
 
 # this csv file is then fed to the tax-calculator command line tool using the command:
 # NOTE: make sure you use Anaconda Prompt on Windows
-# tc tax_inputs.csv 2022 --dump --dvars tax_dump_vars
+# tc tax_inputs.csv 2023 --dump --dvars tax_dump_vars
 # rename the output to 'tax_output.csv'
 write_csv(tax, "~/benefits-cliff/Forsyth_County_2022/tax_liability/tax_inputs.csv")

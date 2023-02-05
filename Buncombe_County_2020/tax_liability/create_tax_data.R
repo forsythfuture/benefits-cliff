@@ -17,7 +17,7 @@ base <- read_rds('Buncombe_County_2020/benefits_tables/tables/base.rds')
 filing_unit <- data.frame(composition = unique(base$composition),
                           DSI = 0, # claimed as dependent on anyone else's return
                           EIC = rep(seq(0, 3), 2), # EIC qualifying children
-                          FLPDYR = 2021, # caldenar year to calculate taxes
+                          FLPDYR = 2023, # calendar year to calculate taxes
                           MARS = c(rep(1, 4), rep(2, 4)), # filing status
                           XTOT = c(seq(1, 4), seq(2, 5)) # total number of exemptions
                           )
@@ -38,6 +38,6 @@ tax <- base %>%
          RECID = row_number())
 
 # this csv file is then fed to the tax-calculator command line tool using the command:
-# tc tax_inputs.csv 2019 --dump --dvars tax_dump_vars
+# tc tax_inputs.csv 2023 --dump --dvars tax_dump_vars
 # the output is renames 'tax_output.csv'
 write_csv(tax, "Buncombe_County_2020/tax_liability/tax_inputs.csv")

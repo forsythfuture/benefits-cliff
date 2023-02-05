@@ -12,7 +12,7 @@
 library(tidyverse)
 
 # read in data from google drive
-test <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_210001 Buncombe County Benefits Cliff Microsite/usa_00001.csv.gz")
+test <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_210001 Buncombe County Benefits Cliff Microsite/usa_00003.csv.gz")
 
 # filter for 5 year 2017 ACS data by state and county --- matches Shane's data
 # test_2017 <- test %>%
@@ -21,12 +21,12 @@ test <- read_csv("G://Shared drives/Forsyth Futures/Forsyth Futures Projects/JE_
 #          YEAR == 2017,
 #          MULTYEAR %in% 2013:2017)
 
-# filter for 5 year 2019 ACS data by state and county
+# filter for 5 year 2021 ACS data by state and county
 test_2019 <- test %>%
   filter(STATEFIP == 37,
          COUNTYFIP == 21,
-         YEAR == 2019,
-         MULTYEAR %in% 2015:2019)
+         YEAR == 2020,
+         MULTYEAR %in% 2017:2021)
 
 #############################################################################################################################################
 
