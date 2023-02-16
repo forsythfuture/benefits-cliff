@@ -8,24 +8,24 @@ library(tidyverse)
 
 wic <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
-# average benefit per person in 2021 was 31.87
-# https://www.fns.usda.gov/pd/wic-program go to Monthly Data – State Level Participation by Category and Program Costs: FY 2021 (preliminary)
-# then go to Average Food Cost per Person and check the Cumulative Average column
+# average benefit per person in 2023 was 38.91
+# https://www.fns.usda.gov/pd/wic-program go to Monthly Data – State Level Participation by Category and Program 
+# Costs: FY 2023 (preliminary) -> Average Food Cost Per Person -> Cumulative Average
 # assume recipients get this amount to get benefits, the children must be under 5 we'll assume that all 
 # children are under 5 except for one child in the 3 child house the mother also gets benefits, and we'll 
 # assume that in one adult households the adult is the mother given this, the amount of the benefit is 
-# the number of children plus one, times 31.87, minus 31.87 if there are three children
+# the number of children plus one, times 38.91, minus 38.91 if there are three children
 wic <- wic %>%
   # only get WIC payment if family has kids
-  mutate(payment = ifelse(children > 0, (children + 1) * 31.87, 0),
-         payment = ifelse(children == 3, payment - 31.87, payment))
+  mutate(payment = ifelse(children > 0, (children + 1) * 38.91, 0),
+         payment = ifelse(children == 3, payment - 38.91, payment))
 
 # can receive wic up to 185% of fpl
 fpl <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds') %>%
   # multiply guideline amount by 1.85 so it is at 185%
   mutate(guidelines_month = guidelines_month * 1.85) %>%
-  # only keep 2018
-  filter(year == 2022) %>%
+  # only keep 2023
+  filter(year == 2023) %>%
   select(size = household_size, guidelines_month)
 
 # add 185% poverty limit to WIC data set

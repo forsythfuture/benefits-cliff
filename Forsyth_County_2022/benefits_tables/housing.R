@@ -8,13 +8,13 @@ library(tidyverse)
 
 housing <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
-# create data frame of fair market rent values in 2022 based on family size
+# create data frame of fair market rent values in 2023 based on family size
 # this is the max rent that can be reimbursed
-# https://www.huduser.gov/portal/datasets/fmr.html#2022
+# https://www.huduser.gov/portal/datasets/fmr.html#2023
 fmr <- housing %>%
   select(adults, children) %>%
   distinct() %>%
-  mutate(fmr = c(664, 808, 808, 1075, 664, 808, 808, 1075),
+  mutate(fmr = c(805, 969, 969, 1280, 805, 969, 969, 1280),
   # we will assume people's rent amount is 80% of fmr
         rent = round(fmr * .8 , 0)) %>%
   select(-fmr)

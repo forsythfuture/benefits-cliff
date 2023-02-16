@@ -5,7 +5,8 @@
 # and NC Health Choices
 #
 # All eligibility limits are here:
-# https://policies.ncdhhs.gov/divisional/health-benefits-nc-medicaid/family-and-childrens-medicaid/family-and-childrens-medicaid/ma-3321.pdf
+# 2020: https://files.nc.gov/ncdma/documents/files/Basic-Medicaid-Eligibility-Chart-2020.pdf
+# 2023: https://policies.ncdhhs.gov/divisional/health-benefits-nc-medicaid/family-and-childrens-medicaid/family-and-childrens-medicaid/ma-3321.pdf
 #
 ###############################################################################
 
@@ -13,13 +14,13 @@ library(tidyverse)
 
 medical <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/base.rds')
 
-# read in poverty guidelines and filter for 2022
+# read in poverty guidelines and filter for 2023
 fpl <- read_rds("~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds") %>%
-  filter(year == 2022) %>%
+  filter(year == 2023) %>%
   select(household_size, guidelines_month)
 
 # the value of the health benefit is the price of a silver plan on the ACA market
-# silver plan prices for Forsyth County in 2022 were retrieved from: 
+# silver plan prices for Forsyth County in 2023 were retrieved from: 
 # https://www.kff.org/interactive/subsidy-calculator/
 
 # since children and adults qualify for different programs, calculate the value 
@@ -29,17 +30,18 @@ fpl <- read_rds("~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/fed
   # 3. put No for '3. Is coverage available from your or your spouse’s job?'
 
 # calculate value of children's silver plans, based on number of children
-mic_value <- c(`1` = 266, # one child: 2 years old
-                `2` = 532, # two children: 2 and 4 years old
-                `3` = 797 # three children: 2, 4, and 10 years old
+mic_value <- c(`1` = 267, # one child: 2 years old
+                `2` = 535, # two children: 2 and 4 years old
+                `3` = 802 # three children: 2, 4, and 10 years old
                 )
 
 # calculate value of adults silver plan; adults are non-tobacco users
-maf_value <- c(`1` = 394, # one adult: 30 years old
-               `2` = 789 # two adults: both 30 years old
+maf_value <- c(`1` = 397, # one adult: 30 years old
+               `2` = 793 # two adults: both 30 years old
                )
 
-# calculate income limits of maf based on number of caretakers
+# calculate income limits of maf based on number of caretakers in 2023
+  # no updates in 2023
 # https://policies.ncdhhs.gov/divisional/health-benefits-nc-medicaid/family-and-childrens-medicaid/family-and-childrens-medicaid/ma-3321.pdf
 maf_income_limits <- c(`1` = 434,
                        `2` = 569,

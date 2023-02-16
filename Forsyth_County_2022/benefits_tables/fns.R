@@ -1,11 +1,12 @@
 #############################################################################
 #
-# Create table of FNS (food stamp) benefits for 2022
+# Create table of FNS (food stamp) benefits for 2023
 # FNS is called SNAP federally, and is often called SNAP in this script
 #
 # the source of the information for the calculation is primarily from:
-# https://fns-prod.azureedge.us/sites/default/files/resource-files/COLA%20Memo%20FY2022%20Without%20Maximum%20Allotments.pdf
-# https://fns-prod.azureedge.us/sites/default/files/resource-files/2022-SNAP-COLA-%20Maximum-Allotments.pdf#page=2
+# 2023: https://fns-prod.azureedge.us/sites/default/files/resource-files/snap-fy-2023-cola-adjustments.pdf
+# 2022: https://fns-prod.azureedge.net/sites/default/files/resource-files/COLA%20Memo%20FY2022%20Without%20Maximum%20Allotments.pdf
+# https://fns-prod.azureedge.net/sites/default/files/resource-files/2022-SNAP-COLA-%20Maximum-Allotments.pdf#page=2
 #
 #############################################################################
 
@@ -19,11 +20,11 @@ snap <- base %>%
 # utility allowance based on family size https://www.fns.usda.gov/snap/eligibility/deduction/standard-utility-allowances
 shelter_costs <- tibble(
   size = seq(1, 5),
-  sua = c(550, 610, 670, 730, 796),
-  bua = c(331, 364, 400, 475, 475),
-  tua = 29,
+  sua = c(557, 612, 672, 732, 798),
+  bua = c(339, 372, 409, 446, 486),
+  tua = 40,
   # rent starts at $600 and each additional person adds $200
-  rent = 600 + (200*size)
+  rent = 600 + (200 * size)
 ) %>%
   # make the shelter deduction the standard utility deduction and rent
   mutate(shelter = sua + rent) %>%
@@ -33,13 +34,13 @@ shelter_costs <- tibble(
 snap <- snap %>%
   left_join(shelter_costs, by="size")
 
-# standard deductions based on family size https://fns-prod.azureedge.net/sites/default/files/resource-files/COLA%20Memo%20FY2022%20Without%20Maximum%20Allotments.pdf
-std_ded <- c(`1` = 177,
-             `2` = 177,
-             `3` = 177,
-             `4` = 184,
-             `5` = 215,
-             `6` = 246)
+# standard deductions based on family size https://fns-prod.azureedge.us/sites/default/files/resource-files/snap-fy-2023-cola-adjustments.pdf
+std_ded <- c(`1` = 193,
+             `2` = 193,
+             `3` = 193,
+             `4` = 193,
+             `5` = 225,
+             `6` = 258)
 
 # add column to dataset showing standard deduction amount
 snap <- snap %>%
@@ -47,7 +48,7 @@ snap <- snap %>%
          # 20 percent of earned income is deducted,
          # so add column showing this amount
          ded_20 = monthly_income * .2,
-         # for dependent care deduction, assume $200 per child per month
+         # for dependent care deduction, assume $400 per child per month
          dep_care = children * 400)
 
 # calculate SNAP amounts
@@ -57,8 +58,8 @@ snap <- snap %>%
   mutate(net_income = monthly_income - std_ded - dep_care - ded_20,
          # deduct shelter expenses that exceed half of net income
          shelter_ded = shelter - (net_income/2),
-         # shelter deduction is maxed out at 597 https://fns-prod.azureedge.net/sites/default/files/resource-files/COLA%20Memo%20FY2022%20Without%20Maximum%20Allotments.pdf
-         shelter_ded = ifelse(shelter_ded > 597, 597, shelter_ded),
+         # shelter deduction is maxed out at 624 https://fns-prod.azureedge.us/sites/default/files/resource-files/snap-fy-2023-cola-adjustments.pdf
+         shelter_ded = ifelse(shelter_ded > 624, 624, shelter_ded),
          # subtract shelter deduction from net income
          net_income = net_income - shelter_ded,
          # family is expected to contribute 30% of income to food
@@ -66,23 +67,23 @@ snap <- snap %>%
          # convert this amount to 0 if it is negative
          family_contribution = ifelse(family_contribution < 0, 0, family_contribution))
 
-# SNAP max allotment amounts Oct 2021 - Sep 2022 https://fns-prod.azureedge.net/sites/default/files/resource-files/2022-SNAP-COLA-%20Maximum-Allotments.pdf#page=2
-snap_amounts <- c(`1` = 250,
-                  `2` = 459,
-                  `3` = 658,
-                  `4` = 835,
-                  `5` = 992,
-                  `6` = 1190,
-                  `7` = 1316,
-                  `8` = 1504)
+# SNAP max allotment amounts Oct 2022 - Sep 2023 https://fns-prod.azureedge.us/sites/default/files/resource-files/snap-fy-2023-cola-adjustments.pdf
+snap_amounts <- c(`1` = 281,
+                  `2` = 516,
+                  `3` = 740,
+                  `4` = 939,
+                  `5` = 1116,
+                  `6` = 1339,
+                  `7` = 1480,
+                  `8` = 1691)
 
 # maximum income is set at 200% of federal poverty guideline
 # read in federal poverty guidelines
 fpg <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds')
 
-# convert guideline amounts to 200% and filter for 2019
+# convert guideline amounts to 200% and filter for 2023
 snap_income_limit <- fpg %>%
-  filter(year == 2022) %>%
+  filter(year == 2023) %>%
   mutate(snap_income_limit = round(guidelines_month * 2, 0)) %>%
   rename(size = household_size) %>%
   select(size, snap_income_limit)
@@ -99,6 +100,7 @@ snap <- snap %>%
          # families with negative values for payment get zero in benefits
          payment = ifelse(payment < 0, 0, payment),
          # one and two person families must have at least $20 in benefits
+         # https://policies.ncdhhs.gov/divisional/social-services/food-and-nutrition-services/policy-manuals/fns-360-determining-benefit-levels.pdf
          payment = ifelse((size %in% c(1,2) & payment < 20), 0, payment)) %>%
   select(composition, adults, children, monthly_income, payment, benefit)
 
