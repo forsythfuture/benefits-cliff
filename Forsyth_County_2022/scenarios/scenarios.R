@@ -61,4 +61,4 @@ pmap(list(household2, benefits2, monthly_income), ~ dat %>%
   select(`Household Composition` = composition, `Benefit Program` = benefit, `Monthly Income` = monthly_income, 
          `Hourly Wage` = hourly_wage, `Benefit Payment` = payment, `Combined Income and Benefit Amount ` = income_and_benefits, 
          `Net Loss` = net_loss) %>% 
-  readr::write_csv('~/benefits-cliff/Forsyth_County_2022/scenarios/scenarios_forsyth_2022.csv')
+  readr::write_csv('~/benefits-cliff/Forsyth_County_2022/scenarios/scenarios_forsyth_2023.csv')
