@@ -21,4 +21,4 @@ fpg <- data.frame(household_size = rep(seq_len(8), times = 3),
   mutate(guidelines_month = round(guidelines_year / 12, 0)) %>%
   select(household_size, year, everything())
 
-write_rds(fpg, 'Buncombe_County_2020/benefits_tables/tables/federal_poverty_guidelines.rds')
+write_rds(fpg, 'Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds')
