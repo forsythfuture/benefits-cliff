@@ -32,7 +32,7 @@ map2(household, benefits, ~ dat %>%
 
 # monthly incomes we will use based on our findings above
   # these monthly amounts equate to whole number hourly wages
-monthly_income <- c(4524, 4698, 1914, 2088, 5394, 5568)
+monthly_income <- c(4872, 5046, 2088, 2262, 5742, 5916)
 # types of benefits used in the scenarios
 benefits2 <- c(rep('NC Child Care Subsidy / Smart Start', 2), rep('FNS (Food Stamps)', 4))
 # household compositions used in the scenarios
@@ -61,4 +61,4 @@ pmap(list(household2, benefits2, monthly_income), ~ dat %>%
   select(`Household Composition` = composition, `Benefit Program` = benefit, `Monthly Income` = monthly_income, 
          `Hourly Wage` = hourly_wage, `Benefit Payment` = payment, `Combined Income and Benefit Amount ` = income_and_benefits, 
          `Net Loss` = net_loss) %>% 
-  readr::write_csv('~/benefits-cliff/Forsyth_County_2022/scenarios/scenarios_forsyth_2023.csv')
+  write_csv('~/benefits-cliff/Forsyth_County_2022/scenarios/scenarios_forsyth_2023.csv')
