@@ -3,14 +3,14 @@
 # This script creates mock situations where the benefits cliff affects different types of households.
 # The three situations are modeled after the 'How might the Benefits Cliff affect Buncombe County residents?' 
 # stories found at https://www.justeconomicswnc.org/buncombe-benefits/. The benefits and the household
-# types are the same in the Forsyth County analysis below.
+# types are the same in the Buncombe County analysis below.
 
 ######################################################################################################
 
 library(tidyverse)
 
 # read in benefit payments by household composition and income
-dat <- read_rds('~/benefits-cliff/Forsyth_County_2022/plots/data/benefits.rds')
+dat <- read_rds('~/benefits-cliff/Buncombe_County_2020/plots/data/benefits.rds')
 
 # types of benefits used in the scenarios
 benefits <- c('NC Child Care Subsidy / Smart Start', rep('FNS (Food Stamps)', 2))
@@ -61,4 +61,4 @@ pmap(list(household2, benefits2, monthly_income), ~ dat %>%
   select(`Household Composition` = composition, `Benefit Program` = benefit, `Monthly Income` = monthly_income, 
          `Hourly Wage` = hourly_wage, `Benefit Payment` = payment, `Combined Income and Benefit Amount ` = income_and_benefits, 
          `Net Loss` = net_loss) %>% 
-  write_csv('~/benefits-cliff/Forsyth_County_2022/scenarios/scenarios_forsyth_2023.csv')
+  write_csv('~/benefits-cliff/Buncombe_County_2020/scenarios/scenarios_buncombe_2023.csv')
