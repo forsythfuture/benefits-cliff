@@ -1,8 +1,10 @@
 
 # calculate a benefit terminations table for the Benefit Terminations subsection for the Buncombe County microsite
 
+library(tidyverse)
+
 # read in federal poverty guidelines
-fpl <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/benefits_tables/tables/federal_poverty_guidelines.rds')
+fpl <- read_rds('~/benefits-cliff/Forsyth_County_2022/benefits_tables/tables/federal_poverty_guidelines.rds')
 
 # table displaying for each benefit at what monthly income threshold the benefit terminates 
 benefit_terminations <- fpl %>% 
