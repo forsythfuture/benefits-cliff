@@ -4,6 +4,10 @@ The Benefits Cliff is a condition in which a pay increase results in an overall 
 
 This repository contains the code used in the Forsyth Futures' reports on the benefits cliff for Forsyth and Buncombe County, North Carolina.  The code allows users to replicate the simulation of benefit levels and the simulation of income levels. Users can also recreate the interactive visualtions. The analysis was conducted in R and the visualizations were created with D3.
 
+Forsyth County, NC Benefits Cliff link: https://abcforsyth.org/bc-forsyth-county/
+
+Buncombe County, NC Benefits Cliff link: https://www.justeconomicswnc.org/buncombe-benefits/
+
 # Repository Organization
 
 #### `benefits_tables` folder
